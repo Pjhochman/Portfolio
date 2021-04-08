@@ -57,18 +57,22 @@ const Card4 = () => {
             <FadeIn className="card4top" style={visible}>
               <p>
                 <br />
-                <strong>
-                  My Own Work |{" "}
-                  <span style={{ fontWeight: "300" }}>Band Planner</span>
+                <strong style={{ color: "white" }}>
+                  My Own Work{" "}
+                  <span style={{ fontWeight: "300", color: "white" }}>
+                    | Band Planner
+                  </span>
                 </strong>
               </p>
             </FadeIn>
             <br />
             <FadeInRight1 className="card4top" style={visible}>
-              <p style={{ fontSize: "11px" }}>Designed for Bands to</p>
+              <p style={{ color: "white", fontSize: "11px" }}>
+                Designed for Bands to
+              </p>
             </FadeInRight1>
             <FadeInRight2 className="card4top" style={visible}>
-              <p style={{ fontSize: "11px" }}>
+              <p style={{ color: "white", fontSize: "11px" }}>
                 Keep Track of Songs<strong>.</strong>
               </p>
             </FadeInRight2>
@@ -82,7 +86,8 @@ const Card4 = () => {
                     style={{
                       cursor: "pointer",
                       pointerEvents: "all",
-                      textTransform: "none"
+                      textTransform: "none",
+                      color: "white"
                     }}
                     onClick={() =>
                       copyToClipboard(
@@ -99,17 +104,21 @@ const Card4 = () => {
               </p>
             </FadeInLeft1>
             <FadeInLeft2 className="card4bottom" style={visible}>
-              <p>
+              <p style={{ color: "white" }}>
                 PASSWORD:{" "}
-                <span style={{ textTransform: "lowercase" }}>hello</span>
+                <span style={{ color: "white", textTransform: "lowercase" }}>
+                  hello
+                </span>
               </p>
             </FadeInLeft2>
             <FadeIn className="card4bottom" style={visible}>
               <br />
               <p>
-                <strong>
+                <strong style={{ color: "white" }}>
                   Mobile App |{" "}
-                  <span style={{ fontWeight: "300" }}>Login Credentials</span>
+                  <span style={{ color: "white", fontWeight: "300" }}>
+                    Login Credentials
+                  </span>
                 </strong>
               </p>
               <br />

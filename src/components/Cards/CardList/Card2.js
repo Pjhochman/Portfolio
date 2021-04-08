@@ -43,7 +43,7 @@ const Card2 = () => {
               <p>
                 <br />
                 <strong style={{ fontSize: "11px", color: "white" }}>
-                  My Own Work |{" "}
+                  My Own Work{" "}
                   <span
                     style={{
                       fontSize: "11px",
@@ -51,7 +51,7 @@ const Card2 = () => {
                       color: "white"
                     }}
                   >
-                    Color Palette
+                    | Color Palette
                   </span>
                 </strong>
               </p>

@@ -55,7 +55,7 @@ const Card3 = () => {
               <br />
               <p>
                 <span style={{ fontSize: "11px", color: "white" }}>
-                  <strong>My Own Work |</strong> Project 11
+                  <strong>My Own Work </strong>| Project 11
                 </span>
               </p>
               <br />

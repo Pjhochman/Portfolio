@@ -50,7 +50,7 @@ const Card1 = () => {
                 style={{
                   margin: "0 20px 10px 0",
                   fontSize: "10px",
-                  color: "white"
+                  color: "black"
                 }}
               >
                 Hyper Island

@@ -29,15 +29,15 @@ const Card4 = () => {
             <FadeIn className="card5top" style={visible}>
               <span style={{ margin: "0" }}>
                 <br />
-                <strong style={{ fontSize: "11px" }}>
+                <strong style={{ fontSize: "10px" }}>
                   Previous Adventure
-                  <hr />
+                  <hr style={{ opacity: "0.25" }} />
                 </strong>
               </span>
             </FadeIn>
             <FadeIn className="card5top" style={visible}>
               <br />
-              <span style={{ fontWeight: "400", fontSize: "10px" }}>
+              <span style={{ fontWeight: "bold", fontSize: "10px" }}>
                 Accedo.tv
               </span>
             </FadeIn>
