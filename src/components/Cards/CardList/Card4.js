@@ -65,10 +65,10 @@ const Card4 = () => {
             </FadeIn>
             <br />
             <FadeInRight1 className="card4top" style={visible}>
-              <p>Designed for Bands to</p>
+              <p style={{ fontSize: "11px" }}>Designed for Bands to</p>
             </FadeInRight1>
             <FadeInRight2 className="card4top" style={visible}>
-              <p>
+              <p style={{ fontSize: "11px" }}>
                 Keep Track of Songs<strong>.</strong>
               </p>
             </FadeInRight2>
