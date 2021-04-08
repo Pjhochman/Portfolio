@@ -1,5 +1,2 @@
-# Portfolio
 
-## Author
-*Peter Hochman*
 
