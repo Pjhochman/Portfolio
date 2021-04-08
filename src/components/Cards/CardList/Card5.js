@@ -3,7 +3,6 @@ import styled, { keyframes } from "styled-components";
 import { fadeIn } from "react-animations";
 
 const fadeInAnimation = keyframes`${fadeIn}`;
-
 const FadeIn = styled.div`
   animation: 0.6s ${fadeInAnimation};
 `;

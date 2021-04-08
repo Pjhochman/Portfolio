@@ -15,7 +15,7 @@ const FadeInLeft1 = styled.div`
   animation: 0.2s ${fadeInLeftAnimation};
 `;
 
-const Card3 = () => {
+const Card1 = () => {
   const [visible, setVisible] = useState({ display: "none" });
 
   return (
@@ -63,4 +63,4 @@ const Card3 = () => {
   );
 };
 
-export default Card3;
+export default Card1;

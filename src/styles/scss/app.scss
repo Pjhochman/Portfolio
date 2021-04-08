@@ -65,7 +65,7 @@ p {
 @media (max-width: 800px) {
   .contact-container {
     position: absolute;
-    top: 90vh;
+    top: 85vh;
     left: 0;
     right: 0;
     margin: auto;
@@ -278,6 +278,7 @@ p {
     }
   }
 }
+
 @media (max-width: 800px) {
   .items {
     width: 100%;
@@ -314,6 +315,9 @@ p {
       height: 16vh;
       top: 17vh;
       left: 37vw;
+      &:after {
+        top: -150px;
+      }
     }
   }
 }
