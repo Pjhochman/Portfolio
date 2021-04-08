@@ -8,7 +8,7 @@ import Card5 from "./CardList/Card5";
 const Cards = () => {
   return (
     <div className="items">
-      <div className="items__inner" id="js-scene" data-hover-only="false">
+      <div className="items__inner" id="js-scene" data-hover-only="true">
         <Card1 />
         <Card2 />
         <Card3 />
