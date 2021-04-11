@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
 /* line 3, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 body {
   margin: 0;
@@ -17,9 +18,57 @@ header {
   margin: auto;
   width: 95%;
   height: 50px;
+  z-index: 10;
 }
 
-/* line 22, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 23, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+footer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  bottom: 40%;
+  right: 0;
+  left: 20px;
+  width: 90%;
+  height: auto;
+  font-weight: 300;
+  margin: auto;
+  font-size: 40px;
+  z-index: 0;
+}
+
+/* line 40, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.title {
+  margin: 0 0 20px 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* line 46, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.description {
+  white-space: normal;
+  font-size: 17px;
+  margin: 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* line 54, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+#designer {
+  width: 280px;
+}
+
+/* line 58, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+#coder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 280px;
+}
+
+/* line 65, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 h1 {
   margin: 0 10px 0 10px;
   font-weight: 200;
@@ -29,7 +78,7 @@ h1 {
   white-space: nowrap;
 }
 
-/* line 31, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 74, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 a {
   margin: 0 10px 0 10px;
   font-weight: 200;
@@ -41,7 +90,7 @@ a {
   color: black;
 }
 
-/* line 42, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 85, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 p {
   font-weight: 200;
   margin: 0 20px 0 20px;
@@ -50,14 +99,14 @@ p {
 }
 
 @media (max-width: 800px) {
-  /* line 50, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 93, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   p,
   span {
     display: none;
   }
 }
 
-/* line 56, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 99, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .information-container,
 .contact-container {
   display: flex;
@@ -68,7 +117,7 @@ p {
 }
 
 @media (max-width: 800px) {
-  /* line 66, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 109, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .contact-container {
     position: absolute;
     top: 78vh;
@@ -78,7 +127,7 @@ p {
   }
 }
 
-/* line 75, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 118, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .card4Container {
   display: flex;
   width: 100%;
@@ -89,7 +138,7 @@ p {
   cursor: default;
 }
 
-/* line 85, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 128, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .card4top {
   display: none;
   margin-top: 8px;
@@ -104,7 +153,7 @@ p {
   user-select: none;
 }
 
-/* line 99, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 142, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .card5top {
   display: none;
   margin-top: 8px;
@@ -119,7 +168,7 @@ p {
   user-select: none;
 }
 
-/* line 113, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 156, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .card5bottom {
   display: none;
   margin-bottom: 8px;
@@ -134,7 +183,7 @@ p {
   user-select: none;
 }
 
-/* line 127, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 170, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .card4bottom {
   display: none;
   margin-bottom: 8px;
@@ -149,7 +198,7 @@ p {
   user-select: none;
 }
 
-/* line 141, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 184, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 #card4bottomContainer {
   display: flex;
   flex-direction: column;
@@ -158,7 +207,7 @@ p {
   width: 100%;
 }
 
-/* line 149, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 192, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 #previousWorkContainer {
   display: flex;
   width: 100%;
@@ -168,17 +217,47 @@ p {
   align-items: center;
 }
 
-/* line 158, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 201, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 #name {
   color: black;
 }
 
-/* line 162, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 205, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 #profession {
   color: #61677c;
 }
 
-/* line 166, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 209, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.colorPalette {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 0;
+  transition: all 0.4s ease-in-out;
+  border-radius: 0 320px 0 320px;
+}
+
+/* line 219, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.colorPalette.active {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* line 236, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items {
   display: flex;
   flex-direction: column;
@@ -189,18 +268,19 @@ p {
   overflow: hidden;
 }
 
-/* line 174, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 244, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__inner {
+  z-index: 2;
   top: 20px;
-  left: 40px;
+  left: 15px;
   position: relative;
-  width: 650px;
+  width: 590px;
   max-width: 800px;
-  height: 630px;
-  background: #e9f0fb;
+  height: 620px;
+  background: transparent;
 }
 
-/* line 183, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 254, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer .items__item {
   position: absolute;
   display: flex;
@@ -210,7 +290,7 @@ p {
   box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
 }
 
-/* line 190, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 261, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer .items__item:after {
   content: attr(data-title);
   position: absolute;
@@ -223,13 +303,13 @@ p {
   opacity: 0;
 }
 
-/* line 202, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 273, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer .items__item:hover:after {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 208, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 279, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(1) .items__item {
   top: 120px;
   left: 0px;
@@ -238,14 +318,14 @@ p {
   background: #040c0e;
 }
 
-/* line 215, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 286, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(1) .items__item:after {
   top: -23px;
   left: 0;
   color: #040c0e;
 }
 
-/* line 221, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 292, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(2) .items__item {
   top: 360px;
   left: 280px;
@@ -254,14 +334,14 @@ p {
   background: #a4978e;
 }
 
-/* line 228, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 299, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(2) .items__item:after {
   bottom: -23px;
   right: 0;
   color: #a4978e;
 }
 
-/* line 234, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 305, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(3) .items__item {
   top: 320px;
   left: 40px;
@@ -270,30 +350,30 @@ p {
   background: #132226;
 }
 
-/* line 241, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 312, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(3) .items__item:after {
   bottom: -23px;
   left: 0;
   color: #132226;
 }
 
-/* line 247, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 318, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(4) .items__item {
-  top: 40px;
+  top: 10px;
   left: 280px;
-  width: 350px;
-  height: 450px;
+  width: 310px;
+  height: 480px;
   background: #525b56;
 }
 
-/* line 254, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 325, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(4) .items__item:after {
   top: -23px;
   right: 0;
   color: #3c433f;
 }
 
-/* line 260, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 331, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(5) .items__item {
   top: 210px;
   left: 180px;
@@ -302,7 +382,7 @@ p {
   background: #be9063;
 }
 
-/* line 267, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 338, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(5) .items__item:after {
   top: -220px;
   font-weight: bold;
@@ -317,53 +397,139 @@ p {
 }
 
 @media (max-width: 800px) {
-  /* line 283, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 354, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items {
     width: 100%;
     height: 100vh;
   }
-  /* line 286, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 357, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__inner {
     width: 500px;
     height: 480px;
   }
-  /* line 290, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 361, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__layer:nth-child(1) .items__item {
     width: 42vw;
     height: 25vh;
     left: 14vw;
     top: 10vh;
   }
-  /* line 296, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 367, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__layer:nth-child(2) .items__item {
     width: 29vw;
     height: 10vh;
     top: 40vh;
     left: 57vw;
   }
-  /* line 302, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 373, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__layer:nth-child(3) .items__item {
     width: 50vw;
     height: 21vh;
     left: 24vw;
     top: 25vh;
   }
-  /* line 308, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 379, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__layer:nth-child(4) .items__item {
     left: 54vw;
     width: 44vw;
     height: 37vh;
   }
-  /* line 313, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 384, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__layer:nth-child(5) .items__item {
     width: 35vw;
     height: 16vh;
     top: 17vh;
     left: 37vw;
   }
-  /* line 318, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 389, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__layer:nth-child(5) .items__item:after {
     top: -150px;
+  }
+}
+
+/* line 398, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+::-moz-selection {
+  background: rgba(170, 170, 170, 0.3);
+}
+
+/* line 402, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+::selection {
+  background: rgba(170, 170, 170, 0.3);
+}
+
+/* line 406, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.aboutMe-container {
+  display: flex;
+  position: absolute;
+  margin: 110px 0 0 30px;
+  font-size: 17px;
+  left: 0px;
+  width: 900px;
+  flex-direction: column;
+}
+
+/* line 415, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.aboutMe-container > div {
+  overflow: hidden;
+}
+
+/* line 418, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.aboutMe-container > div > p {
+  width: 900px;
+  margin: 0;
+  line-height: 117%;
+}
+
+/* line 424, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.green {
+  color: #32c267;
+}
+
+/* line 428, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+div.aboutMe-container > div {
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+}
+
+/* line 432, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+div.aboutMe-container > div:nth-child(2) > p {
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+}
+
+/* line 437, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+div.aboutMe-container > div {
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+}
+
+/* line 441, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+div.aboutMe-container > div:nth-child(3) > p {
+  -webkit-animation-delay: 0.075s;
+  animation-delay: 0.075s;
+}
+
+/* line 446, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.slide-up {
+  -webkit-animation: slide-up 0.3s cubic-bezier(0.65, 0, 0.35, 1) both;
+  animation: slide-up 0.3s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
