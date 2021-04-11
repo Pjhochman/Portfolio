@@ -16,7 +16,7 @@ const Footer = () => {
     <>
       <div style={width} className={hover}></div>
       <footer>
-        <div id="designer" onMouseEnter={onHover} onMouseLeave={onLeave}>
+        {/* <div id="designer" onMouseEnter={onHover} onMouseLeave={onLeave}>
           <h2 className="title">designer</h2>
           <p className="description">
             Passion for designing beautiful and functional experiences.
@@ -28,7 +28,7 @@ const Footer = () => {
             Front End Developer who focuses on writing clean, elegant and
             efficient code.
           </p>
-        </div>
+        </div> */}
       </footer>
     </>
   );
