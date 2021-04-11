@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { fadeIn } from "react-animations";
-import { pulse } from "react-animations";
 
 const fadeInAnimation = keyframes`${fadeIn}`;
-const zoomInAnimation = keyframes`${pulse}`;
 
 const FadeIn = styled.div`
   animation: 0.6s ${fadeInAnimation};
 `;
 const FadeIn1 = styled.div`
-  animation: 1s ${zoomInAnimation};
+  animation: 1s ${fadeInAnimation};
 `;
 
 const Card4 = () => {
