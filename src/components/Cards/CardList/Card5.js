@@ -8,7 +8,7 @@ const FadeIn = styled.div`
   animation: 0.6s ${fadeInAnimation};
 `;
 const FadeIn1 = styled.div`
-  animation: 1s ${fadeInAnimation};
+  animation: 1.5s ${fadeInAnimation};
 `;
 
 const Card4 = () => {

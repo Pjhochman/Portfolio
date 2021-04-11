@@ -12,7 +12,7 @@ const FadeIn = styled.div`
   animation: 0.4s ${fadeInAnimation};
 `;
 const FadeInLeft = styled.div`
-  animation: 1s ${fadeInLeftAnimation};
+  animation: 1.8s ${fadeInLeftAnimation};
 `;
 const FadeInRight1 = styled.div`
   animation: 0.2s ${fadeInRightAnimation};

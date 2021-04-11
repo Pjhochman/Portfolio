@@ -15,7 +15,7 @@ const FadeInLeft1 = styled.div`
   animation: 0.2s ${fadeInLeftAnimation};
 `;
 const FadeInRight = styled.div`
-  animation: 1s ${fadeInRightAnimation};
+  animation: 1.8s ${fadeInRightAnimation};
 `;
 
 const Card1 = () => {
