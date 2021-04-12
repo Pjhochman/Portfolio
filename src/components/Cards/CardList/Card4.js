@@ -60,7 +60,7 @@ const Card4 = () => {
           >
             <div id="card4topContainer">
               <FadeIn className="card4top" style={visible}>
-                <p>
+                <p style={{ marginLeft: "10px" }}>
                   <br />
                   <strong style={{ color: "white" }}>
                     My Own Work{" "}
@@ -72,19 +72,35 @@ const Card4 = () => {
               </FadeIn>
               <br />
               <FadeInRight1 className="card4top" style={visible}>
-                <p style={{ color: "white", fontSize: "11px" }}>
+                <p
+                  style={{
+                    marginLeft: "10px",
+                    color: "white",
+                    fontSize: "11px"
+                  }}
+                >
                   Designed for Bands to
                 </p>
               </FadeInRight1>
               <FadeInRight2 className="card4top" style={visible}>
-                <p style={{ color: "white", fontSize: "11px" }}>
+                <p
+                  style={{
+                    marginLeft: "10px",
+                    color: "white",
+                    fontSize: "11px"
+                  }}
+                >
                   Keep Track of Songs<strong>.</strong>
                 </p>
               </FadeInRight2>
             </div>
             <div id="card4bottomContainer">
               <FadeInLeft1 className="card4bottom" style={visible}>
-                <p>
+                <p
+                  style={{
+                    marginRight: "0px"
+                  }}
+                >
                   {email.map(text => (
                     <span
                       key={Math.random()}
@@ -109,16 +125,22 @@ const Card4 = () => {
                 </p>
               </FadeInLeft1>
               <FadeInLeft2 className="card4bottom" style={visible}>
-                <p style={{ color: "white" }}>
+                <p style={{ marginRight: "0px", color: "white" }}>
                   PASSWORD:{" "}
-                  <span style={{ color: "white", textTransform: "lowercase" }}>
+                  <span
+                    style={{
+                      marginRight: "0px",
+                      color: "white",
+                      textTransform: "lowercase"
+                    }}
+                  >
                     hello
                   </span>
                 </p>
               </FadeInLeft2>
               <FadeIn className="card4bottom" style={visible}>
                 <br />
-                <p>
+                <p style={{ marginRight: "0px" }}>
                   <strong style={{ color: "white" }}>
                     Mobile App |{" "}
                     <span style={{ color: "white", fontWeight: "300" }}>

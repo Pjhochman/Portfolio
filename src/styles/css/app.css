@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
-/* line 3, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 3, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 body {
   margin: 0;
   padding: 0;
   background-color: #e9f0fb;
 }
 
-/* line 9, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 9, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 header {
   position: absolute;
   display: flex;
@@ -16,13 +16,13 @@ header {
   top: 30px;
   right: 0;
   margin: auto;
-  width: 95%;
+  width: 90%;
   height: 50px;
   z-index: 10;
 }
 
-/* line 23, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
-footer {
+/* line 23, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+aside {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -39,28 +39,49 @@ footer {
   z-index: 0;
 }
 
-/* line 40, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
-.title {
+/* line 40, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.title1 {
+  width: 100%;
+  margin: 0 0 20px 0;
+  user-select: none;
+  cursor: default;
+}
+
+/* line 47, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.title2 {
+  width: 100%;
   margin: 0 0 20px 0;
   user-select: none;
   cursor: pointer;
 }
 
-/* line 46, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 52, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.title2:before {
+  content: "<";
+  left: 0;
+}
+
+/* line 56, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.title2:after {
+  content: ">";
+  right: 0;
+}
+
+/* line 62, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .description {
   white-space: normal;
   font-size: 17px;
   margin: 0;
   user-select: none;
-  cursor: pointer;
+  cursor: default;
 }
 
-/* line 54, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 70, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 #designer {
   width: 280px;
 }
 
-/* line 58, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 74, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 #coder {
   display: flex;
   flex-direction: column;
@@ -68,7 +89,7 @@ footer {
   width: 280px;
 }
 
-/* line 65, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 81, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 h1 {
   margin: 0 10px 0 10px;
   font-weight: 200;
@@ -78,7 +99,7 @@ h1 {
   white-space: nowrap;
 }
 
-/* line 74, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 90, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 a {
   margin: 0 10px 0 10px;
   font-weight: 200;
@@ -90,34 +111,34 @@ a {
   color: black;
 }
 
-/* line 85, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 101, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 p {
   font-weight: 200;
+  font-size: 11px;
   margin: 0 20px 0 20px;
   padding: 0;
   white-space: nowrap;
 }
 
 @media (max-width: 800px) {
-  /* line 93, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 110, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   p,
   span {
     display: none;
   }
 }
 
-/* line 99, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 116, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .information-container,
 .contact-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0 20px 0 20px;
 }
 
 @media (max-width: 800px) {
-  /* line 109, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 126, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .contact-container {
     position: absolute;
     top: 78vh;
@@ -127,7 +148,7 @@ p {
   }
 }
 
-/* line 118, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 135, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .card4Container {
   display: flex;
   width: 100%;
@@ -138,7 +159,7 @@ p {
   cursor: default;
 }
 
-/* line 128, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 145, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .card4top {
   display: none;
   margin-top: 8px;
@@ -153,7 +174,7 @@ p {
   user-select: none;
 }
 
-/* line 142, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 159, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .card5top {
   display: none;
   margin-top: 8px;
@@ -168,7 +189,7 @@ p {
   user-select: none;
 }
 
-/* line 156, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 173, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .card5bottom {
   display: none;
   margin-bottom: 8px;
@@ -183,7 +204,7 @@ p {
   user-select: none;
 }
 
-/* line 170, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 187, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .card4bottom {
   display: none;
   margin-bottom: 8px;
@@ -198,7 +219,7 @@ p {
   user-select: none;
 }
 
-/* line 184, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 201, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 #card4bottomContainer {
   display: flex;
   flex-direction: column;
@@ -207,7 +228,7 @@ p {
   width: 100%;
 }
 
-/* line 192, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 209, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 #previousWorkContainer {
   display: flex;
   width: 100%;
@@ -217,28 +238,28 @@ p {
   align-items: center;
 }
 
-/* line 201, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 218, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 #name {
   color: black;
 }
 
-/* line 205, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 222, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 #profession {
   color: #61677c;
 }
 
-/* line 209, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 226, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .colorPalette {
   position: absolute;
   width: 100vw;
   height: 100vh;
   top: 0;
   z-index: 0;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border-radius: 0 320px 0 320px;
 }
 
-/* line 219, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 236, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .colorPalette.active {
   background: linear-gradient(-45deg, #132226, #525b56, #a4978e, #be9063);
   background-size: 400% 400%;
@@ -257,7 +278,7 @@ p {
   }
 }
 
-/* line 236, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 253, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items {
   display: flex;
   flex-direction: column;
@@ -268,19 +289,19 @@ p {
   overflow: hidden;
 }
 
-/* line 244, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 261, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__inner {
   z-index: 2;
   top: 20px;
-  left: 15px;
+  left: -5px;
   position: relative;
-  width: 590px;
+  width: 550px;
   max-width: 800px;
   height: 620px;
   background: transparent;
 }
 
-/* line 254, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 271, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer .items__item {
   position: absolute;
   display: flex;
@@ -290,7 +311,7 @@ p {
   box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
 }
 
-/* line 261, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 278, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer .items__item:after {
   content: attr(data-title);
   position: absolute;
@@ -303,13 +324,13 @@ p {
   opacity: 0;
 }
 
-/* line 273, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 290, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer .items__item:hover:after {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 279, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 296, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(1) .items__item {
   top: 120px;
   left: 0px;
@@ -318,30 +339,30 @@ p {
   background: #040c0e;
 }
 
-/* line 286, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 303, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(1) .items__item:after {
   top: -23px;
   left: 0;
   color: #040c0e;
 }
 
-/* line 292, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 309, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(2) .items__item {
   top: 360px;
   left: 280px;
-  width: 240px;
+  width: 210px;
   height: 200px;
   background: #a4978e;
 }
 
-/* line 299, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 316, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(2) .items__item:after {
   bottom: -23px;
   right: 0;
   color: #a4978e;
 }
 
-/* line 305, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 322, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(3) .items__item {
   top: 320px;
   left: 40px;
@@ -350,30 +371,30 @@ p {
   background: #132226;
 }
 
-/* line 312, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 329, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(3) .items__item:after {
   bottom: -23px;
   left: 0;
   color: #132226;
 }
 
-/* line 318, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 335, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(4) .items__item {
   top: 10px;
   left: 280px;
-  width: 310px;
+  width: 270px;
   height: 480px;
   background: #525b56;
 }
 
-/* line 325, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 342, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(4) .items__item:after {
   top: -23px;
   right: 0;
   color: #3c433f;
 }
 
-/* line 331, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 348, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(5) .items__item {
   top: 210px;
   left: 180px;
@@ -382,7 +403,7 @@ p {
   background: #be9063;
 }
 
-/* line 338, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 355, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .items__layer:nth-child(5) .items__item:after {
   top: -220px;
   font-weight: bold;
@@ -397,67 +418,67 @@ p {
 }
 
 @media (max-width: 800px) {
-  /* line 354, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 371, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items {
     width: 100%;
     height: 100vh;
   }
-  /* line 357, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 374, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__inner {
     width: 500px;
     height: 480px;
   }
-  /* line 361, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 378, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__layer:nth-child(1) .items__item {
     width: 42vw;
     height: 25vh;
     left: 14vw;
     top: 10vh;
   }
-  /* line 367, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 384, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__layer:nth-child(2) .items__item {
     width: 29vw;
     height: 10vh;
     top: 40vh;
     left: 57vw;
   }
-  /* line 373, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 390, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__layer:nth-child(3) .items__item {
     width: 50vw;
     height: 21vh;
     left: 24vw;
     top: 25vh;
   }
-  /* line 379, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 396, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__layer:nth-child(4) .items__item {
     left: 54vw;
     width: 44vw;
     height: 37vh;
   }
-  /* line 384, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 401, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__layer:nth-child(5) .items__item {
     width: 35vw;
     height: 16vh;
     top: 17vh;
     left: 37vw;
   }
-  /* line 389, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  /* line 406, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
   .items__layer:nth-child(5) .items__item:after {
     top: -150px;
   }
 }
 
-/* line 398, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 415, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 ::-moz-selection {
   background: rgba(170, 170, 170, 0.3);
 }
 
-/* line 402, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 419, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 ::selection {
   background: rgba(170, 170, 170, 0.3);
 }
 
-/* line 406, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 423, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .aboutMe-container {
   display: flex;
   position: absolute;
@@ -468,48 +489,48 @@ p {
   flex-direction: column;
 }
 
-/* line 415, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 432, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .aboutMe-container > div {
   overflow: hidden;
 }
 
-/* line 418, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 435, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .aboutMe-container > div > p {
   width: 900px;
   margin: 0;
   line-height: 117%;
 }
 
-/* line 424, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 441, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .green {
   color: #32c267;
 }
 
-/* line 428, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 445, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 div.aboutMe-container > div {
   -webkit-animation-delay: 0;
   animation-delay: 0;
 }
 
-/* line 432, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 449, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 div.aboutMe-container > div:nth-child(2) > p {
   -webkit-animation-delay: 0.05s;
   animation-delay: 0.05s;
 }
 
-/* line 437, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 454, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 div.aboutMe-container > div {
   -webkit-animation-delay: 0;
   animation-delay: 0;
 }
 
-/* line 441, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 458, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 div.aboutMe-container > div:nth-child(3) > p {
   -webkit-animation-delay: 0.075s;
   animation-delay: 0.075s;
 }
 
-/* line 446, ../../../../../../../../../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 463, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .slide-up {
   -webkit-animation: slide-up 0.3s cubic-bezier(0.65, 0, 0.35, 1) both;
   animation: slide-up 0.3s cubic-bezier(0.65, 0, 0.35, 1) both;
@@ -530,6 +551,523 @@ div.aboutMe-container > div:nth-child(3) > p {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+/* line 486, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.content {
+  user-select: none;
+  cursor: default;
+  display: flex;
+  position: absolute;
+  top: 120%;
+  right: 27px;
+  align-items: center;
+  height: 20px;
+  overflow: visible;
+  font-size: 20px;
+  line-height: 40px;
+  color: black;
+  justify-content: center;
+  background-color: #e9f0fb;
+}
+
+/* line 502, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.content__container {
+  font-weight: 600;
+  overflow: hidden;
+  height: 20px;
+  padding: 0 50px;
+}
+
+/* line 508, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.content__container:before {
+  content: "[";
+  right: 240px;
+}
+
+/* line 513, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.content__container:after {
+  content: "]";
+  position: absolute;
+  right: 25px;
+}
+
+/* line 519, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.content__container:after, .content__container:before {
+  position: absolute;
+  bottom: -9px;
+  font-weight: bold;
+  color: #525b56;
+  font-size: 20px;
+  line-height: 40px;
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* line 536, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.content__container__text {
+  position: absolute;
+  display: inline;
+  right: 147px;
+  float: left;
+  margin: 0;
+  font-size: 17px;
+}
+
+/* line 545, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.content__container__list {
+  margin-top: 44px;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 25s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+
+/* line 558, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+.content__container__list__item {
+  display: flex;
+  line-height: 50px;
+  padding-bottom: 10px;
+  justify-content: flex-start;
+}
+
+@-webkit-keyframes opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes change {
+  0%,
+  0.16%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  4.16%,
+  4.32% {
+    transform: translate3d(0, -7.69%, 0);
+  }
+  8.32%,
+  8.48% {
+    transform: translate3d(0, -15.38%, 0);
+  }
+  12.48%,
+  12.64% {
+    transform: translate3d(0, -23.07%, 0);
+  }
+  16.64%,
+  16.80% {
+    transform: translate3d(0, -30.76%, 0);
+  }
+  20.80%,
+  20.96% {
+    transform: translate3d(0, -38.45%, 0);
+  }
+  24.96%,
+  25.12% {
+    transform: translate3d(0, -46.14%, 0);
+  }
+  29.12%,
+  29.28% {
+    transform: translate3d(0, -53.83%, 0);
+  }
+  33.28%,
+  33.44% {
+    transform: translate3d(0, -61.52%, 0);
+  }
+  37.44%,
+  37.60% {
+    transform: translate3d(0, -69.21%, 0);
+  }
+  41.60%,
+  41.76% {
+    transform: translate3d(0, -76.9%, 0);
+  }
+  45.76%,
+  45.92% {
+    transform: translate3d(0, -84.59%, 0);
+  }
+  49.92%,
+  50.08% {
+    transform: translate3d(0, -92.28, 0);
+  }
+  54.08%,
+  54.24% {
+    transform: translate3d(0, -84.59%, 0);
+  }
+  58.24%,
+  58.40% {
+    transform: translate3d(0, -76.9%, 0);
+  }
+  62.4%,
+  62.56% {
+    transform: translate3d(0, -69.21%, 0);
+  }
+  66.56%,
+  66.72% {
+    transform: translate3d(0, -61.52%, 0);
+  }
+  70.72%,
+  70.88% {
+    transform: translate3d(0, -53.83, 0);
+  }
+  74.86%,
+  75.04% {
+    transform: translate3d(0, -46.14%, 0);
+  }
+  79.20%,
+  79.18% {
+    transform: translate3d(0, -38.45%, 0);
+  }
+  83.18%,
+  83.36% {
+    transform: translate3d(0, -30.76%, 0);
+  }
+  87.34%,
+  87.52% {
+    transform: translate3d(0, -23.07%, 0);
+  }
+  91.50%,
+  91.68% {
+    transform: translate3d(0, -15.38%, 0);
+  }
+  95.66%,
+  95.84% {
+    transform: translate3d(0, -7.69%, 0);
+  }
+}
+
+@-o-keyframes opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes change {
+  0%,
+  0.16%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  4.16%,
+  4.32% {
+    transform: translate3d(0, -7.69%, 0);
+  }
+  8.32%,
+  8.48% {
+    transform: translate3d(0, -15.38%, 0);
+  }
+  12.48%,
+  12.64% {
+    transform: translate3d(0, -23.07%, 0);
+  }
+  16.64%,
+  16.80% {
+    transform: translate3d(0, -30.76%, 0);
+  }
+  20.80%,
+  20.96% {
+    transform: translate3d(0, -38.45%, 0);
+  }
+  24.96%,
+  25.12% {
+    transform: translate3d(0, -46.14%, 0);
+  }
+  29.12%,
+  29.28% {
+    transform: translate3d(0, -53.83%, 0);
+  }
+  33.28%,
+  33.44% {
+    transform: translate3d(0, -61.52%, 0);
+  }
+  37.44%,
+  37.60% {
+    transform: translate3d(0, -69.21%, 0);
+  }
+  41.60%,
+  41.76% {
+    transform: translate3d(0, -76.9%, 0);
+  }
+  45.76%,
+  45.92% {
+    transform: translate3d(0, -84.59%, 0);
+  }
+  49.92%,
+  50.08% {
+    transform: translate3d(0, -92.28, 0);
+  }
+  54.08%,
+  54.24% {
+    transform: translate3d(0, -84.59%, 0);
+  }
+  58.24%,
+  58.40% {
+    transform: translate3d(0, -76.9%, 0);
+  }
+  62.4%,
+  62.56% {
+    transform: translate3d(0, -69.21%, 0);
+  }
+  66.56%,
+  66.72% {
+    transform: translate3d(0, -61.52%, 0);
+  }
+  70.72%,
+  70.88% {
+    transform: translate3d(0, -53.83, 0);
+  }
+  74.86%,
+  75.04% {
+    transform: translate3d(0, -46.14%, 0);
+  }
+  79.20%,
+  79.18% {
+    transform: translate3d(0, -38.45%, 0);
+  }
+  83.18%,
+  83.36% {
+    transform: translate3d(0, -30.76%, 0);
+  }
+  87.34%,
+  87.52% {
+    transform: translate3d(0, -23.07%, 0);
+  }
+  91.50%,
+  91.68% {
+    transform: translate3d(0, -15.38%, 0);
+  }
+  95.66%,
+  95.84% {
+    transform: translate3d(0, -7.69%, 0);
+  }
+}
+
+@-moz-keyframes opacity {
+  0%,
+  0.16%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  4.16%,
+  4.32% {
+    transform: translate3d(0, -7.69%, 0);
+  }
+  8.32%,
+  8.48% {
+    transform: translate3d(0, -15.38%, 0);
+  }
+  12.48%,
+  12.64% {
+    transform: translate3d(0, -23.07%, 0);
+  }
+  16.64%,
+  16.80% {
+    transform: translate3d(0, -30.76%, 0);
+  }
+  20.80%,
+  20.96% {
+    transform: translate3d(0, -38.45%, 0);
+  }
+  24.96%,
+  25.12% {
+    transform: translate3d(0, -46.14%, 0);
+  }
+  29.12%,
+  29.28% {
+    transform: translate3d(0, -53.83%, 0);
+  }
+  33.28%,
+  33.44% {
+    transform: translate3d(0, -61.52%, 0);
+  }
+  37.44%,
+  37.60% {
+    transform: translate3d(0, -69.21%, 0);
+  }
+  41.60%,
+  41.76% {
+    transform: translate3d(0, -76.9%, 0);
+  }
+  45.76%,
+  45.92% {
+    transform: translate3d(0, -84.59%, 0);
+  }
+  49.92%,
+  50.08% {
+    transform: translate3d(0, -92.28, 0);
+  }
+  54.08%,
+  54.24% {
+    transform: translate3d(0, -84.59%, 0);
+  }
+  58.24%,
+  58.40% {
+    transform: translate3d(0, -76.9%, 0);
+  }
+  62.4%,
+  62.56% {
+    transform: translate3d(0, -69.21%, 0);
+  }
+  66.56%,
+  66.72% {
+    transform: translate3d(0, -61.52%, 0);
+  }
+  70.72%,
+  70.88% {
+    transform: translate3d(0, -53.83, 0);
+  }
+  74.86%,
+  75.04% {
+    transform: translate3d(0, -46.14%, 0);
+  }
+  79.20%,
+  79.18% {
+    transform: translate3d(0, -38.45%, 0);
+  }
+  83.18%,
+  83.36% {
+    transform: translate3d(0, -30.76%, 0);
+  }
+  87.34%,
+  87.52% {
+    transform: translate3d(0, -23.07%, 0);
+  }
+  91.50%,
+  91.68% {
+    transform: translate3d(0, -15.38%, 0);
+  }
+  95.66%,
+  95.84% {
+    transform: translate3d(0, -7.69%, 0);
+  }
+}
+
+@keyframes opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes change {
+  0%,
+  0.16%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  4.16%,
+  4.32% {
+    transform: translate3d(0, -7.69%, 0);
+  }
+  8.32%,
+  8.48% {
+    transform: translate3d(0, -15.38%, 0);
+  }
+  12.48%,
+  12.64% {
+    transform: translate3d(0, -23.07%, 0);
+  }
+  16.64%,
+  16.80% {
+    transform: translate3d(0, -30.76%, 0);
+  }
+  20.80%,
+  20.96% {
+    transform: translate3d(0, -38.45%, 0);
+  }
+  24.96%,
+  25.12% {
+    transform: translate3d(0, -46.14%, 0);
+  }
+  29.12%,
+  29.28% {
+    transform: translate3d(0, -53.83%, 0);
+  }
+  33.28%,
+  33.44% {
+    transform: translate3d(0, -61.52%, 0);
+  }
+  37.44%,
+  37.60% {
+    transform: translate3d(0, -69.21%, 0);
+  }
+  41.60%,
+  41.76% {
+    transform: translate3d(0, -76.9%, 0);
+  }
+  45.76%,
+  45.92% {
+    transform: translate3d(0, -84.59%, 0);
+  }
+  49.92%,
+  50.08% {
+    transform: translate3d(0, -92.28, 0);
+  }
+  54.08%,
+  54.24% {
+    transform: translate3d(0, -84.59%, 0);
+  }
+  58.24%,
+  58.40% {
+    transform: translate3d(0, -76.9%, 0);
+  }
+  62.4%,
+  62.56% {
+    transform: translate3d(0, -69.21%, 0);
+  }
+  66.56%,
+  66.72% {
+    transform: translate3d(0, -61.52%, 0);
+  }
+  70.72%,
+  70.88% {
+    transform: translate3d(0, -53.83, 0);
+  }
+  74.86%,
+  75.04% {
+    transform: translate3d(0, -46.14%, 0);
+  }
+  79.20%,
+  79.18% {
+    transform: translate3d(0, -38.45%, 0);
+  }
+  83.18%,
+  83.36% {
+    transform: translate3d(0, -30.76%, 0);
+  }
+  87.34%,
+  87.52% {
+    transform: translate3d(0, -23.07%, 0);
+  }
+  91.50%,
+  91.68% {
+    transform: translate3d(0, -15.38%, 0);
+  }
+  95.66%,
+  95.84% {
+    transform: translate3d(0, -7.69%, 0);
   }
 }
 
