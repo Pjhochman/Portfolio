@@ -14,7 +14,7 @@ const FadeInLeft = styled.div`
 
 const Aside = () => {
   const [hover, setHover] = useState("colorPalette");
-  const [width, setWidth] = useState({ width: "0vw" });
+  const [width, setWidth] = useState({ width: "0%" });
   const [isActive, setActive] = useState(false);
 
   const toggleClass = () => {
@@ -23,11 +23,11 @@ const Aside = () => {
 
   const onHover = () => {
     setHover("colorPalette active");
-    setWidth({ width: "100vw" });
+    setWidth({ width: "50%" });
   };
   const onLeave = () => {
     setHover("colorPalette active");
-    setWidth({ width: "0vw" });
+    setWidth({ width: "0%" });
   };
 
   return (
