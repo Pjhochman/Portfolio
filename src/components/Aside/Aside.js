@@ -23,7 +23,7 @@ const Aside = () => {
 
   const onHover = () => {
     setHover("colorPalette active");
-    setWidth({ width: "50%" });
+    setWidth({ width: "100%" });
   };
   const onLeave = () => {
     setHover("colorPalette active");
