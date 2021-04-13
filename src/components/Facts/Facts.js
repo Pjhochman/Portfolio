@@ -71,7 +71,7 @@ const Facts = props => {
             <li>I'm into interior design</li>
             <li>I love to eat (not so much cooking)</li>
             <li>I'm a bit of a clean freak</li>
-            <li>I want to live on New Orleans</li>
+            <li>I want to live in New Orleans</li>
             <li>I worship Bill Evans</li>
             <li>I'm addicted to 'semla' buns</li>
           </ul>
