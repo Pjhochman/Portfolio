@@ -12,6 +12,8 @@ $text-color-black: #221e41;
   font-weight: 300;
   margin: 0;
   font-size: 26px;
+  user-select: none;
+  cursor: default;
 }
 
 #paragraph {
@@ -20,5 +22,7 @@ $text-color-black: #221e41;
   margin: 0;
   font-size: 20px;
   white-space: normal;
+  user-select: none;
+  cursor: default;
   color: $text-color-black;
 }

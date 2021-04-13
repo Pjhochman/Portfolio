@@ -3,7 +3,7 @@ $text-color-black: #221e41;
 #linkedin,
 #github,
 #contact {
-  -webkit-user-select: none;
+  user-select: none;
   height: 100%;
   user-select: none;
   color: #221e41;
@@ -12,6 +12,7 @@ $text-color-black: #221e41;
   justify-content: center;
   text-decoration: none;
   border: 0;
+  outline: none;
 }
 
 .information-container,

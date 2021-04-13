@@ -97,5 +97,7 @@ footer {
   margin: 0;
   font-weight: 300;
   font-size: 15px;
+  cursor: default;
+  user-select: none;
   color: $text-color-black;
 }

@@ -10,9 +10,11 @@ ul {
 #list > li {
   margin-bottom: 14px;
   color: #221e41;
+  user-select: none;
+  cursor: default;
 }
 
-/* line 15, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/facts.scss */
+/* line 17, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/facts.scss */
 #randomFacts {
   font-weight: bold;
   margin: 0;
@@ -20,7 +22,7 @@ ul {
   color: #221e41;
 }
 
-/* line 22, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/facts.scss */
+/* line 24, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/facts.scss */
 #list {
   color: #61677c;
   font-weight: 300;

@@ -12,15 +12,19 @@
   font-weight: 300;
   margin: 0;
   font-size: 26px;
+  user-select: none;
+  cursor: default;
 }
 
-/* line 17, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+/* line 19, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
 #paragraph {
   color: black;
   font-weight: 300;
   margin: 0;
   font-size: 20px;
   white-space: normal;
+  user-select: none;
+  cursor: default;
   color: #221e41;
 }
 

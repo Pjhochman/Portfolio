@@ -5,8 +5,8 @@
 		"../scss/facts.scss"
 	],
 	"sourcesContent": [
-		"$text-color-black: #221e41;\n\nul {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n  color: $text-color-black;\n}\n\n#list > li {\n  margin-bottom: 14px;\n  color: $text-color-black;\n}\n\n#randomFacts {\n  font-weight: bold;\n  margin: 0;\n  font-size: 36px;\n  color: $text-color-black;\n}\n\n#list {\n  color: #61677c;\n  font-weight: 300;\n  margin: 0;\n  font-size: 20px;\n}\n"
+		"$text-color-black: #221e41;\n\nul {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n  color: $text-color-black;\n}\n\n#list > li {\n  margin-bottom: 14px;\n  color: $text-color-black;\n  user-select: none;\n  cursor: default;\n}\n\n#randomFacts {\n  font-weight: bold;\n  margin: 0;\n  font-size: 36px;\n  color: $text-color-black;\n}\n\n#list {\n  color: #61677c;\n  font-weight: 300;\n  margin: 0;\n  font-size: 20px;\n}\n"
 	],
 	"names": [],
-	"mappings": ";AAEA,AAAA,EAAE,CAAC;EACD,eAAe,EAAE,IAAI;EACrB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,KAAK,EANY,OAAO;CAOzB;;;AAED,AAAA,KAAK,GAAG,EAAE,CAAC;EACT,aAAa,EAAE,IAAI;EACnB,KAAK,EAXY,OAAO;CAYzB;;;AAED,AAAA,YAAY,CAAC;EACX,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,CAAC;EACT,SAAS,EAAE,IAAI;EACf,KAAK,EAlBY,OAAO;CAmBzB;;;AAED,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,CAAC;EACT,SAAS,EAAE,IAAI;CAChB"
+	"mappings": ";AAEA,AAAA,EAAE,CAAC;EACD,eAAe,EAAE,IAAI;EACrB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,KAAK,EANY,OAAO;CAOzB;;;AAED,AAAA,KAAK,GAAG,EAAE,CAAC;EACT,aAAa,EAAE,IAAI;EACnB,KAAK,EAXY,OAAO;EAYxB,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,OAAO;CAChB;;;AAED,AAAA,YAAY,CAAC;EACX,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,CAAC;EACT,SAAS,EAAE,IAAI;EACf,KAAK,EApBY,OAAO;CAqBzB;;;AAED,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,CAAC;EACT,SAAS,EAAE,IAAI;CAChB"
 }

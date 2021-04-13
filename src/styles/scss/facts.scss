@@ -10,6 +10,8 @@ ul {
 #list > li {
   margin-bottom: 14px;
   color: $text-color-black;
+  user-select: none;
+  cursor: default;
 }
 
 #randomFacts {

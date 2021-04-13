@@ -17,11 +17,12 @@ button {
   outline: none;
   font-size: 11px;
   font-weight: 500;
+  user-select: none;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-/* line 24, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+/* line 25, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:before,
 #resumeButton:after {
   position: absolute;
@@ -29,7 +30,7 @@ button {
   transition: all 0.25s;
 }
 
-/* line 31, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+/* line 32, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:before {
   border-bottom: 2px solid #221e41;
   border-left: 2px solid #221e41;
@@ -39,7 +40,7 @@ button {
   bottom: -10px;
 }
 
-/* line 40, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+/* line 41, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:after {
   border-top: 2px solid #221e41;
   border-right: 2px solid #221e41;
@@ -49,13 +50,13 @@ button {
   right: -10px;
 }
 
-/* line 49, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+/* line 50, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:hover:before {
   width: 112%;
   height: 140%;
 }
 
-/* line 54, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+/* line 55, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:hover:after {
   width: 112%;
   height: 140%;
