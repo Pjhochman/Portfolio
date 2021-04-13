@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"../scss/main.scss"
+	],
+	"sourcesContent": [
+		"#aboutMe {\n  font-weight: bold;\n  margin: 0;\n  font-size: 80px;\n}\n\n#intro {\n  color: #61677c;\n  font-weight: 300;\n  margin: 0;\n  font-size: 26px;\n}\n\n#paragraph {\n  color: black;\n  font-weight: 300;\n  margin: 0;\n  font-size: 20px;\n  white-space: normal;\n}\n"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,QAAQ,CAAC;EACP,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,CAAC;EACT,SAAS,EAAE,IAAI;CAChB;;;AAED,AAAA,MAAM,CAAC;EACL,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,CAAC;EACT,SAAS,EAAE,IAAI;CAChB;;;AAED,AAAA,UAAU,CAAC;EACT,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,CAAC;EACT,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,MAAM;CACpB"
+}

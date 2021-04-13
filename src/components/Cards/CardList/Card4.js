@@ -50,7 +50,7 @@ const Card4 = () => {
             href="https://obscure-shore-89574.herokuapp.com/"
             target="_blank"
             rel="noreferrer"
-            className="card4Container"
+            className="cardContainer"
             onMouseEnter={() => {
               setVisible({ display: "flex" });
             }}
@@ -58,8 +58,8 @@ const Card4 = () => {
               setVisible({ display: "none" });
             }}
           >
-            <div id="card4topContainer">
-              <FadeIn className="card4top" style={visible}>
+            <div>
+              <FadeIn className="card-top" style={visible}>
                 <p style={{ marginLeft: "10px" }}>
                   <br />
                   <strong style={{ color: "white" }}>
@@ -71,7 +71,7 @@ const Card4 = () => {
                 </p>
               </FadeIn>
               <br />
-              <FadeInRight1 className="card4top" style={visible}>
+              <FadeInRight1 className="card-top" style={visible}>
                 <p
                   style={{
                     marginLeft: "10px",
@@ -82,7 +82,7 @@ const Card4 = () => {
                   Designed for Bands to
                 </p>
               </FadeInRight1>
-              <FadeInRight2 className="card4top" style={visible}>
+              <FadeInRight2 className="card-top" style={visible}>
                 <p
                   style={{
                     marginLeft: "10px",
@@ -94,8 +94,8 @@ const Card4 = () => {
                 </p>
               </FadeInRight2>
             </div>
-            <div id="card4bottomContainer">
-              <FadeInLeft1 className="card4bottom" style={visible}>
+            <div className="card-bottom-container">
+              <FadeInLeft1 className="card-bottom" style={visible}>
                 <p
                   style={{
                     marginRight: "0px"
@@ -124,7 +124,7 @@ const Card4 = () => {
                   ))}
                 </p>
               </FadeInLeft1>
-              <FadeInLeft2 className="card4bottom" style={visible}>
+              <FadeInLeft2 className="card-bottom" style={visible}>
                 <p style={{ marginRight: "0px", color: "white" }}>
                   PASSWORD:{" "}
                   <span
@@ -138,7 +138,7 @@ const Card4 = () => {
                   </span>
                 </p>
               </FadeInLeft2>
-              <FadeIn className="card4bottom" style={visible}>
+              <FadeIn className="card-bottom" style={visible}>
                 <br />
                 <p style={{ marginRight: "0px" }}>
                   <strong style={{ color: "white" }}>

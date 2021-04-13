@@ -22,7 +22,7 @@ const Card4 = () => {
             href="https://www.accedo.tv/one/"
             target="_blank"
             rel="noreferrer"
-            className="card4Container"
+            className="cardContainer"
             onMouseEnter={() => {
               setVisible({ display: "flex" });
             }}
@@ -30,8 +30,8 @@ const Card4 = () => {
               setVisible({ display: "none" });
             }}
           >
-            <div id="card4topContainer">
-              <FadeIn className="card5top" style={visible}>
+            <div>
+              <FadeIn className="card-top-left" style={visible}>
                 <span style={{ margin: "0" }}>
                   <br />
                   <strong style={{ fontSize: "10px" }}>
@@ -40,29 +40,21 @@ const Card4 = () => {
                   </strong>
                 </span>
               </FadeIn>
-              <FadeIn className="card5top" style={visible}>
+              <FadeIn className="card-top-left" style={visible}>
                 <br />
-                <span style={{ fontWeight: "bold", fontSize: "10px" }}>
-                  Accedo.tv
-                </span>
+                <span>Accedo.tv</span>
               </FadeIn>
-              <FadeIn className="card5top" style={visible}>
-                <span style={{ fontWeight: "400", fontSize: "10px" }}>
-                  S. Engineer Intern
-                </span>
+              <FadeIn className="card-top-left" style={visible}>
+                <span>S. Engineer Intern</span>
               </FadeIn>
             </div>
 
-            <div id="card4bottomContainer">
-              <FadeIn className="card5bottom" style={visible}>
-                <span style={{ fontWeight: "400", fontSize: "10px" }}>
-                  React with GraphQL
-                </span>
+            <div className="card-bottom-container">
+              <FadeIn className="card-bottom-center" style={visible}>
+                <span>React with GraphQL</span>
               </FadeIn>
-              <FadeIn className="card5bottom" style={visible}>
-                <span style={{ fontWeight: "400", fontSize: "10px" }}>
-                  Cypress E2E
-                </span>
+              <FadeIn className="card-bottom-center" style={visible}>
+                <span>Cypress E2E</span>
               </FadeIn>
               <br />
             </div>

@@ -1,0 +1,57 @@
+$text-color-black: #221e41;
+
+button {
+  background: transparent;
+  border: none;
+}
+
+#resumeButton {
+  display: block;
+  width: 150px;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: $text-color-black;
+  cursor: pointer;
+  outline: none;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#resumeButton:before,
+#resumeButton:after {
+  position: absolute;
+  content: "";
+  transition: all 0.25s;
+}
+
+#resumeButton:before {
+  border-bottom: 2px solid $text-color-black;
+  border-left: 2px solid $text-color-black;
+  width: 10%;
+  height: 33%;
+  left: -10px;
+  bottom: -10px;
+}
+
+#resumeButton:after {
+  border-top: 2px solid $text-color-black;
+  border-right: 2px solid $text-color-black;
+  width: 10%;
+  height: 33%;
+  top: -10px;
+  right: -10px;
+}
+
+#resumeButton:hover:before {
+  width: 112%;
+  height: 140%;
+}
+
+#resumeButton:hover:after {
+  width: 112%;
+  height: 140%;
+}

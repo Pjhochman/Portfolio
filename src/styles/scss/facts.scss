@@ -1,0 +1,27 @@
+$text-color-black: #221e41;
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: $text-color-black;
+}
+
+#list > li {
+  margin-bottom: 14px;
+  color: $text-color-black;
+}
+
+#randomFacts {
+  font-weight: bold;
+  margin: 0;
+  font-size: 36px;
+  color: $text-color-black;
+}
+
+#list {
+  color: #61677c;
+  font-weight: 300;
+  margin: 0;
+  font-size: 20px;
+}

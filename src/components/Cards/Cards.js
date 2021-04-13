@@ -4,6 +4,7 @@ import Card2 from "./CardList/Card1";
 import Card3 from "./CardList/Card3";
 import Card4 from "./CardList/Card4";
 import Card5 from "./CardList/Card5";
+import "../../styles/css/cards.css";
 
 const Cards = () => {
   return (

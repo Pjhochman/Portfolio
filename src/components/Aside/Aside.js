@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../../styles/css/aside.css";
 import styled, { keyframes } from "styled-components";
 import { fadeInRightBig, fadeInLeftBig } from "react-animations";
 
@@ -38,7 +39,8 @@ const Aside = () => {
           <div id="designer" onMouseEnter={onHover} onMouseLeave={onLeave}>
             <h2 className="title1">designer</h2>
             <p className="description">
-              Passion for designing beautiful and functional experiences.
+              I have a passion for designing beautiful and functional
+              experiences.
             </p>
           </div>
         </FadeInLeft>
@@ -48,7 +50,7 @@ const Aside = () => {
               className="content"
               style={isActive ? { display: "flex" } : { display: "none" }}
             >
-              <p className="content__container__text">I'm used to</p>
+              <p className="content__container__text">I'm skillful in</p>
               <div className="content__container">
                 <ul className="content__container__list">
                   <li className="content__container__list__item">javascript</li>

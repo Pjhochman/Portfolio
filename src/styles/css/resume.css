@@ -1,0 +1,64 @@
+/* line 3, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+button {
+  background: transparent;
+  border: none;
+}
+
+/* line 8, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+#resumeButton {
+  display: block;
+  width: 150px;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: #221e41;
+  cursor: pointer;
+  outline: none;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* line 24, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+#resumeButton:before,
+#resumeButton:after {
+  position: absolute;
+  content: "";
+  transition: all 0.25s;
+}
+
+/* line 31, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+#resumeButton:before {
+  border-bottom: 2px solid #221e41;
+  border-left: 2px solid #221e41;
+  width: 10%;
+  height: 33%;
+  left: -10px;
+  bottom: -10px;
+}
+
+/* line 40, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+#resumeButton:after {
+  border-top: 2px solid #221e41;
+  border-right: 2px solid #221e41;
+  width: 10%;
+  height: 33%;
+  top: -10px;
+  right: -10px;
+}
+
+/* line 49, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+#resumeButton:hover:before {
+  width: 112%;
+  height: 140%;
+}
+
+/* line 54, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+#resumeButton:hover:after {
+  width: 112%;
+  height: 140%;
+}
+
+/*# sourceMappingURL=resume.css.map */

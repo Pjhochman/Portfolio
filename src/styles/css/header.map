@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "header.css",
+	"sources": [
+		"../scss/header.scss"
+	],
+	"sourcesContent": [
+		"$text-color-black: #221e41;\n\n#linkedin,\n#github,\n#contact {\n  -webkit-user-select: none;\n  height: 100%;\n  user-select: none;\n  color: #221e41;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-decoration: none;\n  border: 0;\n}\n\n.information-container,\n.contact-container {\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n\n#name {\n  user-select: none;\n  color: $text-color-black;\n}\n\n#profession {\n  user-select: none;\n  color: #61677c;\n}\n"
+	],
+	"names": [],
+	"mappings": ";AAEA,AAAA,SAAS;AACT,OAAO;AACP,QAAQ,CAAC;EACP,mBAAmB,EAAE,IAAI;EACzB,MAAM,EAAE,IAAI;EACZ,WAAW,EAAE,IAAI;EACjB,KAAK,EAAE,OAAO;EACd,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,eAAe,EAAE,IAAI;EACrB,MAAM,EAAE,CAAC;CACV;;;AAED,AAAA,sBAAsB;AACtB,kBAAkB,CAAC;EACjB,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CACpB;;;AAED,AAAA,KAAK,CAAC;EACJ,WAAW,EAAE,IAAI;EACjB,KAAK,EA3BY,OAAO;CA4BzB;;;AAED,AAAA,WAAW,CAAC;EACV,WAAW,EAAE,IAAI;EACjB,KAAK,EAAE,OAAO;CACf"
+}

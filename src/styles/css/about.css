@@ -1,0 +1,27 @@
+/* line 3, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+#aboutMe {
+  font-weight: bold;
+  margin: 0;
+  font-size: 80px;
+  color: #221e41;
+}
+
+/* line 10, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+#intro {
+  color: #61677c;
+  font-weight: 300;
+  margin: 0;
+  font-size: 26px;
+}
+
+/* line 17, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+#paragraph {
+  color: black;
+  font-weight: 300;
+  margin: 0;
+  font-size: 20px;
+  white-space: normal;
+  color: #221e41;
+}
+
+/*# sourceMappingURL=about.css.map */

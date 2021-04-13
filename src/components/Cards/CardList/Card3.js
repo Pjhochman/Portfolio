@@ -31,7 +31,8 @@ const Card3 = () => {
             href="https://project11.netlify.app/"
             target="_blank"
             rel="noreferrer"
-            className="card4Container"
+            style={{ margin: "0" }}
+            className="cardContainer"
             onMouseEnter={() => {
               setVisible({ display: "flex" });
             }}
@@ -39,22 +40,22 @@ const Card3 = () => {
               setVisible({ display: "none" });
             }}
           >
-            <div id="card4bottomContainer" style={{ height: "100%" }}>
-              <FadeInLeft1 className="card4bottom" style={visible}>
+            <div className="card-bottom-container" style={{ height: "100%" }}>
+              <FadeInLeft1 className="card-bottom" style={visible}>
                 <p>
                   <span style={{ fontSize: "11px", color: "white" }}>
                     Web VR experience Created
                   </span>
                 </p>
               </FadeInLeft1>
-              <FadeInLeft2 className="card4bottom" style={visible}>
+              <FadeInLeft2 className="card-bottom" style={visible}>
                 <p>
                   <span style={{ fontSize: "11px", color: "white" }}>
                     with A-frame<strong>.</strong>
                   </span>
                 </p>
               </FadeInLeft2>
-              <FadeIn className="card4bottom" style={visible}>
+              <FadeIn className="card-bottom" style={visible}>
                 <br />
                 <p>
                   <span style={{ fontSize: "11px", color: "white" }}>

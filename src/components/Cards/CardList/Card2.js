@@ -35,7 +35,7 @@ const Card2 = () => {
             href="https://peterscolorpalette.netlify.app/"
             target="_blank"
             rel="noreferrer"
-            className="card4Container"
+            className="cardContainer"
             onMouseEnter={() => {
               setVisible({ display: "flex" });
             }}
@@ -43,8 +43,8 @@ const Card2 = () => {
               setVisible({ display: "none" });
             }}
           >
-            <div id="card4topContainer">
-              <FadeIn className="card4top" style={visible}>
+            <div>
+              <FadeIn className="card-top" style={visible}>
                 <p>
                   <br />
                   <strong style={{ fontSize: "11px", color: "white" }}>
@@ -62,17 +62,17 @@ const Card2 = () => {
                 </p>
               </FadeIn>
               <br />
-              <FadeInRight1 className="card4top" style={visible}>
+              <FadeInRight1 className="card-top" style={visible}>
                 <p style={{ fontSize: "11px", color: "white" }}>
                   Graphic and Interactive design
                 </p>
               </FadeInRight1>
-              <FadeInRight2 className="card4top" style={visible}>
+              <FadeInRight2 className="card-top" style={visible}>
                 <p style={{ fontSize: "11px", color: "white" }}>
                   using the P5.js
                 </p>
               </FadeInRight2>
-              <FadeInRight3 className="card4top" style={visible}>
+              <FadeInRight3 className="card-top" style={visible}>
                 <p style={{ fontSize: "11px", color: "white" }}>
                   library<strong>.</strong>
                 </p>

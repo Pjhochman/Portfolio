@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import "../../styles/css/header.css";
 import styled, { keyframes } from "styled-components";
 import { fadeIn } from "react-animations";
 
@@ -9,46 +10,12 @@ const FadeInDown = styled.div`
 `;
 
 const Header = () => {
-  const [hover, setHover] = useState({ display: "none" });
-  const onHover = () => {
-    setHover({ display: "none" });
-    console.log("visible");
-  };
-  const onLeave = () => {
-    setHover({ display: "none" });
-  };
   return (
     <FadeInDown>
       <header>
-        <div
-          className="information-container"
-          onMouseEnter={onHover}
-          onMouseLeave={onLeave}
-        >
+        <div className="information-container">
           <h1 id="name">Peter Hochman</h1>
-          <h1 id="profession">Junior Front End Developer</h1>
-
-          <div className="aboutMe-container" style={hover}>
-            <div>
-              <p className="slide-up">
-                <span className="green">Hello there</span>,
-              </p>
-            </div>
-            <div>
-              <p className="slide-up">
-                {" "}
-                I enjoy turning complex problems into simple, beautiful and
-                intuitive designs.
-              </p>
-            </div>
-            <div>
-              <p className="slide-up">
-                {" "}
-                When I'm not pushing pixels, you'll find me playing piano,
-                listening to jazz or playing video games.
-              </p>
-            </div>
-          </div>
+          <h1 id="profession">Front End Developer</h1>
         </div>
         <div className="contact-container">
           <a

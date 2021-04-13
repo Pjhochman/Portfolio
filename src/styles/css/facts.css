@@ -1,0 +1,31 @@
+/* line 3, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/facts.scss */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #221e41;
+}
+
+/* line 10, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/facts.scss */
+#list > li {
+  margin-bottom: 14px;
+  color: #221e41;
+}
+
+/* line 15, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/facts.scss */
+#randomFacts {
+  font-weight: bold;
+  margin: 0;
+  font-size: 36px;
+  color: #221e41;
+}
+
+/* line 22, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/facts.scss */
+#list {
+  color: #61677c;
+  font-weight: 300;
+  margin: 0;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=facts.css.map */

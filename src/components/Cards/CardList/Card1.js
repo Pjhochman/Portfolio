@@ -29,7 +29,7 @@ const Card1 = () => {
             href="https://www.hyperisland.com/programs-and-courses/frontend-developer"
             target="_blank"
             rel="noreferrer"
-            className="card4Container"
+            className="cardContainer"
             onMouseEnter={() => {
               setVisible({ display: "flex" });
             }}
@@ -37,8 +37,8 @@ const Card1 = () => {
               setVisible({ display: "none" });
             }}
           >
-            <div id="card4bottomContainer" style={{ height: "100%" }}>
-              <FadeIn className="card4bottom" style={visible}>
+            <div className="card-bottom-container" style={{ height: "100%" }}>
+              <FadeIn className="card-bottom" style={visible}>
                 <br />
 
                 <span style={{ margin: "0 20px 0 0" }}>
@@ -49,7 +49,7 @@ const Card1 = () => {
                   </strong>
                 </span>
               </FadeIn>
-              <FadeInLeft1 className="card4bottom" style={visible}>
+              <FadeInLeft1 className="card-bottom" style={visible}>
                 <span
                   style={{
                     margin: "0 20px 10px 0",
