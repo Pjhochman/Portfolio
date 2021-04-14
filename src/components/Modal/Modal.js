@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -8,13 +8,11 @@ const Overlay = styled(motion.div)`
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 100;
   overflow-y: hidden;
 `;
 const ModalContainer = styled(motion.div)`
-  width: 50%;
-  height: 50%;
+  width: auto;
+  height: 80%;
   background-color: #e9f0fb;
   position: absolute;
   top: 50%;
@@ -38,10 +36,19 @@ const modalVariant = {
 };
 const containerVariant = {
   initial: { top: "-50%", transition: { type: "spring" } },
-  isOpen: { top: "50%" },
+  isOpen: { top: "55%" },
   exit: { top: "-50%" }
 };
 const Modal = ({ handleClose, children, isOpen }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.background = "rgba(0, 0, 0, 0.2)";
+    } else {
+      document.body.style.overflow = "unset";
+      document.body.style.background = "#e9f0fb";
+    }
+  }, [isOpen]);
   return (
     <AnimatePresence>
       {isOpen && (
@@ -52,6 +59,14 @@ const Modal = ({ handleClose, children, isOpen }) => {
           variants={modalVariant}
         >
           <ModalContainer variants={containerVariant}>
+            <a
+              id="download"
+              href="https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/Peter+Hochman_CV.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download
+            </a>
             <CloseButton
               onClick={handleClose}
               xmlns="http://www.w3.org/2000/svg"

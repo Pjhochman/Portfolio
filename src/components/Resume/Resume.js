@@ -94,7 +94,7 @@ const Resume = props => {
       </ResumeImage>
       <Modal isOpen={isOpen} handleClose={() => handleOpenModal(false)}>
         <ModalContent>
-          <h1>Resume</h1>
+          <img src={resumeImage} alt={"Resume"} style={{ height: "100%", border: "2px solid black", borderRadius: "3px"}} />
         </ModalContent>
       </Modal>
     </Container>
