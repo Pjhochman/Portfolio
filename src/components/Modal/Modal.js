@@ -44,6 +44,7 @@ const Modal = ({ handleClose, children, isOpen }) => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
       document.body.style.background = "rgba(0, 0, 0, 0.2)";
+
     } else {
       document.body.style.overflow = "unset";
       document.body.style.background = "#e9f0fb";

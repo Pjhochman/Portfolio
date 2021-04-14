@@ -58,6 +58,7 @@ button {
 }
 
 #download {
+  user-select: none;
   letter-spacing: 0.8px;
   border: 1px solid $text-color-black;
   color: $text-color-black;
