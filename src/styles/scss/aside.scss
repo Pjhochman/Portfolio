@@ -1,3 +1,32 @@
+aside {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  bottom: 40%;
+  right: 0;
+  left: 0;
+  height: auto;
+  font-weight: 300;
+  margin: auto;
+  z-index: 0;
+}
+
+@media (min-width: 1250px) {
+  aside {
+    width: 90%;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1250px) {
+  aside {
+    width: 100%;
+    font-size: 30px;
+  }
+}
+
 .colorPalette {
   position: absolute;
   width: 100%;
@@ -542,6 +571,78 @@
     95.66%,
     95.84% {
       transform: translate3d(0, -7.69%, 0);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    left: 500px;
+    top: 210px;
+
+    &__container {
+      font-weight: 600;
+      overflow: hidden;
+      height: 20px;
+      padding: 0 50px;
+
+      &:before {
+        content: "[";
+        right: 330px;
+      }
+
+      &:after {
+        content: "]";
+        position: absolute;
+        right: 125px;
+      }
+
+      &:after,
+      &:before {
+        position: absolute;
+        bottom: -9px;
+        font-weight: bold;
+        color: #525b56;
+        font-size: 20px;
+        line-height: 40px;
+
+        -webkit-animation-name: opacity;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        animation-name: opacity;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      &__text {
+        position: absolute;
+        display: inline;
+        right: 147px;
+        float: left;
+        margin: 0;
+        font-size: 17px;
+      }
+
+      &__list {
+        margin-top: 44px;
+        padding: 0;
+        text-align: center;
+        list-style: none;
+
+        -webkit-animation-name: change;
+        -webkit-animation-duration: 25s;
+        -webkit-animation-iteration-count: infinite;
+        animation-name: change;
+        animation-duration: 25s;
+        animation-iteration-count: infinite;
+
+        &__item {
+          display: flex;
+          line-height: 50px;
+          padding-bottom: 10px;
+          justify-content: flex-start;
+        }
+      }
     }
   }
 }

@@ -25,23 +25,6 @@ header {
   z-index: 10;
 }
 
-aside {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  bottom: 40%;
-  right: 0;
-  left: 0;
-  width: 90%;
-  height: auto;
-  font-weight: 300;
-  margin: auto;
-  font-size: 40px;
-  z-index: 0;
-}
-
 .title1 {
   width: 100%;
   margin: 0 0 20px 0;
@@ -66,17 +49,84 @@ aside {
   }
 }
 
+@media (max-width: 1250px) {
+  .title1,
+  .title2 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .title1,
+  .title2 {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
 .description {
   white-space: normal;
-  font-size: 17px;
   margin: 0;
+  font-size: 17px;
+
   user-select: none;
   cursor: default;
   color: $text-color-black;
 }
 
+@media (min-width: 1250px) {
+  .description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .description {
+    margin: 0 50px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .description {
+    margin: 0;
+    padding-left: 70px;
+    width: 267px;
+  }
+}
+
+@media (max-width: 900px) {
+  .description {
+    display: none;
+  }
+}
+
 #designer {
   width: 280px;
+}
+
+@media (max-width: 1100px) {
+  #designer {
+    position: absolute;
+    width: 280px;
+    bottom: 260px;
+    right: 55vw;
+  }
+}
+
+@media (max-width: 900px) {
+  #designer {
+    bottom: 270px;
+    right: 49vw;
+  }
 }
 
 #coder {
@@ -84,6 +134,22 @@ aside {
   flex-direction: column;
   align-items: flex-start;
   width: 280px;
+}
+
+@media (max-width: 1100px) {
+  #coder {
+    position: absolute;
+    height: 130px;
+    left: 46vw;
+    top: 110px;
+  }
+}
+
+@media (max-width: 900px) {
+  #coder {
+    left: 51vw;
+    top: 155px;
+  }
 }
 
 h1 {

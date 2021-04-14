@@ -219,4 +219,103 @@
   color: #a17143;
 }
 
+@media (max-width: 1250px) {
+  /* line 195, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items {
+    width: 100%;
+    height: 100vh;
+  }
+  /* line 198, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items__inner {
+    top: 20px;
+    left: 1%;
+    width: 550px;
+    max-width: 800px;
+    height: 620px;
+  }
+  /* line 205, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items__layer:nth-child(1) .items__item {
+    top: 120px;
+    left: 0px;
+    width: 29vw;
+    height: 340px;
+  }
+  /* line 211, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items__layer:nth-child(2) .items__item {
+    top: 360px;
+    left: 280px;
+    width: 16vw;
+    height: 200px;
+  }
+  /* line 217, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items__layer:nth-child(3) .items__item {
+    top: 320px;
+    left: 40px;
+    width: 25vw;
+    height: 300px;
+  }
+  /* line 223, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items__layer:nth-child(4) .items__item {
+    top: 10px;
+    left: 280px;
+    width: 22vw;
+    height: 480px;
+  }
+  /* line 229, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items__layer:nth-child(5) .items__item {
+    top: 210px;
+    left: 180px;
+    width: 15vw;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* line 239, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items {
+    width: 100%;
+    height: 100vh;
+  }
+  /* line 242, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items__inner {
+    top: 20px;
+    left: 1%;
+    width: 550px;
+    max-width: 800px;
+    height: 620px;
+  }
+  /* line 249, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items__layer:nth-child(1) .items__item {
+    top: 120px;
+    left: 0px;
+    width: 302px;
+    height: 340px;
+  }
+  /* line 255, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items__layer:nth-child(2) .items__item {
+    display: none;
+  }
+  /* line 258, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items__layer:nth-child(3) .items__item {
+    top: 320px;
+    left: 40px;
+    width: 240px;
+    height: 300px;
+  }
+  /* line 264, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items__layer:nth-child(4) .items__item {
+    top: 20px;
+    left: 280px;
+    width: 255px;
+    height: 450px;
+  }
+  /* line 270, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/cards.scss */
+  .items__layer:nth-child(5) .items__item {
+    top: 210px;
+    left: 180px;
+    width: 162px;
+    height: 200px;
+  }
+}
+
 /*# sourceMappingURL=cards.css.map */
