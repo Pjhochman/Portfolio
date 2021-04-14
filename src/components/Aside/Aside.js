@@ -50,7 +50,7 @@ const Aside = () => {
               className="content"
               style={isActive ? { display: "flex" } : { display: "none" }}
             >
-              <p className="content__container__text">I'm skillful in</p>
+              <p className="content__container__text">I'm skilled in</p>
               <div className="content__container">
                 <ul className="content__container__list">
                   <li className="content__container__list__item">javascript</li>
