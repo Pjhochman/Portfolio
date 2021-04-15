@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #e9f0fb;
-  touch-action: none;
+  touch-action: pan-y;
 }
 
 /* line 16, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
