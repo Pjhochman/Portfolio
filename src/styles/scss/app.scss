@@ -3,12 +3,14 @@ $text-color-black: #221e41;
 
 html {
   scroll-behavior: smooth;
+  touch-action: none;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: $background-color;
+  touch-action: none;
 }
 
 .title1 {
