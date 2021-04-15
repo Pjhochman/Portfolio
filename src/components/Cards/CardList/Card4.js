@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { fadeInRight } from "react-animations";
 import { fadeInLeft } from "react-animations";
@@ -9,7 +9,9 @@ const fadeInRightAnimation = keyframes`${fadeInRight}`;
 const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
 const fadeInDownAnimation = keyframes`${fadeInDownBig}`;
 const fadeInAnimation = keyframes`${fadeIn}`;
-const mediaQuery = window.matchMedia("(max-width: 1250px)");
+const email = ["hello@email.com"];
+const mediaQueryWide = window.matchMedia("(max-width: 1250px)");
+const mediaQueryNarrow = window.matchMedia("(max-width: 637px)");
 
 const FadeIn = styled.div`
   animation: 0.4s ${fadeInAnimation};
@@ -41,9 +43,14 @@ const copyToClipboard = (text: string) => {
 
 const Card4 = () => {
   const [visible, setVisible] = useState(
-    !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+    !mediaQueryWide.matches ? { display: "none" } : { display: "flex" }
   );
-  const email = ["hello@email.com"];
+  const [width, setWidth] = useState(mediaQueryNarrow);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, [width]);
 
   return (
     <div className="items__layer layer" data-depth="1.20">
@@ -59,21 +66,25 @@ const Card4 = () => {
             }}
             onMouseLeave={() => {
               setVisible(
-                !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+                !mediaQueryWide.matches
+                  ? { display: "none" }
+                  : { display: "flex" }
               );
             }}
           >
             <div>
               <FadeIn className="card-top" style={visible}>
-                <p style={{ marginLeft: "10px" }}>
+                <div style={{ marginLeft: "10px" }}>
                   <br />
                   <strong style={{ color: "white" }}>
-                    My Own Work{" "}
+                    My Own Work {mediaQueryNarrow.matches ? <hr></hr> : ""}
                     <span style={{ fontWeight: "300", color: "white" }}>
-                      | Band Planner
+                      {mediaQueryNarrow.matches
+                        ? "Band Planner"
+                        : "| Band Planner"}
                     </span>
                   </strong>
-                </p>
+                </div>
               </FadeIn>
               <br />
               <FadeInRight1 className="card-top" style={visible}>
@@ -97,9 +108,9 @@ const Card4 = () => {
                 </p>
               </FadeInRight2>
             </div>
-            <div className="card-bottom-container">
+            <div className="card-bottom-container four">
               <FadeInLeft1 className="card-bottom" style={visible}>
-                <p
+                <div
                   style={{
                     marginRight: "0px"
                   }}
@@ -123,10 +134,10 @@ const Card4 = () => {
                         )
                       }
                     >
-                      {"EMAIL:" + text}
+                      {mediaQueryNarrow.matches ? text : "EMAIL:" + text}
                     </span>
                   ))}
-                </p>
+                </div>
               </FadeInLeft1>
               <FadeInLeft2 className="card-bottom" style={visible}>
                 <p id="password" style={{ marginRight: "0px", color: "white" }}>
@@ -144,14 +155,16 @@ const Card4 = () => {
               </FadeInLeft2>
               <FadeIn className="card-bottom" style={visible}>
                 <br />
-                <p style={{ marginRight: "0px" }}>
+                <div id="credentials" style={{ marginRight: "0px" }}>
                   <strong style={{ color: "white" }}>
-                    Mobile App |{" "}
+                    Mobile App {mediaQueryNarrow.matches ? <hr></hr> : ""}
                     <span style={{ color: "white", fontWeight: "300" }}>
-                      Login Credentials
+                      {mediaQueryNarrow.matches
+                        ? "Login Credentials"
+                        : "| Login Credentials"}
                     </span>
                   </strong>
-                </p>
+                </div>
                 <br />
               </FadeIn>
             </div>

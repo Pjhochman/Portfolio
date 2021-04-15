@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { fadeInLeft } from "react-animations";
 import { fadeInUpBig } from "react-animations";
@@ -7,7 +7,8 @@ import { fadeIn } from "react-animations";
 const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
 const fadeInUpAnimation = keyframes`${fadeInUpBig}`;
 const fadeInAnimation = keyframes`${fadeIn}`;
-const mediaQuery = window.matchMedia("(max-width: 1250px)");
+const mediaQueryWide = window.matchMedia("(max-width: 1250px)");
+const mediaQueryNarrow = window.matchMedia("(max-width: 637px)");
 
 const FadeIn = styled.div`
   animation: 0.4s ${fadeInAnimation};
@@ -24,8 +25,14 @@ const FadeInLeft2 = styled.div`
 
 const Card3 = () => {
   const [visible, setVisible] = useState(
-    !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+    !mediaQueryWide.matches ? { display: "none" } : { display: "flex" }
   );
+  const [width, setWidth] = useState(mediaQueryNarrow);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, [width]);
   return (
     <div className="items__layer layer" data-depth="0.65">
       <FadeInUp>
@@ -41,14 +48,18 @@ const Card3 = () => {
             }}
             onMouseLeave={() => {
               setVisible(
-                !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+                !mediaQueryWide.matches
+                  ? { display: "none" }
+                  : { display: "flex" }
               );
             }}
           >
             <div className="card-bottom-container" style={{ height: "100%" }}>
               <FadeInLeft1 className="card-bottom" style={visible}>
                 <p>
-                  <span style={{ color: "white" }}>
+                  <span
+                    style={mediaQueryNarrow.matches ? { color: "white" } : ""}
+                  >
                     Web VR experience Created
                   </span>
                 </p>
@@ -62,11 +73,13 @@ const Card3 = () => {
               </FadeInLeft2>
               <FadeIn className="card-bottom" style={visible}>
                 <br />
-                <p>
+                <div id="aFrame" style={{ marginRight: "25px" }}>
                   <span style={{ color: "white" }}>
-                    <strong>My Own Work </strong>| Project 11
+                    <strong>My Own Work </strong>
+                    {mediaQueryNarrow.matches ? <hr></hr> : ""}
+                    {mediaQueryNarrow.matches ? "Project 11" : "| Project 11"}
                   </span>
-                </p>
+                </div>
                 <br />
               </FadeIn>
             </div>

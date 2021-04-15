@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { fadeIn } from "react-animations";
 
 const fadeInAnimation = keyframes`${fadeIn}`;
-const mediaQuery = window.matchMedia("(max-width: 1250px)");
+const mediaQueryWide = window.matchMedia("(max-width: 1250px)");
+const mediaQueryNarrow = window.matchMedia("(max-width: 637px)");
 
 const FadeIn = styled.div`
   animation: 0.6s ${fadeInAnimation};
@@ -14,8 +15,14 @@ const FadeIn1 = styled.div`
 
 const Card4 = () => {
   const [visible, setVisible] = useState(
-    !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+    !mediaQueryWide.matches ? { display: "none" } : { display: "flex" }
   );
+  const [width, setWidth] = useState(mediaQueryNarrow);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, [width]);
   return (
     <div className="items__layer layer" data-depth="0.00">
       <FadeIn1>
@@ -30,7 +37,9 @@ const Card4 = () => {
             }}
             onMouseLeave={() => {
               setVisible(
-                !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+                !mediaQueryWide.matches
+                  ? { display: "none" }
+                  : { display: "flex" }
               );
             }}
           >
@@ -39,7 +48,10 @@ const Card4 = () => {
                 <span style={{ margin: "0" }}>
                   <br />
                   <strong>
-                    Previous Adventure
+                    {mediaQueryNarrow.matches
+                      ? "Previously"
+                      : "Previous Adventure"}
+
                     <hr style={{ opacity: "0.25" }} />
                   </strong>
                 </span>
