@@ -7,6 +7,7 @@ import { fadeIn } from "react-animations";
 const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
 const fadeInRightAnimation = keyframes`${fadeInRightBig}`;
 const fadeInAnimation = keyframes`${fadeIn}`;
+const mediaQuery = window.matchMedia("(max-width: 1250px)");
 
 const FadeIn = styled.div`
   animation: 0.3s ${fadeInAnimation};
@@ -19,7 +20,9 @@ const FadeInRight = styled.div`
 `;
 
 const Card1 = () => {
-  const [visible, setVisible] = useState({ display: "none" });
+  const [visible, setVisible] = useState(
+    !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+  );
 
   return (
     <div className="items__layer layer" data-depth="0.70">
@@ -34,7 +37,9 @@ const Card1 = () => {
               setVisible({ display: "flex" });
             }}
             onMouseLeave={() => {
-              setVisible({ display: "none" });
+              setVisible(
+                !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+              );
             }}
           >
             <div className="card-bottom-container" style={{ height: "100%" }}>

@@ -7,6 +7,7 @@ import { fadeIn } from "react-animations";
 const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
 const fadeInUpAnimation = keyframes`${fadeInUpBig}`;
 const fadeInAnimation = keyframes`${fadeIn}`;
+const mediaQuery = window.matchMedia("(max-width: 1250px)");
 
 const FadeIn = styled.div`
   animation: 0.4s ${fadeInAnimation};
@@ -22,7 +23,9 @@ const FadeInLeft2 = styled.div`
 `;
 
 const Card3 = () => {
-  const [visible, setVisible] = useState({ display: "none" });
+  const [visible, setVisible] = useState(
+    !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+  );
   return (
     <div className="items__layer layer" data-depth="0.65">
       <FadeInUp>
@@ -37,20 +40,22 @@ const Card3 = () => {
               setVisible({ display: "flex" });
             }}
             onMouseLeave={() => {
-              setVisible({ display: "none" });
+              setVisible(
+                !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+              );
             }}
           >
             <div className="card-bottom-container" style={{ height: "100%" }}>
               <FadeInLeft1 className="card-bottom" style={visible}>
                 <p>
-                  <span style={{ fontSize: "11px", color: "white" }}>
+                  <span style={{ color: "white" }}>
                     Web VR experience Created
                   </span>
                 </p>
               </FadeInLeft1>
               <FadeInLeft2 className="card-bottom" style={visible}>
                 <p>
-                  <span style={{ fontSize: "11px", color: "white" }}>
+                  <span style={{ color: "white" }}>
                     with A-frame<strong>.</strong>
                   </span>
                 </p>
@@ -58,7 +63,7 @@ const Card3 = () => {
               <FadeIn className="card-bottom" style={visible}>
                 <br />
                 <p>
-                  <span style={{ fontSize: "11px", color: "white" }}>
+                  <span style={{ color: "white" }}>
                     <strong>My Own Work </strong>| Project 11
                   </span>
                 </p>

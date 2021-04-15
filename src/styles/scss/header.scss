@@ -1,5 +1,19 @@
 $text-color-black: #221e41;
 
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  width: 90%;
+  height: 100px;
+  z-index: 10;
+}
+
 #linkedin,
 #github,
 #contact {
@@ -32,4 +46,10 @@ $text-color-black: #221e41;
 #profession {
   user-select: none;
   color: #61677c;
+}
+
+@media (max-width: 750px) {
+  #profession {
+    display: none;
+  }
 }

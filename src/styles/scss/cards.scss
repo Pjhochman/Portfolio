@@ -22,6 +22,12 @@
   user-select: none;
 }
 
+@media (max-width: 1250px) {
+  .card-top {
+    font-size: 9px;
+  }
+}
+
 .card-top-left {
   display: none;
   margin-top: 8px;
@@ -37,12 +43,25 @@
   user-select: none;
 }
 
+@media (max-width: 1250px) {
+  .card-top-left {
+    font-size: 9px;
+    width: 100%;
+  }
+}
+
 .card-bottom-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
   width: 100%;
+}
+
+@media (max-width: 1250px) {
+  .card-bottom-container {
+    align-items: center;
+  }
 }
 
 .card-bottom {
@@ -59,6 +78,25 @@
   user-select: none;
 }
 
+@media (max-width: 1250px) {
+  .card-bottom {
+    width: 100%;
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 1250px) {
+  #email {
+    margin-left: 78px;
+  }
+}
+
+@media (max-width: 1250px) {
+  #password {
+    margin-left: 114px;
+  }
+}
+
 .card-bottom-center {
   display: none;
   margin-bottom: 8px;
@@ -72,6 +110,13 @@
   align-items: center;
   pointer-events: none;
   user-select: none;
+}
+
+@media (max-width: 1250px) {
+  .card-bottom-center {
+    font-size: 9px;
+    width: 15vw;
+  }
 }
 
 .items {
@@ -201,6 +246,7 @@
       width: 550px;
       max-width: 800px;
       height: 620px;
+      z-index: 0;
     }
     &__layer:nth-child(1) &__item {
       top: 120px;
@@ -228,8 +274,8 @@
     }
     &__layer:nth-child(5) &__item {
       top: 210px;
-      left: 180px;
-      width: 15vw;
+      left: 36%;
+      width: 162px;
       height: 200px;
     }
   }
@@ -239,6 +285,7 @@
   .items {
     width: 100%;
     height: 100vh;
+
     &__inner {
       top: 20px;
       left: 1%;
@@ -269,7 +316,50 @@
     }
     &__layer:nth-child(5) &__item {
       top: 210px;
-      left: 180px;
+      left: 36%;
+      width: 162px;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 637px) {
+  .items {
+    width: 86%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100vh;
+    &__inner {
+      top: 20px;
+      left: 1%;
+      width: 100%;
+      height: 620px;
+    }
+    &__layer:nth-child(1) &__item {
+      top: 120px;
+      left: 0px;
+      width: 44vw;
+      height: 340px;
+    }
+    &__layer:nth-child(2) &__item {
+      display: none;
+    }
+    &__layer:nth-child(3) &__item {
+      top: 320px;
+      left: 6.5vw;
+      width: 37.7vw;
+      height: 300px;
+    }
+    &__layer:nth-child(4) &__item {
+      top: 20px;
+      left: 44vw;
+      width: 255px;
+      height: 450px;
+    }
+    &__layer:nth-child(5) &__item {
+      top: 210px;
+      left: 36%;
       width: 162px;
       height: 200px;
     }

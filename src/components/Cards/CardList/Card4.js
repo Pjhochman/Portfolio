@@ -9,6 +9,7 @@ const fadeInRightAnimation = keyframes`${fadeInRight}`;
 const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
 const fadeInDownAnimation = keyframes`${fadeInDownBig}`;
 const fadeInAnimation = keyframes`${fadeIn}`;
+const mediaQuery = window.matchMedia("(max-width: 1250px)");
 
 const FadeIn = styled.div`
   animation: 0.4s ${fadeInAnimation};
@@ -39,7 +40,9 @@ const copyToClipboard = (text: string) => {
 };
 
 const Card4 = () => {
-  const [visible, setVisible] = useState({ display: "none" });
+  const [visible, setVisible] = useState(
+    !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+  );
   const email = ["hello@email.com"];
 
   return (
@@ -55,7 +58,9 @@ const Card4 = () => {
               setVisible({ display: "flex" });
             }}
             onMouseLeave={() => {
-              setVisible({ display: "none" });
+              setVisible(
+                !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+              );
             }}
           >
             <div>
@@ -75,8 +80,7 @@ const Card4 = () => {
                 <p
                   style={{
                     marginLeft: "10px",
-                    color: "white",
-                    fontSize: "11px"
+                    color: "white"
                   }}
                 >
                   Designed for Bands to
@@ -86,8 +90,7 @@ const Card4 = () => {
                 <p
                   style={{
                     marginLeft: "10px",
-                    color: "white",
-                    fontSize: "11px"
+                    color: "white"
                   }}
                 >
                   Keep Track of Songs<strong>.</strong>
@@ -103,6 +106,7 @@ const Card4 = () => {
                 >
                   {email.map(text => (
                     <span
+                      id="email"
                       key={Math.random()}
                       style={{
                         cursor: "pointer",
@@ -125,7 +129,7 @@ const Card4 = () => {
                 </p>
               </FadeInLeft1>
               <FadeInLeft2 className="card-bottom" style={visible}>
-                <p style={{ marginRight: "0px", color: "white" }}>
+                <p id="password" style={{ marginRight: "0px", color: "white" }}>
                   PASSWORD:{" "}
                   <span
                     style={{

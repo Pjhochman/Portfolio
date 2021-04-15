@@ -77,7 +77,7 @@ aside {
   display: flex;
   position: absolute;
   top: 120%;
-  right: 27px;
+  right: 25px;
   align-items: center;
   height: 20px;
   overflow: visible;
@@ -587,73 +587,59 @@ aside {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1250px) {
   /* line 579, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
   .content {
-    left: 500px;
-    top: 210px;
+    width: 280px;
+    left: 75vw;
   }
   /* line 583, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
-  .content__container {
-    font-weight: 600;
-    overflow: hidden;
-    height: 20px;
-    padding: 0 50px;
-  }
-  /* line 589, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
-  .content__container:before {
-    content: "[";
-    right: 330px;
-  }
-  /* line 594, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
-  .content__container:after {
-    content: "]";
-    position: absolute;
-    right: 125px;
-  }
-  /* line 600, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
-  .content__container:after, .content__container:before {
-    position: absolute;
-    bottom: -9px;
-    font-weight: bold;
-    color: #525b56;
-    font-size: 20px;
-    line-height: 40px;
-    -webkit-animation-name: opacity;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-    animation-name: opacity;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-  }
-  /* line 617, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
-  .content__container__text {
-    position: absolute;
-    display: inline;
-    right: 147px;
-    float: left;
-    margin: 0;
-    font-size: 17px;
-  }
-  /* line 626, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
   .content__container__list {
-    margin-top: 44px;
-    padding: 0;
-    text-align: center;
-    list-style: none;
-    -webkit-animation-name: change;
-    -webkit-animation-duration: 25s;
-    -webkit-animation-iteration-count: infinite;
-    animation-name: change;
-    animation-duration: 25s;
-    animation-iteration-count: infinite;
+    margin-left: 90px;
   }
-  /* line 639, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
-  .content__container__list__item {
-    display: flex;
-    line-height: 50px;
-    padding-bottom: 10px;
-    justify-content: flex-start;
+  /* line 586, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
+  .content__container:before {
+    right: 240px;
+  }
+  /* line 590, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
+  .content__container:after {
+    position: absolute;
+    right: 35px;
+  }
+}
+
+@media (max-width: 1150px) {
+  /* line 599, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
+  .content {
+    left: 74vw;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* line 605, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
+  .content {
+    top: 230px;
+    left: 52vw;
+    width: 245px;
+    font-size: 16px;
+  }
+  /* line 610, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
+  .content__container {
+    padding: 0;
+  }
+  /* line 614, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
+  .content__container:before {
+    right: 205px;
+  }
+  /* line 618, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
+  .content__container:after {
+    position: absolute;
+    right: 27px;
+  }
+  /* line 622, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/aside.scss */
+  .content__container__text {
+    right: 120px;
+    font-size: 15px;
   }
 }
 

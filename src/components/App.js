@@ -20,7 +20,7 @@ const Section = styled.div`
 const App = () => {
   useEffect(() => {
     const scene = document.getElementById("js-scene");
-    new Parallax(scene);
+    // new Parallax(scene);
   }, []);
   return (
     <>
@@ -38,7 +38,12 @@ const App = () => {
       <Section style={{ margin: "0" }}>
         <Resume />
       </Section>
-      <Section style={{ margin: "0", boxShadow: "inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff"}}>
+      <Section
+        style={{
+          margin: "0",
+          boxShadow: "inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff"
+        }}
+      >
         <Footer />
       </Section>
     </>

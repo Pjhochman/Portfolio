@@ -69,7 +69,7 @@ aside {
   display: flex;
   position: absolute;
   top: 120%;
-  right: 27px;
+  right: 25px;
   align-items: center;
   height: 20px;
   overflow: visible;
@@ -575,73 +575,53 @@ aside {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1250px) {
   .content {
-    left: 500px;
-    top: 210px;
-
+    width: 280px;
+    left: 75vw;
     &__container {
-      font-weight: 600;
-      overflow: hidden;
-      height: 20px;
-      padding: 0 50px;
-
+      &__list {
+        margin-left: 90px;
+      }
       &:before {
-        content: "[";
-        right: 330px;
+        right: 240px;
       }
 
       &:after {
-        content: "]";
         position: absolute;
-        right: 125px;
+        right: 35px;
       }
+    }
+  }
+}
 
-      &:after,
-      &:before {
-        position: absolute;
-        bottom: -9px;
-        font-weight: bold;
-        color: #525b56;
-        font-size: 20px;
-        line-height: 40px;
+@media (max-width: 1150px) {
+  .content {
+    left: 74vw;
+  }
+}
 
-        -webkit-animation-name: opacity;
-        -webkit-animation-duration: 2s;
-        -webkit-animation-iteration-count: infinite;
-        animation-name: opacity;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-      }
-
-      &__text {
-        position: absolute;
-        display: inline;
-        right: 147px;
-        float: left;
-        margin: 0;
-        font-size: 17px;
-      }
-
+@media (max-width: 1100px) {
+  .content {
+    top: 230px;
+    left: 52vw;
+    width: 245px;
+    font-size: 16px;
+    &__container {
+      padding: 0;
       &__list {
-        margin-top: 44px;
-        padding: 0;
-        text-align: center;
-        list-style: none;
+      }
+      &:before {
+        right: 205px;
+      }
 
-        -webkit-animation-name: change;
-        -webkit-animation-duration: 25s;
-        -webkit-animation-iteration-count: infinite;
-        animation-name: change;
-        animation-duration: 25s;
-        animation-iteration-count: infinite;
-
-        &__item {
-          display: flex;
-          line-height: 50px;
-          padding-bottom: 10px;
-          justify-content: flex-start;
-        }
+      &:after {
+        position: absolute;
+        right: 27px;
+      }
+      &__text {
+        right: 120px;
+        font-size: 15px;
       }
     }
   }

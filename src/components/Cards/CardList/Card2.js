@@ -7,6 +7,7 @@ import { fadeIn } from "react-animations";
 const fadeInRightAnimation = keyframes`${fadeInRight}`;
 const fadeInLeftAnimation = keyframes`${fadeInLeftBig}`;
 const fadeInAnimation = keyframes`${fadeIn}`;
+const mediaQuery = window.matchMedia("(max-width: 1250px)");
 
 const FadeIn = styled.div`
   animation: 0.4s ${fadeInAnimation};
@@ -25,8 +26,9 @@ const FadeInRight3 = styled.div`
 `;
 
 const Card2 = () => {
-  const [visible, setVisible] = useState({ display: "none" });
-
+  const [visible, setVisible] = useState(
+    !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+  );
   return (
     <div className="items__layer layer" data-depth="0.85">
       <FadeInLeft>
@@ -40,18 +42,19 @@ const Card2 = () => {
               setVisible({ display: "flex" });
             }}
             onMouseLeave={() => {
-              setVisible({ display: "none" });
+              setVisible(
+                !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+              );
             }}
           >
             <div>
               <FadeIn className="card-top" style={visible}>
                 <p>
                   <br />
-                  <strong style={{ fontSize: "11px", color: "white" }}>
+                  <strong style={{ color: "white" }}>
                     My Own Work{" "}
                     <span
                       style={{
-                        fontSize: "11px",
                         fontWeight: "300",
                         color: "white"
                       }}
@@ -63,17 +66,13 @@ const Card2 = () => {
               </FadeIn>
               <br />
               <FadeInRight1 className="card-top" style={visible}>
-                <p style={{ fontSize: "11px", color: "white" }}>
-                  Graphic and Interactive design
-                </p>
+                <p style={{ color: "white" }}>Graphic and Interactive design</p>
               </FadeInRight1>
               <FadeInRight2 className="card-top" style={visible}>
-                <p style={{ fontSize: "11px", color: "white" }}>
-                  using the P5.js
-                </p>
+                <p style={{ color: "white" }}>using the P5.js</p>
               </FadeInRight2>
               <FadeInRight3 className="card-top" style={visible}>
-                <p style={{ fontSize: "11px", color: "white" }}>
+                <p style={{ color: "white" }}>
                   library<strong>.</strong>
                 </p>
               </FadeInRight3>

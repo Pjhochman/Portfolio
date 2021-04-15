@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { fadeIn } from "react-animations";
 
 const fadeInAnimation = keyframes`${fadeIn}`;
+const mediaQuery = window.matchMedia("(max-width: 1250px)");
 
 const FadeIn = styled.div`
   animation: 0.6s ${fadeInAnimation};
@@ -12,8 +13,9 @@ const FadeIn1 = styled.div`
 `;
 
 const Card4 = () => {
-  const [visible, setVisible] = useState({ display: "none" });
-
+  const [visible, setVisible] = useState(
+    !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+  );
   return (
     <div className="items__layer layer" data-depth="0.00">
       <FadeIn1>
@@ -27,14 +29,16 @@ const Card4 = () => {
               setVisible({ display: "flex" });
             }}
             onMouseLeave={() => {
-              setVisible({ display: "none" });
+              setVisible(
+                !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+              );
             }}
           >
-            <div>
+            <div style={{ width: "100%" }}>
               <FadeIn className="card-top-left" style={visible}>
                 <span style={{ margin: "0" }}>
                   <br />
-                  <strong style={{ fontSize: "10px" }}>
+                  <strong>
                     Previous Adventure
                     <hr style={{ opacity: "0.25" }} />
                   </strong>
