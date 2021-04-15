@@ -17,10 +17,14 @@ const Section = styled.div`
   height: 100%;
 `;
 
+const mediaQuery = window.matchMedia("(max-width: 1250px)");
+
 const App = () => {
   useEffect(() => {
     const scene = document.getElementById("js-scene");
-    // new Parallax(scene);
+    if (!mediaQuery.matches) {
+      new Parallax(scene);
+    }
   }, []);
   return (
     <>
