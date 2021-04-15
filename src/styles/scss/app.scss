@@ -3,7 +3,7 @@ $text-color-black: #221e41;
 
 html {
   scroll-behavior: smooth;
-  touch-action: none;
+  touch-action: pan-y;
 }
 
 body {
