@@ -57,7 +57,7 @@ const Card2 = () => {
             }}
           >
             <div className="card-top-container">
-              <FadeIn className="card-top" style={visible}>
+              <FadeIn className="card-top two" style={visible}>
                 <div>
                   <br />
                   <strong style={{ color: "white" }}>
@@ -73,7 +73,6 @@ const Card2 = () => {
                   </strong>
                 </div>
               </FadeIn>
-              <br />
               <FadeInRight1 className="card-top" style={visible}>
                 <p id="interactiveDesign" style={{ color: "white" }}>
                   Graphic and Interactive design
