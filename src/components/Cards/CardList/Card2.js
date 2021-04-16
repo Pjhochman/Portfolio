@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { fadeInRight } from "react-animations";
 import { fadeInLeftBig } from "react-animations";
@@ -7,7 +7,8 @@ import { fadeIn } from "react-animations";
 const fadeInRightAnimation = keyframes`${fadeInRight}`;
 const fadeInLeftAnimation = keyframes`${fadeInLeftBig}`;
 const fadeInAnimation = keyframes`${fadeIn}`;
-const mediaQuery = window.matchMedia("(max-width: 1250px)");
+const mediaQueryWide = window.matchMedia("(max-width: 1250px)");
+const mediaQueryNarrow = window.matchMedia("(max-width: 637px)");
 
 const FadeIn = styled.div`
   animation: 0.4s ${fadeInAnimation};
@@ -27,8 +28,14 @@ const FadeInRight3 = styled.div`
 
 const Card2 = () => {
   const [visible, setVisible] = useState(
-    !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+    !mediaQueryWide.matches ? { display: "none" } : { display: "flex" }
   );
+  const [width, setWidth] = useState(mediaQueryNarrow);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, [width]);
   return (
     <div className="items__layer layer" data-depth="0.85">
       <FadeInLeft>
@@ -43,30 +50,36 @@ const Card2 = () => {
             }}
             onMouseLeave={() => {
               setVisible(
-                !mediaQuery.matches ? { display: "none" } : { display: "flex" }
+                !mediaQueryWide.matches
+                  ? { display: "none" }
+                  : { display: "flex" }
               );
             }}
           >
             <div>
               <FadeIn className="card-top" style={visible}>
-                <p>
+                <div>
                   <br />
                   <strong style={{ color: "white" }}>
-                    My Own Work{" "}
+                    My Own Work {mediaQueryNarrow.matches ? <hr></hr> : ""}
                     <span
                       style={{
                         fontWeight: "300",
                         color: "white"
                       }}
                     >
-                      | Color Palette
+                      {mediaQueryNarrow.matches
+                        ? "Color Palette"
+                        : "| Color Palette"}
                     </span>
                   </strong>
-                </p>
+                </div>
               </FadeIn>
               <br />
               <FadeInRight1 className="card-top" style={visible}>
-                <p style={{ color: "white" }}>Graphic and Interactive design</p>
+                <p id="interactiveDesign" style={{ color: "white" }}>
+                  Graphic and Interactive design
+                </p>
               </FadeInRight1>
               <FadeInRight2 className="card-top" style={visible}>
                 <p style={{ color: "white" }}>using the P5.js</p>

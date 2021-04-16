@@ -35,15 +35,18 @@ const Aside = () => {
     <>
       <div style={width} className={hover}></div>
       <aside>
-        <FadeInLeft>
-          <div id="designer" onMouseEnter={onHover} onMouseLeave={onLeave}>
-            <h2 className="title1">designer</h2>
-            <p className="description">
-              I have a passion for designing beautiful and functional
-              experiences.
-            </p>
-          </div>
-        </FadeInLeft>
+        <div id="designerContainer">
+          <FadeInLeft>
+            <div id="designer" onMouseEnter={onHover} onMouseLeave={onLeave}>
+              <h2 className="title1">designer</h2>
+              <p className="description">
+                I have a passion for designing beautiful and functional
+                experiences.
+              </p>
+            </div>
+          </FadeInLeft>
+        </div>
+        <div id="filler"></div>
         <div id="coderContainer" onClick={toggleClass}>
           <FadeInLeft>
             <div

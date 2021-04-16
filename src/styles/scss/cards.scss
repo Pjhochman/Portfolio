@@ -8,6 +8,12 @@
   cursor: pointer;
 }
 
+@media (max-width: 637px) {
+  .cardContainer {
+    flex-direction: row;
+  }
+}
+
 .card-top {
   display: none;
   margin-top: 8px;
@@ -25,6 +31,12 @@
 @media (max-width: 1250px) {
   .card-top {
     font-size: 9px;
+  }
+}
+
+@media (max-width: 637px) {
+  .card-top {
+    margin: 0;
   }
 }
 
@@ -92,6 +104,12 @@
 }
 
 @media (max-width: 637px) {
+  .card-bottom {
+    margin: 0;
+  }
+}
+
+@media (max-width: 637px) {
   #password,
   #email {
     text-transform: lowercase;
@@ -142,6 +160,20 @@
 @media (max-width: 637px) {
   #aFrame {
     text-align: center;
+  }
+}
+
+@media (max-width: 637px) {
+  #interactiveDesign {
+    width: 100px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 637px) {
+  #designedForBands {
+    width: 92px;
+    white-space: normal;
   }
 }
 
@@ -268,7 +300,7 @@
     height: 100vh;
     &__inner {
       top: 20px;
-      left: 1%;
+      left: 0;
       width: 550px;
       max-width: 800px;
       height: 620px;
@@ -300,9 +332,9 @@
     }
     &__layer:nth-child(5) &__item {
       top: 210px;
-      left: 36%;
-      width: 162px;
-      height: 21vh;
+      left: 180px;
+      width: 200px;
+      height: 200px;
     }
   }
 }
@@ -314,7 +346,7 @@
 
     &__inner {
       top: 20px;
-      left: 1%;
+      left: 0;
       width: 550px;
       max-width: 800px;
       height: 620px;
@@ -342,9 +374,9 @@
     }
     &__layer:nth-child(5) &__item {
       top: 210px;
-      left: 36%;
-      width: 162px;
-      height: 21vh;
+      left: 180px;
+      width: 200px;
+      height: 200px;
     }
   }
 }
@@ -358,36 +390,36 @@
     height: 100vh;
     &__inner {
       top: 20px;
-      left: 1%;
+      left: 0;
       width: 100%;
       height: 620px;
     }
     &__layer:nth-child(1) &__item {
-      top: 120px;
-      left: 0px;
-      width: 44vw;
-      height: 340px;
+      top: 140px;
+      left: 0;
+      width: 100%;
+      height: 110px;
     }
     &__layer:nth-child(2) &__item {
       display: none;
     }
     &__layer:nth-child(3) &__item {
-      top: 293px;
-      left: 6.5vw;
-      width: 37.7vw;
-      height: 300px;
+      top: 380px;
+      left: 0;
+      width: 100%;
+      height: 110px;
     }
     &__layer:nth-child(4) &__item {
       top: 20px;
-      left: 44vw;
-      width: 255px;
-      height: 450px;
+      left: 0;
+      width: 100%;
+      height: 110px;
     }
     &__layer:nth-child(5) &__item {
-      top: 210px;
-      left: 31vw;
-      width: 25vw;
-      height: 21vh;
+      top: 260px;
+      left: 0;
+      width: 100%;
+      height: 110px;
     }
   }
 }

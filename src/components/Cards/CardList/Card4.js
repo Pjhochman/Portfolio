@@ -89,12 +89,15 @@ const Card4 = () => {
               <br />
               <FadeInRight1 className="card-top" style={visible}>
                 <p
+                  id="designedForBands"
                   style={{
                     marginLeft: "10px",
                     color: "white"
                   }}
                 >
-                  Designed for Bands to
+                  {!mediaQueryNarrow.matches
+                    ? "Designed for Bands to"
+                    : "Designed for Bands to Keep track of Songs"}
                 </p>
               </FadeInRight1>
               <FadeInRight2 className="card-top" style={visible}>
@@ -104,7 +107,7 @@ const Card4 = () => {
                     color: "white"
                   }}
                 >
-                  Keep Track of Songs<strong>.</strong>
+                  {!mediaQueryNarrow.matches ? "Keep Track of Songs" : ""}
                 </p>
               </FadeInRight2>
             </div>
