@@ -43,13 +43,13 @@ const Card4 = () => {
               );
             }}
           >
-            <div className="card-top-container" style={{ width: "100%" }}>
+            <div className="card-top-container">
               <FadeIn className="card-top-left" style={visible}>
                 <span style={{ margin: "0" }}>
                   <br />
                   <strong>
                     {mediaQueryWide.matches
-                      ? "My Recent Adventure"
+                      ? "Previous Adventure"
                       : "Previous Adventure"}
 
                     <hr style={{ opacity: "0.25" }} />
@@ -63,32 +63,15 @@ const Card4 = () => {
               <FadeIn className="card-top-left" style={visible}>
                 {mediaQueryNarrow.matches
                   ? "Software Engineer Intern"
-                  : "S. Engineer Intern"}
+                  : "S. Engineer Intern"}{" "}
               </FadeIn>
-            </div>
-
-            <div className="card-bottom-container">
+              <br></br>
               <FadeIn className="card-bottom-center" style={visible}>
                 <span>React with GraphQL</span>
               </FadeIn>
               <FadeIn className="card-bottom-center" style={visible}>
                 <span>Cypress E2E</span>
               </FadeIn>
-              <br />
-              {mediaQueryNarrow.matches ? (
-                <FadeIn className="card-bottom" style={visible}>
-                  <br />
-                  <div id="credentials" style={{ marginRight: "0px" }}>
-                    <strong style={{ color: "white" }}>
-                      Mobile App{" "}
-                      <span style={{ color: "white", fontWeight: "300" }}>
-                        | Login Credentials
-                      </span>
-                    </strong>
-                  </div>
-                  <br />
-                </FadeIn>
-              ) : null}
             </div>
           </a>
         </div>

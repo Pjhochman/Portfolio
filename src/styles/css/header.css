@@ -13,7 +13,14 @@ header {
   z-index: 10;
 }
 
-/* line 17, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+@media (max-width: 637px) {
+  /* line 18, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+  header {
+    height: 60px;
+  }
+}
+
+/* line 23, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
 #linkedin,
 #github,
 #contact {
@@ -29,7 +36,7 @@ header {
   outline: none;
 }
 
-/* line 32, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+/* line 38, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
 .information-container,
 .contact-container {
   height: 100%;
@@ -39,20 +46,20 @@ header {
   align-items: center;
 }
 
-/* line 41, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+/* line 47, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
 #name {
   user-select: none;
   color: #221e41;
 }
 
-/* line 46, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+/* line 52, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
 #profession {
   user-select: none;
   color: #61677c;
 }
 
 @media (max-width: 750px) {
-  /* line 52, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+  /* line 58, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
   #profession {
     display: none;
   }

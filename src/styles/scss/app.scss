@@ -39,6 +39,12 @@ a {
   }
 }
 
+@media (max-width: 637px) {
+  a {
+    margin: 0 10px 0 10px;
+  }
+}
+
 p {
   font-weight: 200;
   font-size: 11px;
