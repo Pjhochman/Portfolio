@@ -39,12 +39,6 @@ a {
   }
 }
 
-@media (max-width: 637px) {
-  a {
-    margin: 0 10px 0 10px;
-  }
-}
-
 p {
   font-weight: 200;
   font-size: 11px;
@@ -84,6 +78,20 @@ p {
   opacity: 1;
   transform: none;
   visibility: visible;
+}
+
+@media (max-width: 637px) {
+  .fade-in-section.is-visible {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 637px) {
+  #factSection {
+    flex-direction: column;
+    margin-top: 110px;
+    height: 440px;
+  }
 }
 
 .box {

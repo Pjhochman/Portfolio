@@ -23,6 +23,24 @@ footer {
   overflow: hidden;
 }
 
+@media (max-width: 637px) {
+  .arrow-up {
+    display: none;
+  }
+}
+
+@media (max-width: 637px) {
+  .contact1 {
+    width: 45% !important;
+  }
+}
+
+@media (max-width: 637px) {
+  .contact2 {
+    width: 55% !important;
+  }
+}
+
 .arrow-slide {
   left: 0;
   top: -100%;

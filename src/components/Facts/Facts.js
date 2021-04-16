@@ -51,9 +51,10 @@ const Facts = props => {
   return (
     <Container
       className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+      id="factSection"
       ref={domRef}
     >
-      <FactsImage>
+      <FactsImage className="facts">
         <img
           src={factsImage}
           alt="Logo"
@@ -63,7 +64,7 @@ const Facts = props => {
           }}
         />
       </FactsImage>
-      <FactsWrapper>
+      <FactsWrapper className="facts">
         <h1 id="randomFacts">Random facts</h1>
         <div>
           <ul id="list">

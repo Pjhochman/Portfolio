@@ -33,13 +33,13 @@ const App = () => {
         <Cards />
         <Aside />
       </Section>
-      <Section style={{ margin: " 50px 0 160px 0" }}>
+      <Section className="sections" style={{ margin: " 50px 0 160px 0" }}>
         <About />
       </Section>
-      <Section style={{ margin: " 50px 0 0px 0" }}>
+      <Section className="sections" style={{ margin: " 50px 0 0px 0" }}>
         <Facts />
       </Section>
-      <Section style={{ margin: "0" }}>
+      <Section className="sections resume" style={{ margin: "0" }}>
         <Resume />
       </Section>
       <Section

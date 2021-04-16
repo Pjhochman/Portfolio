@@ -16,7 +16,7 @@ header {
 
 @media (max-width: 637px) {
   header {
-    height: 60px;
+    height: 80px;
   }
 }
 
@@ -35,6 +35,14 @@ header {
   outline: none;
 }
 
+@media (max-width: 637px) {
+  #linkedin,
+  #github,
+  #contact {
+    margin: 0 5px 0 5px;
+  }
+}
+
 .information-container,
 .contact-container {
   height: 100%;
@@ -42,6 +50,18 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 637px) {
+  .information-container {
+    display: none;
+  }
+}
+
+@media (max-width: 637px) {
+  .contact-container {
+    width: 100%;
+  }
 }
 
 #name {

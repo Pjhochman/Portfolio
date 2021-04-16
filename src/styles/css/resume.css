@@ -77,4 +77,32 @@ button {
   font-weight: 300;
 }
 
+@media (max-width: 637px) {
+  /* line 75, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+  #download {
+    left: 0;
+  }
+}
+
+@media (max-width: 637px) {
+  /* line 81, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+  #resumeImage {
+    display: none;
+  }
+}
+
+@media (max-width: 637px) {
+  /* line 87, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+  #resumeImg {
+    height: 70% !important;
+  }
+}
+
+@media (max-width: 637px) {
+  /* line 93, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+  #modal {
+    height: 40% !important;
+  }
+}
+
 /*# sourceMappingURL=resume.css.map */

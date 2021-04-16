@@ -44,7 +44,6 @@ const Modal = ({ handleClose, children, isOpen }) => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
       document.body.style.background = "rgba(0, 0, 0, 0.2)";
-
     } else {
       document.body.style.overflow = "unset";
       document.body.style.background = "#e9f0fb";
@@ -59,7 +58,7 @@ const Modal = ({ handleClose, children, isOpen }) => {
           exit={"exit"}
           variants={modalVariant}
         >
-          <ModalContainer variants={containerVariant}>
+          <ModalContainer id="modalContainer" variants={containerVariant}>
             <a
               id="download"
               href="https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/Peter+Hochman_CV.pdf"

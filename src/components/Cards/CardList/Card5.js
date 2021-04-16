@@ -45,7 +45,7 @@ const Card4 = () => {
           >
             <div className="card-top-container">
               <FadeIn className="card-top-left" style={visible}>
-                <span style={{ margin: "0" }}>
+                <span>
                   <br />
                   <strong>
                     {mediaQueryWide.matches
@@ -53,11 +53,11 @@ const Card4 = () => {
                       : "Previous Adventure"}
 
                     <hr style={{ opacity: "0.25" }} />
+                    <br />
                   </strong>
                 </span>
               </FadeIn>
               <FadeIn className="card-top-left" style={visible}>
-                <br />
                 <span>Accedo.tv</span>
               </FadeIn>
               <FadeIn className="card-top-left" style={visible}>
@@ -65,7 +65,6 @@ const Card4 = () => {
                   ? "Software Engineer Intern"
                   : "S. Engineer Intern"}{" "}
               </FadeIn>
-              <br></br>
               <FadeIn className="card-bottom-center" style={visible}>
                 <span>React with GraphQL</span>
               </FadeIn>

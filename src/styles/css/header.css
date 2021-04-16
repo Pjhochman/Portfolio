@@ -16,7 +16,7 @@ header {
 @media (max-width: 637px) {
   /* line 18, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
   header {
-    height: 60px;
+    height: 80px;
   }
 }
 
@@ -36,7 +36,16 @@ header {
   outline: none;
 }
 
-/* line 38, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+@media (max-width: 637px) {
+  /* line 39, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+  #linkedin,
+  #github,
+  #contact {
+    margin: 0 5px 0 5px;
+  }
+}
+
+/* line 46, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
 .information-container,
 .contact-container {
   height: 100%;
@@ -46,20 +55,34 @@ header {
   align-items: center;
 }
 
-/* line 47, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+@media (max-width: 637px) {
+  /* line 56, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+  .information-container {
+    display: none;
+  }
+}
+
+@media (max-width: 637px) {
+  /* line 62, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+  .contact-container {
+    width: 100%;
+  }
+}
+
+/* line 67, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
 #name {
   user-select: none;
   color: #221e41;
 }
 
-/* line 52, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+/* line 72, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
 #profession {
   user-select: none;
   color: #61677c;
 }
 
 @media (max-width: 750px) {
-  /* line 58, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+  /* line 78, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
   #profession {
     display: none;
   }

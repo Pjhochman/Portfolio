@@ -7,6 +7,13 @@ $text-color-black: #221e41;
   color: $text-color-black;
 }
 
+@media (max-width: 637px) {
+  #aboutMe {
+    margin-top: 20px;
+    font-size: 40px;
+  }
+}
+
 #intro {
   color: #61677c;
   font-weight: 300;
@@ -14,6 +21,13 @@ $text-color-black: #221e41;
   font-size: 26px;
   user-select: none;
   cursor: default;
+}
+
+@media (max-width: 637px) {
+  #intro {
+    margin-top: 10px;
+    font-size: 21px;
+  }
 }
 
 #paragraph {
@@ -25,4 +39,30 @@ $text-color-black: #221e41;
   user-select: none;
   cursor: default;
   color: $text-color-black;
+}
+
+@media (max-width: 637px) {
+  #paragraph {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 637px) {
+  .about {
+    width: 85% !important;
+    height: 85% !important;
+  }
+}
+
+@media (max-width: 637px) {
+  .sections {
+    margin: 0px 0px 160px !important;
+  }
+}
+
+@media (max-width: 637px) {
+  .sections.resume {
+    margin: 0px !important;
+  }
 }

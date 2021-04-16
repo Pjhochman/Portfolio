@@ -43,7 +43,7 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <NameWrapper>
+        <NameWrapper className="contact1">
           <p id="by">2021 Peter Hochman</p>
         </NameWrapper>
         <a className="arrow-up" href="#linkedin">
@@ -51,7 +51,7 @@ const Footer = () => {
           <span className="right-arm"></span>
           <span className="arrow-slide"></span>
         </a>
-        <ContactWrapper>
+        <ContactWrapper className="contact2">
           <div className="contact-container">
             <a
               id="linkedin"

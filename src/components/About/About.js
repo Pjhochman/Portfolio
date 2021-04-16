@@ -55,7 +55,7 @@ const About = props => {
       className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
       ref={domRef}
     >
-      <AboutWrapper>
+      <AboutWrapper className="about">
         <h1 id="aboutMe">about me</h1>
         <h2 id="intro">
           I'm a Frontend developer
@@ -68,7 +68,7 @@ const About = props => {
         </p>
         {props.children}
       </AboutWrapper>
-      <ProfileImage>
+      <ProfileImage className="about">
         <img
           src={profileImage}
           alt="Logo"

@@ -6,7 +6,15 @@
   color: #221e41;
 }
 
-/* line 10, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+@media (max-width: 637px) {
+  /* line 11, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+  #aboutMe {
+    margin-top: 20px;
+    font-size: 40px;
+  }
+}
+
+/* line 17, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
 #intro {
   color: #61677c;
   font-weight: 300;
@@ -16,7 +24,15 @@
   cursor: default;
 }
 
-/* line 19, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+@media (max-width: 637px) {
+  /* line 27, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+  #intro {
+    margin-top: 10px;
+    font-size: 21px;
+  }
+}
+
+/* line 33, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
 #paragraph {
   color: black;
   font-weight: 300;
@@ -26,6 +42,36 @@
   user-select: none;
   cursor: default;
   color: #221e41;
+}
+
+@media (max-width: 637px) {
+  /* line 45, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+  #paragraph {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 637px) {
+  /* line 52, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+  .about {
+    width: 85% !important;
+    height: 85% !important;
+  }
+}
+
+@media (max-width: 637px) {
+  /* line 59, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+  .sections {
+    margin: 0px 0px 160px !important;
+  }
+}
+
+@media (max-width: 637px) {
+  /* line 65, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+  .sections.resume {
+    margin: 0px !important;
+  }
 }
 
 /*# sourceMappingURL=about.css.map */

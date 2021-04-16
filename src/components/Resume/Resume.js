@@ -82,7 +82,7 @@ const Resume = props => {
         </div>
         {props.children}
       </ResumeWrapper>
-      <ResumeImage>
+      <ResumeImage id="resumeImage">
         <img
           src={resumeImage}
           alt="Logo"
@@ -94,7 +94,16 @@ const Resume = props => {
       </ResumeImage>
       <Modal isOpen={isOpen} handleClose={() => handleOpenModal(false)}>
         <ModalContent>
-          <img src={resumeImage} alt={"Resume"} style={{ height: "100%", border: "2px solid black", borderRadius: "3px"}} />
+          <img
+            id="resumeImg"
+            src={resumeImage}
+            alt={"Resume"}
+            style={{
+              height: "100%",
+              border: "2px solid black",
+              borderRadius: "3px"
+            }}
+          />
         </ModalContent>
       </Modal>
     </Container>
