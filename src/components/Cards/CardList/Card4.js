@@ -75,7 +75,7 @@ const Card4 = () => {
           >
             <div className="card-top-container four">
               <FadeIn className="card-top" style={visible}>
-                <div>
+                <div id="bandPlanner">
                   <br />
                   <strong style={{ color: "white" }}>
                     My Own Work{" "}
@@ -92,19 +92,16 @@ const Card4 = () => {
                     color: "white"
                   }}
                 >
-                  {!mediaQueryNarrow.matches
-                    ? "Designed for Bands to"
-                    : "Designed for Bands to Keep track of Songs."}
+                  Designed for Bands to
                 </p>
               </FadeInRight1>
               <FadeInRight2 className="card-top" style={visible}>
                 <p
                   style={{
-                    marginLeft: "10px",
                     color: "white"
                   }}
                 >
-                  {!mediaQueryNarrow.matches ? "Keep Track of Songs." : ""}
+                  Keep Track of Songs
                 </p>
               </FadeInRight2>
             </div>

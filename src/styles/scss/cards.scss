@@ -23,7 +23,7 @@
   flex-direction: column;
   width: 180px;
   height: auto;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
   align-items: flex-start;
@@ -254,6 +254,12 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-top: -5px;
+  }
+}
+
+@media (min-width: 1250px) {
+  #bandPlanner {
+    margin-left: 20px;
   }
 }
 

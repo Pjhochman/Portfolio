@@ -14,30 +14,27 @@ const FadeInLeft = styled.div`
 `;
 
 const Aside = () => {
-  const [hover, setHover] = useState("colorPalette");
-  const [width, setWidth] = useState({ width: "0%" });
-  const [isActive, setActive] = useState(false);
+  const [width, setWidth] = useState(false);
+  const [display, setDisplay] = useState(false);
 
-  const toggleClass = () => {
-    setActive(value => !isActive);
+  const toggleWidth = () => {
+    setWidth(value => !width);
   };
 
-  const onHover = () => {
-    setHover("colorPalette active");
-    setWidth({ width: "100%" });
-  };
-  const onLeave = () => {
-    setHover("colorPalette active");
-    setWidth({ width: "0%" });
+  const toggleDisplay = () => {
+    setDisplay(value => !display);
   };
 
   return (
     <>
-      <div style={width} className={hover}></div>
+      <div
+        style={width ? { width: "100%" } : { width: "0%" }}
+        className="colorPalette active"
+      ></div>
       <aside>
         <div id="designerContainer">
           <FadeInLeft>
-            <div id="designer" onMouseEnter={onHover} onMouseLeave={onLeave}>
+            <div id="designer" onClick={toggleWidth}>
               <h2 className="title1">designer</h2>
               <p className="description">
                 With a passion for designing beautiful and functional
@@ -47,11 +44,11 @@ const Aside = () => {
           </FadeInLeft>
         </div>
         <div id="filler"></div>
-        <div id="coderContainer" onClick={toggleClass}>
+        <div id="coderContainer" onClick={toggleDisplay}>
           <FadeInLeft>
             <div
               className="content"
-              style={isActive ? { display: "flex" } : { display: "none" }}
+              style={display ? { display: "flex" } : { display: "none" }}
             >
               <p className="content__container__text">I'm skilled in</p>
               <div className="content__container">
