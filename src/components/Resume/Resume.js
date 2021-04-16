@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Modal from "../Modal/Modal";
 import OpenModalButton from "../Modal/OpenModalButton";
 import styled from "styled-components";
@@ -55,25 +55,14 @@ const ModalContent = styled.div`
 `;
 
 const Resume = props => {
-  const [isVisible, setVisible] = React.useState(false);
   const [isOpen, setToggle] = useState(false);
 
   function handleOpenModal(open) {
     setToggle(open);
   }
 
-  const domRef = React.useRef();
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-  }, []);
   return (
-    <Container
-      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
-      ref={domRef}
-    >
+    <Container>
       <ResumeWrapper>
         <div className="resume-wrapper">
           <OpenModalButton handleClick={() => handleOpenModal(true)}>

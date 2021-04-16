@@ -66,3 +66,25 @@ $text-color-black: #221e41;
     margin: 0px !important;
   }
 }
+
+@media (max-width: 637px) {
+  .section2 {
+    position: relative;
+    top: 110px;
+  }
+}
+
+@media (max-width: 637px) {
+  .section3 {
+    position: relative;
+    top: 130px;
+    margin: 0px 0px 200px !important;
+  }
+}
+
+@media (max-width: 637px) {
+  .section4 {
+    position: relative;
+    top: 30px;
+  }
+}

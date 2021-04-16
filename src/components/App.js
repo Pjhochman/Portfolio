@@ -28,18 +28,24 @@ const App = () => {
   }, []);
   return (
     <>
-      <Section>
+      <Section className="section1">
         <Header />
         <Cards />
         <Aside />
       </Section>
-      <Section className="sections" style={{ margin: " 50px 0 160px 0" }}>
+      <Section
+        className="section2 sections"
+        style={{ margin: " 50px 0 160px 0" }}
+      >
         <About />
       </Section>
-      <Section className="sections" style={{ margin: " 50px 0 0px 0" }}>
+      <Section
+        className="section3 sections"
+        style={{ margin: " 50px 0 0px 0" }}
+      >
         <Facts />
       </Section>
-      <Section className="sections resume" style={{ margin: "0" }}>
+      <Section className="section4 sections resume " style={{ margin: "0" }}>
         <Resume />
       </Section>
       <Section

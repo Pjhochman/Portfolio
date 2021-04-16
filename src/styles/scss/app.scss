@@ -105,3 +105,10 @@ p {
   padding: 5px;
   border-radius: 3px;
 }
+
+@media (max-width: 637px) {
+  .section1 {
+    top: 0;
+    position: relative;
+  }
+}

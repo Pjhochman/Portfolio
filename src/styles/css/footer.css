@@ -11,7 +11,14 @@ footer {
   z-index: 10;
 }
 
-/* line 15, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+@media (max-width: 637px) {
+  /* line 16, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+  footer {
+    width: 97%;
+  }
+}
+
+/* line 21, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
 .arrow-up {
   height: 40px;
   width: 40px;
@@ -24,27 +31,27 @@ footer {
 }
 
 @media (max-width: 637px) {
-  /* line 27, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+  /* line 33, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
   .arrow-up {
     display: none;
   }
 }
 
 @media (max-width: 637px) {
-  /* line 33, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+  /* line 39, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
   .contact1 {
     width: 45% !important;
   }
 }
 
 @media (max-width: 637px) {
-  /* line 39, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+  /* line 45, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
   .contact2 {
     width: 55% !important;
   }
 }
 
-/* line 44, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+/* line 50, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
 .arrow-slide {
   left: 0;
   top: -100%;
@@ -56,7 +63,7 @@ footer {
   z-index: 0;
 }
 
-/* line 55, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+/* line 61, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
 .left-arm {
   position: absolute;
   z-index: 1;
@@ -68,7 +75,7 @@ footer {
   transform: rotate(-45deg);
 }
 
-/* line 64, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+/* line 70, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
 .left-arm:after {
   content: "";
   background-color: #221e41;
@@ -81,7 +88,7 @@ footer {
   z-index: -1;
 }
 
-/* line 77, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+/* line 83, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
 .right-arm {
   position: absolute;
   z-index: 1;
@@ -94,7 +101,7 @@ footer {
   border-radius: 2px;
 }
 
-/* line 87, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+/* line 93, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
 .right-arm:after {
   content: "";
   background-color: #221e41;
@@ -107,28 +114,28 @@ footer {
   z-index: -1;
 }
 
-/* line 100, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+/* line 106, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
 .arrow-up:hover {
   transition: all 0.1s;
 }
 
-/* line 102, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+/* line 108, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
 .arrow-up:hover .left-arm:after {
   transform: rotate(-10deg);
 }
 
-/* line 105, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+/* line 111, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
 .arrow-up:hover .right-arm:after {
   transform: rotate(10deg);
 }
 
-/* line 108, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+/* line 114, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
 .arrow-up:hover .arrow-slide {
   transition: all 0.4s ease-in-out;
   transform: translateY(200%);
 }
 
-/* line 114, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
+/* line 120, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/footer.scss */
 #by {
   margin: 0;
   font-weight: 300;

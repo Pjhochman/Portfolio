@@ -74,4 +74,29 @@
   }
 }
 
+@media (max-width: 637px) {
+  /* line 71, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+  .section2 {
+    position: relative;
+    top: 110px;
+  }
+}
+
+@media (max-width: 637px) {
+  /* line 78, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+  .section3 {
+    position: relative;
+    top: 130px;
+    margin: 0px 0px 200px !important;
+  }
+}
+
+@media (max-width: 637px) {
+  /* line 86, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/about.scss */
+  .section4 {
+    position: relative;
+    top: 30px;
+  }
+}
+
 /*# sourceMappingURL=about.css.map */

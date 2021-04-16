@@ -118,4 +118,12 @@ p {
   border-radius: 3px;
 }
 
+@media (max-width: 637px) {
+  /* line 110, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  .section1 {
+    top: 0;
+    position: relative;
+  }
+}
+
 /*# sourceMappingURL=app.css.map */

@@ -119,6 +119,12 @@
   }
 }
 
+@media (max-width: 637px) {
+  .card-top-container.four {
+    width: 77vw;
+  }
+}
+
 .card-bottom {
   display: none;
   margin-bottom: 8px;
@@ -433,11 +439,13 @@
 
 @media (max-width: 637px) {
   .items {
+    position: relative;
+    top: 70px;
     width: 86%;
     left: 0;
     right: 0;
     margin: auto;
-    height: 100vh;
+    height: 100%;
     &__inner {
       top: 0;
       left: 0;
@@ -445,7 +453,7 @@
       height: 620px;
     }
     &__layer:nth-child(1) &__item {
-      top: 290px;
+      top: 270px;
       left: 0;
       width: 100%;
       height: 110px;
@@ -454,13 +462,13 @@
       display: none;
     }
     &__layer:nth-child(3) &__item {
-      top: 440px;
+      top: 400px;
       left: 0;
       width: 100%;
       height: 110px;
     }
     &__layer:nth-child(4) &__item {
-      top: 150px;
+      top: 140px;
       left: 0;
       width: 100%;
       height: 110px;
