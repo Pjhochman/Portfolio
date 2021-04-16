@@ -33,11 +33,14 @@ header {
   justify-content: center;
   text-decoration: none;
   border: 0;
+  -webkit-tap-highlight-color: transparent;
   outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 @media (max-width: 637px) {
-  /* line 39, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+  /* line 42, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
   #linkedin,
   #github,
   #contact {
@@ -45,7 +48,7 @@ header {
   }
 }
 
-/* line 46, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+/* line 49, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
 .information-container,
 .contact-container {
   height: 100%;
@@ -56,33 +59,33 @@ header {
 }
 
 @media (max-width: 637px) {
-  /* line 56, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+  /* line 59, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
   .information-container {
     display: none;
   }
 }
 
 @media (max-width: 637px) {
-  /* line 62, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+  /* line 65, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
   .contact-container {
     width: 100%;
   }
 }
 
-/* line 67, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+/* line 70, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
 #name {
   user-select: none;
   color: #221e41;
 }
 
-/* line 72, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+/* line 75, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
 #profession {
   user-select: none;
   color: #61677c;
 }
 
 @media (max-width: 750px) {
-  /* line 78, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
+  /* line 81, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/header.scss */
   #profession {
     display: none;
   }

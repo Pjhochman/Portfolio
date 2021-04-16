@@ -32,7 +32,10 @@ header {
   justify-content: center;
   text-decoration: none;
   border: 0;
+  -webkit-tap-highlight-color: transparent;
   outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 @media (max-width: 637px) {

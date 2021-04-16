@@ -20,6 +20,10 @@ button {
   user-select: none;
   text-transform: uppercase;
   letter-spacing: 2px;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 #resumeButton:before,

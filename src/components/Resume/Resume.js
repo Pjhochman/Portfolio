@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "../Modal/Modal";
 import OpenModalButton from "../Modal/OpenModalButton";
 import styled from "styled-components";
 import resumeImage from "../../assets/images/resumeImage.png";
 
 import "../../styles/css/resume.css";
+
+const mediaQueryNarrow = window.matchMedia("(max-width: 637px)");
 
 const Container = styled.div`
   display: flex;
@@ -60,14 +62,31 @@ const Resume = props => {
   function handleOpenModal(open) {
     setToggle(open);
   }
+  const [width, setWidth] = useState(mediaQueryNarrow);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, [width]);
 
   return (
     <Container>
       <ResumeWrapper>
         <div className="resume-wrapper">
-          <OpenModalButton handleClick={() => handleOpenModal(true)}>
-            <div id="resumeButton">View my Resume</div>
-          </OpenModalButton>
+          {mediaQueryNarrow.matches ? (
+            <a
+              id="resumeButton"
+              href="https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/Peter+Hochman_CV.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View my Resume
+            </a>
+          ) : (
+            <OpenModalButton handleClick={() => handleOpenModal(true)}>
+              <div id="resumeButton">View my Resume</div>
+            </OpenModalButton>
+          )}
         </div>
         {props.children}
       </ResumeWrapper>

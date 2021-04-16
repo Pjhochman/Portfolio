@@ -40,7 +40,7 @@ const Aside = () => {
             <div id="designer" onMouseEnter={onHover} onMouseLeave={onLeave}>
               <h2 className="title1">designer</h2>
               <p className="description">
-                I have a passion for designing beautiful and functional
+                With a passion for designing beautiful and functional
                 experiences.
               </p>
             </div>

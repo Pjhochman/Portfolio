@@ -68,7 +68,7 @@
 
 @media (max-width: 637px) {
   .card-top-left {
-    align-items: center;
+    align-items: flex-start;
     font-size: 10px;
     margin-top: 0;
   }
@@ -188,6 +188,12 @@
   }
 }
 
+@media (max-width: 637px) {
+  #password {
+    margin-bottom: 15px;
+  }
+}
+
 .card-bottom-center {
   display: none;
   margin-bottom: 8px;
@@ -208,7 +214,7 @@
     font-size: 10px;
     margin: 0;
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -238,6 +244,16 @@
 @media (max-width: 637px) {
   #designedForBands {
     white-space: normal;
+  }
+}
+
+@media (max-width: 637px) {
+  #previousContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: -5px;
   }
 }
 
@@ -368,7 +384,7 @@
       width: 550px;
       max-width: 800px;
       height: 620px;
-      z-index: 0;
+      z-index: 2;
     }
     &__layer:nth-child(1) &__item {
       top: 120px;

@@ -57,20 +57,22 @@ const Card4 = () => {
                   </strong>
                 </span>
               </FadeIn>
-              <FadeIn className="card-top-left" style={visible}>
-                <span>Accedo.tv</span>
-              </FadeIn>
-              <FadeIn className="card-top-left" style={visible}>
-                {mediaQueryNarrow.matches
-                  ? "Software Engineer Intern"
-                  : "S. Engineer Intern"}{" "}
-              </FadeIn>
-              <FadeIn className="card-bottom-center" style={visible}>
-                <span>React with GraphQL</span>
-              </FadeIn>
-              <FadeIn className="card-bottom-center" style={visible}>
-                <span>Cypress E2E</span>
-              </FadeIn>
+              <div id="previousContainer">
+                <FadeIn className="card-top-left" style={visible}>
+                  <span>Accedo.tv</span>
+                </FadeIn>
+                <FadeIn className="card-top-left" style={visible}>
+                  {mediaQueryNarrow.matches
+                    ? "Software Engineer Intern"
+                    : "S. Engineer Intern"}{" "}
+                </FadeIn>
+                <FadeIn className="card-bottom-center" style={visible}>
+                  <span>React with GraphQL</span>
+                </FadeIn>
+                <FadeIn className="card-bottom-center" style={visible}>
+                  <span>Cypress E2E</span>
+                </FadeIn>
+              </div>
             </div>
           </a>
         </div>

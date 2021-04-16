@@ -20,9 +20,13 @@ button {
   user-select: none;
   text-transform: uppercase;
   letter-spacing: 2px;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
-/* line 25, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+/* line 29, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:before,
 #resumeButton:after {
   position: absolute;
@@ -30,7 +34,7 @@ button {
   transition: all 0.25s;
 }
 
-/* line 32, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+/* line 36, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:before {
   border-bottom: 2px solid #221e41;
   border-left: 2px solid #221e41;
@@ -40,7 +44,7 @@ button {
   bottom: -10px;
 }
 
-/* line 41, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+/* line 45, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:after {
   border-top: 2px solid #221e41;
   border-right: 2px solid #221e41;
@@ -50,19 +54,19 @@ button {
   right: -10px;
 }
 
-/* line 50, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+/* line 54, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:hover:before {
   width: 112%;
   height: 140%;
 }
 
-/* line 55, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+/* line 59, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:hover:after {
   width: 112%;
   height: 140%;
 }
 
-/* line 60, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+/* line 64, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #download {
   user-select: none;
   letter-spacing: 0.8px;
@@ -78,28 +82,28 @@ button {
 }
 
 @media (max-width: 637px) {
-  /* line 75, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+  /* line 79, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
   #download {
     left: 0;
   }
 }
 
 @media (max-width: 637px) {
-  /* line 81, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+  /* line 85, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
   #resumeImage {
     display: none;
   }
 }
 
 @media (max-width: 637px) {
-  /* line 87, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+  /* line 91, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
   #resumeImg {
     height: 70% !important;
   }
 }
 
 @media (max-width: 637px) {
-  /* line 93, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+  /* line 97, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
   #modal {
     height: 40% !important;
   }
