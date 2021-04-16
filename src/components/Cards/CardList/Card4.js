@@ -45,12 +45,6 @@ const Card4 = () => {
   const [visible, setVisible] = useState(
     !mediaQueryWide.matches ? { display: "none" } : { display: "flex" }
   );
-  const [width, setWidth] = useState(mediaQueryNarrow);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
-  }, [width]);
 
   return (
     <div className="items__layer layer" data-depth="1.20">
@@ -72,26 +66,22 @@ const Card4 = () => {
               );
             }}
           >
-            <div>
+            <div className="card-top-container">
               <FadeIn className="card-top" style={visible}>
-                <div style={{ marginLeft: "10px" }}>
+                <div>
                   <br />
                   <strong style={{ color: "white" }}>
-                    My Own Work {mediaQueryNarrow.matches ? <hr></hr> : ""}
+                    My Own Work{" "}
                     <span style={{ fontWeight: "300", color: "white" }}>
-                      {mediaQueryNarrow.matches
-                        ? "Band Planner"
-                        : "| Band Planner"}
+                      | Band Planner
                     </span>
                   </strong>
                 </div>
               </FadeIn>
-              <br />
               <FadeInRight1 className="card-top" style={visible}>
                 <p
                   id="designedForBands"
                   style={{
-                    marginLeft: "10px",
                     color: "white"
                   }}
                 >
@@ -137,7 +127,7 @@ const Card4 = () => {
                         )
                       }
                     >
-                      {mediaQueryNarrow.matches ? text : "EMAIL:" + text}
+                      {"EMAIL:" + text}
                     </span>
                   ))}
                 </div>
@@ -160,11 +150,9 @@ const Card4 = () => {
                 <br />
                 <div id="credentials" style={{ marginRight: "0px" }}>
                   <strong style={{ color: "white" }}>
-                    Mobile App {mediaQueryNarrow.matches ? <hr></hr> : ""}
+                    Mobile App{" "}
                     <span style={{ color: "white", fontWeight: "300" }}>
-                      {mediaQueryNarrow.matches
-                        ? "Login Credentials"
-                        : "| Login Credentials"}
+                      | Login Credentials
                     </span>
                   </strong>
                 </div>

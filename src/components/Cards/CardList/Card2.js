@@ -56,21 +56,19 @@ const Card2 = () => {
               );
             }}
           >
-            <div>
+            <div className="card-top-container">
               <FadeIn className="card-top" style={visible}>
                 <div>
                   <br />
                   <strong style={{ color: "white" }}>
-                    My Own Work {mediaQueryNarrow.matches ? <hr></hr> : ""}
+                    My Own Work{" "}
                     <span
                       style={{
                         fontWeight: "300",
                         color: "white"
                       }}
                     >
-                      {mediaQueryNarrow.matches
-                        ? "Color Palette"
-                        : "| Color Palette"}
+                      | Color Palette
                     </span>
                   </strong>
                 </div>

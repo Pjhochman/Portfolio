@@ -54,32 +54,33 @@ const Card3 = () => {
               );
             }}
           >
-            <div className="card-bottom-container" style={{ height: "100%" }}>
-              <FadeInLeft1 className="card-bottom" style={visible}>
+            <div
+              className="card-bottom-container three"
+              style={{ height: "100%" }}
+            >
+              <FadeInLeft1 className="card-bottom three" style={visible}>
                 <p id="webVR">
                   <span style={{ color: "white" }}>
                     {!mediaQueryNarrow.matches
                       ? "Web VR experience created"
-                      : "Web VR experience"}
+                      : "created with A-frame."}
                   </span>
                 </p>
               </FadeInLeft1>
-              <FadeInLeft2 className="card-bottom" style={visible}>
+              <FadeInLeft2 className="card-bottom three" style={visible}>
                 <p>
                   <span style={{ color: "white" }}>
                     {!mediaQueryNarrow.matches
                       ? "with A-frame."
-                      : "created with A-frame."}
+                      : "Web VR experience"}
                   </span>
                 </p>
               </FadeInLeft2>
-              <FadeIn className="card-bottom" style={visible}>
+              <FadeIn className="card-bottom three" style={visible}>
                 <br />
                 <div id="aFrame" style={{ marginRight: "25px" }}>
                   <span style={{ color: "white" }}>
-                    <strong>My Own Work </strong>
-                    {mediaQueryNarrow.matches ? <hr></hr> : ""}
-                    {mediaQueryNarrow.matches ? "Project 11" : "| Project 11"}
+                    <strong>My Own Work </strong>| Project 11
                   </span>
                 </div>
                 <br />

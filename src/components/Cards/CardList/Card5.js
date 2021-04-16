@@ -17,7 +17,7 @@ const Card4 = () => {
   const [visible, setVisible] = useState(
     !mediaQueryWide.matches ? { display: "none" } : { display: "flex" }
   );
-  const [width, setWidth] = useState(mediaQueryNarrow);
+  const [width, setWidth] = useState(mediaQueryWide);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -43,12 +43,12 @@ const Card4 = () => {
               );
             }}
           >
-            <div style={{ width: "100%" }}>
+            <div className="card-top-container" style={{ width: "100%" }}>
               <FadeIn className="card-top-left" style={visible}>
                 <span style={{ margin: "0" }}>
                   <br />
                   <strong>
-                    {mediaQueryNarrow.matches
+                    {mediaQueryWide.matches
                       ? "Previously"
                       : "Previous Adventure"}
 
@@ -61,7 +61,9 @@ const Card4 = () => {
                 <span>Accedo.tv</span>
               </FadeIn>
               <FadeIn className="card-top-left" style={visible}>
-                <span>S. Engineer Intern</span>
+                {mediaQueryNarrow.matches
+                  ? "Software Engineer Intern"
+                  : "S. Engineer Intern"}
               </FadeIn>
             </div>
 

@@ -11,6 +11,7 @@
 @media (max-width: 637px) {
   .cardContainer {
     flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -37,6 +38,7 @@
 @media (max-width: 637px) {
   .card-top {
     margin: 0;
+    font-size: 10px;
   }
 }
 
@@ -78,9 +80,24 @@
 
 @media (max-width: 637px) {
   .card-bottom-container.four {
-    width: 33vw;
+    width: 0;
+    height: 100%;
   }
 }
+
+@media (max-width: 637px) {
+  .card-bottom-container.three {
+    flex-direction: column-reverse;
+    margin: 0 20px 0 20px;
+  }
+}
+
+@media (max-width: 637px) {
+  .card-top-container {
+    height: 100%;
+  }
+}
+
 .card-bottom {
   display: none;
   margin-bottom: 8px;
@@ -106,6 +123,13 @@
 @media (max-width: 637px) {
   .card-bottom {
     margin: 0;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 637px) {
+  .card-bottom.three {
+    align-items: flex-start;
   }
 }
 
@@ -166,13 +190,16 @@
 @media (max-width: 637px) {
   #interactiveDesign {
     width: 100px;
-    white-space: normal;
   }
+}
+
+#designedForBands {
+  margin-top: 10px;
+  white-space: normal;
 }
 
 @media (max-width: 637px) {
   #designedForBands {
-    width: 92px;
     white-space: normal;
   }
 }
@@ -395,31 +422,31 @@
       height: 620px;
     }
     &__layer:nth-child(1) &__item {
-      top: 140px;
+      top: 170px;
       left: 0;
       width: 100%;
-      height: 110px;
+      height: 130px;
     }
     &__layer:nth-child(2) &__item {
       display: none;
     }
     &__layer:nth-child(3) &__item {
-      top: 380px;
+      top: 470px;
       left: 0;
       width: 100%;
-      height: 110px;
+      height: 130px;
     }
     &__layer:nth-child(4) &__item {
       top: 20px;
       left: 0;
       width: 100%;
-      height: 110px;
+      height: 130px;
     }
     &__layer:nth-child(5) &__item {
-      top: 260px;
+      top: 320px;
       left: 0;
       width: 100%;
-      height: 110px;
+      height: 130px;
     }
   }
 }
