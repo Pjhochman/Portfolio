@@ -49,7 +49,7 @@ const Card4 = () => {
                   <br />
                   <strong>
                     {mediaQueryWide.matches
-                      ? "Previously"
+                      ? "My Recent Adventure"
                       : "Previous Adventure"}
 
                     <hr style={{ opacity: "0.25" }} />
@@ -75,6 +75,20 @@ const Card4 = () => {
                 <span>Cypress E2E</span>
               </FadeIn>
               <br />
+              {mediaQueryNarrow.matches ? (
+                <FadeIn className="card-bottom" style={visible}>
+                  <br />
+                  <div id="credentials" style={{ marginRight: "0px" }}>
+                    <strong style={{ color: "white" }}>
+                      Mobile App{" "}
+                      <span style={{ color: "white", fontWeight: "300" }}>
+                        | Login Credentials
+                      </span>
+                    </strong>
+                  </div>
+                  <br />
+                </FadeIn>
+              ) : null}
             </div>
           </a>
         </div>

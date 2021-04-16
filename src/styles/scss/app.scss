@@ -60,6 +60,12 @@ p {
   }
 }
 
+@media (max-width: 637px) {
+  p {
+    font-size: 10px;
+  }
+}
+
 .fade-in-section {
   opacity: 0;
   transform: translateY(20vh);

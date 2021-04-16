@@ -83,9 +83,7 @@ const Card2 = () => {
                 <p style={{ color: "white" }}>using the P5.js</p>
               </FadeInRight2>
               <FadeInRight3 className="card-top" style={visible}>
-                <p style={{ color: "white" }}>
-                  library<strong>.</strong>
-                </p>
+                <p style={{ color: "white" }}>library.</p>
               </FadeInRight3>
             </div>
           </a>

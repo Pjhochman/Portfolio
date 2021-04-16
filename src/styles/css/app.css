@@ -65,7 +65,14 @@ p {
   }
 }
 
-/* line 63, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+@media (max-width: 637px) {
+  /* line 64, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+  p {
+    font-size: 10px;
+  }
+}
+
+/* line 69, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .fade-in-section {
   opacity: 0;
   transform: translateY(20vh);
@@ -74,20 +81,20 @@ p {
   will-change: opacity, transform, visibility;
 }
 
-/* line 71, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 77, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .fade-in-section.is-visible {
   opacity: 1;
   transform: none;
   visibility: visible;
 }
 
-/* line 77, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 83, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .box {
   padding: 50px;
   margin: 20px 0;
 }
 
-/* line 82, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
+/* line 88, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/app.scss */
 .box span {
   background-color: rgba(255, 255, 255, 0.5);
   display: inline-block;

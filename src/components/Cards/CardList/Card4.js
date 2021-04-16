@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { fadeInRight } from "react-animations";
 import { fadeInLeft } from "react-animations";
@@ -12,6 +12,7 @@ const fadeInAnimation = keyframes`${fadeIn}`;
 const email = ["hello@email.com"];
 const mediaQueryWide = window.matchMedia("(max-width: 1250px)");
 const mediaQueryNarrow = window.matchMedia("(max-width: 637px)");
+const mediaQueryMiddle = window.matchMedia("(max-width: 1100px)");
 
 const FadeIn = styled.div`
   animation: 0.4s ${fadeInAnimation};
@@ -45,6 +46,12 @@ const Card4 = () => {
   const [visible, setVisible] = useState(
     !mediaQueryWide.matches ? { display: "none" } : { display: "flex" }
   );
+  const [width, setWidth] = useState(mediaQueryNarrow);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, [width]);
 
   return (
     <div className="items__layer layer" data-depth="1.20">
@@ -66,7 +73,7 @@ const Card4 = () => {
               );
             }}
           >
-            <div className="card-top-container">
+            <div className="card-top-container four">
               <FadeIn className="card-top" style={visible}>
                 <div>
                   <br />
@@ -87,7 +94,7 @@ const Card4 = () => {
                 >
                   {!mediaQueryNarrow.matches
                     ? "Designed for Bands to"
-                    : "Designed for Bands to Keep track of Songs"}
+                    : "Designed for Bands to Keep track of Songs."}
                 </p>
               </FadeInRight1>
               <FadeInRight2 className="card-top" style={visible}>
@@ -97,7 +104,7 @@ const Card4 = () => {
                     color: "white"
                   }}
                 >
-                  {!mediaQueryNarrow.matches ? "Keep Track of Songs" : ""}
+                  {!mediaQueryNarrow.matches ? "Keep Track of Songs." : ""}
                 </p>
               </FadeInRight2>
             </div>
@@ -127,7 +134,7 @@ const Card4 = () => {
                         )
                       }
                     >
-                      {"EMAIL:" + text}
+                      {!mediaQueryMiddle.matches ? "EMAIL:" + text : text}
                     </span>
                   ))}
                 </div>

@@ -64,6 +64,14 @@
   }
 }
 
+@media (max-width: 637px) {
+  .card-top-left {
+    align-items: flex-start;
+    font-size: 10px;
+    margin-top: 0;
+  }
+}
+
 .card-bottom-container {
   display: flex;
   flex-direction: column;
@@ -75,6 +83,12 @@
 @media (max-width: 1250px) {
   .card-bottom-container {
     align-items: center;
+  }
+}
+
+@media (max-width: 637px) {
+  .card-bottom-container {
+    height: 100%;
   }
 }
 
@@ -133,7 +147,7 @@
   }
 }
 
-@media (max-width: 637px) {
+@media (max-width: 1100px) {
   #password,
   #email {
     text-transform: lowercase;
@@ -172,6 +186,14 @@
   .card-bottom-center {
     font-size: 9px;
     width: 15vw;
+  }
+}
+
+@media (max-width: 637px) {
+  .card-bottom-center {
+    font-size: 10px;
+    margin: 0;
+    align-items: flex-start;
   }
 }
 
