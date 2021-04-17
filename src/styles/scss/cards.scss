@@ -13,7 +13,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 637px) {
+  .cardContainer.four {
+    justify-content: space-between;
   }
 }
 
@@ -21,7 +27,7 @@
   display: none;
   margin-top: 8px;
   flex-direction: column;
-  width: 180px;
+  width: 100%;
   height: auto;
   font-size: 10px;
   text-transform: uppercase;
@@ -129,7 +135,7 @@
 
 @media (max-width: 637px) {
   .card-top.two {
-    margin-bottom: 10px;
+    margin-bottom: 0 20px 10px 20px;
   }
 }
 
@@ -139,7 +145,7 @@
   flex-direction: column;
   width: 180px;
   height: auto;
-  font-size: 11px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
   align-items: flex-end;

@@ -58,8 +58,8 @@ const Card2 = () => {
           >
             <div className="card-top-container">
               <FadeIn className="card-top two" style={visible}>
-                <div>
-                  <br />
+                <br />
+                <p>
                   <strong style={{ color: "white" }}>
                     My Own Work{" "}
                     <span
@@ -71,7 +71,7 @@ const Card2 = () => {
                       | Color Palette
                     </span>
                   </strong>
-                </div>
+                </p>
               </FadeIn>
               <FadeInRight1 className="card-top" style={visible}>
                 <p id="interactiveDesign" style={{ color: "white" }}>

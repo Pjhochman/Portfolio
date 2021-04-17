@@ -36,7 +36,7 @@ const modalVariant = {
 };
 const containerVariant = {
   initial: { top: "-50%", transition: { type: "spring" } },
-  isOpen: { top: "55%" },
+  isOpen: { top: "47%" },
   exit: { top: "-50%" }
 };
 const Modal = ({ handleClose, children, isOpen }) => {
