@@ -8,16 +8,17 @@ export const useHover = () => {
   const handleMouseover = () => setHovered(true);
   const handleMouseout = () => setHovered(false);
 
-  useEffect(() => {
+  useEffect(node => {
     if (ref.current) {
       ref.current.addEventListener("mouseover", handleMouseover);
       ref.current.addEventListener("mouseout", handleMouseout);
-
-      return () => {
-        ref.current.removeEventListener("mouseover", handleMouseover);
-        ref.current.removeEventListener("mouseout", handleMouseout);
-      };
     }
+    if (node) {
+      ref.current.removeEventListener("mouseover", handleMouseover);
+      ref.current.removeEventListener("mouseout", handleMouseout);
+    }
+
+    ref.current = node;
   }, []);
 
   return [ref, isHovered];

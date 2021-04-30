@@ -159,7 +159,7 @@ const CardItem = ({
   const [isVisible, setVisible] = useState(false);
   const [isExpanded, setExpand] = useState(false);
   const [width, setWidth] = useState();
-
+  console.log(cardHovered);
   const expandHandler = () => setExpand(value => !value);
 
   useEffect(() => {
