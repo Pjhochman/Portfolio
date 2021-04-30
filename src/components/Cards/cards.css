@@ -172,7 +172,7 @@ li {
 
 @media (max-width: 637px) {
   .items {
-    height: 95vh;
+    height: 92vh;
   }
   .items__inner {
     top: -20px;

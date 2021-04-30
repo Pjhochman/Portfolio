@@ -157,7 +157,7 @@ const CardItem = ({
   const [isVisible, setVisible] = useState(false);
   const [isExpanded, setExpand] = useState(false);
   const [width, setWidth] = useState();
-  console.log(cardHovered);
+
   const expandHandler = () => setExpand(value => !value);
 
   useEffect(() => {
@@ -186,7 +186,7 @@ const CardItem = ({
                   width: width > "637" ? "515px" : "316px",
                   height: width > "637" ? "590px" : "510px",
                   left: "0px",
-                  top: "0px",
+                  top: width > "637" ? "0px" : "20px",
                   zIndex: "1"
                 }
               : null

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { CardItemContext } from "../CardItem";
 
 const technologies = [
@@ -12,6 +12,12 @@ const technologies = [
 ];
 
 export const Accedo = props => {
+  const [width, setWidth] = useState();
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
   const {
     TopContent,
     MiddleContent,
@@ -31,7 +37,12 @@ export const Accedo = props => {
           justifyContent: "space-between"
         }}
       >
-        <FadeIn style={{ animationDuration: "0.3s", marginTop: "25px" }}>
+        <FadeIn
+          style={{
+            animationDuration: "0.3s",
+            marginTop: width > "637" ? "25px" : "20px"
+          }}
+        >
           <TopTitle
             style={{
               fontWeight: "bold",
@@ -40,7 +51,8 @@ export const Accedo = props => {
               whiteSpace: "nowrap",
               display: "flex",
               flexDirection: "column",
-              alignItems: "center"
+              alignItems: "center",
+              fontSize: width > "637" ? "9px" : "8px"
             }}
           >
             Previously
@@ -57,7 +69,11 @@ export const Accedo = props => {
             }}
           >
             <p>Accedo.tv</p>
-            <p>S. Engineer Intern</p>
+            {width > "637px" ? (
+              <>
+                <p>S. Engineer Intern</p>
+              </>
+            ) : null}
           </TopDescription>
         </FadeIn>
       </TopContent>
