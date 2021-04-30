@@ -184,7 +184,7 @@ const CardItem = ({
             isExpanded
               ? {
                   width: width > "637" ? "515px" : "316px",
-                  height: "590px",
+                  height: width > "637" ? "590px" : "510px",
                   left: "0px",
                   top: "0px",
                   zIndex: "1"

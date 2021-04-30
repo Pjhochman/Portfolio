@@ -175,10 +175,10 @@ li {
     height: 95vh;
   }
   .items__inner {
-    top: 0;
+    top: -20px;
     left: 1px;
     width: 317px;
-    height: 594px;
+    height: 510px;
   }
   .items__layer:nth-child(1) .items__item {
     top: 170px;

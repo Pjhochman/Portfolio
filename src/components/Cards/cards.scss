@@ -150,10 +150,10 @@ li {
   .items {
     height: 95vh;
     &__inner {
-      top: 0;
+      top: -20px;
       left: 1px;
       width: 317px;
-      height: 594px;
+      height: 510px;
     }
     &__layer:nth-child(1) &__item {
       top: 170px;
