@@ -87,8 +87,13 @@ $text-color-black: #221e41;
   }
 }
 
+#profileInformation {
+  align-items: flex-start;
+}
+
 @media (max-width: 637px) {
   #profileInformation {
+    align-items: center;
     text-align: center;
     width: 60vw !important;
     height: 75vw !important;

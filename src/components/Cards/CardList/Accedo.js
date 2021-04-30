@@ -68,12 +68,14 @@ export const Accedo = props => {
               fontSize: "8px"
             }}
           >
-            <p>Accedo.tv</p>
-            {width > "637px" ? (
+            {width > "637" ? (
               <>
+                <p>Accedo.tv</p>
                 <p>S. Engineer Intern</p>
               </>
-            ) : null}
+            ) : (
+              <p>Accedo.tv</p>
+            )}
           </TopDescription>
         </FadeIn>
       </TopContent>
