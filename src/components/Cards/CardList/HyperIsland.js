@@ -3,7 +3,7 @@ import { CardItemContext } from "../CardItem";
 
 const programInfo = [
   "Dates: August 9, 2019 – April 02, 2021",
-  "Length: 80 weeks (53 on campus – 27 on internship)",
+  "80 weeks (53 on campus – 27 on internship)",
   "Location: Stockholm, Sweden"
 ];
 
@@ -25,24 +25,28 @@ export const HyperIsland = props => {
       {isExpanded && (
         <>
           <MiddleContent>
-            <h3 style={{ color: "white" }}>Program Information</h3>
-            <ul style={{ color: "white", textAlign: "center" }}>
-              {programInfo.map((item, index) => {
-                return <li key={index}>{item}</li>;
-              })}
-            </ul>
-            <br></br>
-            <h3 style={{ color: "white" }}>Website</h3>
-            <a
-              style={{ fontSize: "11px", margin: "0", color: "white" }}
-              href="https://www.hyperisland.com/programs-and-courses/frontend-developer"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <ul style={{ color: "white" }}>
-                <li>hyperisland.com/frontend-developer</li>
+            <div>
+              <h3 style={{ color: "white" }}>Program Information</h3>
+              <ul style={{ color: "white", textAlign: "center" }}>
+                {programInfo.map((item, index) => {
+                  return <li key={index}>{item}</li>;
+                })}
               </ul>
-            </a>
+            </div>
+            <br></br>
+            <div>
+              <h3 style={{ color: "white" }}>Website</h3>
+              <a
+                style={{ fontSize: "11px", margin: "0", color: "white" }}
+                href="https://www.hyperisland.com/programs-and-courses/frontend-developer"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ul style={{ color: "white" }}>
+                  <li>hyperisland.com/frontend-developer</li>
+                </ul>
+              </a>
+            </div>
           </MiddleContent>
         </>
       )}

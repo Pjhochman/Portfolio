@@ -36,7 +36,7 @@ const Header = ({ pageHandler, isPage }) => {
         style={
           menu && width < "1101"
             ? {
-                height: "50%",
+                height: "60%",
                 flexDirection: "column",
                 boxShadow: "inset 0 0 2000px rgba(255, 255, 255, 0.5)",
                 backgroundColor: "rgba(255, 255, 255, 0.15)",

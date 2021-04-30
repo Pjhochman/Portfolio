@@ -43,15 +43,13 @@ const TopContainer = styled.div`
 
 const MiddleContainer = styled.div`
   display: flex;
-  width: 100%;
-  height: auto;
-  padding: 20px;
-  text-align: justify;
+  width: 80%;
+  height: 50vh;
+  text-align: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   overflow: hidden;
-  letter-spacing: 2px;
   font-size: 11px;
   font-weight: 200;
   color: white;

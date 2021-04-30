@@ -34,33 +34,39 @@ export const BandPlanner = props => {
       {isExpanded && (
         <>
           <MiddleContent>
-            <h3>Project Description</h3>
-            <p style={{ lineHeight: "15px" }}>
-              Designed for bands to keep track of songs.
-            </p>
+            <div>
+              <h3>Project Description</h3>
+              <p style={{ lineHeight: "15px" }}>
+                Designed for bands to keep track of songs.
+              </p>
+            </div>
             <br></br>
-            <h3>Technologies & Tools</h3>
-            <ul style={{ color: "white", textAlign: "center" }}>
-              <li>Node.js </li>
-              <li>Javascript</li>
-              {technologies.map((item, index) => {
-                return <li key={index}>{item}</li>;
-              })}
-            </ul>
-            <br></br>
-            <h3>Website</h3>
-            <a
-              style={{ fontSize: "11px", margin: "0", color: "white" }}
-              href="https://obscure-shore-89574.herokuapp.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <div>
+              <h3>Technologies & Tools</h3>
               <ul style={{ color: "white", textAlign: "center" }}>
-                <li>obscure-shore-89574.herokuapp.com</li>
-                <li>Email: hello@email.com</li>
-                <li> Password: hello</li>
+                <li>Node.js </li>
+                <li>Javascript</li>
+                {technologies.map((item, index) => {
+                  return <li key={index}>{item}</li>;
+                })}
               </ul>
-            </a>
+            </div>
+            <br></br>
+            <div>
+              <h3>Website</h3>
+              <a
+                style={{ fontSize: "11px", margin: "0", color: "white" }}
+                href="https://obscure-shore-89574.herokuapp.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ul style={{ color: "white", textAlign: "center" }}>
+                  <li>obscure-shore-89574.herokuapp.com</li>
+                  <li>Email: hello@email.com</li>
+                  <li> Password: hello</li>
+                </ul>
+              </a>
+            </div>
           </MiddleContent>
           <BottomContent>
             <BottomDescription></BottomDescription>

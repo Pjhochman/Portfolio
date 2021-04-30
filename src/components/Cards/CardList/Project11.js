@@ -25,30 +25,35 @@ export const Project11 = props => {
       {isExpanded && (
         <>
           <MiddleContent>
-            <h3 style={{ color: "white" }}>Project Description</h3>
-            <p style={{ lineHeight: "15px", color: "white" }}>
-              Web VR experience.
-            </p>
+            <div>
+              <h3 style={{ color: "white" }}>Project Description</h3>
+              <p style={{ lineHeight: "15px", color: "white" }}>
+                Web VR experience.
+              </p>
+            </div>
             <br></br>
-
-            <h3 style={{ color: "white" }}>Technologies & Tools</h3>
-            <ul style={{ color: "white", textAlign: "center" }}>
-              {technologies.map((item, index) => {
-                return <li key={index}>{item}</li>;
-              })}
-            </ul>
-            <br></br>
-            <h3 style={{ color: "white" }}>Website</h3>
-            <a
-              style={{ fontSize: "11px", margin: "0", color: "white" }}
-              href="https://project11.netlify.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <ul style={{ color: "white" }}>
-                <li>project11.netlify.app</li>
+            <div>
+              <h3 style={{ color: "white" }}>Technologies & Tools</h3>
+              <ul style={{ color: "white", textAlign: "center" }}>
+                {technologies.map((item, index) => {
+                  return <li key={index}>{item}</li>;
+                })}
               </ul>
-            </a>
+            </div>
+            <br></br>
+            <div>
+              <h3 style={{ color: "white" }}>Website</h3>
+              <a
+                style={{ fontSize: "11px", margin: "0", color: "white" }}
+                href="https://project11.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ul style={{ color: "white" }}>
+                  <li>project11.netlify.app</li>
+                </ul>
+              </a>
+            </div>
           </MiddleContent>
         </>
       )}
