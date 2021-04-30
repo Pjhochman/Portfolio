@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "../../styles/css/aside.css";
+import React, { useState, useEffect } from "react";
+import "./aside.css";
 import styled, { keyframes } from "styled-components";
 import { fadeInRightBig, fadeInLeftBig } from "react-animations";
 
@@ -13,31 +13,48 @@ const FadeInLeft = styled.div`
   animation: 2s ${fadeInLeftAnimation};
 `;
 
+const technologies = [
+  "javascript",
+  "react",
+  "node.js",
+  "html",
+  "sass",
+  "rest APIs",
+  "postman",
+  "netlify",
+  "heroku",
+  "AWS",
+  "cypress",
+  "PWA",
+  "PWA"
+];
+
 const Aside = () => {
-  const [width, setWidth] = useState(false);
+  const [gradient, setGradient] = useState(false);
   const [display, setDisplay] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
 
-  const toggleWidth = () => {
-    setWidth(value => !width);
-  };
+  const toggleGradient = () => setGradient(value => !value);
+  const toggleDisplay = () => setDisplay(value => !value);
 
-  const toggleDisplay = () => {
-    setDisplay(value => !display);
-  };
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
 
   return (
     <>
       <div
-        style={width ? { width: "100%" } : { width: "0%" }}
+        style={gradient ? { width: "100%" } : { width: "0%" }}
         className="colorPalette active"
       ></div>
       <aside>
         <div id="designerContainer">
           <FadeInLeft>
-            <div id="designer" onClick={toggleWidth}>
+            <div id="designer" onClick={toggleGradient}>
               <h2 className="title1">designer</h2>
               <p className="description">
-                With a passion for designing beautiful and functional
+                I have a passion for designing beautiful and functional
                 experiences.
               </p>
             </div>
@@ -45,7 +62,15 @@ const Aside = () => {
         </div>
         <div id="filler"></div>
         <div id="coderContainer" onClick={toggleDisplay}>
-          <FadeInLeft>
+          <FadeInRight>
+            <div id="coder">
+              <h2 className="title2">coder</h2>
+              <p className="description">
+                {width > "1100"
+                  ? "   Front End Developer who focuses on writing clean, elegant and efficient code."
+                  : "Focusing on writing clean, elegant and efficient code."}
+              </p>
+            </div>
             <div
               className="content"
               style={display ? { display: "flex" } : { display: "none" }}
@@ -53,30 +78,19 @@ const Aside = () => {
               <p className="content__container__text">I'm skilled in</p>
               <div className="content__container">
                 <ul className="content__container__list">
-                  <li className="content__container__list__item">javascript</li>
-                  <li className="content__container__list__item">react</li>
-                  <li className="content__container__list__item">node.js</li>
-                  <li className="content__container__list__item">html</li>
-                  <li className="content__container__list__item">sass</li>
-                  <li className="content__container__list__item">rest APIs</li>
-                  <li className="content__container__list__item">postman</li>
-                  <li className="content__container__list__item">netlify</li>
-                  <li className="content__container__list__item">heroku</li>
-                  <li className="content__container__list__item">AWS</li>
-                  <li className="content__container__list__item">cypress</li>
-                  <li className="content__container__list__item">PWA</li>
-                  <li className="content__container__list__item">PWA</li>
+                  {technologies.map((item, index) => {
+                    return (
+                      <li
+                        className="content__container__list__item"
+                        key={index}
+                        style={{ margin: "0" }}
+                      >
+                        {item}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
-            </div>
-          </FadeInLeft>
-          <FadeInRight>
-            <div id="coder">
-              <h2 className="title2">coder</h2>
-              <p className="description">
-                Front End Developer who focuses on writing clean, elegant and
-                efficient code.
-              </p>
             </div>
           </FadeInRight>
         </div>

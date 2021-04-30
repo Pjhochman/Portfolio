@@ -1,0 +1,92 @@
+html {
+  scroll-behavior: smooth;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e9f0fb;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+}
+
+h1 {
+  margin: 0 10px 0 10px;
+  font-weight: 200;
+  padding: 0;
+  font-size: 18px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+a {
+  margin: 0 10px 0 10px;
+  font-weight: 200;
+  padding: 0;
+  font-size: 17px;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  color: black;
+}
+
+.about-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 15vh;
+}
+
+.fade-in-section {
+  opacity: 0;
+  -webkit-transform: translateY(20vh);
+          transform: translateY(20vh);
+  visibility: hidden;
+  -webkit-transition: opacity 1200ms ease-out, visibility 1200ms ease-out, -webkit-transform 600ms ease-out;
+  transition: opacity 1200ms ease-out, visibility 1200ms ease-out, -webkit-transform 600ms ease-out;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out, -webkit-transform 600ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+  visibility: visible;
+}
+
+@media (max-width: 637px) {
+  .fade-in-section.is-visible {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.box {
+  padding: 50px;
+  margin: 20px 0;
+}
+
+.box span {
+  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+@media (max-width: 637px) {
+  .section1 {
+    top: 0;
+    position: relative;
+  }
+}
+/*# sourceMappingURL=app.css.map */

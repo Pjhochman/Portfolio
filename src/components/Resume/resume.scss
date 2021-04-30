@@ -61,6 +61,14 @@ button {
   height: 140%;
 }
 
+@media (max-width: 637px) {
+  #resumeButton {
+    font-size: 2.4vw;
+    line-height: 7vw;
+    width: 150px;
+  }
+}
+
 #download {
   user-select: none;
   letter-spacing: 0.8px;

@@ -1,0 +1,41 @@
+{
+  "projects": [
+    {
+      "dataDepth": "0.70",
+      "dataTitle": "no.1",
+      "title": "Color Palette",
+      "description": "Graphic and interactive design using the p5.js library."
+    },
+    {
+      "dataDepth": "0.85",
+      "dataTitle": "no.2",
+      "title": "Education",
+      "description": "Hyper Island"
+    },
+    {
+      "dataDepth": "0.65",
+      "dataTitle": "no.3",
+      "title": "Project 11",
+      "description": "Web vr experience created with a-frame."
+    },
+    {
+      "dataDepth": "1.20",
+      "dataTitle": "no.4",
+      "title": "Band Planner",
+      "description": "Designed for bands to keep track of songs."
+    },
+    {
+      "dataDepth": "0",
+      "dataTitle": "no.5"
+    }
+  ],
+  "work": [
+    {
+      "title": "Previous Adventure",
+      "company": "Accedo.tv",
+      "position": "S. Engineer Intern",
+      "framework": "React with GraphQL",
+      "testingTool": "Cypress E2E"
+    }
+  ]
+}

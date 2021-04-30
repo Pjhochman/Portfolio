@@ -33,37 +33,10 @@ a {
   color: black;
 }
 
-@media (max-width: 1250px) {
-  a {
-    margin: 0 20px 0 20px;
-  }
-}
-
-p {
-  font-weight: 200;
-  font-size: 10px;
-  margin: 0 20px 0 20px;
-  padding: 0;
-  white-space: nowrap;
-}
-
-@media (max-width: 1250px) {
-  p {
-    font-size: 10px;
-    margin: 0 20px 0 0px;
-  }
-}
-
-@media (max-width: 1150px) {
-  p {
-    font-size: 9px;
-  }
-}
-
-@media (max-width: 637px) {
-  p {
-    font-size: 10px;
-  }
+.about-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15vh;
 }
 
 .fade-in-section {
@@ -83,14 +56,6 @@ p {
 @media (max-width: 637px) {
   .fade-in-section.is-visible {
     flex-direction: column-reverse;
-  }
-}
-
-@media (max-width: 637px) {
-  #factSection {
-    flex-direction: column;
-    margin-top: 110px;
-    height: 440px;
   }
 }
 

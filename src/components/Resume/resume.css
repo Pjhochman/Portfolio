@@ -1,10 +1,8 @@
-/* line 3, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 button {
   background: transparent;
   border: none;
 }
 
-/* line 8, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton {
   display: block;
   width: 150px;
@@ -17,7 +15,10 @@ button {
   outline: none;
   font-size: 11px;
   font-weight: 500;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-transform: uppercase;
   letter-spacing: 2px;
   -webkit-tap-highlight-color: transparent;
@@ -26,15 +27,14 @@ button {
   touch-action: manipulation;
 }
 
-/* line 29, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:before,
 #resumeButton:after {
   position: absolute;
   content: "";
+  -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 
-/* line 36, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:before {
   border-bottom: 2px solid #221e41;
   border-left: 2px solid #221e41;
@@ -44,7 +44,6 @@ button {
   bottom: -10px;
 }
 
-/* line 45, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:after {
   border-top: 2px solid #221e41;
   border-right: 2px solid #221e41;
@@ -54,21 +53,29 @@ button {
   right: -10px;
 }
 
-/* line 54, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:hover:before {
   width: 112%;
   height: 140%;
 }
 
-/* line 59, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
 #resumeButton:hover:after {
   width: 112%;
   height: 140%;
 }
 
-/* line 64, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
+@media (max-width: 637px) {
+  #resumeButton {
+    font-size: 2.4vw;
+    line-height: 7vw;
+    width: 150px;
+  }
+}
+
 #download {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   letter-spacing: 0.8px;
   border: 1px solid #221e41;
   color: #221e41;
@@ -82,31 +89,26 @@ button {
 }
 
 @media (max-width: 637px) {
-  /* line 79, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
   #download {
     left: 0;
   }
 }
 
 @media (max-width: 637px) {
-  /* line 85, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
   #resumeImage {
     display: none;
   }
 }
 
 @media (max-width: 637px) {
-  /* line 91, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
   #resumeImg {
     height: 70% !important;
   }
 }
 
 @media (max-width: 637px) {
-  /* line 97, ../../../../../Users/peterhochman/Documents/React/Portfolio/my-app/src/styles/scss/resume.scss */
   #modal {
     height: 40% !important;
   }
 }
-
 /*# sourceMappingURL=resume.css.map */

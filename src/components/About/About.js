@@ -1,8 +1,14 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
+import React from "react";
+import "./about.css";
 import profileImage from "../../assets/images/profileImage.png";
+import styled, { keyframes } from "styled-components";
+import { fadeIn } from "react-animations";
 
-import "../../styles/css/about.css";
+const fadeInAnimation = keyframes`${fadeIn}`;
+
+const FadeIn = styled.div`
+  animation: 1.2s ${fadeInAnimation};
+`;
 
 const Container = styled.div`
   display: flex;
@@ -29,7 +35,6 @@ const AboutWrapper = styled.div`
 `;
 
 const ProfileImage = styled.div`
-  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -42,42 +47,37 @@ const ProfileImage = styled.div`
 `;
 
 const About = props => {
-  const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-  }, []);
   return (
-    <Container
-      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
-      ref={domRef}
-    >
-      <AboutWrapper className="about">
-        <h1 id="aboutMe">about me</h1>
-        <h2 id="intro">
-          I'm a Frontend developer
-          <br /> based in Stockholm, Sweden.
-        </h2>
-        <p id="paragraph">
-          I enjoy turning complex problems into simple, beautiful and intuitive
-          designs. When I'm not pushing pixels, you'll find me playing the
-          piano, listening to jazz, blues funk and enjoying walks with my dog.
-        </p>
-        {props.children}
-      </AboutWrapper>
-      <ProfileImage className="about">
-        <img
-          src={profileImage}
-          alt="Logo"
-          style={{
-            height: "90%"
-          }}
-        />
-      </ProfileImage>
-    </Container>
+    <FadeIn>
+      <Container
+        className="container"
+        style={{ height: "45vw", paddingTop: "10vh" }}
+      >
+        <AboutWrapper className="about" id="profileInformation">
+          <h1 id="aboutMe">about me</h1>
+          <h2 id="intro">
+            I'm a Frontend developer
+            <br /> based in Stockholm, Sweden.
+          </h2>
+          <p id="paragraph">
+            I enjoy turning complex problems into simple, beautiful and
+            intuitive designs. When I'm not pushing pixels, you'll find me
+            playing the piano, listening to jazz, blues funk and enjoying walks
+            with my dog.
+          </p>
+          {props.children}
+        </AboutWrapper>
+        <ProfileImage className="about" id="profileImage">
+          <img
+            src={profileImage}
+            alt="Logo"
+            style={{
+              height: "100%"
+            }}
+          />
+        </ProfileImage>
+      </Container>
+    </FadeIn>
   );
 };
 

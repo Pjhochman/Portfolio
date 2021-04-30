@@ -4,11 +4,12 @@ import OpenModalButton from "../Modal/OpenModalButton";
 import styled from "styled-components";
 import resumeImage from "../../assets/images/resumeImage.png";
 
-import "../../styles/css/resume.css";
+import "./resume.css";
 
 const mediaQueryNarrow = window.matchMedia("(max-width: 637px)");
 
 const Container = styled.div`
+  padding-top: 5vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -17,7 +18,7 @@ const Container = styled.div`
   right: 0;
   width: 100%;
   margin: auto;
-  height: 200px;
+  height: 100px;
 `;
 
 const ResumeWrapper = styled.div`
@@ -29,12 +30,12 @@ const ResumeWrapper = styled.div`
   right: 0;
   width: 190px;
   margin: auto;
-  height: 200px;
+  height: auto;
 `;
 
 const ResumeImage = styled.div`
   display: flex;
-  visibility: hidden;
+  display: none;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;

@@ -1,7 +1,14 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
+import React from "react";
 import factsImage from "../../assets/images/factsImage.png";
-import "../../styles/css/facts.css";
+import "./facts.css";
+import styled, { keyframes } from "styled-components";
+import { fadeIn } from "react-animations";
+
+const fadeInAnimation = keyframes`${fadeIn}`;
+
+const FadeIn = styled.div`
+  animation: 1.2s ${fadeInAnimation};
+`;
 
 const Container = styled.div`
   display: flex;
@@ -12,7 +19,7 @@ const Container = styled.div`
   right: 0;
   width: 100%;
   margin: auto;
-  height: 350px;
+  height: autox;
 `;
 
 const FactsWrapper = styled.div`
@@ -24,7 +31,7 @@ const FactsWrapper = styled.div`
   right: 0;
   width: 380px;
   margin: auto;
-  height: 350px;
+  height: 380px;
 `;
 
 const FactsImage = styled.div`
@@ -40,46 +47,36 @@ const FactsImage = styled.div`
 `;
 
 const Facts = props => {
-  const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-  }, []);
   return (
-    <Container
-      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
-      id="factSection"
-      ref={domRef}
-    >
-      <FactsImage className="facts">
-        <img
-          src={factsImage}
-          alt="Logo"
-          style={{
-            height: "100%",
-            boxShadow: "0 32px 40px -20px rgba(0, 0, 0, 0.25)"
-          }}
-        />
-      </FactsImage>
-      <FactsWrapper className="facts">
-        <h1 id="randomFacts">Random facts</h1>
-        <div>
-          <ul id="list">
-            <li>I drink a lot of coffee</li>
-            <li>I'm into interior design</li>
-            <li>I love to eat (not so much cooking)</li>
-            <li>I'm a bit of a clean freak</li>
-            <li>I want to live in New Orleans</li>
-            <li>I worship Bill Evans</li>
-            <li>I'm addicted to 'semla' buns</li>
-          </ul>
-        </div>
-        {props.children}
-      </FactsWrapper>
-    </Container>
+    <FadeIn>
+      <Container id="factSection" style={{ height: "45vw" }}>
+        <FactsImage className="facts" id="factsImage">
+          <img
+            src={factsImage}
+            alt="Logo"
+            style={{
+              width: "100%",
+              boxShadow: "0 32px 40px -20px rgba(0, 0, 0, 0.25)"
+            }}
+          />
+        </FactsImage>
+        <FactsWrapper className="facts" id="factsList">
+          <h1 id="randomFacts">Random facts</h1>
+          <div>
+            <ul id="list">
+              <li>I drink a lot of coffee</li>
+              <li>I'm into interior design</li>
+              <li>I love to eat (not so much cooking)</li>
+              <li>I'm a bit of a clean freak</li>
+              <li>I want to live in New Orleans</li>
+              <li>I worship Bill Evans</li>
+              <li>I'm addicted to 'semla' buns</li>
+            </ul>
+          </div>
+          {props.children}
+        </FactsWrapper>
+      </Container>
+    </FadeIn>
   );
 };
 

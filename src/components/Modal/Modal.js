@@ -21,8 +21,8 @@ const ModalContainer = styled(motion.div)`
   border-radius: 12px;
 `;
 const CloseButton = styled.svg`
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: auto;
   position: absolute;
   right: 18px;
   top: 18px;
