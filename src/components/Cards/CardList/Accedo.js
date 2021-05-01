@@ -4,8 +4,6 @@ import { CardItemContext } from "../CardItem";
 const technologies = [
   "Validation - Insomnia",
   "Design system - Zeplin",
-  "Source control - GitHub",
-  "Tools - Visual Studio Code",
   "Work - Managed through Jira",
   "Cypress - E2E Testing Framework",
   "Build & Deploy - Jenkins Pipeline with Docker"
