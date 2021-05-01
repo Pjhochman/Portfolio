@@ -44,7 +44,7 @@ const TopContainer = styled.div`
 const MiddleContainer = styled.div`
   display: flex;
   width: 80%;
-  height: auto;
+  height: 100%;
   text-align: center;
   flex-direction: column;
   justify-content: space-evenly;
@@ -192,7 +192,7 @@ const CardItem = ({
             isExpanded
               ? {
                   width: width > "637" ? "515px" : "316px",
-                  height: width > "637" ? "590px" : "560px",
+                  height: width > "637" ? "590px" : "65vh",
                   left: "0",
                   top: width > "637" ? "0" : "50px",
                   zIndex: "1"

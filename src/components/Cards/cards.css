@@ -177,7 +177,7 @@ li {
     margin-top: 10vh;
   }
   .items__inner {
-    top: -20px;
+    top: 0px;
     left: 1px;
     width: 317px;
     height: 100%;

@@ -127,7 +127,6 @@ export const Accedo = props => {
                 launch, and scale video streaming services.
               </p>
             </div>
-            <br></br>
             <div>
               <h3 style={{ color: "#221e41" }}>Technologies & Tools</h3>
               <ul style={{ color: "#221e41", textAlign: "center" }}>
@@ -137,7 +136,6 @@ export const Accedo = props => {
                 })}
               </ul>
             </div>
-            <br></br>
             <div>
               <h3 style={{ color: "#221e41" }}>Website</h3>
               <a
