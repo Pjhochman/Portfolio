@@ -168,7 +168,6 @@ const CardItem = ({
   const [width, setWidth] = useState();
 
   const expandHandler = () => setExpand(value => !value);
-
   useEffect(() => {
     setWidth(window.innerWidth);
     window.addEventListener("resize", () => setWidth(window.innerWidth));
@@ -222,7 +221,11 @@ const CardItem = ({
               isExpanded
             }}
           >
-            {children}
+            {width > "637"
+              ? isExpanded
+                ? children
+                : cardHovered && children
+              : children}
           </CardItemContext.Provider>
         </StartAnimation>
       )}
@@ -230,10 +233,6 @@ const CardItem = ({
   );
 };
 
-//  {width > "637"
-// ? isExpanded
-//   ? children
-//   : cardHovered && children
-// : children}
+// width > "637" ? (isExpanded ? children : cardHovered && children) : children;
 
 export default CardItem;
