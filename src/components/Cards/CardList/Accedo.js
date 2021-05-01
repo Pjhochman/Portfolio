@@ -22,7 +22,6 @@ export const Accedo = props => {
     CloseButton,
     TopContent,
     MiddleContent,
-    BottomContent,
     TopTitle,
     TopDescription,
     FadeIn,
@@ -152,7 +151,6 @@ export const Accedo = props => {
           </MiddleContent>
         </>
       )}
-      <BottomContent></BottomContent>
     </>
   );
 };

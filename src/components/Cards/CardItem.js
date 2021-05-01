@@ -194,7 +194,7 @@ const CardItem = ({
                   width: width > "637" ? "515px" : "316px",
                   height: width > "637" ? "590px" : "65vh",
                   left: "0",
-                  top: width > "637" ? "0" : "50px",
+                  top: width > "637" ? "0" : "30px",
                   zIndex: "1"
                 }
               : null

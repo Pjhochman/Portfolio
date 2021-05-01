@@ -47,7 +47,7 @@ li {
     justify-content: space-between;
     pointer-events: all;
     box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
     &:after {
       content: attr(data-title);
       position: absolute;
