@@ -117,7 +117,12 @@ export const Accedo = props => {
               <h3 style={{ color: "#221e41" }}>Product Description</h3>
               <p
                 id="accedo-description"
-                style={{ lineHeight: "15px", color: "#221e41", width: "90%" }}
+                style={{
+                  lineHeight: "15px",
+                  color: "#221e41",
+                  width: "90%",
+                  marginTop: "0"
+                }}
               >
                 Accedo One is a SaaS (Softare as a service) solution that
                 provides content owners and brands with the ability to build,

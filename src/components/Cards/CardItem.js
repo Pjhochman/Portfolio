@@ -73,7 +73,7 @@ const TopTitle = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 9px;
-  font-weight: 200;
+  font-weight: 400;
   color: white;
 `;
 
@@ -81,7 +81,7 @@ const BottomTitle = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 9px;
-  font-weight: 200;
+  font-weight: 400;
   color: white;
 `;
 
