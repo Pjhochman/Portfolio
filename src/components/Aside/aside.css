@@ -354,10 +354,11 @@ aside {
       -ms-flex-align: center;
           align-items: center;
   height: 20px;
-  width: 220px;
-  margin: 15px 0 0 5px;
+  width: 210px;
+  top: 15px;
+  margin: auto;
   overflow: visible;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 40px;
   color: black;
   -webkit-box-pack: start;
@@ -423,7 +424,7 @@ aside {
   display: -ms-flexbox;
   display: flex;
   line-height: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -699,6 +700,7 @@ aside {
 
 @media (max-width: 1100px) {
   .content {
+    top: 0;
     width: 165px;
     margin: 2px 0 0 7px;
     font-size: 13px;

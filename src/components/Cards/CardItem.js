@@ -44,7 +44,7 @@ const TopContainer = styled.div`
 const MiddleContainer = styled.div`
   display: flex;
   width: 80%;
-  height: 50vh;
+  height: auto;
   text-align: center;
   flex-direction: column;
   justify-content: space-evenly;
@@ -89,9 +89,9 @@ const TopDescription = styled.div`
   width: 70%;
   text-transform: uppercase;
   letter-spacing: 2px;
-  line-height: 15px;
+  line-height: 0px;
   font-size: 9px;
-  font-weight: 200;
+  font-weight: 400;
   color: white;
 `;
 
@@ -101,9 +101,18 @@ const BottomDescription = styled.div`
   letter-spacing: 2px;
   line-height: 15px;
   font-size: 9px;
-  font-weight: 200;
+  font-weight: 400;
   text-align: end;
   color: white;
+`;
+
+const CloseButton = styled.svg`
+  width: 15px;
+  height: auto;
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  cursor: pointer;
 `;
 
 const StartAnimation = styled.div`
@@ -186,7 +195,7 @@ const CardItem = ({
                   width: width > "637" ? "515px" : "316px",
                   height: width > "637" ? "590px" : "510px",
                   left: "0px",
-                  top: width > "637" ? "0px" : "20px",
+                  top: width > "637" ? "0px" : "50px",
                   zIndex: "1"
                 }
               : null
@@ -195,6 +204,7 @@ const CardItem = ({
         >
           <CardItemContext.Provider
             value={{
+              CloseButton: CloseButton,
               TopContent: TopContainer,
               MiddleContent: MiddleContainer,
               BottomContent: BottomContainer,
@@ -212,7 +222,7 @@ const CardItem = ({
               isExpanded
             }}
           >
-            {isExpanded ? children : cardHovered && children}
+            {children}
           </CardItemContext.Provider>
         </StartAnimation>
       )}
@@ -220,6 +230,10 @@ const CardItem = ({
   );
 };
 
-// !isExpanded ? cardHovered && children : children;
+//  {width > "637"
+// ? isExpanded
+//   ? children
+//   : cardHovered && children
+// : children}
 
 export default CardItem;

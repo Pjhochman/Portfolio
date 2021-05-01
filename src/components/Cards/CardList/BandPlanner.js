@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { CardItemContext } from "../CardItem";
 
 const technologies = [
@@ -9,7 +9,14 @@ const technologies = [
 ];
 
 export const BandPlanner = props => {
+  const [width, setWidth] = useState();
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
   const {
+    CloseButton,
     TopContent,
     MiddleContent,
     BottomContent,
@@ -25,14 +32,45 @@ export const BandPlanner = props => {
       <TopContent>
         <SlideInRight style={{ animationDuration: "0.3s" }}>
           <TopTitle>
-            <span style={{ fontWeight: "bold" }}>My Own Work</span>
-            <hr style={{ width: "90px" }}></hr>
+            {width > "637" && (
+              <>
+                <span style={{ fontWeight: "bold" }}>My Own Work</span>
+                <hr style={{ width: "90px" }}></hr>
+              </>
+            )}
             Band Planner
           </TopTitle>
         </SlideInRight>
       </TopContent>
       {isExpanded && (
         <>
+          <CloseButton
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20.39 20.39"
+          >
+            <line
+              x1="19.39"
+              y1="19.39"
+              x2="1"
+              y2="1"
+              fill="none"
+              stroke="white"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              strokeWidth="2"
+            />
+            <line
+              x1="1"
+              y1="19.39"
+              x2="19.39"
+              y2="1"
+              fill="none"
+              stroke="white"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              strokeWidth="2"
+            />
+          </CloseButton>
           <MiddleContent>
             <div>
               <h3>Project Description</h3>

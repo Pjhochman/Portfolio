@@ -1,5 +1,5 @@
 p {
-  margin: 0;
+  font-weight: 400;
 }
 
 h3 {
@@ -17,6 +17,7 @@ hr {
 
 li {
   margin-bottom: 5px;
+  font-weight: 400;
 }
 
 .items {

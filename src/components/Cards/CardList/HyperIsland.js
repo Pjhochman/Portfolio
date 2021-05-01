@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { CardItemContext } from "../CardItem";
 
 const programInfo = [
@@ -8,7 +8,14 @@ const programInfo = [
 ];
 
 export const HyperIsland = props => {
+  const [width, setWidth] = useState();
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
   const {
+    CloseButton,
     TopContent,
     MiddleContent,
     BottomContent,
@@ -24,10 +31,37 @@ export const HyperIsland = props => {
       <TopContent></TopContent>
       {isExpanded && (
         <>
+          <CloseButton
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20.39 20.39"
+          >
+            <line
+              x1="19.39"
+              y1="19.39"
+              x2="1"
+              y2="1"
+              fill="none"
+              stroke="#221e41"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              strokeWidth="2"
+            />
+            <line
+              x1="1"
+              y1="19.39"
+              x2="19.39"
+              y2="1"
+              fill="none"
+              stroke="#221e41"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              strokeWidth="2"
+            />
+          </CloseButton>
           <MiddleContent>
             <div>
-              <h3 style={{ color: "white" }}>Program Information</h3>
-              <ul style={{ color: "white", textAlign: "center" }}>
+              <h3 style={{ color: "#221e41" }}>Program Information</h3>
+              <ul style={{ color: "#221e41", textAlign: "center" }}>
                 {programInfo.map((item, index) => {
                   return <li key={index}>{item}</li>;
                 })}
@@ -35,14 +69,14 @@ export const HyperIsland = props => {
             </div>
             <br></br>
             <div>
-              <h3 style={{ color: "white" }}>Website</h3>
+              <h3 style={{ color: "#221e41" }}>Website</h3>
               <a
-                style={{ fontSize: "11px", margin: "0", color: "white" }}
+                style={{ fontSize: "11px", margin: "0", color: "#221e41" }}
                 href="https://www.hyperisland.com/programs-and-courses/frontend-developer"
                 target="_blank"
                 rel="noreferrer"
               >
-                <ul style={{ color: "white" }}>
+                <ul style={{ color: "#221e41" }}>
                   <li>hyperisland.com/frontend-developer</li>
                 </ul>
               </a>
@@ -61,10 +95,17 @@ export const HyperIsland = props => {
             Hyper Island
           </BottomDescription>
         </FadeIn>
-        <hr style={{ width: "89px" }} />
+
         <SlideInLeft style={{ animationDuration: "0.3s" }}>
-          <BottomTitle style={{ color: "#221e41", fontWeight: "bold" }}>
-            Education
+          <BottomTitle
+            style={{ color: "#221e41", fontWeight: "bold", textAlign: "end" }}
+          >
+            {width > "637" && (
+              <>
+                <hr style={{ width: "89px" }} />
+                Education
+              </>
+            )}
           </BottomTitle>
         </SlideInLeft>
       </BottomContent>

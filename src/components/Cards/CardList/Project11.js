@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { CardItemContext } from "../CardItem";
 
 const technologies = [
@@ -7,7 +7,14 @@ const technologies = [
 ];
 
 export const Project11 = props => {
+  const [width, setWidth] = useState();
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
   const {
+    CloseButton,
     TopContent,
     TopTitle,
     MiddleContent,
@@ -24,6 +31,33 @@ export const Project11 = props => {
       </TopContent>
       {isExpanded && (
         <>
+          <CloseButton
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20.39 20.39"
+          >
+            <line
+              x1="19.39"
+              y1="19.39"
+              x2="1"
+              y2="1"
+              fill="none"
+              stroke="white"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              strokeWidth="2"
+            />
+            <line
+              x1="1"
+              y1="19.39"
+              x2="19.39"
+              y2="1"
+              fill="none"
+              stroke="white"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              strokeWidth="2"
+            />
+          </CloseButton>
           <MiddleContent>
             <div>
               <h3 style={{ color: "white" }}>Project Description</h3>
@@ -61,13 +95,18 @@ export const Project11 = props => {
         <SlideInLeft style={{ animationDuration: "0.3s" }}>
           <BottomTitle style={{ textAlign: "end" }}>
             Project 11
-            <hr
-              style={{
-                width: "93px",
-                border: "1px solid white"
-              }}
-            ></hr>
-            <span style={{ fontWeight: "bold" }}>My Own Work</span>
+            {width > "637" && (
+              <>
+                {" "}
+                <hr
+                  style={{
+                    width: "93px",
+                    border: "1px solid white"
+                  }}
+                ></hr>
+                <span style={{ fontWeight: "bold" }}>My Own Work</span>
+              </>
+            )}
           </BottomTitle>
         </SlideInLeft>
       </BottomContent>

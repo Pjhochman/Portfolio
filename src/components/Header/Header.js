@@ -36,7 +36,7 @@ const Header = ({ pageHandler, isPage }) => {
         style={
           menu && width < "1101"
             ? {
-                height: "100%",
+                height: "40%",
                 flexDirection: "column",
                 boxShadow: "inset 0 0 2000px rgba(255, 255, 255, 0.5)",
                 backgroundColor: "rgba(255, 255, 255, 0.15)",
@@ -46,10 +46,19 @@ const Header = ({ pageHandler, isPage }) => {
         }
       >
         <div className="information-container">
-          {!menu && (
+          {width > "1100" ? (
             <>
               <h1 id="name">Peter Hochman</h1>
               <h1 id="profession">Front End Developer</h1>
+            </>
+          ) : (
+            <>
+              {!menu && (
+                <>
+                  <h1 id="name">Peter Hochman</h1>
+                  <h1 id="profession">Front End Developer</h1>
+                </>
+              )}
             </>
           )}
         </div>

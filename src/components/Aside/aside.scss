@@ -280,10 +280,11 @@ aside {
   position: relative;
   align-items: center;
   height: 20px;
-  width: 220px;
-  margin: 15px 0 0 5px;
+  width: 210px;
+  top: 15px;
+  margin: auto;
   overflow: visible;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 40px;
   color: black;
   justify-content: flex-start;
@@ -345,7 +346,7 @@ aside {
       &__item {
         display: flex;
         line-height: 50px;
-        padding-bottom: 10px;
+        padding-bottom: 9px;
         justify-content: flex-start;
       }
     }
@@ -784,6 +785,7 @@ aside {
 
 @media (max-width: 1100px) {
   .content {
+    top: 0;
     width: 165px;
     margin: 2px 0 0 7px;
     font-size: 13px;
