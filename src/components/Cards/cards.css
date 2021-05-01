@@ -173,13 +173,14 @@ li {
 
 @media (max-width: 637px) {
   .items {
-    height: 92vh;
+    height: 90vh;
+    margin-top: 10vh;
   }
   .items__inner {
     top: -20px;
     left: 1px;
     width: 317px;
-    height: 510px;
+    height: 100%;
   }
   .items__layer:nth-child(1) .items__item {
     top: 170px;

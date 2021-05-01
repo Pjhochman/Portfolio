@@ -89,7 +89,7 @@ const TopDescription = styled.div`
   width: 70%;
   text-transform: uppercase;
   letter-spacing: 2px;
-  line-height: 0px;
+  line-height: 5px;
   font-size: 9px;
   font-weight: 400;
   color: white;
@@ -192,9 +192,9 @@ const CardItem = ({
             isExpanded
               ? {
                   width: width > "637" ? "515px" : "316px",
-                  height: width > "637" ? "590px" : "510px",
-                  left: "0px",
-                  top: width > "637" ? "0px" : "50px",
+                  height: width > "637" ? "590px" : "560px",
+                  left: "0",
+                  top: width > "637" ? "0" : "50px",
                   zIndex: "1"
                 }
               : null

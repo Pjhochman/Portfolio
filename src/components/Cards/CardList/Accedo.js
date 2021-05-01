@@ -34,7 +34,7 @@ export const Accedo = props => {
       <TopContent
         style={{
           alignItems: "center",
-          color: "white",
+          color: "#221e41",
           justifyContent: "space-between"
         }}
       >
@@ -47,7 +47,7 @@ export const Accedo = props => {
           <TopTitle
             style={{
               fontWeight: width > "637" ? "bold" : "400",
-              color: "white",
+              color: "#221e41",
               textAlign: "center",
               whiteSpace: "nowrap",
               display: "flex",
@@ -57,7 +57,7 @@ export const Accedo = props => {
             }}
           >
             Previously
-            <hr style={{ width: "70px" }} />
+            <hr style={{ width: "76px" }} />
           </TopTitle>
 
           <TopDescription
@@ -65,7 +65,7 @@ export const Accedo = props => {
               textAlign: "center",
               width: "100%",
               whiteSpace: "nowrap",
-              color: "white",
+              color: "#221e41",
               fontSize: "8px"
             }}
           >
@@ -117,10 +117,10 @@ export const Accedo = props => {
                 alignItems: "center"
               }}
             >
-              <h3 style={{ color: "white" }}>Product Description</h3>
+              <h3 style={{ color: "#221e41" }}>Product Description</h3>
               <p
                 id="accedo-description"
-                style={{ lineHeight: "15px", color: "white", width: "90%" }}
+                style={{ lineHeight: "15px", color: "#221e41", width: "90%" }}
               >
                 Accedo One is a SaaS (Softare as a service) solution that
                 provides content owners and brands with the ability to build,
@@ -129,8 +129,8 @@ export const Accedo = props => {
             </div>
             <br></br>
             <div>
-              <h3 style={{ color: "white" }}>Technologies & Tools</h3>
-              <ul style={{ color: "white", textAlign: "center" }}>
+              <h3 style={{ color: "#221e41" }}>Technologies & Tools</h3>
+              <ul style={{ color: "#221e41", textAlign: "center" }}>
                 <li>React with GraphQL</li>
                 {technologies.map((item, index) => {
                   return <li key={index}>{item}</li>;
@@ -139,14 +139,14 @@ export const Accedo = props => {
             </div>
             <br></br>
             <div>
-              <h3 style={{ color: "white" }}>Website</h3>
+              <h3 style={{ color: "#221e41" }}>Website</h3>
               <a
-                style={{ fontSize: "11px", margin: "0", color: "white" }}
+                style={{ fontSize: "11px", margin: "0", color: "#221e41" }}
                 href="https://www.accedo.tv/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <ul style={{ color: "white" }}>
+                <ul style={{ color: "#221e41" }}>
                   <li>accedo.tv</li>
                 </ul>
               </a>
