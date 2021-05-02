@@ -2,6 +2,9 @@ import React, { useContext, useState, useEffect } from "react";
 import { CardItemContext } from "../CardItem";
 
 const technologies = [
+  "Node.js",
+  "Javascript",
+  "RESTful API",
   "Mongoose - Schema modelling & validation",
   "Express - Handling http requests",
   "MongoDB - NoSQL database",
@@ -82,8 +85,6 @@ export const BandPlanner = props => {
             <div>
               <h3>Technologies & Tools</h3>
               <ul style={{ color: "white", textAlign: "center" }}>
-                <li>Node.js </li>
-                <li>Javascript</li>
                 {technologies.map((item, index) => {
                   return <li key={index}>{item}</li>;
                 })}
