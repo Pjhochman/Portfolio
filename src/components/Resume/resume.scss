@@ -1,4 +1,4 @@
-$text-color-black: #221e41;
+@import "../../styles/scss/colors";
 
 button {
   background: transparent;
@@ -12,7 +12,7 @@ button {
   text-align: center;
   position: relative;
   text-decoration: none;
-  color: $text-color-black;
+  color: $primary-text-color;
   cursor: pointer;
   outline: none;
   font-size: 11px;
@@ -34,8 +34,8 @@ button {
 }
 
 #resumeButton:before {
-  border-bottom: 2px solid $text-color-black;
-  border-left: 2px solid $text-color-black;
+  border-bottom: 2px solid $primary-text-color;
+  border-left: 2px solid $primary-text-color;
   width: 10%;
   height: 33%;
   left: -10px;
@@ -43,8 +43,8 @@ button {
 }
 
 #resumeButton:after {
-  border-top: 2px solid $text-color-black;
-  border-right: 2px solid $text-color-black;
+  border-top: 2px solid $primary-text-color;
+  border-right: 2px solid $primary-text-color;
   width: 10%;
   height: 33%;
   top: -10px;
@@ -72,8 +72,8 @@ button {
 #download {
   user-select: none;
   letter-spacing: 0.8px;
-  border: 1px solid $text-color-black;
-  color: $text-color-black;
+  border: 1px solid $primary-text-color;
+  color: $primary-text-color;
   padding: 5px;
   left: 20px;
   bottom: 20px;

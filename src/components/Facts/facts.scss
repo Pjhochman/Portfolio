@@ -1,14 +1,12 @@
-$text-color-black: #221e41;
+@import "../../styles/scss/colors";
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  color: $text-color-black;
 }
 
 #list > li {
-  color: $text-color-black;
   user-select: none;
   cursor: default;
 }
@@ -39,7 +37,7 @@ ul {
   font-weight: 300;
   margin: 0;
   font-size: 44px;
-  color: $text-color-black;
+  color: $primary-text-color;
 }
 
 @media (max-width: 1100px) {

@@ -1,4 +1,4 @@
-$text-color-black: #221e41;
+@import "../../styles/scss/colors";
 
 footer {
   display: flex;
@@ -21,7 +21,7 @@ footer {
   height: 40px;
   width: 40px;
   display: block;
-  border: 1px solid $text-color-black;
+  border: 1px solid $primary-text-color;
   position: absolute;
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
@@ -52,7 +52,7 @@ footer {
   top: -100%;
   width: 100%;
   height: 100%;
-  background: $text-color-black;
+  background: $primary-text-color;
   position: absolute;
   display: block;
   z-index: 0;
@@ -69,7 +69,7 @@ footer {
   transform: rotate(-45deg);
   &:after {
     content: "";
-    background-color: $text-color-black;
+    background-color: $primary-text-color;
     width: 20px;
     height: 1px;
     display: block;
@@ -92,7 +92,7 @@ footer {
   border-radius: 2px;
   &:after {
     content: "";
-    background-color: $text-color-black;
+    background-color: $primary-text-color;
     width: 20px;
     height: 1px;
     display: block;
@@ -123,5 +123,5 @@ footer {
   font-size: 15px;
   cursor: default;
   user-select: none;
-  color: $text-color-black;
+  color: $primary-text-color;
 }

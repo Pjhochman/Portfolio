@@ -1,124 +1,81 @@
-import React, { useContext, useState, useEffect } from "react";
-import { CardItemContext } from "../CardItem";
+import React, { useContext } from "react";
+import { CardItemContext } from "../../../Layout/styles";
+import { useWindowSize } from "../hooks/useWindowSize";
+import { FadeInRightAnimation } from "../../../Animations/animations";
+import { colorPalette } from "../data/data";
+import { CloseButton } from "../../Buttons/CloseButton";
 
-const technologies = [
-  "Javascript",
-  "P5.js - Library for creating graphic and interactive experiences"
-];
-
-export const ColorPalette = props => {
-  const [width, setWidth] = useState();
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
-  }, []);
+export const ColorPalette = () => {
+  const mediaWidthMobile = 637;
+  const { width } = useWindowSize();
 
   const {
-    CloseButton,
     TopContent,
     MiddleContent,
     BottomContent,
+    TopTitle,
+    TopDescription,
+    MiddleTitle,
+    MiddleDescription,
     BottomTitle,
     BottomDescription,
-    TopTitle,
-    SlideInRight,
+    Link,
     isExpanded
   } = useContext(CardItemContext);
 
   return (
     <>
-      <TopContent>
-        <SlideInRight style={{ animationDuration: "0.3s" }}>
-          <TopTitle>
-            {width > "637" && (
-              <>
-                <span
-                  style={{
-                    fontWeight: "bold"
-                  }}
-                >
-                  My Own Work
-                </span>
-                <hr
-                  style={{
-                    width: "93px",
-                    border: "1px solid white"
-                  }}
-                ></hr>
-              </>
-            )}
-            Color Palette
-          </TopTitle>
-        </SlideInRight>
+      <TopContent alignSelf="start" flexDirection="column">
+        {width > mediaWidthMobile && (
+          <FadeInRightAnimation>
+            <TopTitle>My Own Work</TopTitle>
+            <hr style={{ borderTop: "0.5px solid darkgrey" }} />
+          </FadeInRightAnimation>
+        )}
+        <FadeInRightAnimation>
+          <TopDescription>Band Planner</TopDescription>
+        </FadeInRightAnimation>
       </TopContent>
       {isExpanded && (
         <>
-          <CloseButton
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20.39 20.39"
-          >
-            <line
-              x1="19.39"
-              y1="19.39"
-              x2="1"
-              y2="1"
-              fill="none"
-              stroke="white"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              strokeWidth="2"
-            />
-            <line
-              x1="1"
-              y1="19.39"
-              x2="19.39"
-              y2="1"
-              fill="none"
-              stroke="white"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              strokeWidth="2"
-            />
-          </CloseButton>
-          <MiddleContent>
-            <div>
-              <h3 style={{ color: "white" }}>Project Description</h3>
-              <p style={{ lineHeight: "15px", color: "white", width: "100%" }}>
-                Gradient color-generator based on uiGradients.com data.
-              </p>
-            </div>
-            <br></br>
-            <div>
-              <h3 style={{ color: "white" }}>Technologies & Tools</h3>
-              <ul style={{ color: "white", textAlign: "center" }}>
-                {technologies.map((item, index) => {
-                  return <li key={index}>{item}</li>;
-                })}
-              </ul>
-            </div>
-            <br></br>
-            <div>
-              <h3 style={{ color: "white" }}>Website</h3>
-              <a
-                style={{ fontSize: "11px", margin: "0", color: "white" }}
-                href="https://peterscolorpalette.netlify.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ul style={{ color: "white" }}>
-                  <li>peterscolorpalette.netlify.app</li>
-                </ul>
-              </a>
-            </div>
-          </MiddleContent>
-
+          <CloseButton />
+          {Object.values(colorPalette[0].middleCardContent).map(
+            (item, index, arr) => {
+              return (
+                <MiddleContent key={item.title}>
+                  <MiddleTitle>{item.title}</MiddleTitle>
+                  {arr.length - 1 === index && (
+                    <Link
+                      href={
+                        "https://" +
+                        colorPalette[0].middleCardContent.bottomSection.link
+                      }
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {item.link}
+                    </Link>
+                  )}
+                  <MiddleDescription>
+                    {arr.length - 2 === index ? (
+                      <>
+                        {colorPalette[0].middleCardContent.middleSection.description.map(
+                          (item, index, arr) => {
+                            return <li key={item}>{item}</li>;
+                          }
+                        )}
+                      </>
+                    ) : (
+                      <li>{item.description}</li>
+                    )}
+                  </MiddleDescription>
+                </MiddleContent>
+              );
+            }
+          )}
           <BottomContent>
-            <BottomDescription></BottomDescription>
-            <BottomTitle>
-              <span style={{ fontWeight: "bold" }}>Mobile & Desktop</span> |
-              Interactive Design
-            </BottomTitle>
+            <BottomTitle>Mobile & Desktop&nbsp;|</BottomTitle>
+            <BottomDescription>&nbsp;Interactive Design</BottomDescription>
           </BottomContent>
         </>
       )}

@@ -1,4 +1,4 @@
-$text-color-black: #221e41;
+@import "../../styles/scss/colors";
 
 aside {
   display: flex;
@@ -48,7 +48,7 @@ aside {
   margin: 0 0 20px 0;
   user-select: none;
   cursor: pointer;
-  color: $text-color-black;
+  color: $primary-text-color;
 }
 
 .title2 {
@@ -56,7 +56,7 @@ aside {
   margin: 0 0 20px 0;
   user-select: none;
   cursor: pointer;
-  color: $text-color-black;
+  color: $primary-text-color;
   &:before {
     content: "<";
     left: 0;
@@ -116,7 +116,7 @@ aside {
   font-size: 18px;
   user-select: none;
   cursor: default;
-  color: $text-color-black;
+  color: $primary-text-color;
   font-size: 200;
 }
 
@@ -263,8 +263,6 @@ aside {
   }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
-
 ::-moz-selection {
   background: rgba(170, 170, 170, 0.3);
 }
@@ -286,7 +284,7 @@ aside {
   overflow: visible;
   font-size: 18px;
   line-height: 40px;
-  color: black;
+  color: $primary-text-color;
   justify-content: flex-start;
   background-color: transparent;
 
@@ -344,6 +342,7 @@ aside {
       animation-iteration-count: infinite;
 
       &__item {
+        font-weight: 600;
         display: flex;
         line-height: 50px;
         padding-bottom: 9px;

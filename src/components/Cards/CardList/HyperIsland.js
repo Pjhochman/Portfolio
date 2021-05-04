@@ -1,114 +1,89 @@
-import React, { useContext, useState, useEffect } from "react";
-import { CardItemContext } from "../CardItem";
-
-const programInfo = [
-  "Dates: August 9, 2019 – April 02, 2021",
-  "80 weeks (53 on campus – 27 on internship)",
-  "Location: Stockholm, Sweden"
-];
+import React, { useContext } from "react";
+import { CardItemContext } from "../../../Layout/styles";
+import { useWindowSize } from "../hooks/useWindowSize";
+import { FadeInLeftAnimation } from "../../../Animations/animations";
+import { hyperIsland } from "../data/data";
+import { CloseButton } from "../../Buttons/CloseButton";
 
 export const HyperIsland = props => {
-  const [width, setWidth] = useState();
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
-  }, []);
+  const mediaWidthMobile = 637;
+  const { width } = useWindowSize();
   const {
-    CloseButton,
     TopContent,
     MiddleContent,
     BottomContent,
+    TopTitle,
+    TopDescription,
+    MiddleTitle,
+    MiddleDescription,
     BottomTitle,
     BottomDescription,
-    FadeIn,
-    SlideInLeft,
+    Link,
     isExpanded
   } = useContext(CardItemContext);
 
   return (
     <>
-      <TopContent></TopContent>
       {isExpanded && (
         <>
-          <CloseButton
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20.39 20.39"
-          >
-            <line
-              x1="19.39"
-              y1="19.39"
-              x2="1"
-              y2="1"
-              fill="none"
-              stroke="#221e41"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              strokeWidth="2"
-            />
-            <line
-              x1="1"
-              y1="19.39"
-              x2="19.39"
-              y2="1"
-              fill="none"
-              stroke="#221e41"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              strokeWidth="2"
-            />
-          </CloseButton>
-          <MiddleContent>
-            <div>
-              <h3 style={{ color: "#221e41" }}>Program Information</h3>
-              <ul style={{ color: "#221e41", textAlign: "center" }}>
-                {programInfo.map((item, index) => {
-                  return <li key={index}>{item}</li>;
-                })}
-              </ul>
-            </div>
-            <br></br>
-            <div>
-              <h3 style={{ color: "#221e41" }}>Website</h3>
-              <a
-                style={{ fontSize: "11px", margin: "0", color: "#221e41" }}
-                href="https://www.hyperisland.com/programs-and-courses/frontend-developer"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ul style={{ color: "#221e41" }}>
-                  <li>hyperisland.com/frontend-developer</li>
-                </ul>
-              </a>
-            </div>
-          </MiddleContent>
+          <BottomContent>
+            <BottomTitle>Stockholm&nbsp;|</BottomTitle>
+            <BottomDescription>&nbsp;2019–2021</BottomDescription>
+          </BottomContent>
+          <CloseButton />
+          {Object.values(hyperIsland[0].middleCardContent).map(
+            (item, index, arr) => {
+              return (
+                <MiddleContent key={item.title}>
+                  <MiddleTitle>{item.title}</MiddleTitle>
+                  {arr.length - 1 === index && (
+                    <Link
+                      href={
+                        "https://" +
+                        hyperIsland[0].middleCardContent.bottomSection.link
+                      }
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {item.link}
+                    </Link>
+                  )}
+                  <MiddleDescription>
+                    {arr.length - 2 === index ? (
+                      <>
+                        {hyperIsland[0].middleCardContent.middleSection.description.map(
+                          (item, index, arr) => {
+                            return <li key={item}>{item}</li>;
+                          }
+                        )}
+                      </>
+                    ) : (
+                      <li>{item.description}</li>
+                    )}
+                  </MiddleDescription>
+                </MiddleContent>
+              );
+            }
+          )}
         </>
       )}
-      <BottomContent style={{ color: "#221e41", padding: "10px" }}>
-        <FadeIn style={{ animationDuration: "0.4s" }}>
-          <BottomDescription
-            style={{
-              whiteSpace: "nowrap",
-              color: "#221e41"
-            }}
-          >
-            Hyper Island
-          </BottomDescription>
-        </FadeIn>
+      <TopContent
+        textAlign={isExpanded ? "start" : "end"}
+        alignSelf={isExpanded ? "flex-start" : "flex-end"}
+      >
+        <FadeInLeftAnimation>
+          <TopTitle>Education</TopTitle>
+        </FadeInLeftAnimation>
+        {width > mediaWidthMobile && (
+          <>
+            <hr style={{ borderTop: "0.5px solid darkgrey" }} />
 
-        <SlideInLeft style={{ animationDuration: "0.3s" }}>
-          <BottomTitle
-            style={{ color: "#221e41", fontWeight: "bold", textAlign: "end" }}
-          >
-            {width > "637" && (
-              <>
-                <hr style={{ width: "89px" }} />
-                Education
-              </>
-            )}
-          </BottomTitle>
-        </SlideInLeft>
-      </BottomContent>
+            <FadeInLeftAnimation>
+              <TopDescription>Hyper Island</TopDescription>
+            </FadeInLeftAnimation>
+          </>
+        )}
+      </TopContent>
     </>
   );
 };

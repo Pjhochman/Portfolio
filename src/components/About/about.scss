@@ -1,4 +1,4 @@
-$text-color-black: #221e41;
+@import "../../styles/scss/colors";
 
 @media (max-width: 1100px) {
   .about {
@@ -19,7 +19,7 @@ $text-color-black: #221e41;
   font-weight: bold;
   margin: 0;
   font-size: 80px;
-  color: $text-color-black;
+  color: $primary-text-color;
 }
 
 @media (max-width: 1100px) {
@@ -35,7 +35,7 @@ $text-color-black: #221e41;
 }
 
 #intro {
-  color: #61677c;
+  color: $grey-text-color;
   font-weight: 300;
   margin: 0;
   font-size: 26px;
@@ -56,14 +56,14 @@ $text-color-black: #221e41;
 }
 
 #paragraph {
-  color: black;
+  color: $primary-text-color;
   font-weight: 300;
   margin: 0;
   font-size: 20px;
   white-space: normal;
   user-select: none;
   cursor: default;
-  color: $text-color-black;
+  color: $primary-text-color;
 }
 
 @media (max-width: 1100px) {

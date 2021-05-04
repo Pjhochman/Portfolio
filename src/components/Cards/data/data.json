@@ -1,41 +1,144 @@
 {
-  "projects": [
+  "bandPlanner": [
+    {
+      "middleCardContent": {
+        "topSection": {
+          "title": "Project Description",
+          "description": "Designed for bands to keep track of songs."
+        },
+        "middleSection": {
+          "title": "Technologies & Tools",
+          "description": [
+            "Node.js",
+            "Javascript",
+            "RESTful API",
+            "Mongoose - Schema modelling & validation",
+            "Express - Handling http requests",
+            "MongoDB - NoSQL database",
+            "SASS - CSS extension"
+          ]
+        },
+        "bottomSection": {
+          "title": "Website",
+          "link": "obscure-shore-89574.herokuapp.com",
+          "description": "Email: hello@email.com | Password: hello"
+        }
+      }
+    }
+  ],
+  "accedo": [
+    {
+      "middleCardContent": {
+        "topSection": {
+          "title": "Product Description",
+          "description": "Accedo One is a SaaS (Softare as a service) solution that provides content owners and brands with the ability to build, launch, and scale video streaming services."
+        },
+        "middleSection": {
+          "title": "Technologies & Tools",
+          "description": [
+            "React with GraphQL",
+            "Validation - Insomnia",
+            "Design system - Zeplin",
+            "Work - Managed through Jira",
+            "Cypress - E2E Testing Framework",
+            "Build & Deploy - Jenkins Pipeline with Docker"
+          ]
+        },
+        "bottomSection": {
+          "title": "Website",
+          "link": "accedo.tv"
+        }
+      }
+    }
+  ],
+  "colorPalette": [
+    {
+      "middleCardContent": {
+        "topSection": {
+          "title": "Project Description",
+          "description": "Gradient color-generator based on uiGradients.com data."
+        },
+        "middleSection": {
+          "title": "Technologies & Tools",
+          "description": [
+            "Javascript",
+            "P5.js - Library for creating graphic and interactive experiences"
+          ]
+        },
+        "bottomSection": {
+          "title": "Website",
+          "link": "peterscolorpalette.netlify.app"
+        }
+      }
+    }
+  ],
+  "project11": [
+    {
+      "middleCardContent": {
+        "topSection": {
+          "title": "Project Description",
+          "description": "Web VR experience."
+        },
+        "middleSection": {
+          "title": "Technologies & Tools",
+          "description": [
+            "Javascript",
+            "A-frame - Framework for building VR experiences"
+          ]
+        },
+        "bottomSection": {
+          "title": "Website",
+          "link": "project11.netlify.app"
+        }
+      }
+    }
+  ],
+  "hyperIsland": [
+    {
+      "middleCardContent": {
+        "middleSection": {
+          "title": "Program Curriculum",
+          "description": [
+            "The Ecosystem of Frontend",
+            "The Fundamentals",
+            "If this...Then that",
+            "Design for the User",
+            "The First App",
+            "Accessible to All",
+            "Data Interaction",
+            "Code and Collaborate",
+            "Exploring Code",
+            "Individual Project",
+            "Industrial Placement"
+          ]
+        },
+        "bottomSection": {
+          "title": "Website",
+          "link": "hyperisland.com/frontend-developer"
+        }
+      }
+    }
+  ],
+  "data": [
     {
       "dataDepth": "0.70",
-      "dataTitle": "no.1",
-      "title": "Color Palette",
-      "description": "Graphic and interactive design using the p5.js library."
+      "dataTitle": "no.1"
     },
     {
       "dataDepth": "0.85",
-      "dataTitle": "no.2",
-      "title": "Education",
-      "description": "Hyper Island"
+      "dataTitle": "no.2"
     },
     {
       "dataDepth": "0.65",
-      "dataTitle": "no.3",
-      "title": "Project 11",
-      "description": "Web vr experience created with a-frame."
+      "dataTitle": "no.3"
     },
     {
       "dataDepth": "1.20",
-      "dataTitle": "no.4",
-      "title": "Band Planner",
-      "description": "Designed for bands to keep track of songs."
+      "dataTitle": "no.4"
     },
     {
       "dataDepth": "0",
       "dataTitle": "no.5"
-    }
-  ],
-  "work": [
-    {
-      "title": "Previous Adventure",
-      "company": "Accedo.tv",
-      "position": "S. Engineer Intern",
-      "framework": "React with GraphQL",
-      "testingTool": "Cypress E2E"
     }
   ]
 }

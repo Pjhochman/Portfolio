@@ -1,115 +1,86 @@
-import React, { useContext, useState, useEffect } from "react";
-import { CardItemContext } from "../CardItem";
+import React, { useContext } from "react";
+import { CardItemContext } from "../../../Layout/styles";
+import { useWindowSize } from "../hooks/useWindowSize";
+import { FadeInLeftAnimation } from "../../../Animations/animations";
+import { project11 } from "../data/data";
+import { CloseButton } from "../../Buttons/CloseButton";
 
-const technologies = [
-  "Javascript",
-  "A-frame - Framework for building VR experiences"
-];
-
-export const Project11 = props => {
-  const [width, setWidth] = useState();
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
-  }, []);
+export const Project11 = () => {
+  const mediaWidthMobile = 637;
+  const { width } = useWindowSize();
   const {
-    CloseButton,
     TopContent,
-    TopTitle,
     MiddleContent,
     BottomContent,
+    TopTitle,
+    TopDescription,
+    MiddleTitle,
+    MiddleDescription,
     BottomTitle,
-    SlideInLeft,
+    BottomDescription,
+    Link,
     isExpanded
   } = useContext(CardItemContext);
 
   return (
     <>
-      <TopContent>
-        <TopTitle></TopTitle>
-      </TopContent>
       {isExpanded && (
         <>
-          <CloseButton
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20.39 20.39"
-          >
-            <line
-              x1="19.39"
-              y1="19.39"
-              x2="1"
-              y2="1"
-              fill="none"
-              stroke="white"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              strokeWidth="2"
-            />
-            <line
-              x1="1"
-              y1="19.39"
-              x2="19.39"
-              y2="1"
-              fill="none"
-              stroke="white"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              strokeWidth="2"
-            />
-          </CloseButton>
-          <MiddleContent>
-            <div>
-              <h3 style={{ color: "white" }}>Project Description</h3>
-              <p style={{ lineHeight: "15px", color: "white" }}>
-                Web VR experience.
-              </p>
-            </div>
-            <br></br>
-            <div>
-              <h3 style={{ color: "white" }}>Technologies & Tools</h3>
-              <ul style={{ color: "white", textAlign: "center" }}>
-                {technologies.map((item, index) => {
-                  return <li key={index}>{item}</li>;
-                })}
-              </ul>
-            </div>
-            <br></br>
-            <div>
-              <h3 style={{ color: "white" }}>Website</h3>
-              <a
-                style={{ fontSize: "11px", margin: "0", color: "white" }}
-                href="https://project11.netlify.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ul style={{ color: "white" }}>
-                  <li>project11.netlify.app</li>
-                </ul>
-              </a>
-            </div>
-          </MiddleContent>
+          <BottomContent>
+            <BottomTitle>Desktop&nbsp;|</BottomTitle>
+            <BottomDescription>&nbsp;VR experience</BottomDescription>
+          </BottomContent>
+          <CloseButton />
+          {Object.values(project11[0].middleCardContent).map(
+            (item, index, arr) => {
+              return (
+                <MiddleContent key={item.title}>
+                  <MiddleTitle>{item.title}</MiddleTitle>
+                  {arr.length - 1 === index && (
+                    <Link
+                      href={
+                        "https://" +
+                        project11[0].middleCardContent.bottomSection.link
+                      }
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {item.link}
+                    </Link>
+                  )}
+                  <MiddleDescription>
+                    {arr.length - 2 === index ? (
+                      <>
+                        {project11[0].middleCardContent.middleSection.description.map(
+                          (item, index, arr) => {
+                            return <li key={item}>{item}</li>;
+                          }
+                        )}
+                      </>
+                    ) : (
+                      <li>{item.description}</li>
+                    )}
+                  </MiddleDescription>
+                </MiddleContent>
+              );
+            }
+          )}
         </>
       )}
-      <BottomContent>
-        <SlideInLeft style={{ animationDuration: "0.3s" }}>
-          <BottomTitle style={{ textAlign: "end" }}>
-            Project 11
-            {width > "637" && (
-              <>
-                {" "}
-                <hr
-                  style={{
-                    width: "93px",
-                    border: "1px solid white"
-                  }}
-                ></hr>
-                <span style={{ fontWeight: "bold" }}>My Own Work</span>
-              </>
-            )}
-          </BottomTitle>
-        </SlideInLeft>
-      </BottomContent>
+      <TopContent
+        textAlign={isExpanded ? "start" : "end"}
+        alignSelf={isExpanded ? "flex-start" : "flex-end"}
+      >
+        {width > mediaWidthMobile && (
+          <FadeInLeftAnimation>
+            <TopTitle>My Own Work</TopTitle>
+            <hr style={{ borderTop: "0.5px solid darkgrey" }} />
+          </FadeInLeftAnimation>
+        )}
+        <FadeInLeftAnimation>
+          <TopDescription>Project 11</TopDescription>
+        </FadeInLeftAnimation>
+      </TopContent>
     </>
   );
 };
