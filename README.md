@@ -1,10 +1,10 @@
 ## Portfolio
 
-_Frontend Developer_ - Open To Work
+Frontend Developer - Open To Work
 
 ## Technologies
 
-React.js
+React.js<br>
 SASS
 
 ## Author
