@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Modal from "../Modal/Modal";
+import { useWindowSize } from "../Cards/hooks/useWindowSize";
 import OpenModalButton from "../Modal/OpenModalButton";
 import styled from "styled-components";
 import resumeImage from "../../assets/images/resumeImage.png";
 
 import "./resume.css";
-
-const mediaQueryNarrow = window.matchMedia("(max-width: 637px)");
 
 const Container = styled.div`
   padding-top: 5vh;
@@ -59,22 +58,19 @@ const ModalContent = styled.div`
 
 const Resume = props => {
   const [isOpen, setToggle] = useState(false);
+  const mediaWidthMobile = 637;
 
   function handleOpenModal(open) {
     setToggle(open);
   }
-  const [width, setWidth] = useState(mediaQueryNarrow);
 
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
-  }, [width]);
+  const { width } = useWindowSize();
 
   return (
     <Container>
       <ResumeWrapper>
         <div className="resume-wrapper">
-          {mediaQueryNarrow.matches ? (
+          {width < mediaWidthMobile ? (
             <a
               id="resumeButton"
               href="https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/Peter+Hochman_CV.pdf"
