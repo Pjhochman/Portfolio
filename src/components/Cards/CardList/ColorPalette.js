@@ -33,7 +33,7 @@ export const ColorPalette = () => {
           </FadeInRightAnimation>
         )}
         <FadeInRightAnimation>
-          <TopDescription>Band Planner</TopDescription>
+          <TopDescription>Color Palette</TopDescription>
         </FadeInRightAnimation>
       </TopContent>
       {isExpanded && (

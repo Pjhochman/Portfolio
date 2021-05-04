@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./header.css";
+import { useWindowSize } from "../Cards/hooks/useWindowSize";
 import styled, { keyframes } from "styled-components";
 import { fadeIn } from "react-animations";
+import "./header.css";
 
 const fadeInDownAnimation = keyframes`${fadeIn}`;
 
@@ -10,9 +11,9 @@ const FadeInDown = styled.div`
 `;
 
 const Header = ({ pageHandler, isPage }) => {
+  const mediaDesktopWidth = 1110;
   const [isVisible, setVisible] = useState(false);
   const [menu, setMenu] = useState(false);
-  const [width, setWidth] = useState();
 
   const menuHandler = () => {
     setMenu(value => !value);
@@ -23,9 +24,9 @@ const Header = ({ pageHandler, isPage }) => {
     setMenu(value => !value);
   };
 
+  const { width } = useWindowSize();
+
   useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
     setTimeout(() => {
       setVisible(value => !value);
     }, 1800);
@@ -34,7 +35,7 @@ const Header = ({ pageHandler, isPage }) => {
     <FadeInDown style={isVisible ? { display: "flex" } : { display: "none" }}>
       <header
         style={
-          menu && width < "1101"
+          menu && width < mediaDesktopWidth + 1
             ? {
                 height: "50%",
                 flexDirection: "column",
@@ -44,7 +45,7 @@ const Header = ({ pageHandler, isPage }) => {
         }
       >
         <div className="information-container">
-          {width > "1100" ? (
+          {width > mediaDesktopWidth ? (
             <>
               <h1 id="name">Peter Hochman</h1>
               <h1 id="profession">Front End Developer</h1>
@@ -71,7 +72,7 @@ const Header = ({ pageHandler, isPage }) => {
           id="menuIcon"
           src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM4NHB0IiB2aWV3Qm94PSIwIC01MyAzODQgMzg0IiB3aWR0aD0iMzg0cHQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTM2OCAxNTQuNjY3OTY5aC0zNTJjLTguODMyMDMxIDAtMTYtNy4xNjc5NjktMTYtMTZzNy4xNjc5NjktMTYgMTYtMTZoMzUyYzguODMyMDMxIDAgMTYgNy4xNjc5NjkgMTYgMTZzLTcuMTY3OTY5IDE2LTE2IDE2em0wIDAiLz48cGF0aCBkPSJtMzY4IDMyaC0zNTJjLTguODMyMDMxIDAtMTYtNy4xNjc5NjktMTYtMTZzNy4xNjc5NjktMTYgMTYtMTZoMzUyYzguODMyMDMxIDAgMTYgNy4xNjc5NjkgMTYgMTZzLTcuMTY3OTY5IDE2LTE2IDE2em0wIDAiLz48cGF0aCBkPSJtMzY4IDI3Ny4zMzIwMzFoLTM1MmMtOC44MzIwMzEgMC0xNi03LjE2Nzk2OS0xNi0xNnM3LjE2Nzk2OS0xNiAxNi0xNmgzNTJjOC44MzIwMzEgMCAxNiA3LjE2Nzk2OSAxNiAxNnMtNy4xNjc5NjkgMTYtMTYgMTZ6bTAgMCIvPjwvc3ZnPg=="
         />
-        {menu || width > "1100" ? (
+        {menu || width > mediaDesktopWidth ? (
           <div className="contact-container">
             <button
               id="home"
