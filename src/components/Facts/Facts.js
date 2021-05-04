@@ -10,6 +10,16 @@ const FadeIn = styled.div`
   animation: 1.2s ${fadeInAnimation};
 `;
 
+const factsList = [
+  "I drink a lot of coffee",
+  "I'm into interior design",
+  "I love to eat (not so much cooking)",
+  "I'm a bit of a clean freak",
+  "I want to live in New Orleans",
+  "I worship Bill Evans",
+  "I'm addicted to 'semla' buns"
+];
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -64,13 +74,9 @@ const Facts = props => {
           <h1 id="randomFacts">Random facts</h1>
           <div>
             <ul id="list">
-              <li>I drink a lot of coffee</li>
-              <li>I'm into interior design</li>
-              <li>I love to eat (not so much cooking)</li>
-              <li>I'm a bit of a clean freak</li>
-              <li>I want to live in New Orleans</li>
-              <li>I worship Bill Evans</li>
-              <li>I'm addicted to 'semla' buns</li>
+              {factsList.map(item => {
+                return <li key={item}>{item}</li>;
+              })}
             </ul>
           </div>
           {props.children}
