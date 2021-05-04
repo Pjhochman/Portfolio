@@ -62,7 +62,7 @@ const About = props => {
           <p id="paragraph">
             I enjoy turning complex problems into simple, beautiful and
             intuitive designs. When I'm not pushing pixels, you'll find me
-            playing the piano, listening to jazz, blues funk and enjoying walks
+            playing the piano, listening to jazz, blues, funk and enjoying walks
             with my dog.
           </p>
           {props.children}

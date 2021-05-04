@@ -21,7 +21,7 @@ export const Accedo = props => {
 
   return (
     <>
-      <TopContent alignSelf="center" textAlign="center" color>
+      <TopContent alignSelf="center" textAlign="center" color="true">
         <FadeInAnimation>
           <TopTitle>Previously</TopTitle>
           <hr style={{ width: "65px", border: "0.5px solid white" }} />
@@ -37,11 +37,11 @@ export const Accedo = props => {
           {Object.values(accedo[0].middleCardContent).map(
             (item, index, arr) => {
               return (
-                <MiddleContent key={item.title} color>
+                <MiddleContent key={item.title} color="true">
                   <MiddleTitle>{item.title}</MiddleTitle>
                   {arr.length - 1 === index && (
                     <Link
-                      color
+                      color="true"
                       href={
                         "https://" +
                         accedo[0].middleCardContent.bottomSection.link

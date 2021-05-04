@@ -32,12 +32,15 @@ const Header = ({ pageHandler, isPage }) => {
     }, 1800);
   }, []);
   return (
-    <FadeInDown style={isVisible ? { display: "flex" } : { display: "none" }}>
+    <div
+      id="headerContainer"
+      style={isVisible ? { opacity: "1" } : { opacity: "0" }}
+    >
       <header
         style={
           menu && width < mediaDesktopWidth + 1
             ? {
-                height: "50%",
+                height: "400px",
                 flexDirection: "column",
                 backgroundColor: "#61677c"
               }
@@ -114,7 +117,7 @@ const Header = ({ pageHandler, isPage }) => {
           </div>
         ) : null}
       </header>
-    </FadeInDown>
+    </div>
   );
 };
 

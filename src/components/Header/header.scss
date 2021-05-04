@@ -1,7 +1,12 @@
 @import "../../styles/scss/colors";
 
+#headerContainer {
+  height: auto;
+  transition: opacity 0.3s ease-in;
+}
+
 header {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
