@@ -33,7 +33,7 @@ export const Accedo = props => {
       </TopContent>
       {isExpanded && (
         <>
-          <CloseButton color />
+          <CloseButton color="true" />
           {Object.values(accedo[0].middleCardContent).map(
             (item, index, arr) => {
               return (

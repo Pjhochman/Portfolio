@@ -1,7 +1,7 @@
 #headerContainer {
   height: auto;
-  -webkit-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
 }
 
 header {
@@ -23,6 +23,7 @@ header {
   height: 50px;
   z-index: 10;
   background: #040c0e;
+  -webkit-transition: all 0.2s ease-in-out;
 }
 
 @media (max-width: 1100px) {
@@ -143,8 +144,8 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-transition: all 0.05s ease-in-out;
-    transition: all 0.05s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 }
 

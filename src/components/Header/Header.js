@@ -26,7 +26,11 @@ const Header = ({ pageHandler, isPage }) => {
   return (
     <div
       id="headerContainer"
-      style={isVisible ? { opacity: "1" } : { opacity: "0" }}
+      style={
+        isVisible
+          ? { opacity: "1", background: "transparent" }
+          : { opacity: "0", background: "transparent" }
+      }
     >
       <header
         style={

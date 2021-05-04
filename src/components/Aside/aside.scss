@@ -5,12 +5,12 @@ aside {
   position: absolute;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
-  top: 41%;
+  top: 50px;
   right: 0;
   left: 0;
-  height: auto;
+  height: 95vh;
   font-weight: 300;
   margin: auto;
   z-index: 0;
@@ -30,9 +30,7 @@ aside {
 
 @media (max-width: 1100px) {
   aside {
-    top: 0;
     width: 480px;
-    height: 100%;
     flex-direction: column;
   }
 }
@@ -275,12 +273,11 @@ aside {
   user-select: none;
   cursor: default;
   display: flex;
-  position: relative;
+  position: absolute;
   align-items: center;
   height: 20px;
   width: 210px;
-  top: 15px;
-  margin: auto;
+  margin: 8px;
   overflow: visible;
   font-size: 18px;
   line-height: 40px;
@@ -784,7 +781,6 @@ aside {
 
 @media (max-width: 1100px) {
   .content {
-    top: 0;
     width: 165px;
     margin: 2px 0 0 7px;
     font-size: 13px;

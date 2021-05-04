@@ -26,7 +26,7 @@ li {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 86.5vh;
+  height: 95vh;
   overflow: hidden;
   &__inner {
     z-index: 2;
@@ -237,7 +237,6 @@ li {
 @media (max-width: 637px) {
   .items {
     height: 90vh;
-    margin-top: 8vh;
     &__inner {
       top: 0px;
       left: 1px;
