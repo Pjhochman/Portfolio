@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { CardItemContext } from "../../../Layout/styles";
+import { CardItemContext } from "../../../layout/styles";
 import { useWindowSize } from "../hooks/useWindowSize";
-import { FadeInLeftAnimation } from "../../../Animations/animations";
+import { FadeInLeftAnimation } from "../../../animations/animations";
 import { project11 } from "../data/data";
 import { CloseButton } from "../../Buttons/CloseButton";
 

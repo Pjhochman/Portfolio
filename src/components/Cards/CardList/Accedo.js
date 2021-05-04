@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { useWindowSize } from "../hooks/useWindowSize";
-import { CardItemContext } from "../../../Layout/styles";
+import { CardItemContext } from "../../../layout/styles";
 import { CloseButton } from "../../Buttons/CloseButton";
 import { accedo } from "../data/data";
-import { FadeInAnimation } from "../../../Animations/animations";
+import { FadeInAnimation } from "../../../animations/animations";
 
 export const Accedo = props => {
   const mediaWidthMobile = 637;

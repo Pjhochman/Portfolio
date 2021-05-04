@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHover } from "./hooks/useHover";
-import { CardItemContext } from "../../Layout/styles";
+import { CardItemContext } from "../../layout/styles";
 import { useWindowSize } from "./hooks/useWindowSize";
 import {
   TopContainer,
@@ -13,8 +13,8 @@ import {
   BottomTitle,
   BottomDescription,
   Link
-} from "../../Layout/styles";
-import { StartAnimation } from "../../Animations/animations";
+} from "../../layout/styles";
+import { StartAnimation } from "../../animations/animations";
 import "./cards.css";
 
 export const ExpandContext = React.createContext({
