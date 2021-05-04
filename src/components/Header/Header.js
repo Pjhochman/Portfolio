@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useWindowSize } from "../Cards/hooks/useWindowSize";
-import styled, { keyframes } from "styled-components";
-import { fadeIn } from "react-animations";
 import "./header.css";
-
-const fadeInDownAnimation = keyframes`${fadeIn}`;
-
-const FadeInDown = styled.div`
-  animation: 0.8s ${fadeInDownAnimation};
-`;
 
 const Header = ({ pageHandler, isPage }) => {
   const mediaDesktopWidth = 1110;
