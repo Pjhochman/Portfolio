@@ -90,7 +90,7 @@ const Resume = props => {
       <ResumeImage id="resumeImage">
         <img
           src={resumeImage}
-          alt="Logo"
+          alt="My Resume"
           style={{
             height: "100%",
             boxShadow: "0 32px 40px -20px rgba(0, 0, 0, 0.25)"
