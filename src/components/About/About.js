@@ -70,7 +70,7 @@ const About = props => {
         <ProfileImage className="about" id="profileImage">
           <img
             src={profileImage}
-            alt="Logo"
+            alt="Peter Hochman"
             style={{
               height: "100%"
             }}

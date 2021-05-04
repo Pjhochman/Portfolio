@@ -53,7 +53,7 @@ const Facts = props => {
         <FactsImage className="facts" id="factsImage">
           <img
             src={factsImage}
-            alt="Logo"
+            alt="The Good & The Bad"
             style={{
               width: "100%",
               boxShadow: "0 32px 40px -20px rgba(0, 0, 0, 0.25)"
