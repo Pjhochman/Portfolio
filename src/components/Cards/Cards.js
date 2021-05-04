@@ -8,21 +8,15 @@ import { BandPlanner } from "./CardList/BandPlanner";
 import { Accedo } from "./CardList/Accedo";
 import { useWindowSize } from "./hooks/useWindowSize";
 import Parallax from "parallax-js";
-import { keyframes } from "styled-components";
-import "./cards.css";
 import {
-  fadeIn,
-  fadeInLeft,
-  fadeInRight,
-  fadeInDownBig,
-  fadeInUpBig
-} from "react-animations";
+  fadeInUpAnimation,
+  fadeInDownAnimation,
+  fadeInAnimation,
+  fadeInLeftAnimation,
+  fadeInRightAnimation
+} from "../../animations/animations";
 
-const fadeInAnimation = keyframes`${fadeIn}`;
-const fadeInLeftAnimation = keyframes`${fadeInLeft}`;
-const fadeInRightAnimation = keyframes`${fadeInRight}`;
-const fadeInDownAnimation = keyframes`${fadeInDownBig}`;
-const fadeInUpAnimation = keyframes`${fadeInUpBig}`;
+import "./cards.css";
 
 const Cards = () => {
   const mediaWidth = 1110;

@@ -47,17 +47,6 @@ const CardItem = props => {
           startAnimation={props.startAnimation}
           className={isExpanded ? "items__item__active" : "items__item"}
           data-title={props.dataTitle}
-          // style={
-          //   isExpanded
-          //     ? {
-          //         width: width > mediaWidthMobile ? "515px" : "316px",
-          //         height: width > mediaWidthMobile ? "590px" : "65vh",
-          //         left: "0",
-          //         top: width > mediaWidthMobile ? "0" : "30px",
-          //         zIndex: "1"
-          //       }
-          //     : null
-          // }
           onClick={expandHandler}
         >
           <CardItemContext.Provider
