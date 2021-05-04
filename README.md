@@ -4,8 +4,8 @@ _Frontend Developer_ - Open To Work
 
 ## Technologies
 
-_React.js_
-_SASS_
+React.js
+SASS
 
 ## Author
 
