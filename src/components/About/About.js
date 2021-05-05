@@ -49,10 +49,7 @@ const ProfileImage = styled.div`
 const About = props => {
   return (
     <FadeIn>
-      <Container
-        className="container"
-        style={{ height: "45vw", paddingTop: "10vh" }}
-      >
+      <Container className="container" style={{ height: "45vw" }}>
         <AboutWrapper className="about" id="profileInformation">
           <h1 id="aboutMe">about me</h1>
           <h2 id="intro">

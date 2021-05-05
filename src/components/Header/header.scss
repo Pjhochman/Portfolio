@@ -1,147 +1,25 @@
 @import "../../styles/scss/colors";
 
-#headerContainer {
-  height: auto;
-  transition: opacity 0.2s ease-in;
-}
-
 header {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   left: 0;
   top: 0;
   right: 0;
+  z-index: 3;
   margin: auto;
   width: 100%;
+  bottom: -8px;
   height: 50px;
-  z-index: 10;
+  font-weight: 400;
   background: #040c0e;
+  transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
 }
 
-@media (max-width: 1100px) {
-  header {
-    background: transparent;
-  }
-}
-
-#home,
-#about {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  font-size: 17px;
-  margin: 0 10px;
-  padding: 0;
-}
-
-@media (max-width: 1100px) {
-  #home,
-  #about {
-    color: white;
-    font-weight: 300;
-    font-size: 18px;
-  }
-}
-
-.links {
-  font-weight: 300;
-  user-select: none;
-  height: 100%;
-  user-select: none;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border: 0;
-  height: auto;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-}
-
-@media (max-width: 1100px) {
-  .links {
-    font-weight: 300;
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 637px) {
-  .links {
-    margin: 0 5px 0 5px;
-  }
-}
-
-.information-container,
-.contact-container {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0 6vw;
-}
-
-@media (max-width: 1100px) {
-  .contact-container {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-}
-
-@media (max-width: 1100px) {
-  .information-container {
-    height: 50px;
-    margin-left: 20px;
-    margin-top: 20px;
-  }
-}
-
-#menuIcon {
-  position: absolute;
-  display: none;
-  height: 30px;
-  right: 20px;
-  top: 20px;
-}
-
-@media (max-width: 1100px) {
-  #menuIcon {
-    display: flex;
-    transition: all 0.2s ease-in-out;
-  }
-}
-
-#name {
-  font-weight: 300;
-  user-select: none;
-  color: white;
-}
-
 #profession {
-  font-weight: 300;
-  user-select: none;
-  color: white;
-}
-
-@media (max-width: 1100px) {
-  #name,
-  #profession {
-    color: $primary-text-color;
-  }
-}
-
-@media (max-width: 637px) {
-  #name,
-  #profession {
-    font-size: 3.9vw;
-  }
+  opacity: 0.7;
+  margin: 0 10px;
 }

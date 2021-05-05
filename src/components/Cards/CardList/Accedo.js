@@ -24,7 +24,7 @@ export const Accedo = props => {
       <TopContent alignSelf="center" textAlign="center" color="true">
         <FadeInAnimation>
           <TopTitle>Previously</TopTitle>
-          <hr style={{ width: "65px", border: "0.5px solid white" }} />
+          <hr style={{ width: "65px", border: "0.5px solid #221e41" }} />
           {width > mediaWidthMobile && (
             <TopDescription>S. Engineer Intern</TopDescription>
           )}

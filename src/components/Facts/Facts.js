@@ -59,7 +59,7 @@ const FactsImage = styled.div`
 const Facts = props => {
   return (
     <FadeIn>
-      <Container id="factSection" style={{ height: "45vw" }}>
+      <Container id="factSection" style={{ height: "40vw" }}>
         <FactsImage className="facts" id="factsImage">
           <img
             src={factsImage}
