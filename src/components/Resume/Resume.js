@@ -73,7 +73,7 @@ const Resume = props => {
           {width < mediaWidthMobile ? (
             <a
               id="resumeButton"
-              href="https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/Peter+Hochman_CV.pdf"
+              href="https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/CV_Peter_Hochman.pdf"
               target="_blank"
               rel="noreferrer"
             >
