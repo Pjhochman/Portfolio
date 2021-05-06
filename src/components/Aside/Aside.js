@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
-import "./aside.css";
+import React, { useState } from "react";
+import { useWindowSize } from "../Cards/hooks/useWindowSize";
 import styled, { keyframes } from "styled-components";
 import { fadeInRightBig, fadeInLeftBig } from "react-animations";
+import "./aside.css";
 
 const fadeInRightAnimation = keyframes`${fadeInRightBig}`;
 const fadeInLeftAnimation = keyframes`${fadeInLeftBig}`;
@@ -30,17 +31,14 @@ const technologies = [
 ];
 
 const Aside = () => {
+  const mediaWidthDesktop = 1100;
   const [gradient, setGradient] = useState(true);
   const [display, setDisplay] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
+
+  const { width } = useWindowSize();
 
   const toggleGradient = () => setGradient(value => !value);
   const toggleDisplay = () => setDisplay(value => !value);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
-  }, []);
 
   return (
     <>
@@ -66,7 +64,7 @@ const Aside = () => {
             <div id="coder">
               <h2 className="title2">coder</h2>
               <p className="description">
-                {width > "1100"
+                {width > mediaWidthDesktop
                   ? "   Front End Developer who focuses on writing clean, elegant and efficient code."
                   : "Focusing on writing clean, elegant and efficient code."}
               </p>
