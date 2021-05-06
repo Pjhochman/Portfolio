@@ -31,7 +31,11 @@ export const Accedo = props => {
           </FadeInAnimation>
         ) : (
           <FadeInAnimation>
-            <TopTitle>Previously</TopTitle>
+            <TopTitle
+              style={width < mediaWidthMobile ? { fontWeight: "300" } : null}
+            >
+              Previously
+            </TopTitle>
             {isExpanded && (
               <>
                 <hr style={{ width: "65px", border: "0.5px solid #221e41" }} />

@@ -16,7 +16,7 @@ const StyledHeader = styled.div`
   left: 0;
   top: 0;
   right: 0;
-  // height: ${({ open }) => (open ? null : "60px")};
+  height: ${({ isVisible }) => (isVisible ? null : "60px")};
   opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
   z-index: ${({ open }) => (open ? "3" : "2")};
   margin: auto;
