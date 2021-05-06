@@ -73,7 +73,7 @@ const StyledMenu = styled.nav`
       "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
       "Helvetica Neue", sans-serif;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     padding: 1.5rem 0;
     font-weight: bold;
