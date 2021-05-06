@@ -48,14 +48,13 @@ export const HyperIsland = props => {
                       {item.link}
                     </Link>
                   )}
-                  <MiddleDescription>
+                  <MiddleDescription marginBottom="true">
                     {arr.length - 2 === index ? (
                       <>
-                        {hyperIsland[0].middleCardContent.middleSection.description.map(
-                          (item, index, arr) => {
-                            return <li key={item}>{item}</li>;
-                          }
-                        )}
+                        {
+                          hyperIsland[0].middleCardContent.topSection
+                            .description
+                        }
                       </>
                     ) : (
                       <li>{item.description}</li>

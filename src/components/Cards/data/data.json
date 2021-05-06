@@ -96,21 +96,9 @@
   "hyperIsland": [
     {
       "middleCardContent": {
-        "middleSection": {
-          "title": "Program Curriculum",
-          "description": [
-            "The Ecosystem of Frontend",
-            "The Fundamentals",
-            "If this...Then that",
-            "Design for the User",
-            "The First App",
-            "Accessible to All",
-            "Data Interaction",
-            "Code and Collaborate",
-            "Exploring Code",
-            "Individual Project",
-            "Industrial Placement"
-          ]
+        "topSection": {
+          "title": "Program Overview",
+          "description": "The frontend developer program takes the students on a journey through program languages such as HTML, CSS and JavaScript and as well as learning essential frameworks, styles and applications. The program is designed to build on a person’s prior experience in the field, whether professional or academic, and prepares students mainly for a role as Frontend developer, Interface developer, Web developer or Web programmer."
         },
         "bottomSection": {
           "title": "Website",

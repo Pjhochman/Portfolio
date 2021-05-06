@@ -56,6 +56,7 @@ export const MiddleDescription = styled.ul`
   line-height: 15px;
   font-size: 11px;
   font-weight: 400;
+  margin-bottom: ${props => (props.marginBottom ? "50px" : null)};
 `;
 
 // Link
