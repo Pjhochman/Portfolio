@@ -13,7 +13,7 @@ export const TopContainer = styled.div`
   pointer-events: none;
   user-select: none;
   color: ${props => (props.color ? "#221e41" : "white")};
-  font-size: 8.5px;
+  font-size: 9px;
   white-space: nowrap;
 `;
 
