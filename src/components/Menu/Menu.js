@@ -1,28 +1,49 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import styled, { keyframes } from "styled-components";
-import { useWindowSize } from "../Cards/hooks/useWindowSize";
-import { fadeIn } from "react-animations";
+import { fadeInDownBig } from "react-animations";
 
-const fadeInAnimation = keyframes`${fadeIn}`;
+const fadeInAnimation = keyframes`${fadeInDownBig}`;
 
 const FadeIn = styled.div`
-  animation: 0.5s ${fadeInAnimation};
+  animation: 0.3s ${fadeInAnimation};
+`;
+
+const StyledHeader = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  // height: ${({ open }) => (open ? null : "60px")};
+  opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
+  z-index: ${({ open }) => (open ? "3" : "2")};
+  margin: auto;
+  width: 100%;
+  font-weight: 400;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
 `;
 
 const StyledTitle = styled.div`
   display: flex;
+  justify-content: center;
   flex-direction: row;
   align-items: center;
   position: absolute;
-  bottom: 4%;
+  margin-left: 6vw;
+  top: 2.4rem;
   white-space: nowrap;
   font-weight: 300;
   user-select: none;
-  color: white;
-  font-size: 17px;
+  color: #221e41;
+  font-size: 20px;
   transition: transform 0.3s ease-in-out;
-  @media (max-width: 400px) {
-    font-size: 4.3vw;
+  @media (max-width: 450px) {
+    font-size: 4.1vw;
+    height: 23px;
   }
 `;
 
@@ -32,7 +53,7 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: #040c0e;
-  transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-87%)")};
+  transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   width: 100vw;
   text-align: center;
   padding: 2rem;
@@ -74,8 +95,8 @@ const StyledMenu = styled.nav`
 
 const StyledBurger = styled.button`
   position: absolute;
-  top: 24%;
-  right: 1rem;
+  top: 2.4rem;
+  right: 8vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -92,9 +113,9 @@ const StyledBurger = styled.button`
   }
 
   div {
-    width: 1.54rem;
-    height: 0.1rem;
-    background: ${({ open }) => (open ? "#EFFFFA" : "#EFFFFA")};
+    width: 1.56rem;
+    height: 0.14rem;
+    background: ${({ open }) => (open ? "#EFFFFA" : "#221e41")};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -116,78 +137,58 @@ const StyledBurger = styled.button`
   }
 `;
 
-const Links = ({ setOpen, open, isPage, changePageHandler, menu }) => {
-  const [isVisible, setVisible] = useState(open);
-  const { width } = useWindowSize();
-  const mediaDesktopWidth = 1110;
-  useEffect(() => {
-    setTimeout(
-      () => {
-        setVisible(open);
-      },
-      open ? 0 : 200
-    );
-  }, [open]);
+const Links = ({ open, isPage, changePageHandler }) => {
   return (
-    <StyledMenu open={isPage ? !open : open}>
-      <button
-        onClick={changePageHandler}
-        style={isPage ? null : { color: "#be9063" }}
-        disabled={isPage ? false : true}
-      >
-        Home
-      </button>
-      <button
-        onClick={changePageHandler}
-        style={!isPage ? null : { color: "#be9063" }}
-        disabled={!isPage ? false : true}
-      >
-        About
-      </button>
-      <a
-        href="https://www.linkedin.com/in/peter-hochman/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Linkedin
-      </a>
-      <a href="https://github.com/Pjhochman" target="_blank" rel="noreferrer">
-        GitHub
-      </a>
-      <a href="mailto:peter.hochman.dev@gmail.com">Say Hi!</a>
-      {!isVisible && (
-        <StyledTitle>
-          {width > mediaDesktopWidth ? (
-            <>
-              <div id="name">Peter Hochman</div>
-              <div id="profession">Front End Developer</div>
-            </>
-          ) : (
-            <>
-              {!menu && (
-                <>
-                  <div id="name">Peter Hochman</div>
-                  <div id="profession">Front End Developer</div>
-                </>
-              )}
-            </>
-          )}
-        </StyledTitle>
-      )}
-    </StyledMenu>
+    <>
+      <StyledMenu open={isPage ? !open : open}>
+        <button
+          onClick={changePageHandler}
+          style={isPage ? null : { color: "#be9063" }}
+          disabled={isPage ? false : true}
+        >
+          Home
+        </button>
+        <button
+          onClick={changePageHandler}
+          style={!isPage ? null : { color: "#be9063" }}
+          disabled={!isPage ? false : true}
+        >
+          About
+        </button>
+        <a
+          href="https://www.linkedin.com/in/peter-hochman/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Linkedin
+        </a>
+        <a href="https://github.com/Pjhochman" target="_blank" rel="noreferrer">
+          GitHub
+        </a>
+        <a href="mailto:peter.hochman.dev@gmail.com">Say Hi!</a>
+      </StyledMenu>
+    </>
   );
 };
 
 const Burger = ({ isPage, open, setOpen }) => {
   return (
-    <StyledBurger
-      open={isPage ? !open : open}
-      onClick={() => setOpen(value => !value)}
-    >
-      <div></div>
-      <div></div>
-      <div></div>
-    </StyledBurger>
+    <>
+      <StyledTitle>
+        <>
+          <div id="name">Peter Hochman</div>
+          <div id="profession">Front End Developer</div>
+        </>
+      </StyledTitle>
+      <StyledBurger
+        open={isPage ? !open : open}
+        onClick={() => setOpen(value => !value)}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+      </StyledBurger>
+    </>
   );
 };
 
@@ -200,21 +201,17 @@ export const DropdownMenu = ({
   const [open, setOpen] = useState(false);
   const node = useRef();
   return (
-    <>
-      {isVisible && (
-        <FadeIn>
-          <header ref={node}>
-            <Burger open={open} setOpen={setOpen} isPage={isPage} />
-            <Links
-              open={open}
-              changePageHandler={changePageHandler}
-              isPage={isPage}
-              menu={menu}
-              setOpen={setOpen}
-            ></Links>
-          </header>
-        </FadeIn>
-      )}
-    </>
+    <FadeIn>
+      <StyledHeader ref={node} open={open} isVisible={isVisible}>
+        <Burger open={open} setOpen={setOpen} isPage={isPage} />
+        <Links
+          open={open}
+          changePageHandler={changePageHandler}
+          isPage={isPage}
+          menu={menu}
+          setOpen={setOpen}
+        ></Links>
+      </StyledHeader>
+    </FadeIn>
   );
 };

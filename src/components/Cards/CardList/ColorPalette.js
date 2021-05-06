@@ -26,15 +26,30 @@ export const ColorPalette = () => {
   return (
     <>
       <TopContent alignSelf="start" flexDirection="column">
-        {width > mediaWidthMobile && (
-          <FadeInRightAnimation>
-            <TopTitle>My Own Work</TopTitle>
-            <hr style={{ borderTop: "0.5px solid darkgrey" }} />
-          </FadeInRightAnimation>
+        {width > mediaWidthMobile ? (
+          <>
+            <FadeInRightAnimation>
+              <TopTitle>My Own Work</TopTitle>
+              <hr style={{ border: "0.5px solid dark-grey" }} />
+            </FadeInRightAnimation>
+
+            <FadeInRightAnimation>
+              <TopDescription>Color Palette</TopDescription>
+            </FadeInRightAnimation>
+          </>
+        ) : (
+          <>
+            {isExpanded && (
+              <FadeInRightAnimation>
+                <TopTitle>My Own Work</TopTitle>
+                <hr style={{ border: "0.5px solid dark-grey" }} />
+              </FadeInRightAnimation>
+            )}
+            <FadeInRightAnimation>
+              <TopDescription>Color Palette</TopDescription>
+            </FadeInRightAnimation>
+          </>
         )}
-        <FadeInRightAnimation>
-          <TopDescription>Color Palette</TopDescription>
-        </FadeInRightAnimation>
       </TopContent>
       {isExpanded && (
         <>

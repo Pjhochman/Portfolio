@@ -5,6 +5,10 @@
   }
 }
 
+.container {
+  padding-top: 9vh !important;
+}
+
 @media (max-width: 637px) {
   .container {
     -webkit-box-orient: vertical !important;
@@ -12,7 +16,7 @@
         -ms-flex-direction: column-reverse !important;
             flex-direction: column-reverse !important;
     height: 100% !important;
-    padding-top: 8vh !important;
+    padding-top: 16vh !important;
   }
 }
 

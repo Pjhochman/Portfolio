@@ -22,14 +22,25 @@ export const Accedo = props => {
   return (
     <>
       <TopContent alignSelf="center" textAlign="center" color="true">
-        <FadeInAnimation>
-          <TopTitle>Previously</TopTitle>
-          <hr style={{ width: "65px", border: "0.5px solid #221e41" }} />
-          {width > mediaWidthMobile && (
+        {width > mediaWidthMobile ? (
+          <FadeInAnimation>
+            <TopTitle>Previously</TopTitle>
+            <hr style={{ width: "65px", border: "0.5px solid #221e41" }} />
             <TopDescription>S. Engineer Intern</TopDescription>
-          )}
-          <TopDescription marginTop="5px">Accedo.tv</TopDescription>
-        </FadeInAnimation>
+            <TopDescription marginTop="5px">Accedo.tv</TopDescription>
+          </FadeInAnimation>
+        ) : (
+          <FadeInAnimation>
+            <TopTitle>Previously</TopTitle>
+            {isExpanded && (
+              <>
+                <hr style={{ width: "65px", border: "0.5px solid #221e41" }} />
+                <TopDescription>S. Engineer Intern</TopDescription>
+                <TopDescription marginTop="5px">Accedo.tv</TopDescription>
+              </>
+            )}
+          </FadeInAnimation>
+        )}
       </TopContent>
       {isExpanded && (
         <>

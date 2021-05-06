@@ -7,11 +7,15 @@
   }
 }
 
+.container {
+  padding-top: 9vh !important;
+}
+
 @media (max-width: 637px) {
   .container {
     flex-direction: column-reverse !important;
     height: 100% !important;
-    padding-top: 8vh !important;
+    padding-top: 16vh !important;
   }
 }
 

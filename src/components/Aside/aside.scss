@@ -7,13 +7,12 @@ aside {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  top: 0;
   right: 0;
   left: 0;
-  height: 94vh;
+  height: 100%;
   font-weight: 300;
   margin: auto;
-  z-index: 0;
+  z-index: 1;
 }
 
 @media (min-width: 1250px) {
@@ -148,6 +147,11 @@ aside {
   }
 }
 
+#designerContainer,
+#coderContainer {
+  height: 100%;
+}
+
 #coderContainer,
 #designerContainer {
   display: flex;
@@ -155,13 +159,6 @@ aside {
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-@media (max-width: 1100px) {
-  #coderContainer,
-  #designerContainer {
-    height: 100%;
-  }
 }
 
 @media (max-width: 1100px) {

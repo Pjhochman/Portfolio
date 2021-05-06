@@ -32,7 +32,7 @@ const Footer = () => {
     <footer>
       <Container>
         <NameWrapper className="contact1">
-          <p id="by">2021 Peter Hochman</p>
+          <p id="by">&#xa9;2021 Peter Hochman</p>
         </NameWrapper>
       </Container>
     </footer>

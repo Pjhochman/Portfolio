@@ -71,15 +71,26 @@ export const HyperIsland = props => {
         textAlign={isExpanded ? "start" : "end"}
         alignSelf={isExpanded ? "flex-start" : "flex-end"}
       >
-        <FadeInLeftAnimation>
-          <TopTitle>Education</TopTitle>
-        </FadeInLeftAnimation>
-        {width > mediaWidthMobile && (
+        {width > mediaWidthMobile ? (
           <>
-            <hr style={{ borderTop: "0.5px solid darkgrey" }} />
-
+            <FadeInLeftAnimation>
+              <TopTitle>Education</TopTitle>
+              <hr style={{ borderTop: "0.5px solid darkgrey" }} />
+            </FadeInLeftAnimation>
             <FadeInLeftAnimation>
               <TopDescription>Hyper Island</TopDescription>
+            </FadeInLeftAnimation>
+          </>
+        ) : (
+          <>
+            {isExpanded && (
+              <FadeInLeftAnimation>
+                <TopTitle>Hyper Island</TopTitle>
+                <hr style={{ borderTop: "0.5px solid darkgrey" }} />
+              </FadeInLeftAnimation>
+            )}
+            <FadeInLeftAnimation>
+              <TopDescription>Education</TopDescription>
             </FadeInLeftAnimation>
           </>
         )}

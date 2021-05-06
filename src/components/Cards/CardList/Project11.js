@@ -71,15 +71,29 @@ export const Project11 = () => {
         textAlign={isExpanded ? "start" : "end"}
         alignSelf={isExpanded ? "flex-start" : "flex-end"}
       >
-        {width > mediaWidthMobile && (
-          <FadeInLeftAnimation>
-            <TopTitle>My Own Work</TopTitle>
-            <hr style={{ borderTop: "0.5px solid darkgrey" }} />
-          </FadeInLeftAnimation>
+        {width > mediaWidthMobile ? (
+          <>
+            <FadeInLeftAnimation>
+              <TopTitle>My Own Work</TopTitle>
+              <hr style={{ borderTop: "0.5px solid darkgrey" }} />
+            </FadeInLeftAnimation>
+            <FadeInLeftAnimation>
+              <TopDescription>Project 11</TopDescription>
+            </FadeInLeftAnimation>
+          </>
+        ) : (
+          <>
+            {isExpanded && (
+              <FadeInLeftAnimation>
+                <TopTitle>My Own Work</TopTitle>
+                <hr style={{ borderTop: "0.5px solid darkgrey" }} />
+              </FadeInLeftAnimation>
+            )}
+            <FadeInLeftAnimation>
+              <TopDescription>Project 11</TopDescription>
+            </FadeInLeftAnimation>
+          </>
         )}
-        <FadeInLeftAnimation>
-          <TopDescription>Project 11</TopDescription>
-        </FadeInLeftAnimation>
       </TopContent>
     </>
   );

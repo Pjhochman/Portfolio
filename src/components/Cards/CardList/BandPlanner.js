@@ -25,15 +25,30 @@ export const BandPlanner = () => {
   return (
     <>
       <TopContent alignSelf="start">
-        {width > mediaWidthMobile && (
-          <FadeInRightAnimation>
-            <TopTitle>My Own Work</TopTitle>
-            <hr style={{ border: "0.5px solid dark-grey" }} />
-          </FadeInRightAnimation>
+        {width > mediaWidthMobile ? (
+          <>
+            <FadeInRightAnimation>
+              <TopTitle>My Own Work</TopTitle>
+              <hr style={{ border: "0.5px solid dark-grey" }} />
+            </FadeInRightAnimation>
+
+            <FadeInRightAnimation>
+              <TopDescription>Band Planner</TopDescription>
+            </FadeInRightAnimation>
+          </>
+        ) : (
+          <>
+            {isExpanded && (
+              <FadeInRightAnimation>
+                <TopTitle>My Own Work</TopTitle>
+                <hr style={{ border: "0.5px solid dark-grey" }} />
+              </FadeInRightAnimation>
+            )}
+            <FadeInRightAnimation>
+              <TopDescription>Band Planner</TopDescription>
+            </FadeInRightAnimation>
+          </>
         )}
-        <FadeInRightAnimation>
-          <TopDescription>Band Planner</TopDescription>
-        </FadeInRightAnimation>
       </TopContent>
       {isExpanded && (
         <>

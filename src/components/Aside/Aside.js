@@ -30,7 +30,7 @@ const technologies = [
 ];
 
 const Aside = () => {
-  const [gradient, setGradient] = useState(false);
+  const [gradient, setGradient] = useState(true);
   const [display, setDisplay] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
 
