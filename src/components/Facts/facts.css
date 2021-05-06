@@ -46,6 +46,10 @@ ul {
   margin: 0;
   font-size: 44px;
   color: #221e41;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media (max-width: 1100px) {

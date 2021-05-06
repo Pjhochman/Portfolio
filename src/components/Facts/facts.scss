@@ -38,6 +38,7 @@ ul {
   margin: 0;
   font-size: 44px;
   color: $primary-text-color;
+  user-select: none;
 }
 
 @media (max-width: 1100px) {

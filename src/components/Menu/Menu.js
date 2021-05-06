@@ -53,7 +53,8 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: #040c0e;
-  transform: ${({ open }) => (open ? "translateY(24%)" : "translateY(-100%)")};
+  transform: ${({ open }) =>
+    open ? "translateY(23.5%)" : "translateY(-100%)"};
   width: 100vw;
   text-align: center;
   padding: 4rem;

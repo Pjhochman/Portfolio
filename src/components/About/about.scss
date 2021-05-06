@@ -19,11 +19,16 @@
   }
 }
 
+img {
+  user-select: none;
+}
+
 #aboutMe {
   font-weight: bold;
   margin: 0;
   font-size: 80px;
   color: $primary-text-color;
+  user-select: none;
 }
 
 @media (max-width: 1100px) {
@@ -34,7 +39,7 @@
 
 @media (max-width: 637px) {
   #aboutMe {
-    font-size: calc(11vw + 1px); //12px
+    font-size: calc(13vw + 1px); //12px
   }
 }
 
@@ -56,6 +61,7 @@
 @media (max-width: 637px) {
   #intro {
     font-size: 5vw;
+    text-align: start;
   }
 }
 
@@ -97,7 +103,6 @@
 
 @media (max-width: 637px) {
   #profileInformation {
-    align-items: center;
     text-align: center;
     width: 60vw !important;
     height: 75vw !important;
