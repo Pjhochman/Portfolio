@@ -16,7 +16,7 @@ const StyledHeader = styled.div`
   left: 0;
   top: 0;
   right: 0;
-  height: ${({ isVisible }) => (isVisible ? null : "60px")};
+  height: 229px;
   opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
   z-index: ${({ open }) => (open ? "3" : "2")};
   margin: auto;
@@ -53,10 +53,10 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: #040c0e;
-  transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
+  transform: ${({ open }) => (open ? "translateY(24%)" : "translateY(-100%)")};
   width: 100vw;
   text-align: center;
-  padding: 2rem;
+  padding: 4rem;
   position: relative;
   box-sizing: border-box;
   top: 0;

@@ -68,7 +68,11 @@ export const HyperIsland = props => {
         </>
       )}
       <TopContent
-        style={width < mediaWidthMobile ? { margin: "15px 6px" } : null}
+        style={
+          width < mediaWidthMobile && !isExpanded
+            ? { margin: "15px 6px" }
+            : null
+        }
         textAlign={isExpanded ? "start" : "end"}
         alignSelf={isExpanded ? "flex-start" : "flex-end"}
       >

@@ -32,7 +32,11 @@ export const Accedo = props => {
         ) : (
           <FadeInAnimation>
             <TopTitle
-              style={width < mediaWidthMobile ? { fontWeight: "300" } : null}
+              style={
+                width < mediaWidthMobile
+                  ? { fontWeight: "300", marginLeft: "3px" }
+                  : null
+              }
             >
               Previously
             </TopTitle>
