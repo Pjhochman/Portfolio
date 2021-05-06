@@ -15,7 +15,8 @@
             "Mongoose - Schema modelling & validation",
             "Express - Handling http requests",
             "MongoDB - NoSQL database",
-            "SASS - CSS extension"
+            "SASS - CSS extension",
+            "AWS"
           ]
         },
         "bottomSection": {
