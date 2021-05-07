@@ -5,12 +5,6 @@ import "./header.css";
 
 const Header = ({ pageHandler, isPage }) => {
   const [isVisible, setVisible] = useState(false);
-  const [menu, setMenu] = useState(false);
-
-  const changePageHandler = () => {
-    pageHandler();
-    setMenu(value => !value);
-  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -20,10 +14,9 @@ const Header = ({ pageHandler, isPage }) => {
   return (
     <>
       <DropdownMenu
-        changePageHandler={changePageHandler}
+        changePageHandler={pageHandler}
         isPage={isPage}
         isVisible={isVisible}
-        menu={menu}
       ></DropdownMenu>
     </>
   );

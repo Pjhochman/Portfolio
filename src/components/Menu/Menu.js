@@ -139,19 +139,23 @@ const StyledBurger = styled.button`
   }
 `;
 
-const Links = ({ open, isPage, changePageHandler }) => {
+const Links = ({ open, setOpen, isPage, changePageHandler }) => {
+  const changePage = () => {
+    changePageHandler();
+    setOpen(!open);
+  };
   return (
     <>
-      <StyledMenu open={isPage ? !open : open}>
+      <StyledMenu open={open}>
         <button
-          onClick={changePageHandler}
+          onClick={changePage}
           style={isPage ? null : { color: "#be9063" }}
           disabled={isPage ? false : true}
         >
           Home
         </button>
         <button
-          onClick={changePageHandler}
+          onClick={changePage}
           style={!isPage ? null : { color: "#be9063" }}
           disabled={!isPage ? false : true}
         >
@@ -182,10 +186,7 @@ const Burger = ({ isPage, open, setOpen }) => {
           <div id="profession">Front End Developer</div>
         </>
       </StyledTitle>
-      <StyledBurger
-        open={isPage ? !open : open}
-        onClick={() => setOpen(value => !value)}
-      >
+      <StyledBurger open={open} onClick={() => setOpen(value => !value)}>
         <div></div>
         <div></div>
         <div></div>
@@ -194,12 +195,7 @@ const Burger = ({ isPage, open, setOpen }) => {
   );
 };
 
-export const DropdownMenu = ({
-  isPage,
-  changePageHandler,
-  menu,
-  isVisible
-}) => {
+export const DropdownMenu = ({ isPage, changePageHandler, isVisible }) => {
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(open ? !open : open);
@@ -212,6 +208,7 @@ export const DropdownMenu = ({
         <Burger open={open} setOpen={setOpen} isPage={isPage} />
         <Links
           open={open}
+          setOpen={setOpen}
           changePageHandler={changePageHandler}
           isPage={isPage}
         ></Links>
