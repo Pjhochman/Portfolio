@@ -49,8 +49,10 @@ const Aside = () => {
       <aside>
         <div id="designerContainer">
           <FadeInLeft>
-            <div id="designer" onClick={toggleGradient}>
-              <h2 className="title1">designer</h2>
+            <div id="designer">
+              <h2 className="title1" onClick={toggleGradient}>
+                designer
+              </h2>
               <p className="description">
                 I have a passion for designing beautiful and functional
                 experiences.
@@ -59,10 +61,12 @@ const Aside = () => {
           </FadeInLeft>
         </div>
         <div id="filler"></div>
-        <div id="coderContainer" onClick={toggleDisplay}>
+        <div id="coderContainer">
           <FadeInRight>
             <div id="coder">
-              <h2 className="title2">coder</h2>
+              <h2 className="title2" onClick={toggleDisplay}>
+                coder
+              </h2>
               <p className="description">
                 {width > mediaWidthDesktop
                   ? "   Front End Developer who focuses on writing clean, elegant and efficient code."

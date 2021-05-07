@@ -1,6 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { fadeInDownBig } from "react-animations";
+import { useClickOutside } from "../Cards/hooks/useClickOutside";
 
 const fadeInAnimation = keyframes`${fadeInDownBig}`;
 
@@ -200,17 +201,19 @@ export const DropdownMenu = ({
   isVisible
 }) => {
   const [open, setOpen] = useState(false);
-  const node = useRef();
+  const handleClick = () => {
+    setOpen(open ? !open : open);
+  };
+  const clickRef = useClickOutside(handleClick);
+
   return (
     <FadeIn>
-      <StyledHeader ref={node} open={open} isVisible={isVisible}>
+      <StyledHeader ref={clickRef} open={open} isVisible={isVisible}>
         <Burger open={open} setOpen={setOpen} isPage={isPage} />
         <Links
           open={open}
           changePageHandler={changePageHandler}
           isPage={isPage}
-          menu={menu}
-          setOpen={setOpen}
         ></Links>
       </StyledHeader>
     </FadeIn>
