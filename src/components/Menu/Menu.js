@@ -17,7 +17,6 @@ const StyledHeader = styled.div`
   left: 0;
   top: 0;
   right: 0;
-  height: 229px;
   opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
   z-index: ${({ open }) => (open ? "3" : "2")};
   margin: auto;
@@ -54,12 +53,11 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: #040c0e;
-  transform: ${({ open }) =>
-    open ? "translateY(23.5%)" : "translateY(-100%)"};
+  transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   width: 100vw;
   text-align: center;
   padding: 4rem;
-  position: relative;
+  position: fixed;
   box-sizing: border-box;
   top: 0;
   left: 0;
@@ -96,7 +94,7 @@ const StyledMenu = styled.nav`
 `;
 
 const StyledBurger = styled.button`
-  position: absolute;
+  position: ${({ open }) => (open ? "fixed" : "absolute")};
   top: 2.4rem;
   right: 8vw;
   display: flex;
