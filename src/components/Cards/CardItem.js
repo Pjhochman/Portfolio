@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHover } from "./hooks/useHover";
 import { CardItemContext } from "../../layout/styles";
 import { useWindowSize } from "./hooks/useWindowSize";
+import PropTypes from "prop-types";
 import {
   TopContainer,
   MiddleContainer,
@@ -74,6 +75,12 @@ const CardItem = props => {
       )}
     </div>
   );
+};
+
+CardItem.propTypes = {
+  dataDepth: PropTypes.string,
+  dataTitle: PropTypes.string,
+  startAnimation: PropTypes.object
 };
 
 export default CardItem;

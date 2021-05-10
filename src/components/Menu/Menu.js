@@ -56,7 +56,7 @@ const StyledMenu = styled.nav`
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   width: 100vw;
   text-align: center;
-  padding: 4rem;
+  padding: 2rem 4rem 2rem 4rem;
   position: fixed;
   box-sizing: border-box;
   top: 0;
