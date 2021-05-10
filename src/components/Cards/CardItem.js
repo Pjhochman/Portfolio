@@ -30,11 +30,22 @@ const CardItem = props => {
   const [isExpanded, setExpand] = useState(false);
 
   const expandHandler = () => setExpand(value => !value);
+
   useEffect(() => {
     setTimeout(() => {
       setVisible(value => !value);
     }, props.wait);
   }, [props.wait]);
+
+  const delayCardText = () => {
+    if (width > mediaWidthMobile) {
+      if (cardHovered || isExpanded) {
+        return props.children;
+      }
+    } else {
+      return props.children;
+    }
+  };
 
   return (
     <div
@@ -65,11 +76,7 @@ const CardItem = props => {
               isExpanded
             }}
           >
-            {width > mediaWidthMobile
-              ? isExpanded
-                ? props.children
-                : cardHovered && props.children
-              : props.children}
+            {delayCardText()}
           </CardItemContext.Provider>
         </StartAnimation>
       )}

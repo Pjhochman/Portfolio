@@ -56,35 +56,37 @@ export const Accedo = props => {
           {Object.values(accedo[0].middleCardContent).map(
             (item, index, arr) => {
               return (
-                <MiddleContent key={item.title} color="true">
-                  <MiddleTitle>{item.title}</MiddleTitle>
-                  {arr.length - 1 === index && (
-                    <Link
-                      color="true"
-                      href={
-                        "https://" +
-                        accedo[0].middleCardContent.bottomSection.link
-                      }
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {item.link}
-                    </Link>
-                  )}
-                  <MiddleDescription>
-                    {arr.length - 2 === index ? (
-                      <>
-                        {accedo[0].middleCardContent.middleSection.description.map(
-                          (item, index, arr) => {
-                            return <li key={item}>{item}</li>;
-                          }
-                        )}
-                      </>
-                    ) : (
-                      <li>{item.description}</li>
+                <FadeInAnimation key={item.title} animation="true">
+                  <MiddleContent color="true">
+                    <MiddleTitle>{item.title}</MiddleTitle>
+                    {arr.length - 1 === index && (
+                      <Link
+                        color="true"
+                        href={
+                          "https://" +
+                          accedo[0].middleCardContent.bottomSection.link
+                        }
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {item.link}
+                      </Link>
                     )}
-                  </MiddleDescription>
-                </MiddleContent>
+                    <MiddleDescription>
+                      {arr.length - 2 === index ? (
+                        <>
+                          {accedo[0].middleCardContent.middleSection.description.map(
+                            (item, index, arr) => {
+                              return <li key={item}>{item}</li>;
+                            }
+                          )}
+                        </>
+                      ) : (
+                        <li>{item.description}</li>
+                      )}
+                    </MiddleDescription>
+                  </MiddleContent>
+                </FadeInAnimation>
               );
             }
           )}

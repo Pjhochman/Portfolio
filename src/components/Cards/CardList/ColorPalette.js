@@ -1,7 +1,10 @@
 import React, { useContext } from "react";
 import { CardItemContext } from "../../../layout/styles";
 import { useWindowSize } from "../hooks/useWindowSize";
-import { FadeInRightAnimation } from "../../../animations/animations";
+import {
+  FadeInRightAnimation,
+  FadeInAnimation
+} from "../../../animations/animations";
 import { colorPalette } from "../data/data";
 import { CloseButton } from "../../Buttons/CloseButton";
 
@@ -57,34 +60,36 @@ export const ColorPalette = () => {
           {Object.values(colorPalette[0].middleCardContent).map(
             (item, index, arr) => {
               return (
-                <MiddleContent key={item.title}>
-                  <MiddleTitle>{item.title}</MiddleTitle>
-                  {arr.length - 1 === index && (
-                    <Link
-                      href={
-                        "https://" +
-                        colorPalette[0].middleCardContent.bottomSection.link
-                      }
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {item.link}
-                    </Link>
-                  )}
-                  <MiddleDescription>
-                    {arr.length - 2 === index ? (
-                      <>
-                        {colorPalette[0].middleCardContent.middleSection.description.map(
-                          (item, index, arr) => {
-                            return <li key={item}>{item}</li>;
-                          }
-                        )}
-                      </>
-                    ) : (
-                      <li>{item.description}</li>
+                <FadeInAnimation key={item.title} animation="true">
+                  <MiddleContent>
+                    <MiddleTitle>{item.title}</MiddleTitle>
+                    {arr.length - 1 === index && (
+                      <Link
+                        href={
+                          "https://" +
+                          colorPalette[0].middleCardContent.bottomSection.link
+                        }
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {item.link}
+                      </Link>
                     )}
-                  </MiddleDescription>
-                </MiddleContent>
+                    <MiddleDescription>
+                      {arr.length - 2 === index ? (
+                        <>
+                          {colorPalette[0].middleCardContent.middleSection.description.map(
+                            (item, index, arr) => {
+                              return <li key={item}>{item}</li>;
+                            }
+                          )}
+                        </>
+                      ) : (
+                        <li>{item.description}</li>
+                      )}
+                    </MiddleDescription>
+                  </MiddleContent>
+                </FadeInAnimation>
               );
             }
           )}

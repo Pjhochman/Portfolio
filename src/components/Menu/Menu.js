@@ -199,7 +199,6 @@ export const DropdownMenu = ({ isPage, changePageHandler, isVisible }) => {
     setOpen(open ? !open : open);
   };
   const clickRef = useClickOutside(handleClick);
-
   return (
     <FadeIn>
       <StyledHeader ref={clickRef} open={open} isVisible={isVisible}>

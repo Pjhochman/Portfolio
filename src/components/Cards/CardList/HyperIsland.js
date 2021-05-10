@@ -1,7 +1,10 @@
 import React, { useContext } from "react";
 import { CardItemContext } from "../../../layout/styles";
 import { useWindowSize } from "../hooks/useWindowSize";
-import { FadeInLeftAnimation } from "../../../animations/animations";
+import {
+  FadeInLeftAnimation,
+  FadeInAnimation
+} from "../../../animations/animations";
 import { hyperIsland } from "../data/data";
 import { CloseButton } from "../../Buttons/CloseButton";
 
@@ -34,33 +37,35 @@ export const HyperIsland = props => {
           {Object.values(hyperIsland[0].middleCardContent).map(
             (item, index, arr) => {
               return (
-                <MiddleContent key={item.title}>
-                  <MiddleTitle>{item.title}</MiddleTitle>
-                  {arr.length - 1 === index && (
-                    <Link
-                      href={
-                        "https://" +
-                        hyperIsland[0].middleCardContent.bottomSection.link
-                      }
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {item.link}
-                    </Link>
-                  )}
-                  <MiddleDescription marginBottom="true">
-                    {arr.length - 2 === index ? (
-                      <>
-                        {
-                          hyperIsland[0].middleCardContent.topSection
-                            .description
+                <FadeInAnimation key={item.title} animation="true">
+                  <MiddleContent>
+                    <MiddleTitle>{item.title}</MiddleTitle>
+                    {arr.length - 1 === index && (
+                      <Link
+                        href={
+                          "https://" +
+                          hyperIsland[0].middleCardContent.bottomSection.link
                         }
-                      </>
-                    ) : (
-                      <li>{item.description}</li>
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {item.link}
+                      </Link>
                     )}
-                  </MiddleDescription>
-                </MiddleContent>
+                    <MiddleDescription marginBottom="true">
+                      {arr.length - 2 === index ? (
+                        <>
+                          {
+                            hyperIsland[0].middleCardContent.topSection
+                              .description
+                          }
+                        </>
+                      ) : (
+                        <li>{item.description}</li>
+                      )}
+                    </MiddleDescription>
+                  </MiddleContent>
+                </FadeInAnimation>
               );
             }
           )}
