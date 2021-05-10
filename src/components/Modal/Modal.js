@@ -61,7 +61,7 @@ const Modal = ({ handleClose, children, isOpen }) => {
           <ModalContainer id="modalContainer" variants={containerVariant}>
             <a
               id="download"
-              href="https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/Peter+Hochman_CV.pdf"
+              href="https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/CV_Peter_Hochman.pdf"
               target="_blank"
               rel="noreferrer"
             >
