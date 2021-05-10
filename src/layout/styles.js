@@ -42,6 +42,7 @@ export const MiddleContainer = styled.div`
   font-weight: 400;
   box-sizing: border-box;
   user-select: none;
+  white-space: ${props => (props.whiteSpace ? "nowrap" : null)};
   color: ${props => (props.color ? "#221e41" : "white")};
 `;
 
