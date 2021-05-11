@@ -47,7 +47,7 @@ li {
     justify-content: space-between;
     pointer-events: all;
     box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
     &:after {
       content: attr(data-title);
       position: absolute;
@@ -55,7 +55,7 @@ li {
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      transition: all 0.5s ease;
+      transition: all 0.2s ease;
       visibility: hidden;
       opacity: 0;
     }
@@ -86,7 +86,7 @@ li {
       width: 515px;
       height: 590px;
       background: $color;
-      transition: all 0.1s ease-in-out;
+      // transition: all 0.1s ease-in-out;
       pointer-events: auto;
     }
     &:after {
@@ -116,7 +116,7 @@ li {
       width: 515px;
       height: 590px;
       background: $color;
-      transition: all 0.1s ease-in-out;
+      // transition: all 0.2s ease-in-out;
       pointer-events: auto;
     }
     &:after {
@@ -146,7 +146,7 @@ li {
       width: 515px;
       height: 590px;
       background: $color;
-      transition: all 0.1s ease-in-out;
+      // transition: all 0.1s ease-in-out;
       pointer-events: auto;
     }
     &:after {
@@ -175,7 +175,7 @@ li {
       width: 515px;
       height: 590px;
       background: $color;
-      transition: all 0.1s ease-in-out;
+      // transition: all 0.1s ease-in-out;
       pointer-events: auto;
     }
     &:after {
@@ -205,7 +205,7 @@ li {
       width: 515px;
       height: 590px;
       background: $color;
-      transition: all 0.1s ease-in-out;
+      // transition: all 0.1s ease-in-out;
       pointer-events: auto;
     }
     &:after {

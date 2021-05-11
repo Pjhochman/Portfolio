@@ -38,7 +38,7 @@ export const Project11 = () => {
             (item, index, arr) => {
               return (
                 <FadeInAnimation key={item.title} animation="true">
-                  <MiddleContent>
+                  <MiddleContent whiteSpace="true">
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (
                       <Link

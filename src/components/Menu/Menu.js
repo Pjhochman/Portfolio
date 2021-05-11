@@ -56,7 +56,7 @@ const StyledMenu = styled.nav`
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   width: 100vw;
   text-align: center;
-  padding: 2rem 4rem 2rem 4rem;
+  padding: 3rem 4rem;
   position: fixed;
   box-sizing: border-box;
   top: 0;
@@ -175,10 +175,10 @@ const Links = ({ open, setOpen, isPage, changePageHandler }) => {
   );
 };
 
-const Burger = ({ isPage, open, setOpen }) => {
+const Burger = ({ isPage, changePageHandler, open, setOpen }) => {
   return (
     <>
-      <StyledTitle>
+      <StyledTitle onClick={isPage ? changePageHandler : null}>
         <>
           <div id="name">Peter Hochman</div>
           <div id="profession">Front End Developer</div>
@@ -202,7 +202,12 @@ export const DropdownMenu = ({ isPage, changePageHandler, isVisible }) => {
   return (
     <FadeIn>
       <StyledHeader ref={clickRef} open={open} isVisible={isVisible}>
-        <Burger open={open} setOpen={setOpen} isPage={isPage} />
+        <Burger
+          open={open}
+          setOpen={setOpen}
+          changePageHandler={changePageHandler}
+          isPage={isPage}
+        />
         <Links
           open={open}
           setOpen={setOpen}
