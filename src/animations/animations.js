@@ -17,7 +17,7 @@ export const StartAnimation = styled.div`
 `;
 
 export const FadeInAnimation = styled.div`
-  animation: ${props => (props.animation ? "0.8s" : "0.3s")} ${fadeInAnimation};
+  animation: ${props => (props.animation ? "0.5s" : "0.3s")} ${fadeInAnimation};
   display: flex;
   flex-direction: column;
   align-items: center;
