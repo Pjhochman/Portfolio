@@ -12,7 +12,7 @@ export const TopContainer = styled.div`
   box-sizing: border-box;
   pointer-events: none;
   user-select: none;
-  color: ${props => (props.color ? "#221e41" : "white")};
+  color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
   font-size: 9px;
   white-space: nowrap;
 `;
@@ -43,7 +43,7 @@ export const MiddleContainer = styled.div`
   box-sizing: border-box;
   user-select: none;
   white-space: ${props => (props.whiteSpace ? "nowrap" : null)};
-  color: ${props => (props.color ? "#221e41" : "white")};
+  color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
 `;
 
 export const MiddleTitle = styled.h3`
@@ -66,7 +66,7 @@ export const Link = styled.a`
   margin-bottom: 5px;
   font-size: 11px;
   font-weight: 400;
-  color: ${props => (props.color ? "#221e41" : "white")};
+  color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
 `;
 
 // Bottom Containers
@@ -80,7 +80,7 @@ export const BottomContainer = styled.div`
   pointer-events: none;
   user-select: none;
   white-space: nowrap;
-  color: ${props => (props.color ? "#221e41" : "white")};
+  color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
 `;
 
 export const BottomTitle = styled.div`
