@@ -142,7 +142,7 @@ aside {
 
 @media (max-width: 1100px) {
   #filler {
-    min-height: 340px;
+    min-height: 328px;
     min-width: 100%;
   }
 }
@@ -274,16 +274,17 @@ aside {
 }
 
 .content {
+  -webkit-user-select: none;
   user-select: none;
   cursor: default;
   display: flex;
   position: absolute;
   align-items: center;
   height: 20px;
-  width: 210px;
-  margin: 8px;
+  width: 195px;
+  margin: 20px 5px 0 17px;
   overflow: visible;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 40px;
   color: $primary-text-color;
   justify-content: flex-start;
@@ -326,7 +327,7 @@ aside {
       position: relative;
       display: inline;
       margin: 0 5px 0 15px;
-      font-size: 18px;
+      font-size: 16px;
     }
 
     &__list {
