@@ -117,6 +117,8 @@ li {
   width: 515px;
   height: 590px;
   background: #040c0e;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   pointer-events: auto;
 }
 
@@ -159,6 +161,8 @@ li {
   width: 515px;
   height: 590px;
   background: #a4978e;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   pointer-events: auto;
 }
 
@@ -201,6 +205,8 @@ li {
   width: 515px;
   height: 590px;
   background: #132226;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   pointer-events: auto;
 }
 
@@ -239,6 +245,8 @@ li {
   width: 515px;
   height: 590px;
   background: #525b56;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   pointer-events: auto;
 }
 
@@ -280,6 +288,8 @@ li {
   width: 515px;
   height: 590px;
   background: #be9063;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   pointer-events: auto;
 }
 
@@ -296,6 +306,10 @@ li {
 }
 
 @media (max-width: 1100px) {
+  .items__layer .items__item {
+    -webkit-transition: none;
+    transition: none;
+  }
   .items__layer:nth-child(1) .items__item:after {
     display: none;
   }
@@ -325,6 +339,8 @@ li {
     left: 0;
     width: 316px;
     height: 65vh;
+    -webkit-transition: none;
+    transition: none;
   }
   .items__layer:nth-child(2) .items__item {
     display: -webkit-box;
@@ -340,6 +356,8 @@ li {
     left: 0;
     width: 316px;
     height: 65vh;
+    -webkit-transition: none;
+    transition: none;
   }
   .items__layer:nth-child(3) .items__item {
     top: 280px;
@@ -352,6 +370,8 @@ li {
     left: 0;
     width: 316px;
     height: 65vh;
+    -webkit-transition: none;
+    transition: none;
   }
   .items__layer:nth-child(4) .items__item {
     top: 110px;
@@ -364,6 +384,8 @@ li {
     left: 0;
     width: 316px;
     height: 65vh;
+    -webkit-transition: none;
+    transition: none;
   }
   .items__layer:nth-child(5) .items__item {
     top: 220px;
@@ -376,6 +398,8 @@ li {
     left: 0;
     width: 316px;
     height: 65vh;
+    -webkit-transition: none;
+    transition: none;
   }
 }
 /*# sourceMappingURL=cards.css.map */

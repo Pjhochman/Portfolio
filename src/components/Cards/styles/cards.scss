@@ -1,4 +1,4 @@
-@import "../../styles/scss/colors";
+@import "../../../styles/scss/_colors";
 
 p {
   font-weight: 300;
@@ -86,7 +86,7 @@ li {
       width: 515px;
       height: 590px;
       background: $color;
-      // transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out;
       pointer-events: auto;
     }
     &:after {
@@ -116,7 +116,7 @@ li {
       width: 515px;
       height: 590px;
       background: $color;
-      // transition: all 0.2s ease-in-out;
+      transition: all 0.1s ease-in-out;
       pointer-events: auto;
     }
     &:after {
@@ -146,7 +146,7 @@ li {
       width: 515px;
       height: 590px;
       background: $color;
-      // transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out;
       pointer-events: auto;
     }
     &:after {
@@ -175,7 +175,7 @@ li {
       width: 515px;
       height: 590px;
       background: $color;
-      // transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out;
       pointer-events: auto;
     }
     &:after {
@@ -205,7 +205,7 @@ li {
       width: 515px;
       height: 590px;
       background: $color;
-      // transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out;
       pointer-events: auto;
     }
     &:after {
@@ -224,6 +224,9 @@ li {
 
 @media (max-width: 1100px) {
   .items {
+    &__layer &__item {
+      transition: none;
+    }
     &__layer:nth-child(1) &__item {
       &:after {
         display: none;
@@ -254,6 +257,7 @@ li {
         left: 0;
         width: 316px;
         height: 65vh;
+        transition: none;
       }
     }
     &__layer:nth-child(2) &__item {
@@ -267,6 +271,7 @@ li {
         left: 0;
         width: 316px;
         height: 65vh;
+        transition: none;
       }
     }
     &__layer:nth-child(3) &__item {
@@ -279,6 +284,7 @@ li {
         left: 0;
         width: 316px;
         height: 65vh;
+        transition: none;
       }
     }
     &__layer:nth-child(4) &__item {
@@ -291,6 +297,7 @@ li {
         left: 0;
         width: 316px;
         height: 65vh;
+        transition: none;
       }
     }
     &__layer:nth-child(5) &__item {
@@ -303,6 +310,7 @@ li {
         left: 0;
         width: 316px;
         height: 65vh;
+        transition: none;
       }
     }
   }
