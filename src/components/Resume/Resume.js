@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Modal from "../Modal/Modal";
-import { useWindowSize } from "../Cards/hooks/useWindowSize";
+import { useWindowSize } from "../../hooks/useWindowSize";
 import OpenModalButton from "../Modal/OpenModalButton";
 import styled from "styled-components";
 import resumeImage from "../../assets/images/resumeImage.png";
-
-import "./resume.css";
+import "./styles/resume.css";
 
 const Container = styled.div`
   padding-top: 5vh;

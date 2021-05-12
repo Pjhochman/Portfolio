@@ -1,4 +1,4 @@
-@import "../../styles/scss/colors";
+@import "../../../styles/scss/_colors";
 
 aside {
   display: flex;
@@ -40,7 +40,7 @@ aside {
   }
 }
 
-.title1 {
+.designer-title {
   width: auto;
   margin: 0 0 20px 0;
   user-select: none;
@@ -48,7 +48,7 @@ aside {
   color: $primary-text-color;
 }
 
-.title2 {
+.coder-title {
   width: auto;
   margin: 0 0 20px 0;
   user-select: none;
@@ -64,9 +64,12 @@ aside {
   }
 }
 
+.title {
+  margin: 10px;
+}
+
 @media (max-width: 1250px) {
-  .title1,
-  .title2 {
+  .title {
     display: flex;
     justify-content: center;
     -webkit-tap-highlight-color: transparent;
@@ -77,8 +80,7 @@ aside {
 }
 
 @media (max-width: 1100px) {
-  .title1,
-  .title2 {
+  .title {
     font-size: 35px;
     display: flex;
     justify-content: center;
@@ -87,22 +89,20 @@ aside {
 }
 
 @media (max-width: 1100px) {
-  .title2 {
-    margin-bottom: 5px;
-  }
-}
-
-@media (max-width: 556px) {
-  .title1,
-  .title2 {
+  .coder-title {
     margin-bottom: 5px;
   }
 }
 
 @media (max-width: 637px) {
-  .title1,
-  .title2 {
+  .title {
     font-size: 27px;
+  }
+}
+
+@media (max-width: 556px) {
+  .title {
+    margin-bottom: 5px;
   }
 }
 
@@ -278,13 +278,13 @@ aside {
   user-select: none;
   cursor: default;
   display: flex;
-  position: absolute;
+  position: relative;
   align-items: center;
   height: 20px;
-  width: 195px;
-  margin: 20px 5px 0 17px;
+  width: 212px;
+  margin-top: 20px;
   overflow: visible;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 40px;
   color: $primary-text-color;
   justify-content: flex-start;
@@ -327,7 +327,7 @@ aside {
       position: relative;
       display: inline;
       margin: 0 5px 0 15px;
-      font-size: 16px;
+      font-size: 18px;
     }
 
     &__list {
@@ -786,11 +786,10 @@ aside {
 
 @media (max-width: 1100px) {
   .content {
-    width: 165px;
-    margin: 2px 0 0 7px;
-    font-size: 13px;
+    width: 173px;
+    margin-top: 10px;
     &__container {
-      padding: 0;
+      font-size: 14px;
       &__text {
         font-size: 13px;
       }

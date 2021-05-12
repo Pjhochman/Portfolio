@@ -60,15 +60,6 @@ export const MiddleDescription = styled.ul`
   margin-bottom: ${props => (props.marginBottom ? "50px" : null)};
 `;
 
-// Link
-
-export const Link = styled.a`
-  margin-bottom: 5px;
-  font-size: 11px;
-  font-weight: 400;
-  color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
-`;
-
 // Bottom Containers
 
 export const BottomContainer = styled.div`
@@ -95,6 +86,15 @@ export const BottomDescription = styled.div`
   letter-spacing: 2px;
   font-size: 9px;
   font-weight: 400;
+`;
+
+// Link
+
+export const Link = styled.a`
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 400;
+  color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
 `;
 
 export const CardItemContext = React.createContext({

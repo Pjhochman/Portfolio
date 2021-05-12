@@ -1,10 +1,7 @@
 import React, { useContext } from "react";
-import { CardItemContext } from "../../../layout/styles";
-import { useWindowSize } from "../hooks/useWindowSize";
-import {
-  FadeInRightAnimation,
-  FadeInAnimation
-} from "../../../animations/animations";
+import { CardItemContext } from "../Context/cardContext";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { FadeInRightAnimation, FadeInAnimation } from "../animations";
 import { colorPalette } from "../data/data";
 import { CloseButton } from "../../Buttons/CloseButton";
 

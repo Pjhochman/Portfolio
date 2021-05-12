@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
-import "./footer.css";
+import "./styles/footer.css";
 
 const Container = styled.div`
   display: flex;

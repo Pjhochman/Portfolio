@@ -1,14 +1,9 @@
 import React from "react";
-import "./about.css";
 import profileImage from "../../assets/images/profileImage.png";
-import styled, { keyframes } from "styled-components";
-import { fadeIn } from "react-animations";
+import styled from "styled-components";
+import { FadeIn } from "./animations";
 
-const fadeInAnimation = keyframes`${fadeIn}`;
-
-const FadeIn = styled.div`
-  animation: 1.2s ${fadeInAnimation};
-`;
+import "./styles/about.css";
 
 const Container = styled.div`
   display: flex;
@@ -19,7 +14,7 @@ const Container = styled.div`
   right: 0;
   width: 100%;
   margin: auto;
-  height: 380px;
+  height: 45vw;
 `;
 
 const AboutWrapper = styled.div`
@@ -49,7 +44,7 @@ const ProfileImage = styled.div`
 const About = props => {
   return (
     <FadeIn>
-      <Container className="container" style={{ height: "45vw" }}>
+      <Container className="container">
         <AboutWrapper className="about" id="profileInformation">
           <h1 id="aboutMe">about me</h1>
           <h2 id="intro">

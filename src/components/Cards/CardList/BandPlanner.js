@@ -1,12 +1,9 @@
 import React, { useContext } from "react";
-import { CardItemContext } from "../../../layout/styles";
-import { useWindowSize } from "../hooks/useWindowSize";
+import { CardItemContext } from "../Context/cardContext";
+import { useWindowSize } from "../../../hooks/useWindowSize";
 import { CloseButton } from "../../Buttons/CloseButton";
 import { bandPlanner } from "../data/data";
-import {
-  FadeInRightAnimation,
-  FadeInAnimation
-} from "../../../animations/animations";
+import { FadeInRightAnimation, FadeInAnimation } from "../animations";
 
 export const BandPlanner = () => {
   const mediaWidthMobile = 637;

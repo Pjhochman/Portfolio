@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { useHover } from "./hooks/useHover";
-import { CardItemContext } from "../../layout/styles";
-import { useWindowSize } from "./hooks/useWindowSize";
+import { useHover } from "../../hooks/useHover";
+import { CardItemContext } from "./Context/cardContext";
+import { useWindowSize } from "../../hooks/useWindowSize";
 import PropTypes from "prop-types";
 import {
   TopContainer,
-  MiddleContainer,
-  BottomContainer,
   TopTitle,
   TopDescription,
+  MiddleContainer,
+  BottomContainer,
   MiddleTitle,
   MiddleDescription,
   BottomTitle,
   BottomDescription,
   Link
-} from "../../layout/styles";
+} from "./Context/cardContext";
 import { StartAnimation } from "../../animations/animations";
-import "./cards.css";
+import "./styles/cards.css";
 
 export const ExpandContext = React.createContext({
   isExpanded: null

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { DropdownMenu } from "../Menu/Menu";
-
-import "./header.css";
+import { DropdownMenu } from "./DropdownMenu";
+import "./styles/header.css";
 
 const Header = ({ pageHandler, isPage }) => {
   const [isVisible, setVisible] = useState(false);

@@ -1,24 +1,9 @@
 import React from "react";
 import factsImage from "../../assets/images/factsImage.png";
-import "./facts.css";
-import styled, { keyframes } from "styled-components";
-import { fadeIn } from "react-animations";
-
-const fadeInAnimation = keyframes`${fadeIn}`;
-
-const FadeIn = styled.div`
-  animation: 1.2s ${fadeInAnimation};
-`;
-
-const factsList = [
-  "I drink a lot of coffee",
-  "I'm into interior design",
-  "I love to eat (not so much cooking)",
-  "I'm a bit of a clean freak",
-  "I want to live in New Orleans",
-  "I worship Bill Evans",
-  "I'm addicted to 'semla' buns"
-];
+import { factsList } from "./data";
+import styled from "styled-components";
+import { FadeIn } from "./animations";
+import "./styles/facts.css";
 
 const Container = styled.div`
   display: flex;

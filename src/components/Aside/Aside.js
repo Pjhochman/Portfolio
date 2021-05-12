@@ -1,44 +1,25 @@
-import React, { useState } from "react";
-import { useWindowSize } from "../Cards/hooks/useWindowSize";
-import styled, { keyframes } from "styled-components";
-import { fadeInRightBig, fadeInLeftBig } from "react-animations";
-import "./aside.css";
-
-const fadeInRightAnimation = keyframes`${fadeInRightBig}`;
-const fadeInLeftAnimation = keyframes`${fadeInLeftBig}`;
-
-const FadeInRight = styled.div`
-  animation: 2s ${fadeInRightAnimation};
-`;
-const FadeInLeft = styled.div`
-  animation: 2s ${fadeInLeftAnimation};
-`;
-
-const technologies = [
-  "javascript",
-  "react",
-  "node.js",
-  "html",
-  "sass",
-  "rest APIs",
-  "postman",
-  "netlify",
-  "heroku",
-  "AWS",
-  "cypress",
-  "PWA",
-  "PWA"
-];
+import React, { useState, useEffect } from "react";
+import { useWindowSize } from "../../hooks/useWindowSize";
+import { FadeInLeft, FadeInRight, FadeIn } from "./animations";
+import { technologies } from "./data";
+import "./styles/aside.css";
 
 const Aside = () => {
   const mediaWidthDesktop = 1100;
   const [gradient, setGradient] = useState(true);
   const [display, setDisplay] = useState(false);
+  const [isVisible, setVisible] = useState(false);
 
   const { width } = useWindowSize();
 
   const toggleGradient = () => setGradient(value => !value);
   const toggleDisplay = () => setDisplay(value => !value);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setVisible(value => !value);
+    }, 1000);
+  }, []);
 
   return (
     <>
@@ -48,53 +29,56 @@ const Aside = () => {
       ></div>
       <aside>
         <div id="designerContainer">
-          <FadeInLeft>
-            <div id="designer">
-              <h2 className="title1" onClick={toggleGradient}>
+          {isVisible && (
+            <FadeInLeft>
+              <h2 className="designer-title title" onClick={toggleGradient}>
                 designer
               </h2>
               <p className="description">
                 I have a passion for designing beautiful and functional
                 experiences.
               </p>
-            </div>
-          </FadeInLeft>
+            </FadeInLeft>
+          )}
         </div>
         <div id="filler"></div>
         <div id="coderContainer">
-          <FadeInRight>
-            <div id="coder">
-              <h2 className="title2" onClick={toggleDisplay}>
+          {isVisible && (
+            <FadeInRight>
+              <h2 className="coder-title title" onClick={toggleDisplay}>
                 coder
               </h2>
               <p className="description">
                 {width > mediaWidthDesktop
-                  ? "   Front End Developer who focuses on writing clean, elegant and efficient code."
+                  ? "Front-End Developer who focuses on writing clean, elegant and efficient code."
                   : "Focusing on writing clean, elegant and efficient code."}
               </p>
-            </div>
-            <div
-              className="content"
-              style={display ? { display: "flex" } : { display: "none" }}
-            >
-              <p className="content__container__text">I'm skilled in</p>
-              <div className="content__container">
-                <ul className="content__container__list">
-                  {technologies.map((item, index) => {
-                    return (
-                      <li
-                        className="content__container__list__item"
-                        key={index}
-                        style={{ margin: "0" }}
-                      >
-                        {item}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </div>
-          </FadeInRight>
+
+              <FadeIn
+                style={display ? { display: "flex" } : { display: "none" }}
+              >
+                <div className="content">
+                  <p className="content__container__text">I'm skilled in</p>
+
+                  <div className="content__container">
+                    <ul className="content__container__list">
+                      {technologies.map((item, index) => {
+                        return (
+                          <li
+                            className="content__container__list__item"
+                            key={index}
+                            style={{ margin: "0" }}
+                          >
+                            {item}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </div>
+              </FadeIn>
+            </FadeInRight>
+          )}
         </div>
       </aside>
     </>
