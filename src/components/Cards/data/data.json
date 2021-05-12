@@ -4,7 +4,7 @@
       "middleCardContent": {
         "topSection": {
           "title": "Project Description",
-          "description": "Mobile App designed for bands to keep track of songs."
+          "description": "SaaS mobile application created for bands to keep track of songs, manage band practices, build setlists and upload files."
         },
         "middleSection": {
           "title": "Technologies & Tools",
@@ -31,8 +31,8 @@
     {
       "middleCardContent": {
         "topSection": {
-          "title": "Product Description",
-          "description": "Accedo One is a SaaS (Softare as a service) solution that provides content owners and brands with the ability to build, launch, and scale video streaming services."
+          "title": "Job Description",
+          "description": "My role was to give clients access to managing their video streaming applications for the Accedo One product. The admin UI product was built using React with GraphQL, facilitating API requests throughout the app. The design system created in our application outlined all the components and screens using Zeplin."
         },
         "middleSection": {
           "title": "Technologies & Tools",

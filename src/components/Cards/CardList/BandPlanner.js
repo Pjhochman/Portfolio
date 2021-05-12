@@ -60,7 +60,7 @@ export const BandPlanner = () => {
             (item, index, arr) => {
               return (
                 <FadeInAnimation key={item.title} animation="true">
-                  <MiddleContent whiteSpace="true">
+                  <MiddleContent>
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (
                       <Link
@@ -79,7 +79,11 @@ export const BandPlanner = () => {
                         <>
                           {bandPlanner[0].middleCardContent.middleSection.description.map(
                             (item, index, arr) => {
-                              return <li key={item}>{item}</li>;
+                              return (
+                                <li style={{ whiteSpace: "nowrap" }} key={item}>
+                                  {item}
+                                </li>
+                              );
                             }
                           )}
                         </>

@@ -77,7 +77,11 @@ export const Accedo = props => {
                         <>
                           {accedo[0].middleCardContent.middleSection.description.map(
                             (item, index, arr) => {
-                              return <li key={item}>{item}</li>;
+                              return (
+                                <li style={{ whiteSpace: "nowrap" }} key={item}>
+                                  {item}
+                                </li>
+                              );
                             }
                           )}
                         </>
