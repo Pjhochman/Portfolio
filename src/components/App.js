@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Cards from "./Cards/Cards";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
@@ -19,6 +19,10 @@ const Section = styled.div`
 const App = () => {
   const [isPage, setPage] = useState(false);
   const pageHandler = () => setPage(value => !value);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
