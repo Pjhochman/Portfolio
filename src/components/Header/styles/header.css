@@ -1,3 +1,9 @@
+@media (max-width: 450px) {
+  .name {
+    font-size: 4.1vw;
+  }
+}
+
 #profession {
   opacity: 0.7;
   margin: 0 10px;

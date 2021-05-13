@@ -16,7 +16,6 @@ const StyledTitle = styled.div`
   font-size: 20px;
   transition: transform 0.3s ease-in-out;
   @media (max-width: 450px) {
-    font-size: 4.1vw;
     height: 23px;
   }
 `;
@@ -70,7 +69,7 @@ const Burger = ({ isPage, changePageHandler, open, setOpen }) => {
     <>
       <StyledTitle onClick={isPage ? changePageHandler : null}>
         <>
-          <h1 id="name">
+          <h1 className="name">
             Peter Hochman&nbsp;<span id="profession">Front End Developer</span>
           </h1>
         </>
