@@ -1,1 +1,3 @@
-https://petersportfolio.netlify.app https://www.peterhochman.com 301!
+$ curl -svo /dev/null https://petersportfolio.netlify.app/  2>&1 | egrep -i "<\s(HTTP/2|location)"
+< HTTP/2 301
+< location: https://www.peterhochman.com/
