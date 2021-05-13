@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const OpenModalButton = styled(motion.button)`
+const StyledOpenModalButton = styled(motion.button)`
   display: block;
   width: 150px;
   line-height: 40px;
@@ -19,13 +19,13 @@ const OpenModalButton = styled(motion.button)`
 `;
 const animatedOpenButton = ({ children, handleClick }) => {
   return (
-    <OpenModalButton
+    <StyledOpenModalButton
       onClick={handleClick}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >
       {children}
-    </OpenModalButton>
+    </StyledOpenModalButton>
   );
 };
 

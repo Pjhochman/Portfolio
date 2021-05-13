@@ -3,11 +3,10 @@ import LazyImage from "./LazyImage";
 import styled from "styled-components";
 import { FadeIn } from "./animations";
 import profileImage from "../../assets/images/profileImage.png";
-import altImage from "../../assets/images/profileImage_small.png";
 
 import "./styles/about.css";
 
-const Container = styled.div`
+const StyledContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -19,7 +18,7 @@ const Container = styled.div`
   height: 45vw;
 `;
 
-const AboutWrapper = styled.div`
+const StyledAboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -34,8 +33,8 @@ const AboutWrapper = styled.div`
 const About = props => {
   return (
     <FadeIn>
-      <Container className="container">
-        <AboutWrapper className="about" id="profileInformation">
+      <StyledContainer className="container">
+        <StyledAboutWrapper className="about" id="profileInformation">
           <h1 id="aboutMe">about me</h1>
           <h2 id="intro">
             I'm a Frontend developer
@@ -48,9 +47,9 @@ const About = props => {
             with my dog.
           </p>
           {props.children}
-        </AboutWrapper>
-        <LazyImage src={profileImage} alt={altImage} />
-      </Container>
+        </StyledAboutWrapper>
+        <LazyImage src={profileImage} alt="Profile Image" />
+      </StyledContainer>
     </FadeIn>
   );
 };

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { FadeIn } from "./animations";
 import "./styles/facts.css";
 
-const Container = styled.div`
+const StyledContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -17,7 +17,7 @@ const Container = styled.div`
   height: autox;
 `;
 
-const FactsWrapper = styled.div`
+const StyledFactsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -29,7 +29,7 @@ const FactsWrapper = styled.div`
   height: 380px;
 `;
 
-const FactsImage = styled.div`
+const StyledFactsImage = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -44,8 +44,8 @@ const FactsImage = styled.div`
 const Facts = props => {
   return (
     <FadeIn>
-      <Container id="factSection" style={{ height: "40vw" }}>
-        <FactsImage className="facts" id="factsImage">
+      <StyledContainer id="factSection" style={{ height: "40vw" }}>
+        <StyledFactsImage className="facts" id="factsImage">
           <img
             src={factsImage}
             alt="The Good & The Bad"
@@ -54,8 +54,8 @@ const Facts = props => {
               boxShadow: "0 32px 40px -20px rgba(0, 0, 0, 0.25)"
             }}
           />
-        </FactsImage>
-        <FactsWrapper className="facts" id="factsList">
+        </StyledFactsImage>
+        <StyledFactsWrapper className="facts" id="factsList">
           <h1 id="randomFacts">Random facts</h1>
           <div>
             <ul id="list">
@@ -65,8 +65,8 @@ const Facts = props => {
             </ul>
           </div>
           {props.children}
-        </FactsWrapper>
-      </Container>
+        </StyledFactsWrapper>
+      </StyledContainer>
     </FadeIn>
   );
 };

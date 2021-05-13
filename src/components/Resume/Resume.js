@@ -6,7 +6,7 @@ import styled from "styled-components";
 import resumeImage from "../../assets/images/resumeImage.png";
 import "./styles/resume.css";
 
-const Container = styled.div`
+const StyledContainer = styled.div`
   padding-top: 5vh;
   display: flex;
   flex-direction: row;
@@ -19,7 +19,7 @@ const Container = styled.div`
   height: 100px;
 `;
 
-const ResumeWrapper = styled.div`
+const StyledResumeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +31,7 @@ const ResumeWrapper = styled.div`
   height: auto;
 `;
 
-const ResumeImage = styled.div`
+const StyledResumeImage = styled.div`
   display: flex;
   display: none;
   flex-direction: column;
@@ -44,7 +44,7 @@ const ResumeImage = styled.div`
   height: 200px;
 `;
 
-const ModalContent = styled.div`
+const StyledModalContent = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
@@ -66,8 +66,8 @@ const Resume = props => {
   const { width } = useWindowSize();
 
   return (
-    <Container>
-      <ResumeWrapper>
+    <StyledContainer>
+      <StyledResumeWrapper>
         <div className="resume-wrapper">
           {width < mediaWidthMobile ? (
             <a
@@ -85,8 +85,8 @@ const Resume = props => {
           )}
         </div>
         {props.children}
-      </ResumeWrapper>
-      <ResumeImage id="resumeImage">
+      </StyledResumeWrapper>
+      <StyledResumeImage id="resumeImage">
         <img
           src={resumeImage}
           alt="My Resume"
@@ -95,9 +95,9 @@ const Resume = props => {
             boxShadow: "0 32px 40px -20px rgba(0, 0, 0, 0.25)"
           }}
         />
-      </ResumeImage>
+      </StyledResumeImage>
       <Modal isOpen={isOpen} handleClose={() => handleOpenModal(false)}>
-        <ModalContent>
+        <StyledModalContent>
           <img
             id="resumeImg"
             src={resumeImage}
@@ -108,9 +108,9 @@ const Resume = props => {
               borderRadius: "3px"
             }}
           />
-        </ModalContent>
+        </StyledModalContent>
       </Modal>
-    </Container>
+    </StyledContainer>
   );
 };
 export default Resume;

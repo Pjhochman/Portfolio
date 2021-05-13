@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Overlay = styled(motion.div)`
+const StyledOverlay = styled(motion.div)`
   position: fixed;
   bottom: 0;
   left: 0;
@@ -10,7 +10,7 @@ const Overlay = styled(motion.div)`
   height: 100vh;
   overflow-y: hidden;
 `;
-const ModalContainer = styled(motion.div)`
+const StyledModalContainer = styled(motion.div)`
   width: auto;
   height: 80%;
   background-color: #e9f0fb;
@@ -20,7 +20,7 @@ const ModalContainer = styled(motion.div)`
   transform: translate(-50%, -50%);
   border-radius: 12px;
 `;
-const CloseButton = styled.svg`
+const StyledCloseButton = styled.svg`
   width: 15px;
   height: auto;
   position: absolute;
@@ -52,13 +52,13 @@ const Modal = ({ handleClose, children, isOpen }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <Overlay
+        <StyledOverlay
           initial={"initial"}
           animate={"isOpen"}
           exit={"exit"}
           variants={modalVariant}
         >
-          <ModalContainer id="modalContainer" variants={containerVariant}>
+          <StyledModalContainer id="modalContainer" variants={containerVariant}>
             <a
               id="download"
               href="https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/resumeImage.png"
@@ -67,7 +67,7 @@ const Modal = ({ handleClose, children, isOpen }) => {
             >
               Download
             </a>
-            <CloseButton
+            <StyledCloseButton
               onClick={handleClose}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20.39 20.39"
@@ -95,10 +95,10 @@ const Modal = ({ handleClose, children, isOpen }) => {
                 strokeMiterlimit="10"
                 strokeWidth="2"
               />
-            </CloseButton>
+            </StyledCloseButton>
             {children}
-          </ModalContainer>
-        </Overlay>
+          </StyledModalContainer>
+        </StyledOverlay>
       )}
     </AnimatePresence>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "./styles/footer.css";
 
-const Container = styled.div`
+const StyledContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -14,7 +14,7 @@ const Container = styled.div`
   height: 50px;
 `;
 
-const NameWrapper = styled.div`
+const StyledNameWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,11 +29,11 @@ const NameWrapper = styled.div`
 const Footer = () => {
   return (
     <footer>
-      <Container>
-        <NameWrapper className="contact1">
+      <StyledContainer>
+        <StyledNameWrapper className="contact1">
           <p id="by">&#xa9;&nbsp;2021 Peter Hochman</p>
-        </NameWrapper>
-      </Container>
+        </StyledNameWrapper>
+      </StyledContainer>
     </footer>
   );
 };

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 // Top Containers
 
-export const TopContainer = styled.div`
+export const StyledTopContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -17,13 +17,13 @@ export const TopContainer = styled.div`
   text-align: ${props => props.textAlign};
 `;
 
-export const TopTitle = styled.div`
+export const StyledTopTitle = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
 `;
 
-export const TopDescription = styled.div`
+export const StyledTopDescription = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 200;
@@ -32,7 +32,7 @@ export const TopDescription = styled.div`
 
 // Middle Containers
 
-export const MiddleContainer = styled.div`
+export const StyledMiddleContainer = styled.div`
   width: 75%;
   display: flex;
   text-align: center;
@@ -46,14 +46,14 @@ export const MiddleContainer = styled.div`
   color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
 `;
 
-export const MiddleTitle = styled.h3`
+export const StyledMiddleTitle = styled.h3`
   margin-bottom: 10px;
   font-size: 11px;
   font-weight: bold;
   text-transform: uppercase;
 `;
 
-export const MiddleDescription = styled.ul`
+export const StyledMiddleDescription = styled.ul`
   line-height: 15px;
   font-size: 11px;
   font-weight: 400;
@@ -62,7 +62,7 @@ export const MiddleDescription = styled.ul`
 
 // Bottom Containers
 
-export const BottomContainer = styled.div`
+export const StyledBottomContainer = styled.div`
   display: flex;
   align-self: flex-end;
   box-sizing: border-box;
@@ -74,14 +74,14 @@ export const BottomContainer = styled.div`
   color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
 `;
 
-export const BottomTitle = styled.div`
+export const StyledBottomTitle = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 9px;
   font-weight: 400;
 `;
 
-export const BottomDescription = styled.div`
+export const StyledBottomDescription = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 9px;
@@ -90,7 +90,7 @@ export const BottomDescription = styled.div`
 
 // Link
 
-export const Link = styled.a`
+export const StyledLink = styled.a`
   margin-bottom: 5px;
   font-size: 11px;
   font-weight: 400;

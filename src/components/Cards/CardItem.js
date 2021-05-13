@@ -4,16 +4,16 @@ import { CardItemContext } from "./Context/cardContext";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import PropTypes from "prop-types";
 import {
-  TopContainer,
-  TopTitle,
-  TopDescription,
-  MiddleContainer,
-  BottomContainer,
-  MiddleTitle,
-  MiddleDescription,
-  BottomTitle,
-  BottomDescription,
-  Link
+  StyledTopContainer,
+  StyledTopTitle,
+  StyledTopDescription,
+  StyledMiddleContainer,
+  StyledBottomContainer,
+  StyledMiddleTitle,
+  StyledMiddleDescription,
+  StyledBottomTitle,
+  StyledBottomDescription,
+  StyledLink
 } from "./Context/cardContext";
 import { StartAnimation } from "../../animations/animations";
 import "./styles/cards.css";
@@ -63,16 +63,16 @@ const CardItem = props => {
         >
           <CardItemContext.Provider
             value={{
-              TopContent: TopContainer,
-              MiddleContent: MiddleContainer,
-              BottomContent: BottomContainer,
-              TopTitle: TopTitle,
-              BottomTitle: BottomTitle,
-              MiddleTitle: MiddleTitle,
-              MiddleDescription: MiddleDescription,
-              TopDescription: TopDescription,
-              BottomDescription: BottomDescription,
-              Link: Link,
+              TopContent: StyledTopContainer,
+              MiddleContent: StyledMiddleContainer,
+              BottomContent: StyledBottomContainer,
+              TopTitle: StyledTopTitle,
+              BottomTitle: StyledBottomTitle,
+              MiddleTitle: StyledMiddleTitle,
+              MiddleDescription: StyledMiddleDescription,
+              TopDescription: StyledTopDescription,
+              BottomDescription: StyledBottomDescription,
+              Link: StyledLink,
               isExpanded
             }}
           >

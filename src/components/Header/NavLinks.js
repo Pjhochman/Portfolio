@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Links = styled.nav`
+const StyledLinks = styled.nav`
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -54,7 +54,7 @@ const NavLinks = ({ open, setOpen, isPage, changePageHandler }) => {
   };
   return (
     <>
-      <Links open={open}>
+      <StyledLinks open={open}>
         <button
           onClick={changePage}
           style={isPage ? null : { color: "#be9063" }}
@@ -80,7 +80,7 @@ const NavLinks = ({ open, setOpen, isPage, changePageHandler }) => {
           GitHub
         </a>
         <a href="mailto:peter.hochman.dev@gmail.com">Say Hi!</a>
-      </Links>
+      </StyledLinks>
     </>
   );
 };

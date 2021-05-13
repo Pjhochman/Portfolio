@@ -1,21 +1,9 @@
 import React, { useRef } from "react";
 import LazyLoad from "react-lazyload";
 import PropTypes from "prop-types";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
-const loadingAnimation = keyframes`
-  0% {
-    background-color: #e9f0fb;
-  }
-  50% {
-    background-color: #ccc;
-  }
-  100% {
-    background-color: #fff;
-  }
-`;
-
-const ImageWrapper = styled.div`
+const StyledImageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -27,12 +15,9 @@ const ImageWrapper = styled.div`
   height: 380px;
 `;
 
-const Placeholder = styled.img`
+const StyledPlaceholder = styled.img`
   filter: blur(30px);
-  position: absolute;
-  height: 380px;
-  width: 380px;
-  animation: ${loadingAnimation} 3s infinite;
+  height: 100%;
 `;
 
 const StyledImage = styled.img`
@@ -48,8 +33,8 @@ const LazyImage = ({ src, alt }) => {
   };
 
   return (
-    <ImageWrapper className="about" id="profileImage">
-      <Placeholder ref={refPlaceholder} src={alt} />
+    <StyledImageWrapper className="about" id="profileImage">
+      <StyledPlaceholder ref={refPlaceholder} src={alt} />
       <LazyLoad style={{ height: "100%", width: "100%" }}>
         <StyledImage
           onLoad={removePlaceholder}
@@ -58,7 +43,7 @@ const LazyImage = ({ src, alt }) => {
           alt={alt}
         />
       </LazyLoad>
-    </ImageWrapper>
+    </StyledImageWrapper>
   );
 };
 

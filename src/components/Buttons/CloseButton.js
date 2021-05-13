@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const CloseIcon = styled.svg`
+const StyledCloseIcon = styled.svg`
   width: 15px;
   height: auto;
   position: absolute;
@@ -12,7 +12,10 @@ const CloseIcon = styled.svg`
 
 export const CloseButton = ({ color }) => {
   return (
-    <CloseIcon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.39 20.39">
+    <StyledCloseIcon
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20.39 20.39"
+    >
       <line
         x1="19.39"
         y1="19.39"
@@ -35,6 +38,6 @@ export const CloseButton = ({ color }) => {
         strokeMiterlimit="10"
         strokeWidth="2"
       />
-    </CloseIcon>
+    </StyledCloseIcon>
   );
 };
