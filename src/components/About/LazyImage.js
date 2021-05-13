@@ -16,8 +16,11 @@ const StyledImageWrapper = styled.div`
 `;
 
 const StyledPlaceholder = styled.img`
+  position: absolute;
+  width: 380px;
+  height: 380px;
   filter: blur(30px);
-  width: 100%;
+  transition: filter 0.5s;
 `;
 
 const StyledImage = styled.img`
