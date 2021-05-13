@@ -8,6 +8,7 @@ import { FadeInAnimation } from "../animations";
 export const Accedo = props => {
   const mediaWidthMobile = 637;
   const { width } = useWindowSize();
+
   const {
     TopContent,
     TopTitle,

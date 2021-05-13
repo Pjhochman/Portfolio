@@ -89,7 +89,7 @@ const Resume = props => {
       <StyledResumeImage id="resumeImage">
         <img
           src={resumeImage}
-          alt="My Resume"
+          alt="Peter Hochman"
           style={{
             height: "100%",
             boxShadow: "0 32px 40px -20px rgba(0, 0, 0, 0.25)"
@@ -101,7 +101,7 @@ const Resume = props => {
           <img
             id="resumeImg"
             src={resumeImage}
-            alt={"Resume"}
+            alt="Peter Hochman"
             style={{
               height: "100%",
               border: "2px solid black",

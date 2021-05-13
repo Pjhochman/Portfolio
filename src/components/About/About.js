@@ -48,7 +48,7 @@ const About = props => {
           </p>
           {props.children}
         </StyledAboutWrapper>
-        <LazyImage src={profileImage} alt="Profile Image" />
+        <LazyImage src={profileImage} alt="Peter Hochman" />
       </StyledContainer>
     </FadeIn>
   );

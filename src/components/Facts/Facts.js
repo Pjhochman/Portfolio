@@ -48,7 +48,7 @@ const Facts = props => {
         <StyledFactsImage className="facts" id="factsImage">
           <img
             src={factsImage}
-            alt="The Good & The Bad"
+            alt="Peter Hochman"
             style={{
               width: "100%",
               boxShadow: "0 32px 40px -20px rgba(0, 0, 0, 0.25)"
