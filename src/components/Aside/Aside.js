@@ -85,26 +85,28 @@ const Aside = () => {
               </p>
 
               {display && (
-                <div>
-                  <div className="content">
-                    <p className="content__container__text">I'm skilled in</p>
+                <FadeIn>
+                  <div>
+                    <div className="content">
+                      <p className="content__container__text">I'm skilled in</p>
 
-                    <div className="content__container">
-                      <ul className="content__container__list">
-                        {technologies.map((item, index) => {
-                          return (
-                            <li
-                              className="content__container__list__item"
-                              key={index}
-                            >
-                              {item}
-                            </li>
-                          );
-                        })}
-                      </ul>
+                      <div className="content__container">
+                        <ul className="content__container__list">
+                          {technologies.map((item, index) => {
+                            return (
+                              <li
+                                className="content__container__list__item"
+                                key={index}
+                              >
+                                {item}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </FadeIn>
               )}
             </FadeInRight>
           )}
