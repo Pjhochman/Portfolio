@@ -1,14 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledTitle = styled.div`
+const StyledTitle = styled.h1`
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
+  position: relative;
   margin-left: 6vw;
-  top: 2.4rem;
   white-space: nowrap;
   font-weight: 300;
   user-select: none;
@@ -17,6 +13,7 @@ const StyledTitle = styled.div`
   transition: transform 0.3s ease-in-out;
   @media (max-width: 450px) {
     height: 23px;
+    font-size: 4.35vw;
   }
 `;
 
@@ -68,11 +65,7 @@ const Burger = ({ isPage, changePageHandler, open, setOpen }) => {
   return (
     <>
       <StyledTitle onClick={isPage ? changePageHandler : null}>
-        <>
-          <h1 className="name">
-            Peter Hochman&nbsp;<span id="profession">Front End Developer</span>
-          </h1>
-        </>
+        Peter Hochman&nbsp;<span id="profession">Front End Developer</span>
       </StyledTitle>
       <StyledBurger open={open} onClick={() => setOpen(value => !value)}>
         <div></div>

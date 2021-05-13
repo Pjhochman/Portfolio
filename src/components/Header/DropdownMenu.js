@@ -9,7 +9,7 @@ const FadeIn = styled.div`
   animation: 0.3s ${fadeInAnimation};
 `;
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -17,6 +17,7 @@ const StyledHeader = styled.div`
   left: 0;
   top: 0;
   right: 0;
+  height: 100px;
   opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
   z-index: ${({ open }) => (open ? "3" : "2")};
   margin: auto;
