@@ -285,49 +285,6 @@ aside {
   }
 }
 
-.colorPalette {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  z-index: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.colorPalette.active {
-  -ms-touch-action: none;
-      touch-action: none;
-  background: linear-gradient(-45deg, #b6aca5, #677174, #e9f0fb, #757c78, #f5efe8);
-  background-size: 400% 400%;
-  -webkit-animation: gradient 15s ease infinite;
-          animation: gradient 15s ease infinite;
-}
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 ::-moz-selection {
   background: rgba(170, 170, 170, 0.3);
 }
@@ -415,6 +372,7 @@ aside {
 }
 
 .content__container__list__item {
+  margin: 0;
   font-weight: 600;
   display: -webkit-box;
   display: -ms-flexbox;

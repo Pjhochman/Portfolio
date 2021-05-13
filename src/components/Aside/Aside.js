@@ -2,7 +2,40 @@ import React, { useState, useEffect } from "react";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { FadeInLeft, FadeInRight, FadeIn } from "./animations";
 import { technologies } from "./data";
+import styled from "styled-components";
 import "./styles/aside.css";
+
+const StyledGradient = styled.div`
+  width: ${props => (props.gradient ? "100%" : "0%")};
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  z-index: 0;
+  transition: all 1s ease-in-out;
+   touch-action: none;
+    background: linear-gradient(
+      -45deg,
+      #b6aca5,
+      #677174,
+      #e9f0fb,
+      #757c78,
+      #f5efe8
+    );
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  } 
+`;
 
 const Aside = () => {
   const mediaWidthDesktop = 1100;
@@ -23,10 +56,7 @@ const Aside = () => {
 
   return (
     <>
-      <div
-        style={gradient ? { width: "100%" } : { width: "0%" }}
-        className="colorPalette active"
-      ></div>
+      <StyledGradient gradient={gradient}></StyledGradient>
       <aside>
         <div id="designerContainer">
           {isVisible && (
@@ -54,29 +84,28 @@ const Aside = () => {
                   : "Focusing on writing clean, elegant and efficient code."}
               </p>
 
-              <FadeIn
-                style={display ? { display: "flex" } : { display: "none" }}
-              >
-                <div className="content">
-                  <p className="content__container__text">I'm skilled in</p>
+              {display && (
+                <div>
+                  <div className="content">
+                    <p className="content__container__text">I'm skilled in</p>
 
-                  <div className="content__container">
-                    <ul className="content__container__list">
-                      {technologies.map((item, index) => {
-                        return (
-                          <li
-                            className="content__container__list__item"
-                            key={index}
-                            style={{ margin: "0" }}
-                          >
-                            {item}
-                          </li>
-                        );
-                      })}
-                    </ul>
+                    <div className="content__container">
+                      <ul className="content__container__list">
+                        {technologies.map((item, index) => {
+                          return (
+                            <li
+                              className="content__container__list__item"
+                              key={index}
+                            >
+                              {item}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </FadeIn>
+              )}
             </FadeInRight>
           )}
         </div>
