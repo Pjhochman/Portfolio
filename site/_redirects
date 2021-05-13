@@ -1,3 +1,0 @@
-curl -svo /dev/null https://petersportfolio.netlify.app/
-< HTTP/2 301
-< location: https://www.peterhochman.com/
