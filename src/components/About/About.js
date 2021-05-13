@@ -1,7 +1,9 @@
 import React from "react";
-import profileImage from "../../assets/images/profileImage.png";
+import LazyImage from "./LazyImage";
 import styled from "styled-components";
 import { FadeIn } from "./animations";
+import profileImage from "../../assets/images/profileImage.png";
+import altImage from "../../assets/images/profileImage_small.png";
 
 import "./styles/about.css";
 
@@ -20,19 +22,7 @@ const Container = styled.div`
 const AboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  left: 0;
-  right: 0;
-  width: 380px;
-  margin: auto;
-  height: 380px;
-`;
-
-const ProfileImage = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   left: 0;
   right: 0;
@@ -59,15 +49,12 @@ const About = props => {
           </p>
           {props.children}
         </AboutWrapper>
-        <ProfileImage className="about" id="profileImage">
-          <img
-            src={profileImage}
-            alt="Peter Hochman"
-            style={{
-              height: "100%"
-            }}
-          />
-        </ProfileImage>
+        <LazyImage
+          className="about"
+          id="profileImage"
+          src={profileImage}
+          alt={altImage}
+        />
       </Container>
     </FadeIn>
   );
