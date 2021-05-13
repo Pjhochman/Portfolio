@@ -70,8 +70,9 @@ const Burger = ({ isPage, changePageHandler, open, setOpen }) => {
     <>
       <StyledTitle onClick={isPage ? changePageHandler : null}>
         <>
-          <div id="name">Peter Hochman</div>
-          <div id="profession">Front End Developer</div>
+          <h1 id="name">
+            Peter Hochman&nbsp;<span id="profession">Front End Developer</span>
+          </h1>
         </>
       </StyledTitle>
       <StyledBurger open={open} onClick={() => setOpen(value => !value)}>
