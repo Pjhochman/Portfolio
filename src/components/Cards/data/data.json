@@ -103,7 +103,8 @@
         },
         "bottomSection": {
           "title": "Website",
-          "link": "hyperisland.com/programs-and-courses/frontend-developer"
+          "link": "hyperisland.com/programs-and-courses/frontend-developer",
+          "linkAlt": "hyperIsland.com/frontend-developer"
         }
       }
     }

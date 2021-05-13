@@ -46,7 +46,7 @@ export const HyperIsland = props => {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        {item.link}
+                        {item.linkAlt}
                       </Link>
                     )}
                     <MiddleDescription marginBottom="true">

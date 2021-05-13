@@ -6,15 +6,15 @@ import styled from "styled-components";
 export const TopContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-self: ${props => props.alignSelf};
-  text-align: ${props => props.textAlign};
   margin: 20px;
   box-sizing: border-box;
   pointer-events: none;
   user-select: none;
-  color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
   font-size: 9px;
   white-space: nowrap;
+  color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
+  align-self: ${props => props.alignSelf};
+  text-align: ${props => props.textAlign};
 `;
 
 export const TopTitle = styled.div`
@@ -24,10 +24,10 @@ export const TopTitle = styled.div`
 `;
 
 export const TopDescription = styled.div`
-  margin-top: ${props => props.marginTop};
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 200;
+  margin-top: ${props => props.marginTop};
 `;
 
 // Middle Containers
@@ -42,7 +42,7 @@ export const MiddleContainer = styled.div`
   font-weight: 400;
   box-sizing: border-box;
   user-select: none;
-  white-space: ${props => (props.whiteSpace ? "nowrap" : null)};
+  white-space: ${props => props.whiteSpace && "nowrap"};
   color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
 `;
 
@@ -57,20 +57,20 @@ export const MiddleDescription = styled.ul`
   line-height: 15px;
   font-size: 11px;
   font-weight: 400;
-  margin-bottom: ${props => (props.marginBottom ? "50px" : null)};
+  margin-bottom: ${props => props.marginBottom && "50px"};
 `;
 
 // Bottom Containers
 
 export const BottomContainer = styled.div`
   display: flex;
-  flex-direction: ${props => props.flexDirection};
   align-self: flex-end;
-  margin: ${props => (props.margin ? "14px" : "20px")};
   box-sizing: border-box;
   pointer-events: none;
   user-select: none;
   white-space: nowrap;
+  flex-direction: ${props => props.flexDirection};
+  margin: ${props => (props.margin ? "14px" : "20px")};
   color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
 `;
 
