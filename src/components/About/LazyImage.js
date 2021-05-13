@@ -48,7 +48,7 @@ const LazyImage = ({ src, alt }) => {
   };
 
   return (
-    <ImageWrapper>
+    <ImageWrapper className="about" id="profileImage">
       <Placeholder ref={refPlaceholder} src={alt} />
       <LazyLoad style={{ height: "100%", width: "100%" }}>
         <StyledImage
