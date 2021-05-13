@@ -320,6 +320,8 @@ li {
 
 @media (max-width: 637px) {
   .items {
+    -ms-touch-action: none;
+        touch-action: none;
     height: 90vh;
   }
   .items__inner {
