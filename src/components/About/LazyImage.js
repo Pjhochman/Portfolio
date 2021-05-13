@@ -17,12 +17,12 @@ const StyledImageWrapper = styled.div`
 
 const StyledPlaceholder = styled.img`
   filter: blur(30px);
-  height: 100%;
+  width: 100%;
 `;
 
 const StyledImage = styled.img`
-  height: 100%;
   transition: filter 0.5s;
+  width: 100%;
 `;
 
 const LazyImage = ({ src, alt }) => {
@@ -35,7 +35,7 @@ const LazyImage = ({ src, alt }) => {
   return (
     <StyledImageWrapper className="about" id="profileImage">
       <StyledPlaceholder ref={refPlaceholder} src={alt} />
-      <LazyLoad style={{ height: "100%", width: "100%" }}>
+      <LazyLoad>
         <StyledImage
           onLoad={removePlaceholder}
           onError={removePlaceholder}
