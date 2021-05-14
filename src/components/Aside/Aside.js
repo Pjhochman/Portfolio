@@ -6,7 +6,7 @@ import styled from "styled-components";
 import "./styles/aside.css";
 
 const StyledGradient = styled.div`
-  width: ${props => (props.gradient ? "100%" : "0%")};
+  width: ${({ gradient }) => (gradient ? "100%" : "0%")};
   position: absolute;
   height: 100vh;
   top: 0;

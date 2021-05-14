@@ -20,7 +20,7 @@ const StyledTitle = styled.h1`
   font-size: 20px;
   @media (max-width: 450px) {
     line-height: 23px;
-    font-size: 4.35vw;
+    font-size: 4.1vw;
   }
 `;
 

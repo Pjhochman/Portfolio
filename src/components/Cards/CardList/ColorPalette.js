@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { CardItemContext } from "../Context/cardContext";
 import { useWindowSize } from "../../../hooks/useWindowSize";
-import { FadeInRightAnimation, FadeInAnimation } from "../animations";
-import { colorPalette } from "../data/data";
 import { CloseButton } from "../../Buttons/CloseButton";
+import { colorPalette } from "../data/data";
+import { FadeInRightAnimation, FadeInAnimation } from "../animations";
 
 export const ColorPalette = () => {
   const mediaWidthMobile = 637;
@@ -28,24 +28,23 @@ export const ColorPalette = () => {
       <TopContent alignSelf="start" flexDirection="column">
         {width > mediaWidthMobile ? (
           <>
-            <FadeInRightAnimation>
+            <FadeInRightAnimation duration="0.3s">
               <TopTitle>My Own Work</TopTitle>
-              <hr style={{ border: "0.5px solid dark-grey" }} />
+              <hr />
             </FadeInRightAnimation>
-
-            <FadeInRightAnimation>
+            <FadeInRightAnimation duration="0.5s">
               <TopDescription>Color Palette</TopDescription>
             </FadeInRightAnimation>
           </>
         ) : (
           <>
             {isExpanded && (
-              <FadeInRightAnimation>
+              <>
                 <TopTitle>My Own Work</TopTitle>
-                <hr style={{ border: "0.5px solid dark-grey" }} />
-              </FadeInRightAnimation>
+                <hr />
+              </>
             )}
-            <FadeInRightAnimation>
+            <FadeInRightAnimation duration="0.1s">
               <TopDescription>Color Palette</TopDescription>
             </FadeInRightAnimation>
           </>
@@ -57,7 +56,7 @@ export const ColorPalette = () => {
           {Object.values(colorPalette[0].middleCardContent).map(
             (item, index, arr) => {
               return (
-                <FadeInAnimation key={item.title} animation="true">
+                <FadeInAnimation key={item.title} duration="1.1s">
                   <MiddleContent>
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (

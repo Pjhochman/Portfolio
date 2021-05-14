@@ -31,17 +31,9 @@ const StyledResumeWrapper = styled.div`
   height: auto;
 `;
 
-const StyledResumeImage = styled.div`
-  display: flex;
-  display: none;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  left: 0;
-  right: 0;
-  width: 380px;
-  margin: auto;
-  height: 200px;
+const StyledImage = styled.img`
+  height: 100%;
+  box-shadow: 32px 40px -20px rgba(0, 0, 0, 0.25);
 `;
 
 const StyledModalContent = styled.div`
@@ -86,28 +78,9 @@ const Resume = props => {
         </div>
         {props.children}
       </StyledResumeWrapper>
-      <StyledResumeImage id="resumeImage">
-        <img
-          src={resumeImage}
-          alt="Peter Hochman"
-          style={{
-            height: "100%",
-            boxShadow: "0 32px 40px -20px rgba(0, 0, 0, 0.25)"
-          }}
-        />
-      </StyledResumeImage>
       <Modal isOpen={isOpen} handleClose={() => handleOpenModal(false)}>
         <StyledModalContent>
-          <img
-            id="resumeImg"
-            src={resumeImage}
-            alt="Peter Hochman"
-            style={{
-              height: "100%",
-              border: "2px solid black",
-              borderRadius: "3px"
-            }}
-          />
+          <StyledImage src={resumeImage} alt="Peter Hochman"></StyledImage>
         </StyledModalContent>
       </Modal>
     </StyledContainer>

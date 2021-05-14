@@ -34,7 +34,7 @@ export const HyperIsland = props => {
           {Object.values(hyperIsland[0].middleCardContent).map(
             (item, index, arr) => {
               return (
-                <FadeInAnimation key={item.title} animation="true">
+                <FadeInAnimation key={item.title} duration="1.1s">
                   <MiddleContent>
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (
@@ -69,33 +69,29 @@ export const HyperIsland = props => {
         </>
       )}
       <TopContent
-        style={
-          width < mediaWidthMobile && !isExpanded
-            ? { margin: "15px 6px" }
-            : null
-        }
+        margin={!isExpanded & (width < mediaWidthMobile) ? "15px 6px" : "14px"}
         textAlign={isExpanded ? "start" : "end"}
         alignSelf={isExpanded ? "flex-start" : "flex-end"}
       >
         {width > mediaWidthMobile ? (
           <>
-            <FadeInLeftAnimation>
+            <FadeInLeftAnimation duration="0.3s">
               <TopTitle>Education</TopTitle>
-              <hr style={{ borderTop: "0.5px solid darkgrey" }} />
+              <hr />
             </FadeInLeftAnimation>
-            <FadeInLeftAnimation>
+            <FadeInLeftAnimation duration="0.5s">
               <TopDescription>Hyper Island</TopDescription>
             </FadeInLeftAnimation>
           </>
         ) : (
           <>
             {isExpanded && (
-              <FadeInLeftAnimation>
+              <>
                 <TopTitle>Hyper Island</TopTitle>
-                <hr style={{ borderTop: "0.5px solid darkgrey" }} />
-              </FadeInLeftAnimation>
+                <hr />
+              </>
             )}
-            <FadeInLeftAnimation>
+            <FadeInLeftAnimation duration="0.1s">
               <TopDescription>Education</TopDescription>
             </FadeInLeftAnimation>
           </>

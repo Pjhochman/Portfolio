@@ -34,7 +34,7 @@ export const Project11 = () => {
           {Object.values(project11[0].middleCardContent).map(
             (item, index, arr) => {
               return (
-                <FadeInAnimation key={item.title} animation="true">
+                <FadeInAnimation key={item.title} duration="1.1s">
                   <MiddleContent whiteSpace="true">
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (
@@ -75,23 +75,23 @@ export const Project11 = () => {
       >
         {width > mediaWidthMobile ? (
           <>
-            <FadeInLeftAnimation>
+            <FadeInLeftAnimation duration="0.3s">
               <TopTitle>My Own Work</TopTitle>
-              <hr style={{ borderTop: "0.5px solid darkgrey" }} />
+              <hr />
             </FadeInLeftAnimation>
-            <FadeInLeftAnimation>
+            <FadeInLeftAnimation duration="0.5s">
               <TopDescription>Project 11</TopDescription>
             </FadeInLeftAnimation>
           </>
         ) : (
           <>
             {isExpanded && (
-              <FadeInLeftAnimation>
+              <>
                 <TopTitle>My Own Work</TopTitle>
-                <hr style={{ borderTop: "0.5px solid darkgrey" }} />
-              </FadeInLeftAnimation>
+                <hr />
+              </>
             )}
-            <FadeInLeftAnimation>
+            <FadeInLeftAnimation duration="0.1s">
               <TopDescription>Project 11</TopDescription>
             </FadeInLeftAnimation>
           </>

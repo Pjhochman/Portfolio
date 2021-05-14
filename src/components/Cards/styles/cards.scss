@@ -13,6 +13,7 @@ hr {
   margin: 7px 0;
   opacity: 0.25;
   font-weight: bold;
+  border: 0.5px solid darkgrey;
 }
 
 li {
@@ -38,7 +39,13 @@ li {
     height: 550px;
     background: transparent;
   }
-
+  .active {
+    z-index: 10;
+    top: 0 !important;
+    left: 0 !important;
+    width: 515px !important;
+    height: 590px !important;
+  }
   &__layer &__item {
     position: absolute;
     display: flex;
@@ -73,22 +80,6 @@ li {
     width: 300px;
     height: 300px;
     background: $color;
-    &__active {
-      $color: #040c0e;
-      z-index: 1;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      top: 0;
-      left: 0;
-      width: 515px;
-      height: 590px;
-      background: $color;
-      transition: all 0.1s ease-in-out;
-      pointer-events: auto;
-    }
     &:after {
       top: -23px;
       left: 0;
@@ -103,22 +94,6 @@ li {
     width: 170px;
     height: 160px;
     background: $color;
-    &__active {
-      $color: #a4978e;
-      z-index: 1;
-      position: absolute;
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
-      align-items: center;
-      top: 0;
-      left: 0;
-      width: 515px;
-      height: 590px;
-      background: $color;
-      transition: all 0.1s ease-in-out;
-      pointer-events: auto;
-    }
     &:after {
       bottom: -23px;
       right: 0;
@@ -162,22 +137,6 @@ li {
     width: 240px;
     height: 420px;
     background: $color;
-    &__active {
-      $color: #525b56;
-      z-index: 1;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      top: 0;
-      left: 0;
-      width: 515px;
-      height: 590px;
-      background: $color;
-      transition: all 0.1s ease-in-out;
-      pointer-events: auto;
-    }
     &:after {
       top: -23px;
       right: 0;
@@ -192,22 +151,6 @@ li {
     width: 160px;
     height: 160px;
     background: $color;
-    &__active {
-      $color: #be9063;
-      z-index: 1;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      top: 0;
-      left: 0;
-      width: 515px;
-      height: 590px;
-      background: $color;
-      transition: all 0.1s ease-in-out;
-      pointer-events: auto;
-    }
     &:after {
       top: -20px;
       font-weight: bold;
@@ -248,20 +191,21 @@ li {
       width: 317px;
       height: 100%;
     }
+    .active {
+      z-index: 10;
+      top: 30px !important;
+      left: 0 !important;
+      width: 316px !important;
+      height: auto !important;
+      min-height: 500px !important;
+      padding-bottom: 5px !important;
+      transition: none !important;
+    }
     &__layer:nth-child(1) &__item {
       top: 170px;
       left: 0px;
       width: 170px;
       height: 180px;
-      &__active {
-        top: 30px;
-        left: 0;
-        width: 316px;
-        height: auto;
-        min-height: 500px;
-        padding-bottom: 5px;
-        transition: none;
-      }
     }
     &__layer:nth-child(2) &__item {
       display: flex;
@@ -269,60 +213,24 @@ li {
       left: 160px;
       width: 130px;
       height: 90px;
-      &__active {
-        top: 30px;
-        left: 0;
-        width: 316px;
-        height: auto;
-        min-height: 500px;
-        padding-bottom: 5px;
-        transition: none;
-      }
     }
     &__layer:nth-child(3) &__item {
       top: 280px;
       left: 30px;
       width: 180px;
       height: 180px;
-      &__active {
-        top: 30px;
-        left: 0;
-        width: 316px;
-        height: auto;
-        min-height: 500px;
-        padding-bottom: 5px;
-        transition: none;
-      }
     }
     &__layer:nth-child(4) &__item {
       top: 110px;
       left: 160px;
       width: 155px;
       height: 280px;
-      &__active {
-        top: 30px;
-        left: 0;
-        width: 316px;
-        height: auto;
-        min-height: 500px;
-        padding-bottom: 5px;
-        transition: none;
-      }
     }
     &__layer:nth-child(5) &__item {
       top: 220px;
       left: 100px;
       width: 120px;
       height: 120px;
-      &__active {
-        top: 30px;
-        left: 0;
-        width: 316px;
-        height: auto;
-        min-height: 500px;
-        padding-bottom: 5px;
-        transition: none;
-      }
     }
   }
 }

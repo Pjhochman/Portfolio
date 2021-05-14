@@ -6,12 +6,12 @@ import styled from "styled-components";
 export const StyledTopContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px;
   box-sizing: border-box;
   pointer-events: none;
   user-select: none;
   font-size: 9px;
   white-space: nowrap;
+  margin: ${props => (props.margin ? props.margin : "20px")};
   color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
   align-self: ${props => props.alignSelf};
   text-align: ${props => props.textAlign};
@@ -28,6 +28,7 @@ export const StyledTopDescription = styled.div`
   letter-spacing: 2px;
   font-weight: 200;
   margin-top: ${props => props.marginTop};
+  line-height: ${props => props.lineHeight};
 `;
 
 // Middle Containers
@@ -57,7 +58,11 @@ export const StyledMiddleDescription = styled.ul`
   line-height: 15px;
   font-size: 11px;
   font-weight: 400;
+  width: ${props => props.width};
   margin-bottom: ${props => props.marginBottom && "50px"};
+  @media (max-width: 637px) {
+    width: 250px;
+  }
 `;
 
 // Bottom Containers

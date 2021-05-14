@@ -32,7 +32,7 @@
       "middleCardContent": {
         "topSection": {
           "title": "Job Description",
-          "description": "Giving clients access to managing their video streaming applications for the Accedo One product. The admin UI product was built using React with GraphQL, facilitating API requests throughout the app. The design system created in our application outlined all the components and screens using Zeplin."
+          "description": "Giving clients access to managing their video streaming applications for the Accedo One product. The admin UI product was built using React with GraphQL."
         },
         "middleSection": {
           "title": "Technologies & Tools",

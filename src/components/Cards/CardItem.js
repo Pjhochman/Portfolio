@@ -49,15 +49,16 @@ const CardItem = props => {
 
   return (
     <div
-      className="items__layer layer"
+      className={
+        isExpanded ? "items__layer layer active" : "items__layer layer"
+      }
       data-depth={props.dataDepth}
       ref={refCard}
-      style={isExpanded ? { zIndex: "1" } : null}
     >
       {isVisible && (
         <StartAnimation
           startAnimation={props.startAnimation}
-          className={isExpanded ? "items__item__active" : "items__item"}
+          className={isExpanded ? "items__item active" : "items__item"}
           data-title={props.dataTitle}
           onClick={expandHandler}
         >

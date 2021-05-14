@@ -6,19 +6,19 @@ import {
 } from "../../animations/animations";
 
 export const FadeInAnimation = styled.div`
-  animation: ${props => (props.animation ? "0.8s" : "0.3s")} ${fadeInAnimation};
+  animation: ${props => props.duration} ${fadeInAnimation};
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
 export const FadeInLeftAnimation = styled.div`
-  animation: 0.3s ${fadeInLeftAnimation};
+  animation: ${props => props.duration} ${fadeInLeftAnimation};
   width: auto;
 `;
 
 export const FadeInRightAnimation = styled.div`
-  animation: 0.3s ${fadeInRightAnimation};
+  animation: ${props => props.duration} ${fadeInRightAnimation};
   width: auto;
   white-space: nowrap;
 `;

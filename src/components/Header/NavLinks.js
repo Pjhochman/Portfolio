@@ -32,19 +32,25 @@ const StyledLinks = styled.nav`
     padding: 1.5rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: white;
     text-decoration: none;
     transition: color 0.3s linear;
-
+    color: #e9f0fb;
     @media (max-width: 576px) {
       font-size: 0.8rem;
       text-align: center;
     }
-
     &:hover {
       color: #be9063;
     }
   }
+`;
+
+const StyledHomeButton = styled.button`
+  color: ${({ isPage }) => !isPage && "#be9063"} !important;
+`;
+
+const StyledAboutButton = styled.button`
+  color: ${({ isPage }) => isPage && "#be9063"} !important;
 `;
 
 const NavLinks = ({ open, setOpen, isPage, changePageHandler }) => {
@@ -55,20 +61,20 @@ const NavLinks = ({ open, setOpen, isPage, changePageHandler }) => {
   return (
     <>
       <StyledLinks open={open}>
-        <button
+        <StyledHomeButton
+          isPage={isPage}
           onClick={changePage}
-          style={isPage ? null : { color: "#be9063" }}
           disabled={isPage ? false : true}
         >
           Home
-        </button>
-        <button
+        </StyledHomeButton>
+        <StyledAboutButton
+          isPage={isPage}
           onClick={changePage}
-          style={!isPage ? null : { color: "#be9063" }}
-          disabled={!isPage ? false : true}
+          disabled={isPage ? true : false}
         >
           About
-        </button>
+        </StyledAboutButton>
         <a
           href="https://www.linkedin.com/in/peter-hochman/"
           target="_blank"

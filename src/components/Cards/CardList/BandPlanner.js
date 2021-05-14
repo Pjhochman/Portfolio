@@ -1,9 +1,14 @@
 import React, { useContext } from "react";
+import styled from "styled-components";
 import { CardItemContext } from "../Context/cardContext";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import { CloseButton } from "../../Buttons/CloseButton";
 import { bandPlanner } from "../data/data";
 import { FadeInRightAnimation, FadeInAnimation } from "../animations";
+
+const StyledLi = styled.li`
+  white-space: ${({ whiteSpace }) => whiteSpace};
+`;
 
 export const BandPlanner = () => {
   const mediaWidthMobile = 637;
@@ -27,24 +32,24 @@ export const BandPlanner = () => {
       <TopContent alignSelf="start">
         {width > mediaWidthMobile ? (
           <>
-            <FadeInRightAnimation>
+            <FadeInRightAnimation duration="0.3s">
               <TopTitle>My Own Work</TopTitle>
-              <hr style={{ border: "0.5px solid dark-grey" }} />
+              <hr />
             </FadeInRightAnimation>
 
-            <FadeInRightAnimation>
+            <FadeInRightAnimation duration="0.5s">
               <TopDescription>Band Planner</TopDescription>
             </FadeInRightAnimation>
           </>
         ) : (
           <>
             {isExpanded && (
-              <FadeInRightAnimation>
+              <>
                 <TopTitle>My Own Work</TopTitle>
-                <hr style={{ border: "0.5px solid dark-grey" }} />
-              </FadeInRightAnimation>
+                <hr />
+              </>
             )}
-            <FadeInRightAnimation>
+            <FadeInRightAnimation duration="0.1s">
               <TopDescription>Band Planner</TopDescription>
             </FadeInRightAnimation>
           </>
@@ -56,7 +61,7 @@ export const BandPlanner = () => {
           {Object.values(bandPlanner[0].middleCardContent).map(
             (item, index, arr) => {
               return (
-                <FadeInAnimation key={item.title} animation="true">
+                <FadeInAnimation key={item.title} duration="1.1s">
                   <MiddleContent>
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (
@@ -71,16 +76,12 @@ export const BandPlanner = () => {
                         {item.link}
                       </Link>
                     )}
-                    <MiddleDescription>
+                    <MiddleDescription width="320px">
                       {arr.length - 2 === index ? (
                         <>
                           {bandPlanner[0].middleCardContent.middleSection.description.map(
                             (item, index, arr) => {
-                              return (
-                                <li style={{ whiteSpace: "nowrap" }} key={item}>
-                                  {item}
-                                </li>
-                              );
+                              return <StyledLi key={item}>{item}</StyledLi>;
                             }
                           )}
                         </>

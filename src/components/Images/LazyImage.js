@@ -13,6 +13,7 @@ const StyledImageWrapper = styled.div`
   width: 380px;
   margin: auto;
   height: 380px;
+  transition: filter 0.5s;
 `;
 
 const StyledPlaceholder = styled.img`
@@ -24,8 +25,8 @@ const StyledPlaceholder = styled.img`
 `;
 
 const StyledImage = styled.img`
-  transition: filter 0.5s;
   width: 100%;
+  box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
 `;
 
 const LazyImage = ({ src, alt }) => {
