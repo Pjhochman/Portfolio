@@ -17,16 +17,18 @@ const StyledImageWrapper = styled.div`
 `;
 
 const StyledPlaceholder = styled.img`
-  position: absolute;
-  width: 380px;
-  height: 380px;
+  width: 100%;
   filter: blur(30px);
   transition: filter 0.5s;
+  @media (max-width: 637px) {
+    width: auto;
+  }
 `;
 
 const StyledImage = styled.img`
   width: 100%;
   box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
+  transition: filter 0.5s;
 `;
 
 const LazyImage = ({ src, alt }) => {
