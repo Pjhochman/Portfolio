@@ -6,7 +6,7 @@ import { Project11 } from "./CardList/Project11";
 import { HyperIsland } from "./CardList/HyperIsland";
 import { BandPlanner } from "./CardList/BandPlanner";
 import { Accedo } from "./CardList/Accedo";
-import { useWindowSize } from "../../hooks/useWindowSize";
+import { useWindowSize } from "../../../hooks/useWindowSize";
 import Parallax from "parallax-js";
 import {
   fadeInUpAnimation,
@@ -14,7 +14,7 @@ import {
   fadeInAnimation,
   fadeInLeftAnimation,
   fadeInRightAnimation
-} from "../../animations/animations";
+} from "../../../animations/animations";
 import "./styles/cards.css";
 
 const Cards = () => {

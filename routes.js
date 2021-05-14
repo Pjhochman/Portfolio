@@ -3,7 +3,7 @@ import { Route } from "react-router";
 
 export default (
   <Route>
-    <Route path="/my-app/src/components/Aside/Aside.js" />
-    <Route path="/about/:id" />
+    <Route path="/my-app/src/components/HomePage/HomePage.js" />
+    <Route path="/my-app/src/components/AboutPage/AboutPage.js" />
   </Route>
 );

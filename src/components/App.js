@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Cards from "./Cards/Cards";
 import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
-import Aside from "./Aside/Aside";
-import About from "./About/About";
-import Facts from "./Facts/Facts";
-import Resume from "./Resume/Resume";
-import styled from "styled-components";
+import HomePage from "./HomePage/HomePage";
+import AboutPage from "./AboutPage/AboutPage";
 
+import styled from "styled-components";
 import "../styles/css/app.css";
 
 const Section = styled.div`
@@ -27,24 +23,8 @@ const App = () => {
   return (
     <>
       <Header pageHandler={pageHandler} isPage={isPage} />
-      <Section>
-        {!isPage && (
-          <>
-            <Cards />
-            <Aside />
-          </>
-        )}
-      </Section>
-      <Section className="about-page">
-        {isPage && (
-          <>
-            <About />
-            <Facts />
-            <Resume />
-            <Footer />
-          </>
-        )}
-      </Section>
+      <Section>{!isPage && <HomePage />}</Section>
+      <Section className="about-page">{isPage && <AboutPage />}</Section>
     </>
   );
 };

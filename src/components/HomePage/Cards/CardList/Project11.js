@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { CardItemContext } from "../Context/cardContext";
-import { useWindowSize } from "../../../hooks/useWindowSize";
+import { useWindowSize } from "../../../../hooks/useWindowSize";
 import { FadeInLeftAnimation, FadeInAnimation } from "../animations";
-import { hyperIsland } from "../data/data";
-import { CloseButton } from "../../Buttons/CloseButton";
+import { project11 } from "../data/data";
+import { CloseButton } from "../../../Buttons/CloseButton";
 
-export const HyperIsland = props => {
+export const Project11 = () => {
   const mediaWidthMobile = 637;
   const { width } = useWindowSize();
   const {
@@ -27,35 +27,36 @@ export const HyperIsland = props => {
       {isExpanded && (
         <>
           <BottomContent>
-            <BottomTitle>Stockholm&nbsp;|</BottomTitle>
-            <BottomDescription>&nbsp;2019–2021</BottomDescription>
+            <BottomTitle>Desktop&nbsp;|</BottomTitle>
+            <BottomDescription>&nbsp;VR experience</BottomDescription>
           </BottomContent>
           <CloseButton />
-          {Object.values(hyperIsland[0].middleCardContent).map(
+          {Object.values(project11[0].middleCardContent).map(
             (item, index, arr) => {
               return (
                 <FadeInAnimation key={item.title} duration="1.1s">
-                  <MiddleContent>
+                  <MiddleContent whiteSpace="true">
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (
                       <Link
                         href={
                           "https://" +
-                          hyperIsland[0].middleCardContent.bottomSection.link
+                          project11[0].middleCardContent.bottomSection.link
                         }
                         target="_blank"
                         rel="noreferrer"
                       >
-                        {item.linkAlt}
+                        {item.link}
                       </Link>
                     )}
-                    <MiddleDescription marginBottom="true">
+                    <MiddleDescription>
                       {arr.length - 2 === index ? (
                         <>
-                          {
-                            hyperIsland[0].middleCardContent.topSection
-                              .description
-                          }
+                          {project11[0].middleCardContent.middleSection.description.map(
+                            (item, index, arr) => {
+                              return <li key={item}>{item}</li>;
+                            }
+                          )}
                         </>
                       ) : (
                         <li>{item.description}</li>
@@ -69,30 +70,29 @@ export const HyperIsland = props => {
         </>
       )}
       <TopContent
-        margin={!isExpanded & (width < mediaWidthMobile) ? "15px 6px" : "14px"}
         textAlign={isExpanded ? "start" : "end"}
         alignSelf={isExpanded ? "flex-start" : "flex-end"}
       >
         {width > mediaWidthMobile ? (
           <>
             <FadeInLeftAnimation duration="0.3s">
-              <TopTitle>Education</TopTitle>
+              <TopTitle>My Own Work</TopTitle>
               <hr />
             </FadeInLeftAnimation>
             <FadeInLeftAnimation duration="0.5s">
-              <TopDescription>Hyper Island</TopDescription>
+              <TopDescription>Project 11</TopDescription>
             </FadeInLeftAnimation>
           </>
         ) : (
           <>
             {isExpanded && (
               <>
-                <TopTitle>Hyper Island</TopTitle>
+                <TopTitle>My Own Work</TopTitle>
                 <hr />
               </>
             )}
             <FadeInLeftAnimation duration="0.1s">
-              <TopDescription>Education</TopDescription>
+              <TopDescription>Project 11</TopDescription>
             </FadeInLeftAnimation>
           </>
         )}

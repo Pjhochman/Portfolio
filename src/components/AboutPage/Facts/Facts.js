@@ -1,9 +1,9 @@
 import React from "react";
-import LazyImage from "../Images/LazyImage";
+import LazyImage from "../../Images/LazyImage";
 import styled from "styled-components";
 import { FadeIn } from "./animations";
-import factsImage from "../../assets/images/factsImage.png";
-import altImage from "../../assets/images/factsImage_small.png";
+import factsImage from "../../../assets/images/factsImage.png";
+import altImage from "../../../assets/images/factsImage_small.png";
 import { factsList } from "./data";
 import "./styles/facts.css";
 

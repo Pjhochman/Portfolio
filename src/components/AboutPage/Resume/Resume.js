@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Modal from "../Modal/Modal";
-import { useWindowSize } from "../../hooks/useWindowSize";
+import { useWindowSize } from "../../../hooks/useWindowSize";
 import OpenModalButton from "../Modal/OpenModalButton";
 import styled from "styled-components";
-import resumeImage from "../../assets/images/resumeImage.png";
+import resumeImage from "../../../assets/images/resumeImage.png";
 import "./styles/resume.css";
 
 const StyledContainer = styled.div`

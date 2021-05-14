@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useHover } from "../../hooks/useHover";
+import { useHover } from "../../../hooks/useHover";
 import { CardItemContext } from "./Context/cardContext";
-import { useWindowSize } from "../../hooks/useWindowSize";
+import { useWindowSize } from "../../../hooks/useWindowSize";
 import PropTypes from "prop-types";
 import {
   StyledTopContainer,
@@ -15,7 +15,7 @@ import {
   StyledBottomDescription,
   StyledLink
 } from "./Context/cardContext";
-import { StartAnimation } from "../../animations/animations";
+import { StartAnimation } from "../../../animations/animations";
 import "./styles/cards.css";
 
 export const ExpandContext = React.createContext({

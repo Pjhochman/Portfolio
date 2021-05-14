@@ -3,7 +3,7 @@ import {
   fadeInAnimation,
   fadeInRightAnimation,
   fadeInLeftAnimation
-} from "../../animations/animations";
+} from "../../../animations/animations";
 
 export const FadeIn = styled.div`
   animation: 0.5s ${fadeInAnimation};

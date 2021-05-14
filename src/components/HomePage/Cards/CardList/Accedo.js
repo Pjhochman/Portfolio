@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { CardItemContext } from "../Context/cardContext";
-import { useWindowSize } from "../../../hooks/useWindowSize";
-import { CloseButton } from "../../Buttons/CloseButton";
+import { useWindowSize } from "../../../../hooks/useWindowSize";
+import { CloseButton } from "../../../Buttons/CloseButton";
 import { accedo } from "../data/data";
 import { FadeInAnimation } from "../animations";
-import { textColor } from "../../../styles/GlobalStyles";
+import { textColor } from "../../../../styles/GlobalStyles";
 
 const StyledHr = styled.hr`
   width: 65px;

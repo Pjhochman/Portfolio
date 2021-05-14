@@ -1,22 +1,26 @@
 import React, { useContext } from "react";
+import styled from "styled-components";
 import { CardItemContext } from "../Context/cardContext";
-import { useWindowSize } from "../../../hooks/useWindowSize";
-import { CloseButton } from "../../Buttons/CloseButton";
-import { colorPalette } from "../data/data";
+import { useWindowSize } from "../../../../hooks/useWindowSize";
+import { CloseButton } from "../../../Buttons/CloseButton";
+import { bandPlanner } from "../data/data";
 import { FadeInRightAnimation, FadeInAnimation } from "../animations";
 
-export const ColorPalette = () => {
+const StyledLi = styled.li`
+  white-space: ${({ whiteSpace }) => whiteSpace};
+`;
+
+export const BandPlanner = () => {
   const mediaWidthMobile = 637;
   const { width } = useWindowSize();
-
   const {
     TopContent,
-    MiddleContent,
-    BottomContent,
     TopTitle,
     TopDescription,
+    MiddleContent,
     MiddleTitle,
     MiddleDescription,
+    BottomContent,
     BottomTitle,
     BottomDescription,
     Link,
@@ -25,15 +29,16 @@ export const ColorPalette = () => {
 
   return (
     <>
-      <TopContent alignSelf="start" flexDirection="column">
+      <TopContent alignSelf="start">
         {width > mediaWidthMobile ? (
           <>
             <FadeInRightAnimation duration="0.3s">
               <TopTitle>My Own Work</TopTitle>
               <hr />
             </FadeInRightAnimation>
+
             <FadeInRightAnimation duration="0.5s">
-              <TopDescription>Color Palette</TopDescription>
+              <TopDescription>Band Planner</TopDescription>
             </FadeInRightAnimation>
           </>
         ) : (
@@ -45,7 +50,7 @@ export const ColorPalette = () => {
               </>
             )}
             <FadeInRightAnimation duration="0.1s">
-              <TopDescription>Color Palette</TopDescription>
+              <TopDescription>Band Planner</TopDescription>
             </FadeInRightAnimation>
           </>
         )}
@@ -53,7 +58,7 @@ export const ColorPalette = () => {
       {isExpanded && (
         <>
           <CloseButton />
-          {Object.values(colorPalette[0].middleCardContent).map(
+          {Object.values(bandPlanner[0].middleCardContent).map(
             (item, index, arr) => {
               return (
                 <FadeInAnimation key={item.title} duration="1.1s">
@@ -63,7 +68,7 @@ export const ColorPalette = () => {
                       <Link
                         href={
                           "https://" +
-                          colorPalette[0].middleCardContent.bottomSection.link
+                          bandPlanner[0].middleCardContent.bottomSection.link
                         }
                         target="_blank"
                         rel="noreferrer"
@@ -71,12 +76,12 @@ export const ColorPalette = () => {
                         {item.link}
                       </Link>
                     )}
-                    <MiddleDescription>
+                    <MiddleDescription width="320px">
                       {arr.length - 2 === index ? (
                         <>
-                          {colorPalette[0].middleCardContent.middleSection.description.map(
+                          {bandPlanner[0].middleCardContent.middleSection.description.map(
                             (item, index, arr) => {
-                              return <li key={item}>{item}</li>;
+                              return <StyledLi key={item}>{item}</StyledLi>;
                             }
                           )}
                         </>
@@ -89,9 +94,9 @@ export const ColorPalette = () => {
               );
             }
           )}
-          <BottomContent>
-            <BottomTitle>Mobile & Desktop&nbsp;|</BottomTitle>
-            <BottomDescription>&nbsp;Interactive Design</BottomDescription>
+          <BottomContent margin>
+            <BottomTitle>Progressive Web App&nbsp;|</BottomTitle>
+            <BottomDescription>&nbsp;Login Credentials</BottomDescription>
           </BottomContent>
         </>
       )}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useWindowSize } from "../../hooks/useWindowSize";
+import { useWindowSize } from "../../../hooks/useWindowSize";
 import { FadeInLeft, FadeInRight, FadeIn } from "./animations";
 import { technologies } from "./data";
 import styled from "styled-components";

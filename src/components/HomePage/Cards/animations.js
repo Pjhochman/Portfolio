@@ -3,7 +3,7 @@ import {
   fadeInAnimation,
   fadeInLeftAnimation,
   fadeInRightAnimation
-} from "../../animations/animations";
+} from "../../../animations/animations";
 
 export const FadeInAnimation = styled.div`
   animation: ${props => props.duration} ${fadeInAnimation};
