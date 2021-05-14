@@ -1,18 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledTitle = styled.div`
+const StyledTitleWrapper = styled.div`
   display: flex;
   position: relative;
   margin-left: 6vw;
   white-space: nowrap;
   font-weight: 300;
   user-select: none;
+  cursor: ${props => (props.isPage ? "pointer" : "default")}
   color: #221e41;
-  font-size: 20px;
   transition: transform 0.3s ease-in-out;
   @media (max-width: 450px) {
     height: 23px;
+  }
+`;
+
+const StyledTitle = styled.h1`
+  font-size: 20px;
+  @media (max-width: 450px) {
+    line-height: 23px;
     font-size: 4.35vw;
   }
 `;
@@ -64,11 +71,14 @@ const StyledBurger = styled.button`
 const Burger = ({ isPage, changePageHandler, open, setOpen }) => {
   return (
     <>
-      <StyledTitle onClick={isPage ? changePageHandler : null}>
-        <h1>
+      <StyledTitleWrapper
+        onClick={isPage ? changePageHandler : null}
+        isPage={isPage}
+      >
+        <StyledTitle>
           Peter Hochman&nbsp;<span id="profession">Front End Developer</span>
-        </h1>
-      </StyledTitle>
+        </StyledTitle>
+      </StyledTitleWrapper>
       <StyledBurger open={open} onClick={() => setOpen(value => !value)}>
         <div></div>
         <div></div>
