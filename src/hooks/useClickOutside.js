@@ -2,15 +2,15 @@ import { useEffect, useRef } from "react";
 
 export const useClickOutside = callback => {
   const ref = useRef();
-  const handleClick = e => {
+  const clickHandler = e => {
     if (!ref.current.contains(e.target)) {
       callback();
     }
   };
   useEffect(() => {
-    document.addEventListener("click", handleClick);
+    document.addEventListener("click", clickHandler);
     return () => {
-      document.removeEventListener("click", handleClick);
+      document.removeEventListener("click", clickHandler);
     };
   });
   return ref;

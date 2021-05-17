@@ -61,12 +61,12 @@ export const ColorPalette = () => {
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (
                       <Link
-                        href={
-                          "https://" +
-                          colorPalette[0].middleCardContent.bottomSection.link
+                        color="true"
+                        onClick={() =>
+                          window.open(
+                            `https://${colorPalette[0].middleCardContent.bottomSection.link}`
+                          )
                         }
-                        target="_blank"
-                        rel="noreferrer"
                       >
                         {item.link}
                       </Link>

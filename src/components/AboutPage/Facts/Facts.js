@@ -8,6 +8,7 @@ import { factsList } from "./data";
 import "./styles/facts.css";
 
 const StyledContainer = styled.div`
+  cursor: default;
   display: flex;
   flex-direction: row;
   justify-content: center;

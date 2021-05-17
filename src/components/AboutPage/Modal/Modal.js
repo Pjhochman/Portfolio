@@ -59,14 +59,16 @@ const Modal = ({ handleClose, children, isOpen }) => {
           variants={modalVariant}
         >
           <StyledModalContainer id="modalContainer" variants={containerVariant}>
-            <a
+            <button
               id="download"
-              href="https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/resumeImage.png"
-              target="_blank"
-              rel="noreferrer"
+              onClick={() =>
+                window.open(
+                  `https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/resumeImage.png`
+                )
+              }
             >
               Download
-            </a>
+            </button>
             <StyledCloseButton
               onClick={handleClose}
               xmlns="http://www.w3.org/2000/svg"

@@ -7,10 +7,14 @@ import Resume from "./Resume/Resume";
 const AboutPage = () => {
   return (
     <>
-      <About />
-      <Facts />
-      <Resume />
-      <Footer />
+      {window.location.pathname === "/about" && (
+        <>
+          <About />
+          <Facts />
+          <Resume />
+          <Footer />
+        </>
+      )}
     </>
   );
 };

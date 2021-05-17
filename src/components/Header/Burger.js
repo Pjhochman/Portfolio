@@ -1,28 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
-const StyledTitleWrapper = styled.div`
-  display: flex;
-  position: relative;
-  margin-left: 6vw;
-  white-space: nowrap;
-  font-weight: 300;
-  user-select: none;
-  cursor: ${props => (props.isPage ? "pointer" : "default")}
-  color: #221e41;
-  transition: transform 0.3s ease-in-out;
-  @media (max-width: 450px) {
-    height: 23px;
-  }
-`;
-
-const StyledTitle = styled.h1`
-  font-size: 20px;
-  @media (max-width: 450px) {
-    line-height: 23px;
-    font-size: 4.1vw;
-  }
-`;
+import { useClickOutside } from "../../hooks/useClickOutside";
 
 const StyledBurger = styled.button`
   position: ${({ open }) => (open ? "fixed" : "absolute")};
@@ -68,23 +46,19 @@ const StyledBurger = styled.button`
   }
 `;
 
-const Burger = ({ isPage, changePageHandler, open, setOpen }) => {
+const Burger = props => {
+  const { open, clickHandler } = props;
+  const triggerHandler = () => {
+    props.setOpen(open && !open);
+  };
+
+  const clickRef = useClickOutside(triggerHandler);
   return (
-    <>
-      <StyledTitleWrapper
-        onClick={isPage ? changePageHandler : null}
-        isPage={isPage}
-      >
-        <StyledTitle>
-          Peter Hochman&nbsp;<span id="profession">Front End Developer</span>
-        </StyledTitle>
-      </StyledTitleWrapper>
-      <StyledBurger open={open} onClick={() => setOpen(value => !value)}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </StyledBurger>
-    </>
+    <StyledBurger ref={clickRef} open={open} onClick={clickHandler}>
+      <div></div>
+      <div></div>
+      <div></div>
+    </StyledBurger>
   );
 };
 

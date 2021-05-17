@@ -1,20 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useRoutes, useRedirect, A } from "hookrouter";
+import routes from "../routes";
 import Header from "./Header/Header";
-import HomePage from "./HomePage/HomePage";
-import AboutPage from "./AboutPage/AboutPage";
-
-import styled from "styled-components";
+import HomePage from "../components/HomePage/HomePage";
+import AboutPage from "../components/AboutPage/AboutPage";
+import NoPageFound from "./NoPageFound/NoPageFound";
 import "../styles/css/app.css";
 
-const Section = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-`;
-
 const App = () => {
-  const [isPage, setPage] = useState(false);
-  const pageHandler = () => setPage(value => !value);
+  const routeResult = useRoutes(routes);
+  useRedirect("/", "/home");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,9 +17,13 @@ const App = () => {
 
   return (
     <>
-      <Header pageHandler={pageHandler} isPage={isPage} />
-      <Section>{!isPage && <HomePage />}</Section>
-      <Section className="about-page">{isPage && <AboutPage />}</Section>
+      {(routeResult && <Header />) || <NoPageFound />}
+      <A href={"/home"}>
+        <HomePage />
+      </A>
+      <A href="/about">
+        <AboutPage />
+      </A>
     </>
   );
 };

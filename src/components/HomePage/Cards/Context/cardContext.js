@@ -55,6 +55,7 @@ export const StyledMiddleTitle = styled.h3`
 `;
 
 export const StyledMiddleDescription = styled.ul`
+  white-space: break-spaces;
   line-height: 15px;
   font-size: 11px;
   font-weight: 400;
@@ -95,11 +96,12 @@ export const StyledBottomDescription = styled.div`
 
 // Link
 
-export const StyledLink = styled.a`
+export const StyledLink = styled.button`
   margin-bottom: 5px;
+  cursor: pointer;
   font-size: 11px;
   font-weight: 400;
-  color: ${props => (props.color ? "#221e41" : "#e9f0fb")};
+  color: ${props => (props.color ? "#e9f0fb" : "#221e41")};
 `;
 
 export const CardItemContext = React.createContext({

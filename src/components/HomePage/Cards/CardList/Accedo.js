@@ -73,13 +73,11 @@ export const Accedo = props => {
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (
                       <Link
-                        color="true"
-                        href={
-                          "https://" +
-                          accedo[0].middleCardContent.bottomSection.link
+                        onClick={() =>
+                          window.open(
+                            `https://${accedo[0].middleCardContent.bottomSection.link}`
+                          )
                         }
-                        target="_blank"
-                        rel="noreferrer"
                       >
                         {item.link}
                       </Link>

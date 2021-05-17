@@ -20,6 +20,7 @@ aside {
   font-weight: 300;
   margin: auto;
   z-index: 1;
+  cursor: default;
 }
 
 @media (min-width: 1250px) {

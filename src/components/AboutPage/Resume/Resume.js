@@ -7,6 +7,7 @@ import resumeImage from "../../../assets/images/resumeImage.png";
 import "./styles/resume.css";
 
 const StyledContainer = styled.div`
+  cursor: default;
   padding-top: 5vh;
   display: flex;
   flex-direction: row;
@@ -60,22 +61,15 @@ const Resume = props => {
   return (
     <StyledContainer>
       <StyledResumeWrapper>
-        <div className="resume-wrapper">
+        <>
           {width < mediaWidthMobile ? (
-            <a
-              id="resumeButton"
-              href="https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/resumeImage.png"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View my Resume
-            </a>
+            <button>View my Resume</button>
           ) : (
-            <OpenModalButton handleClick={() => handleOpenModal(true)}>
+            <OpenModalButton clickHandler={() => handleOpenModal(true)}>
               <div id="resumeButton">View my Resume</div>
             </OpenModalButton>
           )}
-        </div>
+        </>
         {props.children}
       </StyledResumeWrapper>
       <Modal isOpen={isOpen} handleClose={() => handleOpenModal(false)}>

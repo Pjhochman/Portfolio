@@ -7,6 +7,7 @@ import altImage from "../../../assets/images/profileImage_small.png";
 import "./styles/about.css";
 
 const StyledContainer = styled.div`
+  cursor: default;
   display: flex;
   flex-direction: row;
   justify-content: center;

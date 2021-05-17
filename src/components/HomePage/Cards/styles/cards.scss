@@ -1,4 +1,4 @@
-@import "../../../styles/scss/_colors";
+@import "../../../../styles/scss/_colors";
 
 p {
   font-weight: 300;
@@ -22,6 +22,7 @@ li {
 }
 
 .items {
+  cursor: default;
   top: 0;
   position: absolute;
   display: flex;

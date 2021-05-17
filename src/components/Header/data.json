@@ -1,0 +1,12 @@
+{
+  "pageData": {
+    "home": { "path": "/home", "title": "home" },
+    "about": { "path": "/about", "title": "about" },
+    "linkedin": {
+      "path": "https://www.linkedin.com/in/peter-hochman",
+      "title": "linkedin"
+    },
+    "github": { "path": "https://github.com/Pjhochman", "title": "github" },
+    "email": { "path": "mailto:peter.hochman.dev@gmail.com", "title": "email" }
+  }
+}

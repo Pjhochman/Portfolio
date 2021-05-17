@@ -17,10 +17,10 @@ const StyledOpenModalButton = styled(motion.button)`
   text-transform: uppercase;
   letter-spacing: 2px;
 `;
-const animatedOpenButton = ({ children, handleClick }) => {
+const animatedOpenButton = ({ children, clickHandler }) => {
   return (
     <StyledOpenModalButton
-      onClick={handleClick}
+      onClick={clickHandler}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >

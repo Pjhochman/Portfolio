@@ -66,12 +66,12 @@ export const BandPlanner = () => {
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (
                       <Link
-                        href={
-                          "https://" +
-                          bandPlanner[0].middleCardContent.bottomSection.link
+                        color="true"
+                        onClick={() =>
+                          window.open(
+                            `https://${bandPlanner[0].middleCardContent.bottomSection.link}`
+                          )
                         }
-                        target="_blank"
-                        rel="noreferrer"
                       >
                         {item.link}
                       </Link>

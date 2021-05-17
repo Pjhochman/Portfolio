@@ -39,14 +39,14 @@ export const HyperIsland = props => {
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (
                       <Link
-                        href={
-                          "https://" +
-                          hyperIsland[0].middleCardContent.bottomSection.link
+                        color="true"
+                        onClick={() =>
+                          window.open(
+                            `https://${hyperIsland[0].middleCardContent.bottomSection.link}`
+                          )
                         }
-                        target="_blank"
-                        rel="noreferrer"
                       >
-                        {item.linkAlt}
+                        {item.link}
                       </Link>
                     )}
                     <MiddleDescription marginBottom="true">

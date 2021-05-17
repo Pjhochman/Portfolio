@@ -39,12 +39,12 @@ export const Project11 = () => {
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (
                       <Link
-                        href={
-                          "https://" +
-                          project11[0].middleCardContent.bottomSection.link
+                        color="true"
+                        onClick={() =>
+                          window.open(
+                            `https://${project11[0].middleCardContent.bottomSection.link}`
+                          )
                         }
-                        target="_blank"
-                        rel="noreferrer"
                       >
                         {item.link}
                       </Link>
