@@ -60,7 +60,7 @@ const Header = () => {
   useEffect(() => {
     setTimeout(() => {
       setVisible(value => !value);
-    }, 1800);
+    }, 0);
   }, []);
   return (
     <FadeIn>

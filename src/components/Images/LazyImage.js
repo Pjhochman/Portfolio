@@ -17,11 +17,18 @@ const StyledImageWrapper = styled.div`
 `;
 
 const StyledPlaceholder = styled.img`
-  width: 100%;
+  position: absolute;
+  width: 380px;
+  height: 380px;
   filter: blur(30px);
   transition: filter 0.5s;
+  @media (max-width: 1100px) {
+    width: 34vw;
+    height: 34vw;
+  }
   @media (max-width: 637px) {
-    width: auto;
+    width: 60vw;
+    height: 60vw;
   }
 `;
 

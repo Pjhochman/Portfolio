@@ -63,7 +63,15 @@ const Resume = props => {
       <StyledResumeWrapper>
         <>
           {width < mediaWidthMobile ? (
-            <button>View my Resume</button>
+            <OpenModalButton
+              clickHandler={() =>
+                window.open(
+                  `https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/resumeImage.png`
+                )
+              }
+            >
+              <div id="resumeButton">View my Resume</div>
+            </OpenModalButton>
           ) : (
             <OpenModalButton clickHandler={() => handleOpenModal(true)}>
               <div id="resumeButton">View my Resume</div>

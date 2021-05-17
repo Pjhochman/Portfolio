@@ -67,7 +67,7 @@ const Modal = ({ handleClose, children, isOpen }) => {
                 )
               }
             >
-              Download
+              Enlarge
             </button>
             <StyledCloseButton
               onClick={handleClose}
