@@ -35,6 +35,7 @@ const StyledTitleWrapper = styled.a`
   white-space: nowrap;
   font-weight: 300;
   user-select: none;
+  cursor: default;
   color: #221e41;
   transition: transform 0.3s ease-in-out;
   @media (max-width: 450px) {

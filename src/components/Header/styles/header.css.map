@@ -3,7 +3,7 @@
     "mappings": "AAEA,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,MAAM;CACf",
     "sources": [
         "header.scss",
-        "../../styles/scss/_colors.scss"
+        "../../../styles/scss/_colors.scss"
     ],
     "names": [],
     "file": "header.css"
