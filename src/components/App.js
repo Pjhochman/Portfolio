@@ -11,6 +11,7 @@ import "../styles/css/app.css";
 const App = () => {
   const routeResult = useRoutes(routes);
   useRedirect("/", "/home/");
+  useRedirect("/home", "/home/");
 
   useEffect(() => {
     window.scrollTo(0, 0);
