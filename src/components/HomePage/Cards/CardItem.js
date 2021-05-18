@@ -18,10 +18,6 @@ import {
 import { StartAnimation } from "../../../animations/animations";
 import "./styles/cards.css";
 
-export const ExpandContext = React.createContext({
-  isExpanded: null
-});
-
 const CardItem = props => {
   const mediaWidthMobile = 637;
   const [refCard, cardHovered] = useHover();

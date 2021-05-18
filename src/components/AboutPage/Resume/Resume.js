@@ -49,11 +49,11 @@ const StyledModalContent = styled.div`
 `;
 
 const Resume = props => {
-  const [isOpen, setToggle] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   const mediaWidthMobile = 637;
 
   function handleOpenModal(open) {
-    setToggle(open);
+    setOpen(open);
   }
 
   const { width } = useWindowSize();

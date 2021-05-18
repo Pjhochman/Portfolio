@@ -58,7 +58,7 @@ aside {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  cursor: pointer;
+  cursor: default;
   color: #221e41;
 }
 

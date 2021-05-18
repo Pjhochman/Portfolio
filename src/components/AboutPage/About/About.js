@@ -1,7 +1,7 @@
 import React from "react";
 import LazyImage from "../../Images/LazyImage";
 import styled from "styled-components";
-import { FadeIn } from "./animations";
+import { FadeIn } from "../animations";
 import profileImage from "../../../assets/images/profileImage.png";
 import altImage from "../../../assets/images/profileImage_small.png";
 import "./styles/about.css";

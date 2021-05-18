@@ -71,7 +71,7 @@ export const ColorPalette = () => {
                         {item.link}
                       </Link>
                     )}
-                    <MiddleDescription>
+                    <MiddleDescription width="360px">
                       {arr.length - 2 === index ? (
                         <>
                           {colorPalette[0].middleCardContent.middleSection.description.map(

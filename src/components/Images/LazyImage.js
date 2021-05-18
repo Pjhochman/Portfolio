@@ -13,7 +13,6 @@ const StyledImageWrapper = styled.div`
   width: 380px;
   margin: auto;
   height: 380px;
-  transition: filter 0.5s;
 `;
 
 const StyledPlaceholder = styled.img`

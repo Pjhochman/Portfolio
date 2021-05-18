@@ -1,4 +1,4 @@
-import React from "react";
+import { createContext } from "react";
 import styled from "styled-components";
 
 // Top Containers
@@ -39,7 +39,6 @@ export const StyledMiddleContainer = styled.div`
   text-align: center;
   flex-direction: column;
   align-items: center;
-  font-size: 11px;
   font-weight: 400;
   box-sizing: border-box;
   user-select: none;
@@ -49,7 +48,7 @@ export const StyledMiddleContainer = styled.div`
 
 export const StyledMiddleTitle = styled.h3`
   margin-bottom: 10px;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
 `;
@@ -57,7 +56,7 @@ export const StyledMiddleTitle = styled.h3`
 export const StyledMiddleDescription = styled.ul`
   white-space: break-spaces;
   line-height: 15px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   width: ${props => props.width};
   margin-bottom: ${props => props.marginBottom && "50px"};
@@ -104,7 +103,7 @@ export const StyledLink = styled.button`
   color: ${props => (props.color ? "#e9f0fb" : "#221e41")};
 `;
 
-export const CardItemContext = React.createContext({
+export const CardItemContext = createContext({
   TopContent: null,
   MiddleContent: null,
   BottomContent: null,

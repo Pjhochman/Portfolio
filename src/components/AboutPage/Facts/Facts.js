@@ -1,7 +1,6 @@
 import React from "react";
 import LazyImage from "../../Images/LazyImage";
 import styled from "styled-components";
-import { FadeIn } from "./animations";
 import factsImage from "../../../assets/images/factsImage.png";
 import altImage from "../../../assets/images/factsImage_small.png";
 import { factsList } from "./data";
@@ -34,22 +33,20 @@ const StyledFactsWrapper = styled.div`
 
 const Facts = props => {
   return (
-    <FadeIn>
-      <StyledContainer id="factSection">
-        <LazyImage src={factsImage} alt={altImage} />
-        <StyledFactsWrapper className="facts" id="factsList">
-          <h1 id="randomFacts">Random facts</h1>
-          <div>
-            <ul id="list">
-              {factsList.map(item => {
-                return <li key={item}>{item}</li>;
-              })}
-            </ul>
-          </div>
-          {props.children}
-        </StyledFactsWrapper>
-      </StyledContainer>
-    </FadeIn>
+    <StyledContainer id="factSection">
+      <LazyImage src={factsImage} alt={altImage} />
+      <StyledFactsWrapper className="facts" id="factsList">
+        <h1 id="randomFacts">Random facts</h1>
+        <div>
+          <ul id="list">
+            {factsList.map(item => {
+              return <li key={item}>{item}</li>;
+            })}
+          </ul>
+        </div>
+        {props.children}
+      </StyledFactsWrapper>
+    </StyledContainer>
   );
 };
 

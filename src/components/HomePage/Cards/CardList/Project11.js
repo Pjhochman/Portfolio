@@ -49,7 +49,7 @@ export const Project11 = () => {
                         {item.link}
                       </Link>
                     )}
-                    <MiddleDescription>
+                    <MiddleDescription width="320px">
                       {arr.length - 2 === index ? (
                         <>
                           {project11[0].middleCardContent.middleSection.description.map(

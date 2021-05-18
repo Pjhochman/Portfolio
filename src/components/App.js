@@ -5,6 +5,7 @@ import Header from "./Header/Header";
 import HomePage from "../components/HomePage/HomePage";
 import AboutPage from "../components/AboutPage/AboutPage";
 import NoPageFound from "./NoPageFound/NoPageFound";
+import { StyledGradient } from "./gradient";
 import "../styles/css/app.css";
 
 const App = () => {
@@ -18,11 +19,17 @@ const App = () => {
   return (
     <>
       {(routeResult && <Header />) || <NoPageFound />}
+
       <A href={"/home"}>
-        <HomePage />
+        <StyledGradient height="100vh">
+          <HomePage />
+        </StyledGradient>
       </A>
+
       <A href="/about">
-        <AboutPage />
+        <StyledGradient height="auto">
+          <AboutPage />
+        </StyledGradient>
       </A>
     </>
   );
