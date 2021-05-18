@@ -8,7 +8,7 @@ import { FadeIn } from "./animations";
 const AboutPage = () => {
   return (
     <FadeIn>
-      {window.location.pathname === "/about" && (
+      {window.location.pathname === "/about/" && (
         <>
           <About />
           <Facts />

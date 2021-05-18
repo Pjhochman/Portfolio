@@ -10,7 +10,7 @@ import "../styles/css/app.css";
 
 const App = () => {
   const routeResult = useRoutes(routes);
-  useRedirect("/", "/home");
+  useRedirect("/", "/home/");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,13 +20,13 @@ const App = () => {
     <>
       {(routeResult && <Header />) || <NoPageFound />}
 
-      <A href={"/home"}>
+      <A href={"/home/"}>
         <StyledGradient height="100vh">
           <HomePage />
         </StyledGradient>
       </A>
 
-      <A href="/about">
+      <A href="/about/">
         <StyledGradient height="auto">
           <AboutPage />
         </StyledGradient>
