@@ -70,7 +70,7 @@ const Resume = props => {
                 )
               }
             >
-              <div id="resumeButton">View my Resume</div>
+              <div>View my Resume</div>
             </OpenModalButton>
           ) : (
             <OpenModalButton clickHandler={() => handleOpenModal(true)}>

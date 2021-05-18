@@ -12,6 +12,7 @@ const App = () => {
   const routeResult = useRoutes(routes);
   useRedirect("/", "/home/");
   useRedirect("/home", "/home/");
+  useRedirect("/about", "/about/");
 
   useEffect(() => {
     window.scrollTo(0, 0);
