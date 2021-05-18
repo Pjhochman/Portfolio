@@ -101,6 +101,11 @@ export const StyledLink = styled.button`
   font-size: 11px;
   font-weight: 400;
   color: ${props => (props.color ? "#e9f0fb" : "#221e41")};
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 `;
 
 export const CardItemContext = createContext({
