@@ -13,7 +13,7 @@ const StyledContainer = styled.nav`
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   width: 100vw;
   text-align: center;
-  padding: 3rem 4rem;
+  padding: 4rem;
   position: fixed;
   box-sizing: border-box;
   top: 0;

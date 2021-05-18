@@ -45,6 +45,7 @@ const StyledTitleWrapper = styled.a`
 
 const StyledTitle = styled.h1`
   font-size: 20px;
+  outline: 0;
   @media (max-width: 450px) {
     line-height: 23px;
     font-size: 4.1vw;

@@ -6,7 +6,6 @@
       "path": "https://www.linkedin.com/in/peter-hochman",
       "title": "linkedin"
     },
-    "github": { "path": "https://github.com/Pjhochman", "title": "github" },
-    "email": { "path": "mailto:peter.hochman.dev@gmail.com", "title": "email" }
+    "github": { "path": "https://github.com/Pjhochman", "title": "github" }
   }
 }
