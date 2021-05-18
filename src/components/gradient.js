@@ -7,7 +7,7 @@ export const StyledGradient = styled.div`
   top: 0;
   z-index: -1;
   transition: all 1s ease-in-out;
-   touch-action: none;
+   touch-action: manipulation;
     background: linear-gradient(
       -45deg,
       #b6aca5,
