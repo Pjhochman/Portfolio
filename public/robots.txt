@@ -1,3 +1,4 @@
+Sitemap: https://peterhochman.com/sitemap.xml
 User-agent: *
 Disallow: /cgi-bin/
 Disallow: /images/
