@@ -48,7 +48,7 @@ export const StyledMiddleContainer = styled.div`
 
 export const StyledMiddleTitle = styled.h3`
   margin-bottom: 10px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
 `;
@@ -56,7 +56,7 @@ export const StyledMiddleTitle = styled.h3`
 export const StyledMiddleDescription = styled.ul`
   white-space: break-spaces;
   line-height: 15px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 300;
   width: ${props => props.width};
   margin-bottom: ${props => props.marginBottom && "50px"};
@@ -98,7 +98,7 @@ export const StyledBottomDescription = styled.div`
 export const StyledLink = styled.button`
   margin-bottom: 5px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 300;
   color: ${props => (props.color ? "#e9f0fb" : "#221e41")};
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
