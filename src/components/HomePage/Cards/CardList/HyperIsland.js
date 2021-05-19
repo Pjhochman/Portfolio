@@ -1,9 +1,15 @@
 import React, { useContext } from "react";
+import styled from "styled-components";
 import { CardItemContext } from "../Context/cardContext";
 import { useWindowSize } from "../../../../hooks/useWindowSize";
 import { FadeInLeftAnimation, FadeInAnimation } from "../animations";
 import { hyperIsland } from "../data/data";
 import { CloseButton } from "../../../Buttons/CloseButton";
+import { textColor } from "../../../../styles/GlobalStyles";
+
+const StyledHr = styled.hr`
+  border: 0.5px solid ${textColor.primaryBlack};
+`;
 
 export const HyperIsland = props => {
   const mediaWidthMobile = 637;
@@ -26,27 +32,26 @@ export const HyperIsland = props => {
     <>
       {isExpanded && (
         <>
-          <BottomContent>
+          <BottomContent color="true">
             <BottomTitle>Stockholm&nbsp;|</BottomTitle>
             <BottomDescription>&nbsp;2019–2021</BottomDescription>
           </BottomContent>
-          <CloseButton />
+          <CloseButton color="true" />
           {Object.values(hyperIsland[0].middleCardContent).map(
             (item, index, arr) => {
               return (
                 <FadeInAnimation key={item.title} duration="1.1s">
-                  <MiddleContent>
+                  <MiddleContent color="true">
                     <MiddleTitle>{item.title}</MiddleTitle>
                     {arr.length - 1 === index && (
                       <Link
-                        color="true"
                         onClick={() =>
                           window.open(
                             `https://${hyperIsland[0].middleCardContent.bottomSection.link}`
                           )
                         }
                       >
-                        {item.link}
+                        {item.linkAlt}
                       </Link>
                     )}
                     <MiddleDescription marginBottom="true">
@@ -69,6 +74,7 @@ export const HyperIsland = props => {
         </>
       )}
       <TopContent
+        color="true"
         margin={!isExpanded & (width < mediaWidthMobile) ? "15px 6px" : "14px"}
         textAlign={isExpanded ? "start" : "end"}
         alignSelf={isExpanded ? "flex-start" : "flex-end"}
@@ -77,7 +83,7 @@ export const HyperIsland = props => {
           <>
             <FadeInLeftAnimation duration="0.3s">
               <TopTitle>Education</TopTitle>
-              <hr />
+              <StyledHr />
             </FadeInLeftAnimation>
             <FadeInLeftAnimation duration="0.5s">
               <TopDescription>Hyper Island</TopDescription>
@@ -88,7 +94,7 @@ export const HyperIsland = props => {
             {isExpanded && (
               <>
                 <TopTitle>Hyper Island</TopTitle>
-                <hr />
+                <StyledHr />
               </>
             )}
             <FadeInLeftAnimation duration="0.1s">

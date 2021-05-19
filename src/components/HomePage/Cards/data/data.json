@@ -4,7 +4,7 @@
       "middleCardContent": {
         "topSection": {
           "title": "Project Description",
-          "description": "SaaS mobile application created for bands to keep track of songs, manage band practices, build setlists and upload files."
+          "description": "SaaS mobile application created for bands to keep track of songs."
         },
         "middleSection": {
           "title": "Technologies & Tools",
@@ -32,7 +32,7 @@
       "middleCardContent": {
         "topSection": {
           "title": "Job Description",
-          "description": "Giving clients access to managing their video streaming applications for the Accedo One product. The admin UI product was built using React with GraphQL."
+          "description": "Giving clients access to managing their video streaming applications. Built using React with GraphQL."
         },
         "middleSection": {
           "title": "Technologies & Tools",
