@@ -144,7 +144,6 @@ aside {
           user-select: none;
   cursor: default;
   color: #221e41;
-  font-size: 200;
 }
 
 @media (max-width: 1250px) {
