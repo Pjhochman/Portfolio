@@ -34,7 +34,7 @@ const StyledLink = styled.a`
   letter-spacing: 0.5rem;
   text-decoration: none;
   transition: color 0.3s linear;
-  color: ${({ href }) => (pathName === href ? "#be9063" : "#e9f0fb")};
+  color: ${({ path }) => (pathName === path ? "#be9063" : "#e9f0fb")};
   @media (max-width: 576px) {
     font-size: 0.8rem;
     text-align: center;
@@ -48,11 +48,13 @@ const Links = ({ open }) => {
   return (
     <StyledContainer open={open}>
       {Object.values(pageData).map((value, index) => {
+        console.log(value.path, pathName);
         return (
           <StyledLink
             aria-label={value.title}
             key={value.title}
-            href={value.path}
+            href={value.href}
+            path={value.path}
           >
             {value.title}
           </StyledLink>
