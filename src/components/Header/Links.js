@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { pageData } from "./data";
 
-const pathName = window.location.href;
+const href = window.location.href;
+const pathName = window.location.path;
 
 const StyledContainer = styled.nav`
   z-index: 3;
@@ -48,7 +49,6 @@ const Links = ({ open }) => {
   return (
     <StyledContainer open={open}>
       {Object.values(pageData).map((value, index) => {
-        console.log(value.path, pathName);
         return (
           <StyledLink
             aria-label={value.title}
