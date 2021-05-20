@@ -34,7 +34,7 @@ const StyledLink = styled.a`
   letter-spacing: 0.5rem;
   text-decoration: none;
   transition: color 0.3s linear;
-  color: ${({ path }) => (pathName === path ? "#be9063" : "#e9f0fb")};
+  color: ${({ href }) => (pathName === href ? "#be9063" : "#e9f0fb")};
   @media (max-width: 576px) {
     font-size: 0.8rem;
     text-align: center;
@@ -52,8 +52,7 @@ const Links = ({ open }) => {
           <StyledLink
             aria-label={value.title}
             key={value.title}
-            path={value.path}
-            href={pathName !== value.path ? value.path : null}
+            href={value.path}
           >
             {value.title}
           </StyledLink>
