@@ -45,11 +45,9 @@ const StyledLink = styled.a`
 `;
 
 const Links = ({ open }) => {
-  console.log(pathName);
   return (
     <StyledContainer open={open}>
       {Object.values(pageData).map((value, index) => {
-        console.log(value.path);
         return (
           <StyledLink
             aria-label={value.title}
