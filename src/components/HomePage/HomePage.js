@@ -5,7 +5,7 @@ import Aside from "./Aside/Aside";
 const HomePage = () => {
   return (
     <>
-      {window.location.pathname === "/home/" && (
+      {window.location.pathname === "/" && (
         <>
           <Cards />
           <Aside />

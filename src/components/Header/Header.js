@@ -67,13 +67,12 @@ const Header = () => {
   return (
     <FadeIn>
       <StyledHeader open={open} isVisible={isVisible}>
-        <StyledTitleWrapper href={pathName !== "/home/" ? "/home/" : null}>
+        <StyledTitleWrapper href={pathName !== "/" ? "/" : null}>
           <StyledTitle>
             Peter Hochman&nbsp;
             <span id="profession">Front End Developer</span>
           </StyledTitle>
         </StyledTitleWrapper>
-
         <Dropdown
           open={open}
           setOpen={setOpen}

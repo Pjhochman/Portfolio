@@ -10,8 +10,6 @@ import "../styles/css/app.css";
 
 const App = () => {
   const routeResult = useRoutes(routes);
-  useRedirect("/", "/home/");
-  useRedirect("/home", "/home/");
   useRedirect("/about", "/about/");
 
   useEffect(() => {
@@ -22,7 +20,7 @@ const App = () => {
     <>
       {(routeResult && <Header />) || <NoPageFound />}
 
-      <A href={"/home/"}>
+      <A href={"/"}>
         <StyledGradient height="100vh">
           <HomePage />
         </StyledGradient>

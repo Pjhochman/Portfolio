@@ -53,7 +53,7 @@ const NoPageFound = () => {
       <StyledDescription fontSize="20px">
         Sorry, the page you're looking for doesn't exist.
       </StyledDescription>
-      <StyledLink href="/home">return home</StyledLink>
+      <StyledLink href="/">return home</StyledLink>
     </StyledWrapper>
   );
 };
