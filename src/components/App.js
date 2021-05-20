@@ -24,9 +24,11 @@ const App = () => {
           <A href="/about/"></A>
         </Header>
       )) || <NoPageFound />}
+
       <StyledGradient height="100vh">
         <HomePage />
       </StyledGradient>
+
       <StyledGradient height="auto">
         <AboutPage />
       </StyledGradient>

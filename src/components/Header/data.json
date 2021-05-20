@@ -1,7 +1,7 @@
 {
   "pageData": {
-    "home": { "path": "/", "title": "home" },
-    "about": { "path": "/about/", "title": "about" },
+    "home": { "path": "https://peterhochman.com", "title": "home" },
+    "about": { "path": "https://peterhochman.com/about", "title": "about" },
     "linkedin": {
       "path": "https://www.linkedin.com/in/peter-hochman",
       "title": "linkedin"
