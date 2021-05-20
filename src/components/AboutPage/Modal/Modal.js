@@ -63,7 +63,7 @@ const Modal = ({ handleClose, children, isOpen }) => {
               id="download"
               onClick={() =>
                 window.open(
-                  `https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/resumeImage.png`
+                  `https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/CV_Peter_Hochman.pdf`
                 )
               }
             >

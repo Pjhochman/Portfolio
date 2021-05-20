@@ -66,7 +66,7 @@ const Resume = props => {
             <OpenModalButton
               clickHandler={() =>
                 window.open(
-                  `https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/resumeImage.png`
+                  `https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/CV_Peter_Hochman.pdf`
                 )
               }
             >
