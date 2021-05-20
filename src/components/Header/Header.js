@@ -7,8 +7,6 @@ const FadeIn = styled.div`
   animation: 0.3s ${fadeInAnimation};
 `;
 
-const pathName = window.location.pathname;
-
 const StyledHeader = styled.header`
   position: absolute;
   display: flex;
@@ -67,7 +65,7 @@ const Header = () => {
   return (
     <FadeIn>
       <StyledHeader open={open} isVisible={isVisible}>
-        <StyledTitleWrapper href={pathName !== "/" ? "/" : null}>
+        <StyledTitleWrapper href="/">
           <StyledTitle>
             Peter Hochman&nbsp;
             <span id="profession">Front End Developer</span>

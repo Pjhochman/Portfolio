@@ -18,19 +18,18 @@ const App = () => {
 
   return (
     <>
-      {(routeResult && <Header />) || <NoPageFound />}
-
-      <A href={"/"}>
-        <StyledGradient height="100vh">
-          <HomePage />
-        </StyledGradient>
-      </A>
-
-      <A href="/about/">
-        <StyledGradient height="auto">
-          <AboutPage />
-        </StyledGradient>
-      </A>
+      {(routeResult && (
+        <Header>
+          <A href="/"></A>
+          <A href="/about/"></A>
+        </Header>
+      )) || <NoPageFound />}
+      <StyledGradient height="100vh">
+        <HomePage />
+      </StyledGradient>
+      <StyledGradient height="auto">
+        <AboutPage />
+      </StyledGradient>
     </>
   );
 };

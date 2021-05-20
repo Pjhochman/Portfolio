@@ -54,7 +54,12 @@ const Burger = props => {
 
   const clickRef = useClickOutside(triggerHandler);
   return (
-    <StyledBurger ref={clickRef} open={open} onClick={clickHandler}>
+    <StyledBurger
+      aria-label="dropdown"
+      ref={clickRef}
+      open={open}
+      onClick={clickHandler}
+    >
       <div></div>
       <div></div>
       <div></div>

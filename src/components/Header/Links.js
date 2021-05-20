@@ -50,6 +50,7 @@ const Links = ({ open }) => {
       {Object.values(pageData).map((value, index) => {
         return (
           <StyledLink
+            aria-label={value.title}
             key={value.title}
             path={value.path}
             href={pathName !== value.path ? value.path : null}
