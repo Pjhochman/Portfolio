@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
-import { CardItemContext } from "../Context/cardContext";
-import { useWindowSize } from "../../../../hooks/useWindowSize";
-import { FadeInLeftAnimation, FadeInAnimation } from "../animations";
-import { project11 } from "../data/data";
-import { CloseButton } from "../../../Buttons/CloseButton";
+import React, { useContext } from 'react';
+import { CardItemContext } from '../Context/cardContext';
+import useWindowSize from '../../../../hooks/useWindowSize';
+import { FadeInLeftAnimation, FadeInAnimation } from '../animations';
+import { project11 } from '../data/data.json';
+import CloseButton from '../../../Buttons/CloseButton';
 
-export const Project11 = () => {
+const Project11 = () => {
   const mediaWidthMobile = 637;
   const { width } = useWindowSize();
   const {
@@ -18,8 +18,8 @@ export const Project11 = () => {
     MiddleDescription,
     BottomTitle,
     BottomDescription,
-    Link,
-    isExpanded
+    isExpanded,
+    Button,
   } = useContext(CardItemContext);
 
   return (
@@ -32,46 +32,43 @@ export const Project11 = () => {
           </BottomContent>
           <CloseButton />
           {Object.values(project11[0].middleCardContent).map(
-            (item, index, arr) => {
-              return (
-                <FadeInAnimation key={item.title} duration="1.1s">
-                  <MiddleContent whiteSpace="true">
-                    <MiddleTitle>{item.title}</MiddleTitle>
-                    {arr.length - 1 === index && (
-                      <Link
-                        color="true"
-                        onClick={() =>
-                          window.open(
-                            `https://${project11[0].middleCardContent.bottomSection.link}`
-                          )
-                        }
-                      >
-                        {item.link}
-                      </Link>
-                    )}
-                    <MiddleDescription width="320px">
-                      {arr.length - 2 === index ? (
-                        <>
-                          {project11[0].middleCardContent.middleSection.description.map(
-                            (item, index, arr) => {
-                              return <li key={item}>{item}</li>;
-                            }
-                          )}
-                        </>
-                      ) : (
-                        <li>{item.description}</li>
+            (item, index, arr) => (
+              <FadeInAnimation key={item.title} duration="1.1s">
+                <MiddleContent whiteSpace="true">
+                  <MiddleTitle>{item.title}</MiddleTitle>
+                  {arr.length - 1 === index && (
+                    <Button
+                      type="button"
+                      color="true"
+                      onClick={() => window.open(
+                        `https://${project11[0].middleCardContent.bottomSection.link}`,
                       )}
-                    </MiddleDescription>
-                  </MiddleContent>
-                </FadeInAnimation>
-              );
-            }
+                    >
+                      {item.link}
+                    </Button>
+                  )}
+                  <MiddleDescription width="320px">
+                    {arr.length - 2 === index ? (
+                      <>
+                        {project11[0].middleCardContent.middleSection.description.map(
+                          (value) => (
+                            <li key={value}>{value}</li>
+                          ),
+                        )}
+                      </>
+                    ) : (
+                      <li>{item.description}</li>
+                    )}
+                  </MiddleDescription>
+                </MiddleContent>
+              </FadeInAnimation>
+            ),
           )}
         </>
       )}
       <TopContent
-        textAlign={isExpanded ? "start" : "end"}
-        alignSelf={isExpanded ? "flex-start" : "flex-end"}
+        textAlign={isExpanded ? 'start' : 'end'}
+        alignSelf={isExpanded ? 'flex-start' : 'flex-end'}
       >
         {width > mediaWidthMobile ? (
           <>
@@ -100,3 +97,5 @@ export const Project11 = () => {
     </>
   );
 };
+
+export default Project11;

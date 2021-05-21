@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { useRoutes, A } from "hookrouter";
-import routes from "../routes";
-import Header from "./Header/Header";
-import HomePage from "../components/HomePage/HomePage";
-import AboutPage from "../components/AboutPage/AboutPage";
-import NoPageFound from "./NoPageFound/NoPageFound";
-import { StyledGradient } from "./gradient";
-import "../styles/css/app.css";
+import React, { useEffect } from 'react';
+import { useRoutes, A } from 'hookrouter';
+import routes from '../routes';
+import Header from './Header/Header';
+import HomePage from './HomePage/HomePage';
+import AboutPage from './AboutPage/AboutPage';
+import NoPageFound from './NoPageFound/NoPageFound';
+import StyledGradient from './gradient';
+import '../styles/css/app.css';
 
 const App = () => {
   const routeResult = useRoutes(routes);
@@ -18,8 +18,8 @@ const App = () => {
     <>
       {(routeResult && (
         <Header>
-          <A href="/"></A>
-          <A href="/about"></A>
+          <A href="/" />
+          <A href="/about" />
         </Header>
       )) || <NoPageFound />}
 

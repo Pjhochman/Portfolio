@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const StyledCloseIcon = styled.svg`
   width: 15px;
@@ -10,34 +11,35 @@ const StyledCloseIcon = styled.svg`
   cursor: pointer;
 `;
 
-export const CloseButton = ({ color }) => {
-  return (
-    <StyledCloseIcon
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20.39 20.39"
-    >
-      <line
-        x1="19.39"
-        y1="19.39"
-        x2="1"
-        y2="1"
-        fill="none"
-        stroke={color ? "#221e41" : "white"}
-        strokeLinecap="round"
-        strokeMiterlimit="10"
-        strokeWidth="2"
-      />
-      <line
-        x1="1"
-        y1="19.39"
-        x2="19.39"
-        y2="1"
-        fill="none"
-        stroke={color ? "#221e41" : "white"}
-        strokeLinecap="round"
-        strokeMiterlimit="10"
-        strokeWidth="2"
-      />
-    </StyledCloseIcon>
-  );
+const CloseButton = ({ color }) => (
+  <StyledCloseIcon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.39 20.39">
+    <line
+      x1="19.39"
+      y1="19.39"
+      x2="1"
+      y2="1"
+      fill="none"
+      stroke={color ? '#221e41' : 'white'}
+      strokeLinecap="round"
+      strokeMiterlimit="10"
+      strokeWidth="2"
+    />
+    <line
+      x1="1"
+      y1="19.39"
+      x2="19.39"
+      y2="1"
+      fill="none"
+      stroke={color ? '#221e41' : 'white'}
+      strokeLinecap="round"
+      strokeMiterlimit="10"
+      strokeWidth="2"
+    />
+  </StyledCloseIcon>
+);
+
+CloseButton.propTypes = {
+  color: PropTypes.bool.isRequired,
 };
+
+export default CloseButton;

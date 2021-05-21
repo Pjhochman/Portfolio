@@ -1,0 +1,12 @@
+  {
+    "parser": "babel",
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": [
+          "error",
+        {
+          "singleQuote": true
+        }
+        ]
+      }
+ } 

@@ -1,5 +1,7 @@
-export const textColor = {
-  primaryBlack: "#221e41",
-  secondaryBlack: "#040c0e",
-  primaryWhite: "#e9f0fb"
+const textColor = {
+  primaryBlack: '#221e41',
+  secondaryBlack: '#040c0e',
+  primaryWhite: '#e9f0fb',
 };
+
+export default textColor;

@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import {
   fadeInAnimation,
   fadeInRightAnimation,
-  fadeInLeftAnimation
-} from "../../../animations/animations";
+  fadeInLeftAnimation,
+} from '../../../animations/animations';
 
 export const FadeIn = styled.div`
   animation: 0.5s ${fadeInAnimation};

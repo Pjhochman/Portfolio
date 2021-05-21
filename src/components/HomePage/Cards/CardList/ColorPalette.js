@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
-import { CardItemContext } from "../Context/cardContext";
-import { useWindowSize } from "../../../../hooks/useWindowSize";
-import { CloseButton } from "../../../Buttons/CloseButton";
-import { colorPalette } from "../data/data";
-import { FadeInRightAnimation, FadeInAnimation } from "../animations";
+import React, { useContext } from 'react';
+import { CardItemContext } from '../Context/cardContext';
+import useWindowSize from '../../../../hooks/useWindowSize';
+import CloseButton from '../../../Buttons/CloseButton';
+import { colorPalette } from '../data/data.json';
+import { FadeInRightAnimation, FadeInAnimation } from '../animations';
 
-export const ColorPalette = () => {
+const ColorPalette = () => {
   const mediaWidthMobile = 637;
   const { width } = useWindowSize();
 
@@ -19,8 +19,8 @@ export const ColorPalette = () => {
     MiddleDescription,
     BottomTitle,
     BottomDescription,
-    Link,
-    isExpanded
+    isExpanded,
+    Button,
   } = useContext(CardItemContext);
 
   return (
@@ -54,40 +54,37 @@ export const ColorPalette = () => {
         <>
           <CloseButton />
           {Object.values(colorPalette[0].middleCardContent).map(
-            (item, index, arr) => {
-              return (
-                <FadeInAnimation key={item.title} duration="1.1s">
-                  <MiddleContent>
-                    <MiddleTitle>{item.title}</MiddleTitle>
-                    {arr.length - 1 === index && (
-                      <Link
-                        color="true"
-                        onClick={() =>
-                          window.open(
-                            `https://${colorPalette[0].middleCardContent.bottomSection.link}`
-                          )
-                        }
-                      >
-                        {item.link}
-                      </Link>
-                    )}
-                    <MiddleDescription width="360px">
-                      {arr.length - 2 === index ? (
-                        <>
-                          {colorPalette[0].middleCardContent.middleSection.description.map(
-                            (item, index, arr) => {
-                              return <li key={item}>{item}</li>;
-                            }
-                          )}
-                        </>
-                      ) : (
-                        <li>{item.description}</li>
+            (item, index, arr) => (
+              <FadeInAnimation key={item.title} duration="1.1s">
+                <MiddleContent>
+                  <MiddleTitle>{item.title}</MiddleTitle>
+                  {arr.length - 1 === index && (
+                    <Button
+                      type="button"
+                      color="true"
+                      onClick={() => window.open(
+                        `https://${colorPalette[0].middleCardContent.bottomSection.link}`,
                       )}
-                    </MiddleDescription>
-                  </MiddleContent>
-                </FadeInAnimation>
-              );
-            }
+                    >
+                      {item.link}
+                    </Button>
+                  )}
+                  <MiddleDescription width="360px">
+                    {arr.length - 2 === index ? (
+                      <>
+                        {colorPalette[0].middleCardContent.middleSection.description.map(
+                          (value) => (
+                            <li key={value}>{value}</li>
+                          ),
+                        )}
+                      </>
+                    ) : (
+                      <li>{item.description}</li>
+                    )}
+                  </MiddleDescription>
+                </MiddleContent>
+              </FadeInAnimation>
+            ),
           )}
           <BottomContent>
             <BottomTitle>Mobile & Desktop&nbsp;|</BottomTitle>
@@ -98,3 +95,5 @@ export const ColorPalette = () => {
     </>
   );
 };
+
+export default ColorPalette;

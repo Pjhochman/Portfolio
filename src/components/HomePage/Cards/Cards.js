@@ -1,31 +1,32 @@
-import React from "react";
-import { data } from "./data/data";
-import CardItem from "./CardItem";
-import { ColorPalette } from "./CardList/ColorPalette";
-import { Project11 } from "./CardList/Project11";
-import { HyperIsland } from "./CardList/HyperIsland";
-import { BandPlanner } from "./CardList/BandPlanner";
-import { Accedo } from "./CardList/Accedo";
-import { useWindowSize } from "../../../hooks/useWindowSize";
-import Parallax from "parallax-js";
+import React from 'react';
+import Parallax from 'parallax-js';
+import { data } from './data/data.json';
+import CardItem from './CardItem';
+import ColorPalette from './CardList/ColorPalette';
+import Project11 from './CardList/Project11';
+import HyperIsland from './CardList/HyperIsland';
+import BandPlanner from './CardList/BandPlanner';
+import Accedo from './CardList/Accedo';
+import useWindowSize from '../../../hooks/useWindowSize';
 import {
   fadeInUpAnimation,
   fadeInDownAnimation,
   fadeInAnimation,
   fadeInLeftAnimation,
-  fadeInRightAnimation
-} from "../../../animations/animations";
-import "./styles/cards.css";
+  fadeInRightAnimation,
+} from '../../../animations/animations';
+import './styles/cards.css';
 
 const Cards = () => {
   const mediaWidth = 1110;
   const { width } = useWindowSize();
-  const scene = document.getElementById("js-scene");
+  const scene = document.getElementById('js-scene');
 
   if (width) {
+    /* eslint-disable */ 
     width > mediaWidth
       ? new Parallax(scene, { hoverOnly: false })
-      : new Parallax(scene, { scalarX: "0", scalarY: "0" });
+      : new Parallax(scene, { scalarX: '0', scalarY: '0' });
   }
   return (
     <div className="items">

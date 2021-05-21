@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
-import LazyLoad from "react-lazyload";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React, { useRef } from 'react';
+import LazyLoad from 'react-lazyload';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const StyledImageWrapper = styled.div`
   display: flex;
@@ -59,9 +59,9 @@ const LazyImage = ({ src, alt }) => {
   );
 };
 
-Image.propTypes = {
+LazyImage.propTypes = {
   src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired
+  alt: PropTypes.string.isRequired,
 };
 
 export default LazyImage;

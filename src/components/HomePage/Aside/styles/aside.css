@@ -52,25 +52,13 @@ aside {
 }
 
 .designer-title {
-  width: auto;
-  margin: 0 0 20px 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   cursor: default;
-  color: #221e41;
 }
 
 .coder-title {
-  width: auto;
-  margin: 0 0 20px 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  font-size: 1.5em;
+  font-weight: bold;
   cursor: pointer;
-  color: #221e41;
 }
 
 .coder-title:before {
@@ -84,17 +72,19 @@ aside {
 }
 
 .title {
+  padding: 0;
   margin: 10px;
+  width: auto;
+  margin: 0 0 20px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #221e41;
 }
 
 @media (max-width: 1250px) {
   .title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-tap-highlight-color: transparent;
     outline: none;
     -ms-touch-action: manipulation;
@@ -137,21 +127,13 @@ aside {
   text-align: center;
   white-space: normal;
   margin: 0;
-  font-size: 18px;
+  font-size: 0.45em;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: default;
   color: #221e41;
-}
-
-@media (max-width: 1250px) {
-  .description {
-    font-size: 15px;
-    margin: 0 1.3vw;
-    text-align: center;
-  }
 }
 
 @media (max-width: 1100px) {

@@ -1,6 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { pageData } from "./data";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { pageData } from './data.json';
 
 const pathName = window.location.pathname;
 
@@ -10,7 +11,7 @@ const StyledContainer = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: #040c0e;
-  transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
+  transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-100%)')};
   width: 100vw;
   text-align: center;
   padding: 4rem;
@@ -34,7 +35,7 @@ const StyledLink = styled.a`
   letter-spacing: 0.5rem;
   text-decoration: none;
   transition: color 0.3s linear;
-  color: ${({ path }) => (pathName === path ? "#be9063" : "#e9f0fb")};
+  color: ${({ path }) => (pathName === path ? '#be9063' : '#e9f0fb')};
   @media (max-width: 576px) {
     font-size: 0.8rem;
     text-align: center;
@@ -44,23 +45,23 @@ const StyledLink = styled.a`
   }
 `;
 
-const Links = ({ open }) => {
-  return (
-    <StyledContainer open={open}>
-      {Object.values(pageData).map((value, index) => {
-        return (
-          <StyledLink
-            aria-label={value.title}
-            key={value.title}
-            href={value.href}
-            path={value.path}
-          >
-            {value.title}
-          </StyledLink>
-        );
-      })}
-    </StyledContainer>
-  );
+const Links = ({ open }) => (
+  <StyledContainer open={open}>
+    {Object.values(pageData).map((value) => (
+      <StyledLink
+        aria-label={value.title}
+        key={value.title}
+        href={value.href}
+        path={value.path}
+      >
+        {value.title}
+      </StyledLink>
+    ))}
+  </StyledContainer>
+);
+
+Links.propTypes = {
+  open: PropTypes.bool.isRequired,
 };
 
 export default Links;

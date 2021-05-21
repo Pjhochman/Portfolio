@@ -1,10 +1,11 @@
-import React from "react";
-import LazyImage from "../../Images/LazyImage";
-import styled from "styled-components";
-import { FadeIn } from "../animations";
-import profileImage from "../../../assets/images/profileImage.webp";
-import altImage from "../../../assets/images/profileImage.webp";
-import "./styles/about.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import LazyImage from '../../Images/LazyImage';
+import FadeIn from '../animations';
+import profileImage from '../../../assets/images/profileImage.webp';
+import altImage from '../../../assets/images/profileImage_small.png';
+import './styles/about.css';
 
 const StyledContainer = styled.div`
   cursor: default;
@@ -31,28 +32,34 @@ const StyledAboutWrapper = styled.div`
   height: 380px;
 `;
 
-const About = props => {
+const About = (props) => {
+  const { children } = props;
+
   return (
     <FadeIn>
       <StyledContainer className="container">
         <StyledAboutWrapper className="about" id="profileInformation">
           <h1 id="aboutMe">about me</h1>
           <h2 id="intro">
-            I'm a Frontend developer
-            <br /> based in Stockholm, Sweden.
+            I&#39;m a Frontend developer
+            <br />
+            based in Stockholm, Sweden.
           </h2>
           <p id="paragraph">
             I enjoy turning complex problems into simple, beautiful and
-            intuitive designs. When I'm not pushing pixels, you'll find me
-            playing the piano, listening to jazz, blues, funk and enjoying walks
-            with my dog.
+            intuitive designs. When I&#39;m not pushing pixels, you&#39;ll find
+            me playing the piano, listening to jazz, blues, funk and enjoying
+            walks with my dog.
           </p>
-          {props.children}
+          {children}
         </StyledAboutWrapper>
         <LazyImage src={profileImage} alt={altImage} />
       </StyledContainer>
     </FadeIn>
   );
 };
-
 export default About;
+
+About.propTypes = {
+  children: PropTypes.node.isRequired,
+};

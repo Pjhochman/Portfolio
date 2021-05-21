@@ -42,19 +42,13 @@ aside {
 }
 
 .designer-title {
-  width: auto;
-  margin: 0 0 20px 0;
-  user-select: none;
   cursor: default;
-  color: $primary-text-color;
 }
 
 .coder-title {
-  width: auto;
-  margin: 0 0 20px 0;
-  user-select: none;
+  font-size: 1.5em;
+  font-weight: bold;
   cursor: pointer;
-  color: $primary-text-color;
   &:before {
     content: "<";
     left: 0;
@@ -66,13 +60,16 @@ aside {
 }
 
 .title {
+  padding: 0;
   margin: 10px;
+  width: auto;
+  margin: 0 0 20px 0;
+  user-select: none;
+  color: $primary-text-color;
 }
 
 @media (max-width: 1250px) {
   .title {
-    display: flex;
-    justify-content: center;
     -webkit-tap-highlight-color: transparent;
     outline: none;
     -ms-touch-action: manipulation;
@@ -111,18 +108,10 @@ aside {
   text-align: center;
   white-space: normal;
   margin: 0;
-  font-size: 18px;
+  font-size: 0.45em;
   user-select: none;
   cursor: default;
   color: $primary-text-color;
-}
-
-@media (max-width: 1250px) {
-  .description {
-    font-size: 15px;
-    margin: 0 1.3vw;
-    text-align: center;
-  }
 }
 
 @media (max-width: 1100px) {

@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const StyledOverlay = styled(motion.div)`
   position: fixed;
@@ -32,40 +33,39 @@ const StyledCloseButton = styled.svg`
 const modalVariant = {
   initial: { opacity: 0 },
   isOpen: { opacity: 1 },
-  exit: { opacity: 0 }
+  exit: { opacity: 0 },
 };
 const containerVariant = {
-  initial: { top: "-50%", transition: { type: "spring" } },
-  isOpen: { top: "47%" },
-  exit: { top: "-50%" }
+  initial: { top: '-50%', transition: { type: 'spring' } },
+  isOpen: { top: '47%' },
+  exit: { top: '-50%' },
 };
 const Modal = ({ handleClose, children, isOpen }) => {
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden";
-      document.body.style.background = "rgba(0, 0, 0, 0.4)";
+      document.body.style.overflow = 'hidden';
+      document.body.style.background = 'rgba(0, 0, 0, 0.4)';
     } else {
-      document.body.style.overflow = "unset";
-      document.body.style.background = "#e9f0fb";
+      document.body.style.overflow = 'unset';
+      document.body.style.background = '#e9f0fb';
     }
   }, [isOpen]);
   return (
     <AnimatePresence>
       {isOpen && (
         <StyledOverlay
-          initial={"initial"}
-          animate={"isOpen"}
-          exit={"exit"}
+          initial="initial"
+          animate="isOpen"
+          exit="exit"
           variants={modalVariant}
         >
           <StyledModalContainer id="modalContainer" variants={containerVariant}>
             <button
+              type="button"
               id="download"
-              onClick={() =>
-                window.open(
-                  `https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/CV_Peter_Hochman.pdf`
-                )
-              }
+              onClick={() => window.open(
+                'https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/CV_Peter_Hochman.pdf',
+              )}
             >
               Enlarge
             </button>
@@ -104,6 +104,12 @@ const Modal = ({ handleClose, children, isOpen }) => {
       )}
     </AnimatePresence>
   );
+};
+
+Modal.propTypes = {
+  handleClose: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Modal;

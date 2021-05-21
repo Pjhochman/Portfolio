@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
-import styled from "styled-components";
-import { CardItemContext } from "../Context/cardContext";
-import { useWindowSize } from "../../../../hooks/useWindowSize";
-import { CloseButton } from "../../../Buttons/CloseButton";
-import { accedo } from "../data/data";
-import { FadeInAnimation } from "../animations";
-import { textColor } from "../../../../styles/GlobalStyles";
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import { CardItemContext } from '../Context/cardContext';
+import useWindowSize from '../../../../hooks/useWindowSize';
+import CloseButton from '../../../Buttons/CloseButton';
+import { accedo } from '../data/data.json';
+import { FadeInAnimation } from '../animations';
+import textColor from '../../../../styles/GlobalStyles';
 
 const StyledHr = styled.hr`
   width: 65px;
@@ -13,10 +13,10 @@ const StyledHr = styled.hr`
 `;
 
 const StyledLi = styled.li`
-  white-space: ${props => props.whiteSpace};
+  white-space: ${(props) => props.whiteSpace};
 `;
 
-export const Accedo = props => {
+const Accedo = () => {
   const mediaWidthMobile = 637;
   const { width } = useWindowSize();
 
@@ -27,8 +27,8 @@ export const Accedo = props => {
     MiddleContent,
     MiddleTitle,
     MiddleDescription,
-    Link,
-    isExpanded
+    isExpanded,
+    Button,
   } = useContext(CardItemContext);
 
   return (
@@ -39,7 +39,8 @@ export const Accedo = props => {
             <TopTitle>Previously</TopTitle>
             <StyledHr />
             <TopDescription lineHeight="15px">
-              S. Engineer Intern <br />
+              S. Engineer Intern
+              <br />
               Accedo.tv
             </TopDescription>
           </FadeInAnimation>
@@ -50,7 +51,8 @@ export const Accedo = props => {
                 <TopTitle>Previously</TopTitle>
                 <StyledHr />
                 <TopDescription lineHeight="15px">
-                  S. Engineer Intern <br />
+                  S. Engineer Intern
+                  <br />
                   Accedo.tv
                 </TopDescription>
               </FadeInAnimation>
@@ -66,46 +68,43 @@ export const Accedo = props => {
         <>
           <CloseButton color="true" />
           {Object.values(accedo[0].middleCardContent).map(
-            (item, index, arr) => {
-              return (
-                <FadeInAnimation key={item.title} duration="1.1s">
-                  <MiddleContent color="true">
-                    <MiddleTitle>{item.title}</MiddleTitle>
-                    {arr.length - 1 === index && (
-                      <Link
-                        onClick={() =>
-                          window.open(
-                            `https://${accedo[0].middleCardContent.bottomSection.link}`
-                          )
-                        }
-                      >
-                        {item.link}
-                      </Link>
-                    )}
-                    <MiddleDescription width="360px">
-                      {arr.length - 2 === index ? (
-                        <>
-                          {accedo[0].middleCardContent.middleSection.description.map(
-                            (item, index, arr) => {
-                              return (
-                                <StyledLi whiteSpace="nowrap" key={item}>
-                                  {item}
-                                </StyledLi>
-                              );
-                            }
-                          )}
-                        </>
-                      ) : (
-                        <StyledLi>{item.description}</StyledLi>
+            (item, index, arr) => (
+              <FadeInAnimation key={item.title} duration="1.1s">
+                <MiddleContent color="true">
+                  <MiddleTitle>{item.title}</MiddleTitle>
+                  {arr.length - 1 === index && (
+                    <Button
+                      type="button"
+                      onClick={() => window.open(
+                        `https://${accedo[0].middleCardContent.bottomSection.link}`,
                       )}
-                    </MiddleDescription>
-                  </MiddleContent>
-                </FadeInAnimation>
-              );
-            }
+                    >
+                      {item.link}
+                    </Button>
+                  )}
+                  <MiddleDescription width="360px">
+                    {arr.length - 2 === index ? (
+                      <>
+                        {accedo[0].middleCardContent.middleSection.description.map(
+                          (value) => (
+                            <StyledLi whiteSpace="nowrap" key={value}>
+                              {value}
+                            </StyledLi>
+                          ),
+                        )}
+                      </>
+                    ) : (
+                      <StyledLi>{item.description}</StyledLi>
+                    )}
+                  </MiddleDescription>
+                </MiddleContent>
+              </FadeInAnimation>
+            ),
           )}
         </>
       )}
     </>
   );
 };
+
+export default Accedo;

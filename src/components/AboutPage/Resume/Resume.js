@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import Modal from "../Modal/Modal";
-import { useWindowSize } from "../../../hooks/useWindowSize";
-import OpenModalButton from "../Modal/OpenModalButton";
-import styled from "styled-components";
-import resumeImage from "../../../assets/images/resumeImage.webp";
-import "./styles/resume.css";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import Modal from '../Modal/Modal';
+import useWindowSize from '../../../hooks/useWindowSize';
+import OpenModalButton from '../Modal/OpenModalButton';
+import resumeImage from '../../../assets/images/resumeImage.webp';
+import './styles/resume.css';
 
 const StyledContainer = styled.div`
   cursor: default;
@@ -48,7 +49,8 @@ const StyledModalContent = styled.div`
   }
 `;
 
-const Resume = props => {
+const Resume = (props) => {
+  const { children } = props;
   const [isOpen, setOpen] = useState(false);
   const mediaWidthMobile = 637;
 
@@ -64,11 +66,9 @@ const Resume = props => {
         <>
           {width < mediaWidthMobile ? (
             <OpenModalButton
-              clickHandler={() =>
-                window.open(
-                  `https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/CV_Peter_Hochman.pdf`
-                )
-              }
+              clickHandler={() => window.open(
+                'https://kaernvirke.s3.eu-north-1.amazonaws.com/resume/CV_Peter_Hochman.pdf',
+              )}
             >
               <div>View my Resume</div>
             </OpenModalButton>
@@ -78,14 +78,19 @@ const Resume = props => {
             </OpenModalButton>
           )}
         </>
-        {props.children}
+        {children}
       </StyledResumeWrapper>
       <Modal isOpen={isOpen} handleClose={() => handleOpenModal(false)}>
         <StyledModalContent>
-          <StyledImage src={resumeImage} alt="Peter Hochman"></StyledImage>
+          <StyledImage src={resumeImage} alt="Peter Hochman" />
         </StyledModalContent>
       </Modal>
     </StyledContainer>
   );
 };
+
+Resume.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 export default Resume;

@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { Dropdown } from "./Dropdown";
-import styled from "styled-components";
-import { fadeInAnimation } from "../../animations/animations";
-import "./styles/header.css";
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import Dropdown from './Dropdown';
+import { fadeInAnimation } from '../../animations/animations';
+import './styles/header.css';
+
 const FadeIn = styled.div`
   animation: 0.3s ${fadeInAnimation};
 `;
@@ -16,8 +17,8 @@ const StyledHeader = styled.header`
   top: 0;
   right: 0;
   height: 100px;
-  opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
-  z-index: ${({ open }) => (open ? "3" : "2")};
+  opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
+  z-index: ${({ open }) => (open ? '3' : '2')};
   margin: auto;
   width: 100%;
   font-weight: 400;
@@ -42,7 +43,7 @@ const StyledTitleWrapper = styled.a`
 `;
 
 const StyledTitle = styled.h1`
-  font-size: 20px;
+  font-size: 1.2em;
   outline: 0;
   @media (max-width: 450px) {
     line-height: 23px;
@@ -54,12 +55,12 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const [isVisible, setVisible] = useState(false);
   const clickHandler = () => {
-    setOpen(value => !value);
+    setOpen((value) => !value);
   };
 
   useEffect(() => {
     setTimeout(() => {
-      setVisible(value => !value);
+      setVisible((value) => !value);
     }, 0);
   }, []);
   return (
@@ -76,7 +77,7 @@ const Header = () => {
           setOpen={setOpen}
           isVisible={isVisible}
           clickHandler={clickHandler}
-        ></Dropdown>
+        />
       </StyledHeader>
     </FadeIn>
   );

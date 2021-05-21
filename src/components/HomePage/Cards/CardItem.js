@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useHover } from "../../../hooks/useHover";
-import { CardItemContext } from "./Context/cardContext";
-import { useWindowSize } from "../../../hooks/useWindowSize";
-import PropTypes from "prop-types";
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import useHover from '../../../hooks/useHover';
 import {
+  CardItemContext,
   StyledTopContainer,
   StyledTopTitle,
   StyledTopDescription,
@@ -13,49 +12,53 @@ import {
   StyledMiddleDescription,
   StyledBottomTitle,
   StyledBottomDescription,
-  StyledLink
-} from "./Context/cardContext";
-import { StartAnimation } from "../../../animations/animations";
-import "./styles/cards.css";
+  StyledButton,
+} from './Context/cardContext';
+import useWindowSize from '../../../hooks/useWindowSize';
 
-const CardItem = props => {
-  const mediaWidthMobile = 637;
+import { StartAnimation } from '../../../animations/animations';
+import './styles/cards.css';
+
+const CardItem = ({
+  children, wait, startAnimation, dataDepth, dataTitle,
+}) => {
+  const mediaWidthTablet = 768;
   const [refCard, cardHovered] = useHover();
   const { width } = useWindowSize();
   const [isVisible, setVisible] = useState(false);
   const [isExpanded, setExpand] = useState(false);
 
-  const expandHandler = () => setExpand(value => !value);
+  const expandHandler = () => setExpand((value) => !value);
 
   useEffect(() => {
     setTimeout(() => {
-      setVisible(value => !value);
-    }, props.wait);
-  }, [props.wait]);
+      setVisible((value) => !value);
+    }, wait);
+  }, [wait]);
 
   const delayCardText = () => {
-    if (width > mediaWidthMobile) {
+    if (width > mediaWidthTablet) {
       if (cardHovered || isExpanded) {
-        return props.children;
+        return children;
       }
     } else {
-      return props.children;
+      return children;
     }
+    return null;
   };
-
   return (
     <div
       className={
-        isExpanded ? "items__layer layer active" : "items__layer layer"
+        isExpanded ? 'items__layer layer active' : 'items__layer layer'
       }
-      data-depth={props.dataDepth}
+      data-depth={dataDepth}
       ref={refCard}
     >
       {isVisible && (
         <StartAnimation
-          startAnimation={props.startAnimation}
-          className={isExpanded ? "items__item active" : "items__item"}
-          data-title={props.dataTitle}
+          startAnimation={startAnimation}
+          className={isExpanded ? 'items__item active' : 'items__item'}
+          data-title={dataTitle}
           onClick={expandHandler}
         >
           <CardItemContext.Provider
@@ -69,8 +72,8 @@ const CardItem = props => {
               MiddleDescription: StyledMiddleDescription,
               TopDescription: StyledTopDescription,
               BottomDescription: StyledBottomDescription,
-              Link: StyledLink,
-              isExpanded
+              Button: StyledButton,
+              isExpanded,
             }}
           >
             {delayCardText()}
@@ -82,9 +85,11 @@ const CardItem = props => {
 };
 
 CardItem.propTypes = {
-  dataDepth: PropTypes.string,
-  dataTitle: PropTypes.string,
-  startAnimation: PropTypes.object
+  dataDepth: PropTypes.string.isRequired,
+  dataTitle: PropTypes.string.isRequired,
+  startAnimation: PropTypes.shape(PropTypes.obj).isRequired,
+  wait: PropTypes.number.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default CardItem;

@@ -1,6 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
-import styled from "styled-components";
+import React from 'react';
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
 const StyledOpenModalButton = styled(motion.button)`
   display: block;
@@ -17,16 +17,14 @@ const StyledOpenModalButton = styled(motion.button)`
   text-transform: uppercase;
   letter-spacing: 2px;
 `;
-const animatedOpenButton = ({ children, clickHandler }) => {
-  return (
-    <StyledOpenModalButton
-      onClick={clickHandler}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-    >
-      {children}
-    </StyledOpenModalButton>
-  );
-};
+const animatedOpenButton = ({ children, clickHandler }) => (
+  <StyledOpenModalButton
+    onClick={clickHandler}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+  >
+    {children}
+  </StyledOpenModalButton>
+);
 
 export default animatedOpenButton;

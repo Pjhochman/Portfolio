@@ -1,9 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { useClickOutside } from "../../hooks/useClickOutside";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import useClickOutside from '../../hooks/useClickOutside';
 
 const StyledBurger = styled.button`
-  position: ${({ open }) => (open ? "fixed" : "absolute")};
+  position: ${({ open }) => (open ? 'fixed' : 'absolute')};
   top: 2.4rem;
   right: 8vw;
   display: flex;
@@ -24,32 +25,30 @@ const StyledBurger = styled.button`
   div {
     width: 1.56rem;
     height: 0.14rem;
-    background: ${({ open }) => (open ? "#EFFFFA" : "#221e41")};
+    background: ${({ open }) => (open ? '#EFFFFA' : '#221e41')};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
 
     :first-child {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
     }
 
     :nth-child(2) {
-      opacity: ${({ open }) => (open ? "0" : "1")};
-      transform: ${({ open }) =>
-        open ? "translateX(-20px)" : "translateX(0)"};
+      opacity: ${({ open }) => (open ? '0' : '1')};
+      transform: ${({ open }) => (open ? 'translateX(-20px)' : 'translateX(0)')};
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
 `;
 
-const Burger = props => {
-  const { open, clickHandler } = props;
+const Burger = ({ open, setOpen, clickHandler }) => {
   const triggerHandler = () => {
-    props.setOpen(open && !open);
+    setOpen(open && !open);
   };
 
   const clickRef = useClickOutside(triggerHandler);
@@ -60,11 +59,17 @@ const Burger = props => {
       open={open}
       onClick={clickHandler}
     >
-      <div></div>
-      <div></div>
-      <div></div>
+      <div />
+      <div />
+      <div />
     </StyledBurger>
   );
+};
+
+Burger.propTypes = {
+  open: PropTypes.bool.isRequired,
+  clickHandler: PropTypes.func.isRequired,
+  setOpen: PropTypes.func.isRequired,
 };
 
 export default Burger;

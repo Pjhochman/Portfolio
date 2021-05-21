@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import "./styles/footer.css";
+import React from 'react';
+import styled from 'styled-components';
+import './styles/footer.css';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -26,16 +26,14 @@ const StyledNameWrapper = styled.div`
   height: 50px;
 `;
 
-const Footer = () => {
-  return (
-    <footer>
-      <StyledContainer>
-        <StyledNameWrapper className="contact1">
-          <p id="by">&#xa9;&nbsp;2021 Peter Hochman</p>
-        </StyledNameWrapper>
-      </StyledContainer>
-    </footer>
-  );
-};
+const Footer = () => (
+  <footer>
+    <StyledContainer>
+      <StyledNameWrapper className="contact1">
+        <p id="by">&#xa9;&nbsp;2021 Peter Hochman</p>
+      </StyledNameWrapper>
+    </StyledContainer>
+  </footer>
+);
 
 export default Footer;

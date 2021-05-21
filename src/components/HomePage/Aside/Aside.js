@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { useWindowSize } from "../../../hooks/useWindowSize";
-import { FadeInLeft, FadeInRight, FadeIn } from "./animations";
-import { technologies } from "./data";
-import "./styles/aside.css";
+import React, { useState, useEffect } from 'react';
+import useWindowSize from '../../../hooks/useWindowSize';
+import { FadeInLeft, FadeInRight, FadeIn } from './animations';
+import { technologies } from './data.json';
+import './styles/aside.css';
 
 const Aside = () => {
   const mediaWidthDesktop = 1100;
   const [display, setDisplay] = useState(false);
   const [isVisible, setVisible] = useState(false);
   const { width } = useWindowSize();
-  const toggleDisplay = () => setDisplay(value => !value);
+  const toggleDisplay = () => setDisplay((value) => !value);
 
   useEffect(() => {
     setTimeout(() => {
-      setVisible(value => !value);
+      setVisible((value) => !value);
     }, 1000);
   }, []);
 
@@ -30,37 +30,42 @@ const Aside = () => {
           </FadeInLeft>
         )}
       </div>
-      <div id="filler"></div>
+      <div id="filler" />
       <div id="coderContainer">
         {isVisible && (
+
           <FadeInRight>
-            <h2 className="coder-title title" onClick={toggleDisplay}>
+            <h2
+              aria-hidden="true"
+              type="button"
+              className="coder-title title"
+              onClick={toggleDisplay}
+            >
               coder
             </h2>
             <p className="description">
               {width > mediaWidthDesktop
-                ? "Front-End Developer who focuses on writing clean, elegant and efficient code."
-                : "Focusing on writing clean, elegant and efficient code."}
+                ? 'Front-End Developer who focuses on writing clean, elegant and efficient code.'
+                : 'Focusing on writing clean, elegant and efficient code.'}
             </p>
 
             {display && (
               <FadeIn>
                 <div>
                   <div className="content">
-                    <p className="content__container__text">I'm skilled in</p>
-
+                    <p className="content__container__text">
+                      I&#39;m skilled in
+                    </p>
                     <div className="content__container">
                       <ul className="content__container__list">
-                        {technologies.map((item, index) => {
-                          return (
-                            <li
-                              className="content__container__list__item"
-                              key={index}
-                            >
-                              {item}
-                            </li>
-                          );
-                        })}
+                        {technologies.map((item) => (
+                          <li
+                            className="content__container__list__item"
+                            key={item}
+                          >
+                            {item}
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>

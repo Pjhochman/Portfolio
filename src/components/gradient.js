@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const StyledGradient = styled.div`
+const StyledGradient = styled.div`
   width: 100%;
   position: absolute;
   height: ${({ height }) => height};
@@ -31,3 +31,5 @@ export const StyledGradient = styled.div`
     }
   } 
 `;
+
+export default StyledGradient;

@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import "./styles/nopagefound.css";
-import { textColor } from "../../styles/GlobalStyles";
+import React from 'react';
+import styled from 'styled-components';
+import './styles/nopagefound.css';
+import textColor from '../../styles/GlobalStyles';
 
 const StyledWrapper = styled.div`
   user-select: none;
@@ -45,17 +45,15 @@ const StyledLink = styled.a`
   }
 `;
 
-const NoPageFound = () => {
-  return (
-    <StyledWrapper>
-      <StyledTitle className="text">404</StyledTitle>
-      <StyledDescription fontSize="37px"> Page not found</StyledDescription>
-      <StyledDescription fontSize="20px">
-        Sorry, the page you're looking for doesn't exist.
-      </StyledDescription>
-      <StyledLink href="/">return home</StyledLink>
-    </StyledWrapper>
-  );
-};
+const NoPageFound = () => (
+  <StyledWrapper>
+    <StyledTitle className="text">404</StyledTitle>
+    <StyledDescription fontSize="37px"> Page not found</StyledDescription>
+    <StyledDescription fontSize="20px">
+      Sorry, the page you&#39;re looking for doesn&#39;t exist.
+    </StyledDescription>
+    <StyledLink href="/">return home</StyledLink>
+  </StyledWrapper>
+);
 
 export default NoPageFound;
