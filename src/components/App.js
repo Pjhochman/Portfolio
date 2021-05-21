@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useRoutes, useRedirect, A } from "hookrouter";
+import { useRoutes, A } from "hookrouter";
 import routes from "../routes";
 import Header from "./Header/Header";
 import HomePage from "../components/HomePage/HomePage";
