@@ -4,7 +4,7 @@ import AboutPage from "./components/AboutPage/AboutPage";
 
 const routes = {
   "/": () => <HomePage />,
-  "/about/": () => <AboutPage />
+  "/about": () => <AboutPage />
 };
 
 export default routes;

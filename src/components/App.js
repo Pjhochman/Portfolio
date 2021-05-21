@@ -10,8 +10,6 @@ import "../styles/css/app.css";
 
 const App = () => {
   const routeResult = useRoutes(routes);
-  useRedirect("/about", "/about/");
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -21,7 +19,7 @@ const App = () => {
       {(routeResult && (
         <Header>
           <A href="/"></A>
-          <A href="/about/"></A>
+          <A href="/about"></A>
         </Header>
       )) || <NoPageFound />}
 
