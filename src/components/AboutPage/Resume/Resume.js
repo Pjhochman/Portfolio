@@ -3,7 +3,7 @@ import Modal from "../Modal/Modal";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import OpenModalButton from "../Modal/OpenModalButton";
 import styled from "styled-components";
-import resumeImage from "../../../assets/images/resumeImage.png";
+import resumeImage from "../../../assets/images/resumeImage.webp";
 import "./styles/resume.css";
 
 const StyledContainer = styled.div`
