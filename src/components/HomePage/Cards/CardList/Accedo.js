@@ -66,7 +66,7 @@ const Accedo = () => {
       </TopContent>
       {isExpanded && (
         <>
-          <CloseButton color="true" />
+          <CloseButton color="#221e41" />
           {Object.values(accedo[0].middleCardContent).map(
             (item, index, arr) => (
               <FadeInAnimation key={item.title} duration="1.1s">

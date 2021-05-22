@@ -36,7 +36,7 @@ const HyperIsland = () => {
             <BottomTitle>Stockholm&nbsp;|</BottomTitle>
             <BottomDescription>&nbsp;2019–2021</BottomDescription>
           </BottomContent>
-          <CloseButton color="true" />
+          <CloseButton color="#221e41" />
           {Object.values(hyperIsland[0].middleCardContent).map(
             (item, index, arr) => (
               <FadeInAnimation key={item.title} duration="1.1s">

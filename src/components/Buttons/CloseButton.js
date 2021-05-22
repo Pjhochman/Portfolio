@@ -19,7 +19,7 @@ const CloseButton = ({ color }) => (
       x2="1"
       y2="1"
       fill="none"
-      stroke={color ? '#221e41' : 'white'}
+      stroke={color}
       strokeLinecap="round"
       strokeMiterlimit="10"
       strokeWidth="2"
@@ -30,7 +30,7 @@ const CloseButton = ({ color }) => (
       x2="19.39"
       y2="1"
       fill="none"
-      stroke={color ? '#221e41' : 'white'}
+      stroke={color}
       strokeLinecap="round"
       strokeMiterlimit="10"
       strokeWidth="2"
@@ -39,7 +39,11 @@ const CloseButton = ({ color }) => (
 );
 
 CloseButton.propTypes = {
-  color: PropTypes.bool.isRequired,
+  color: PropTypes.string,
+};
+
+CloseButton.defaultProps = {
+  color: PropTypes.func,
 };
 
 export default CloseButton;

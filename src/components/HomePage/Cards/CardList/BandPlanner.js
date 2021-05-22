@@ -57,7 +57,7 @@ const BandPlanner = () => {
       </TopContent>
       {isExpanded && (
         <>
-          <CloseButton />
+          <CloseButton color="#e9f0fb" />
           {Object.values(bandPlanner[0].middleCardContent).map(
             (item, index, arr) => (
               <FadeInAnimation key={item.title} duration="1.1s">

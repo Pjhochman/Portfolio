@@ -30,7 +30,7 @@ const Project11 = () => {
             <BottomTitle>Desktop&nbsp;|</BottomTitle>
             <BottomDescription>&nbsp;VR experience</BottomDescription>
           </BottomContent>
-          <CloseButton />
+          <CloseButton color="#e9f0fb" />
           {Object.values(project11[0].middleCardContent).map(
             (item, index, arr) => (
               <FadeInAnimation key={item.title} duration="1.1s">
