@@ -16,7 +16,7 @@ export const StyledTopContainer = styled.div`
   align-self: ${(props) => props.alignSelf};
   text-align: ${(props) => props.textAlign};
   @media (max-width: 637px) {
-    font-size: 12px;
+    font-size: 10px;
   }
 `;
 
@@ -55,7 +55,7 @@ export const StyledMiddleTitle = styled.h3`
   font-weight: bold;
   text-transform: uppercase;
   @media (max-width: 637px) {
-    font-size: 14px;
+    font-size: 12px;
   }
 `;
 
@@ -68,7 +68,7 @@ export const StyledMiddleDescription = styled.ul`
   margin-bottom: ${(props) => props.marginBottom && '50px'};
   @media (max-width: 637px) {
     width: 270px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 18px;
   }
 `;
@@ -93,7 +93,7 @@ export const StyledBottomTitle = styled.div`
   font-size: 9px;
   font-weight: 300;
     @media (max-width: 637px) {
-  font-size: 11px;
+  font-size: 10px;
   }
 `;
 
@@ -103,7 +103,7 @@ export const StyledBottomDescription = styled.div`
   font-size: 9px;
   font-weight: 300;
     @media (max-width: 637px) {
-  font-size: 12px;
+  font-size: 10px;
   }
 `;
 
@@ -121,7 +121,7 @@ export const StyledButton = styled.button`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @media (max-width: 637px) {
-  font-size: 14px;
+  font-size: 12px;
   }
 `;
 
