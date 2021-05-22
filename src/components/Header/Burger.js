@@ -3,33 +3,47 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import useClickOutside from '../../hooks/useClickOutside';
 
-const StyledBurger = styled.button`
+const BurgerWrapper = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: ${({ open }) => (open ? 'fixed' : 'absolute')};
-  top: 2.4rem;
-  right: 8vw;
+  top: 20px;
+  right: 6.5vw;
+  width: 60px;
+  height: 60px;
+  @media (max-width: 637px) {
+  right: 10px;
+  }
+`;
+
+const StyledBurger = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
   z-index: 10;
-
   &:focus {
     outline: none;
   }
-
+  @media (max-width: 637px) {
+    width: 1.5rem;
+  height: 1.5rem;
+  }
   div {
-    width: 1.56rem;
-    height: 0.14rem;
+    width: 1.8rem;
+    height: 0.25rem;
     background: ${({ open }) => (open ? '#EFFFFA' : '#221e41')};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
-    transform-origin: 1px;
+    transform-origin: 0px;
 
     :first-child {
       transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
@@ -43,6 +57,11 @@ const StyledBurger = styled.button`
     :nth-child(3) {
       transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
+    @media (max-width: 637px) {
+    width: 1.5rem;
+    height: 0.1rem;
+    transform-origin: 0.4px;
+  }
   }
 `;
 
@@ -50,19 +69,18 @@ const Burger = ({ open, setOpen, clickHandler }) => {
   const triggerHandler = () => {
     setOpen(open && !open);
   };
-
   const clickRef = useClickOutside(triggerHandler);
   return (
-    <StyledBurger
-      aria-label="dropdown"
-      ref={clickRef}
-      open={open}
-      onClick={clickHandler}
-    >
-      <div />
-      <div />
-      <div />
-    </StyledBurger>
+    <BurgerWrapper onClick={clickHandler} ref={clickRef}>
+      <StyledBurger
+        aria-label="dropdown"
+        open={open}
+      >
+        <div />
+        <div />
+        <div />
+      </StyledBurger>
+    </BurgerWrapper>
   );
 };
 
