@@ -197,6 +197,7 @@ li {
       height: 100%;
     }  
     .active {
+      box-sizing: border-box;
       z-index: 10;
       left: 0 !important;
       width: 100vw !important;
@@ -205,6 +206,8 @@ li {
       transform: none !important;
     }
     &__layer:nth-child(1) &__item {
+      padding-bottom: 60px;
+      box-sizing: border-box;
       left: 50%;
       top: 50%;
       transform: translate(-90%, -60%);
@@ -212,6 +215,8 @@ li {
       height: 180px;
     }
     &__layer:nth-child(2) &__item {
+      padding-bottom: 60px;
+      box-sizing: border-box;
       display: flex;
       left: 50%;
       top: 50%;
@@ -220,6 +225,8 @@ li {
       height: 90px;
     }
     &__layer:nth-child(3) &__item {
+      padding-bottom: 60px;
+      box-sizing: border-box;
       left: 50%;
       top: 50%;
       transform: translate(-70%, 0%);
@@ -227,6 +234,8 @@ li {
       height: 180px;
     }
     &__layer:nth-child(4) &__item {
+      padding-bottom: 60px;
+      box-sizing: border-box;
       left: 50%;
       top: 50%;
       transform: translate(0%, -58%);
@@ -234,6 +243,8 @@ li {
       height: 280px;
     }
     &__layer:nth-child(5) &__item {
+      padding-bottom: 60px;
+      box-sizing: border-box;
       left: 50% !important;
       top: 50% !important;
       transform: translate(-50%, -50%) !important;

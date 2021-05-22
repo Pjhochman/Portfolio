@@ -77,7 +77,7 @@ export const StyledMiddleDescription = styled.ul`
 
 export const StyledBottomContainer = styled.div`
   display: flex;
-  align-self: flex-end;
+  align-self: center;
   box-sizing: border-box;
   pointer-events: none;
   user-select: none;
