@@ -8,6 +8,8 @@ import NoPageFound from './NoPageFound/NoPageFound';
 import StyledGradient from './gradient';
 import '../styles/css/app.css';
 
+const path = window.location.pathname;
+
 const App = () => {
   const routeResult = useRoutes(routes);
   useEffect(() => {
@@ -16,20 +18,15 @@ const App = () => {
 
   return (
     <>
+      <StyledGradient width={path === '/' && '100vw'} />
       {(routeResult && (
         <Header>
           <A href="/" />
           <A href="/about" />
         </Header>
       )) || <NoPageFound />}
-
-      <StyledGradient height="100vh">
-        <HomePage />
-      </StyledGradient>
-
-      <StyledGradient height="auto">
-        <AboutPage />
-      </StyledGradient>
+      <HomePage />
+      <AboutPage />
     </>
   );
 };

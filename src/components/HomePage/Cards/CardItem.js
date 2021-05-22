@@ -31,9 +31,13 @@ const CardItem = ({
   const expandHandler = () => setExpand((value) => !value);
 
   useEffect(() => {
-    setTimeout(() => {
+    if (width < mediaWidthTablet) {
       setVisible((value) => !value);
-    }, wait);
+    } else {
+      setTimeout(() => {
+        setVisible((value) => !value);
+      }, wait);
+    }
   }, [wait]);
 
   const delayCardText = () => {
@@ -56,7 +60,7 @@ const CardItem = ({
     >
       {isVisible && (
         <StartAnimation
-          startAnimation={startAnimation}
+          startAnimation={width > mediaWidthTablet && startAnimation}
           className={isExpanded ? 'items__item active' : 'items__item'}
           data-title={dataTitle}
           onClick={expandHandler}

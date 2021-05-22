@@ -20,6 +20,7 @@ import './styles/cards.css';
 const Cards = () => {
   const mediaWidth = 1110;
   const { width } = useWindowSize();
+
   const scene = document.getElementById('js-scene');
 
   if (width) {
@@ -30,7 +31,7 @@ const Cards = () => {
   }
   return (
     <div className="items">
-      <div className="items__inner" id="js-scene">
+      <div className='items__inner' id="js-scene">
         <CardItem
           dataDepth={data[0].dataDepth}
           dataTitle={data[0].dataTitle}

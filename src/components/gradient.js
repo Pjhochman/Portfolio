@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 const StyledGradient = styled.div`
-  width: 100%;
+  width: ${({ width }) => width};
   position: absolute;
-  height: ${({ height }) => height};
+  height: 100vh;
   top: 0;
-  z-index: -1;
+  z-index: -10;
   transition: all 1s ease-in-out;
    touch-action: manipulation;
     background: linear-gradient(

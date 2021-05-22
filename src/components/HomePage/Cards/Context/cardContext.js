@@ -15,6 +15,9 @@ export const StyledTopContainer = styled.div`
   color: ${(props) => (props.color ? '#221e41' : '#e9f0fb')};
   align-self: ${(props) => props.alignSelf};
   text-align: ${(props) => props.textAlign};
+  @media (max-width: 637px) {
+    font-size: 12px;
+  }
 `;
 
 export const StyledTopTitle = styled.div`
@@ -26,7 +29,7 @@ export const StyledTopTitle = styled.div`
 export const StyledTopDescription = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 200;
+  font-weight: 400;
   margin-top: ${(props) => props.marginTop};
   line-height: ${(props) => props.lineHeight};
 `;
@@ -34,7 +37,7 @@ export const StyledTopDescription = styled.div`
 // Middle Containers
 
 export const StyledMiddleContainer = styled.div`
-  width: 75%;
+  width: 100%;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -51,6 +54,9 @@ export const StyledMiddleTitle = styled.h3`
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
+  @media (max-width: 637px) {
+    font-size: 14px;
+  }
 `;
 
 export const StyledMiddleDescription = styled.ul`
@@ -62,6 +68,8 @@ export const StyledMiddleDescription = styled.ul`
   margin-bottom: ${(props) => props.marginBottom && '50px'};
   @media (max-width: 637px) {
     width: 270px;
+    font-size: 14px;
+    line-height: 18px;
   }
 `;
 
@@ -84,6 +92,9 @@ export const StyledBottomTitle = styled.div`
   letter-spacing: 2px;
   font-size: 9px;
   font-weight: 300;
+    @media (max-width: 637px) {
+  font-size: 11px;
+  }
 `;
 
 export const StyledBottomDescription = styled.div`
@@ -91,6 +102,9 @@ export const StyledBottomDescription = styled.div`
   letter-spacing: 2px;
   font-size: 9px;
   font-weight: 300;
+    @media (max-width: 637px) {
+  font-size: 12px;
+  }
 `;
 
 // Link
@@ -106,6 +120,9 @@ export const StyledButton = styled.button`
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @media (max-width: 637px) {
+  font-size: 14px;
+  }
 `;
 
 export const CardItemContext = createContext({
