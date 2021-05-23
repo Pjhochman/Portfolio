@@ -23,6 +23,8 @@ const StyledImage = styled.img`
 const LazyImage = ({ src, alt }) => (
   <StyledImageWrapper className="about" id="profileImage">
     <StyledImage
+      width="359px"
+      height="380px"
       src={src}
       alt={alt}
     />
