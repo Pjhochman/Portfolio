@@ -35,6 +35,7 @@ const StyledLink = styled.a`
   letter-spacing: 0.5rem;
   text-decoration: none;
   transition: color 0.3s linear;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: ${({ path }) => (pathName === path ? '#be9063' : '#e9f0fb')};
   @media (max-width: 576px) {
     font-size: 0.8rem;

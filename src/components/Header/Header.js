@@ -48,7 +48,7 @@ const StyledTitle = styled.h1`
   @media (max-width: 450px) {
     line-height: 23px;
     font-size: 4.1vw;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 `;
 
