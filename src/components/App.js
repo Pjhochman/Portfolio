@@ -22,7 +22,7 @@ const App = () => {
       {(routeResult && (
         <Header>
           <A href="/" />
-          <A href="/about" />
+          <A rel="canonical" href="/about" />
         </Header>
       )) || <NoPageFound />}
       <HomePage />
