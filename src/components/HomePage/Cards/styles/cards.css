@@ -252,7 +252,7 @@ li {
     transition: none !important;
     -webkit-transform: none !important;
             transform: none !important;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
   }
   .items__layer:nth-child(1) .items__item {
     -webkit-box-sizing: border-box;

@@ -26,8 +26,9 @@ export const StyledTopTitle = styled.div`
   letter-spacing: 2px;
   font-weight: bold;
   @media (max-width: 637px) {
-  text-transform: none;
-  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
   }
 `;
 
@@ -76,9 +77,9 @@ export const StyledMiddleDescription = styled.ul`
   width: ${(props) => props.width};
   margin-bottom: ${(props) => props.marginBottom && '50px'};
   @media (max-width: 637px) {
-    width: 270px;
-    font-size: 12px;
-    line-height: 18px;
+  width: 260px;
+  font-size: 12px;
+  line-height: 18px;
   }
 `;
 
