@@ -9,7 +9,7 @@ const StyledImageWrapper = styled.div`
   align-items: center;
   left: 0;
   right: 0;
-  width: 359px;
+  width: 380px;
   margin: auto;
   height: 380px;
 `;
