@@ -58,7 +58,7 @@ const Accedo = () => {
               </FadeInAnimation>
             ) : (
               <FadeInAnimation duration="0.1s">
-                <TopDescription>Accedo.tv</TopDescription>
+                <TopDescription>Accedo</TopDescription>
               </FadeInAnimation>
             )}
           </>

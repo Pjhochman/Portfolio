@@ -16,7 +16,8 @@ export const StyledTopContainer = styled.div`
   align-self: ${(props) => props.alignSelf};
   text-align: ${(props) => props.textAlign};
   @media (max-width: 637px) {
-    font-size: 10px;
+    font-size: 13px;
+    opacity: 0.9;
   }
 `;
 
@@ -32,6 +33,10 @@ export const StyledTopDescription = styled.div`
   font-weight: 400;
   margin-top: ${(props) => props.marginTop};
   line-height: ${(props) => props.lineHeight};
+  @media (max-width: 637px) {
+  text-transform: none;
+  font-weight: 200;
+  }
 `;
 
 // Middle Containers
