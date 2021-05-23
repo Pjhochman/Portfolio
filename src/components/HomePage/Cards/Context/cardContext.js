@@ -25,6 +25,10 @@ export const StyledTopTitle = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
+  @media (max-width: 637px) {
+  text-transform: none;
+  font-weight: 500;
+  }
 `;
 
 export const StyledTopDescription = styled.div`
