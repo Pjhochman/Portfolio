@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useRoutes, A } from 'hookrouter';
+import { Helmet } from 'react-helmet';
 import routes from '../routes';
 import Header from './Header/Header';
 import HomePage from './HomePage/HomePage';
@@ -21,8 +22,14 @@ const App = () => {
       <StyledGradient width={path === '/' ? 'true' : null} />
       {(routeResult && (
         <Header>
-          <A href="/" />
-          <A href="/about" />
+          <Helmet>
+            <link rel="canonical" href="https://www.peterhochman.com" />
+            <A href="/" />
+          </Helmet>
+          <Helmet>
+            <link rel="canonical" href="https://www.peterhochman.com/about" />
+            <A href="/about" />
+          </Helmet>
         </Header>
       )) || <NoPageFound />}
       <HomePage />
