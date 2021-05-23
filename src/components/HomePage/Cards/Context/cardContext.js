@@ -76,8 +76,9 @@ export const StyledMiddleDescription = styled.ul`
   font-weight: 300;
   width: ${(props) => props.width};
   margin-bottom: ${(props) => props.marginBottom && '50px'};
+  width: 380px;
   @media (max-width: 637px) {
-  width: 260px;
+  width: 270px;
   font-size: 12px;
   line-height: 18px;
   }
