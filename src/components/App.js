@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <>
-      <StyledGradient width={path === '/' && '100vw'} />
+      <StyledGradient width={path === '/' ? 'true' : null} />
       {(routeResult && (
         <Header>
           <A href="/" />

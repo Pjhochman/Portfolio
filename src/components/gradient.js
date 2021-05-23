@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledGradient = styled.div`
-  width: ${({ width }) => width};
+  width: ${({ width }) => width && '100vw'};
   position: absolute;
   height: 100vh;
   top: 0;

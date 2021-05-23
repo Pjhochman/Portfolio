@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import LazyImage from '../../Images/LazyImage';
 import factsImage from '../../../assets/images/factsImage.webp';
@@ -32,28 +31,20 @@ const StyledFactsWrapper = styled.div`
   margin: auto;
 `;
 
-const Facts = (props) => {
-  const { children } = props;
-  return (
-    <StyledContainer id="factSection">
-      <LazyImage src={factsImage} alt={altImage} />
-      <StyledFactsWrapper className="facts" id="factsList">
-        <h1 id="randomFacts">Random facts</h1>
-        <div>
-          <ul id="list">
-            {factsList.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-        {children}
-      </StyledFactsWrapper>
-    </StyledContainer>
-  );
-};
-
-Facts.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const Facts = () => (
+  <StyledContainer id="factSection">
+    <LazyImage src={factsImage} alt={altImage} />
+    <StyledFactsWrapper className="facts" id="factsList">
+      <h1 id="randomFacts">Random facts</h1>
+      <div>
+        <ul id="list">
+          {factsList.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </StyledFactsWrapper>
+  </StyledContainer>
+);
 
 export default Facts;

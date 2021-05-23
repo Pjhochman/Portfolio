@@ -29,6 +29,7 @@ const StyledBurger = styled.div`
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   &:focus {
     outline: none;
   }

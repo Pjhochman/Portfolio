@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Modal from '../Modal/Modal';
 import useWindowSize from '../../../hooks/useWindowSize';
@@ -19,6 +18,7 @@ const StyledContainer = styled.div`
   width: 100%;
   margin: auto;
   height: 100px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const StyledResumeWrapper = styled.div`
@@ -49,8 +49,7 @@ const StyledModalContent = styled.div`
   }
 `;
 
-const Resume = (props) => {
-  const { children } = props;
+const Resume = () => {
   const [isOpen, setOpen] = useState(false);
   const mediaWidthMobile = 637;
 
@@ -78,7 +77,6 @@ const Resume = (props) => {
             </OpenModalButton>
           )}
         </>
-        {children}
       </StyledResumeWrapper>
       <Modal isOpen={isOpen} handleClose={() => handleOpenModal(false)}>
         <StyledModalContent>
@@ -87,10 +85,6 @@ const Resume = (props) => {
       </Modal>
     </StyledContainer>
   );
-};
-
-Resume.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default Resume;
