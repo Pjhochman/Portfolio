@@ -1,3 +1,4 @@
+/* eslint-disable */ 
 import React, { useEffect } from 'react';
 import {
   BrowserRouter,
@@ -13,9 +14,9 @@ import StyledGradient from './gradient';
 import '../styles/css/app.css';
 
 const App = () => {
-  const Canonical = (props) => (
+  const Canonical = ({ props }) => (
     <Helmet>
-      <link rel="canonical" href={props} />
+      <link rel="canonical" href={props.home || props.about} />
     </Helmet>
   );
 
@@ -29,11 +30,11 @@ const App = () => {
         <Header />
         <Routes>
           <HelmetProvider>
-            <Canonical props="https://www.peterhochman.com" />
+            <Canonical props={{ home: 'https://www.peterhochman.com' }} />
             <Route path="/" element={<HomePage />} />
           </HelmetProvider>
           <HelmetProvider>
-            <Canonical props="https://www.peterhochman.com/about" />
+            <Canonical props={{ about: 'https://www.peterhochman.com/about' }} />
             <Route path="/about" element={<AboutPage />} />
           </HelmetProvider>
         </Routes>

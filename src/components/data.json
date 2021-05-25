@@ -1,0 +1,12 @@
+{
+    "home": {
+        "href": "https://www.peterhochman.com",
+        "path": "/",
+        "element": "HomePage"
+    },
+    "about": {
+        "href": "https://www.peterhochman.com/about",
+        "path": "/about",
+        "element": "AboutPage"
+    }
+}
