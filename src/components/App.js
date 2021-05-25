@@ -13,9 +13,9 @@ import StyledGradient from './gradient';
 import '../styles/css/app.css';
 
 const App = () => {
-  const Canonical = (props) => (
+  const Canonical = () => (
     <Helmet>
-      <link rel="canonical" href={props} />
+      <link rel="canonical" href="https://www.peterhochman.com" />
     </Helmet>
   );
 
@@ -29,11 +29,11 @@ const App = () => {
         <Header />
         <Routes>
           <HelmetProvider>
-            <Canonical props="https://www.peterhochman.com" />
+            <Canonical />
             <Route path="/" element={<HomePage />} />
           </HelmetProvider>
           <HelmetProvider>
-            <Canonical props="https://www.peterhochman.com/about" />
+            <Canonical />
             <Route path="/about" element={<AboutPage />} />
           </HelmetProvider>
         </Routes>
