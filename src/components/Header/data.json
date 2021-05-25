@@ -1,19 +1,22 @@
 {
-  "pageData": {
-    "home": {
-      "href": "https://peterhochman.com",
+  "internalLinks": [
+    {
       "path": "/",
       "title": "home"
     },
-    "about": {
-      "href": "https://peterhochman.com/about",
+    {
       "path": "/about",
       "title": "about"
-    },
-    "linkedin": {
+    }
+  ],
+  "externalLinks": [
+    {
       "href": "https://www.linkedin.com/in/peter-hochman",
       "title": "linkedin"
     },
-    "github": { "href": "https://github.com/Pjhochman", "title": "github" }
-  }
+    {
+      "href": "https://github.com/Pjhochman",
+      "title": "github"
+    }
+  ]
 }

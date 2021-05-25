@@ -1,40 +1,44 @@
 import React, { useEffect } from 'react';
-import { useRoutes, A } from 'hookrouter';
-import { Helmet } from 'react-helmet';
-import routes from '../routes';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Header from './Header/Header';
 import HomePage from './HomePage/HomePage';
 import AboutPage from './AboutPage/AboutPage';
-import NoPageFound from './NoPageFound/NoPageFound';
+// import NoPageFound from './NoPageFound/NoPageFound';
 import StyledGradient from './gradient';
 import '../styles/css/app.css';
 
-const path = window.location.pathname;
-
 const App = () => {
-  const routeResult = useRoutes(routes);
+  const Canonical = (props) => (
+    <Helmet>
+      <link rel="canonical" href={props} />
+    </Helmet>
+  );
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <>
-      <StyledGradient width={path === '/' ? 'true' : null} />
-      {(routeResult && (
-        <Header>
-          <Helmet>
-            <link rel="canonical" href="https://www.peterhochman.com" />
-            <A href="/" />
-          </Helmet>
-          <Helmet>
-            <link rel="canonical" href="https://www.peterhochman.com/about" />
-            <A href="/about" />
-          </Helmet>
-        </Header>
-      )) || <NoPageFound />}
-      <HomePage />
-      <AboutPage />
-    </>
+    <StyledGradient>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <HelmetProvider>
+            <Canonical props="https://www.peterhochman.com" />
+            <Route path="/" element={<HomePage />} />
+          </HelmetProvider>
+          <HelmetProvider>
+            <Canonical props="https://www.peterhochman.com/about" />
+            <Route path="/about" element={<AboutPage />} />
+          </HelmetProvider>
+        </Routes>
+      </BrowserRouter>
+    </StyledGradient>
   );
 };
 

@@ -7,14 +7,10 @@ import FadeIn from './animations';
 
 const AboutPage = () => (
   <FadeIn>
-    {window.location.pathname === '/about' && (
-      <>
-        <About />
-        <Facts />
-        <Resume />
-        <Footer />
-      </>
-    )}
+    <About />
+    <Facts />
+    <Resume />
+    <Footer />
   </FadeIn>
 );
 

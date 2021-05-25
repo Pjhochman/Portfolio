@@ -4,12 +4,8 @@ import Aside from './Aside/Aside';
 
 const HomePage = () => (
   <>
-    {window.location.pathname === '/' && (
-      <>
-        <Cards />
-        <Aside />
-      </>
-    )}
+    <Cards />
+    <Aside />
   </>
 );
 

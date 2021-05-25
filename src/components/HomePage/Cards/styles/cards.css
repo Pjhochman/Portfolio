@@ -22,7 +22,7 @@ li {
 .items {
   cursor: default;
   top: 0;
-  position: absolute;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,9 +1,8 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { pageData } from './data.json';
-
-const pathName = window.location.pathname;
+import { internalLinks, externalLinks } from './data.json';
 
 const StyledContainer = styled.nav`
   z-index: 3;
@@ -25,7 +24,7 @@ const StyledContainer = styled.nav`
   }
 `;
 
-const StyledLink = styled.a`
+const StyledSocialMedia = styled.a`
   cursor: pointer;
   user-select: none;
   font-size: 0.7rem;
@@ -36,7 +35,7 @@ const StyledLink = styled.a`
   text-decoration: none;
   transition: color 0.3s linear;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  color: ${({ path }) => (pathName === path ? '#be9063' : '#e9f0fb')};
+  color: #e9f0fb;
   @media (max-width: 576px) {
     font-size: 0.8rem;
     text-align: center;
@@ -46,17 +45,51 @@ const StyledLink = styled.a`
   }
 `;
 
+const StyledLink = styled(NavLink)`
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 1.5rem 0;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s linear;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: #e9f0fb;
+  @media (max-width: 576px) {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  &:hover {
+    color: #be9063;
+  }
+  &.selected {
+  color: #be9063;  
+  }
+`;
+
 const Links = ({ open }) => (
   <StyledContainer open={open}>
-    {Object.values(pageData).map((value) => (
+    {Object.values(internalLinks).map((value) => (
       <StyledLink
-        aria-label={value.title}
+        activeClassName="selected"
         key={value.title}
-        href={value.href}
-        path={value.path}
+        end
+        to={value.path}
       >
         {value.title}
       </StyledLink>
+    ))}
+    {Object.values(externalLinks).map((value) => (
+      <StyledSocialMedia
+        target="_blank"
+        aria-label={value.title}
+        key={value.title}
+        href={value.href}
+      >
+        {value.title}
+      </StyledSocialMedia>
     ))}
   </StyledContainer>
 );

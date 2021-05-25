@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Dropdown from './Dropdown';
 import { fadeInAnimation } from '../../animations/animations';
@@ -27,7 +28,7 @@ const StyledHeader = styled.header`
   -webkit-transition: all 0.2s ease-in-out;
 `;
 
-const StyledTitleWrapper = styled.a`
+const StyledTitleWrapper = styled.h1`
   display: flex;
   position: relative;
   margin-left: 6vw;
@@ -36,17 +37,12 @@ const StyledTitleWrapper = styled.a`
   user-select: none;
   cursor: default;
   color: #221e41;
+  font-size: 1.2em;
+  outline: 0;
   transition: transform 0.3s ease-in-out;
   @media (max-width: 450px) {
     height: 23px;
-  }
-`;
-
-const StyledTitle = styled.h1`
-  font-size: 1.2em;
-  outline: 0;
-  @media (max-width: 450px) {
-    line-height: 23px;
+       line-height: 23px;
     font-size: 4.1vw;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
@@ -67,12 +63,12 @@ const Header = () => {
   return (
     <FadeIn>
       <StyledHeader open={open} isVisible={isVisible}>
-        <StyledTitleWrapper href="/">
-          <StyledTitle>
+        <Link to="/">
+          <StyledTitleWrapper>
             Peter Hochman&nbsp;
             <span id="profession">Front End Developer</span>
-          </StyledTitle>
-        </StyledTitleWrapper>
+          </StyledTitleWrapper>
+        </Link>
         <Dropdown
           open={open}
           setOpen={setOpen}
