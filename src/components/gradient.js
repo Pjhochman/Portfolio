@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const StyledGradient = styled.div`
   width: 100%;
-  position: absolute;
   top: 0;
   z-index: -10;
    touch-action: manipulation;

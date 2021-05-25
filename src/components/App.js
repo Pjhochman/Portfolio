@@ -9,7 +9,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Header from './Header/Header';
 import HomePage from './HomePage/HomePage';
 import AboutPage from './AboutPage/AboutPage';
-// import NoPageFound from './NoPageFound/NoPageFound';
+import NoPageFound from './NoPageFound/NoPageFound';
 import StyledGradient from './gradient';
 import '../styles/css/app.css';
 
@@ -37,6 +37,7 @@ const App = () => {
             <Canonical props={{ about: 'https://www.peterhochman.com/about' }} />
             <Route path="/about" element={<AboutPage />} />
           </HelmetProvider>
+            <Route path="*" element={<NoPageFound />} />
         </Routes>
       </BrowserRouter>
     </StyledGradient>

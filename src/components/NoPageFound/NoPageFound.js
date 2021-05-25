@@ -4,6 +4,7 @@ import './styles/nopagefound.css';
 import textColor from '../../styles/GlobalStyles';
 
 const StyledWrapper = styled.div`
+  position: relative;
   user-select: none;
   display: flex;
   justify-content: center;
@@ -13,7 +14,7 @@ const StyledWrapper = styled.div`
   height: 100vh;
   text-align: center;
   font-size: 34px;
-  background: ${textColor.primaryWhite};
+  background: transparent;
 `;
 
 const StyledTitle = styled.h1`
