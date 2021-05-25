@@ -87,6 +87,7 @@ const Links = ({ open }) => (
         aria-label={value.title}
         key={value.title}
         href={value.href}
+        rel="noreferrer"
       >
         {value.title}
       </StyledSocialMedia>
