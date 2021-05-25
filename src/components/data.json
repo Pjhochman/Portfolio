@@ -1,12 +1,8 @@
 {
     "home": {
-        "href": "https://www.peterhochman.com",
-        "path": "/",
-        "element": "HomePage"
+        "href": "https://www.peterhochman.com"
     },
     "about": {
-        "href": "https://www.peterhochman.com/about",
-        "path": "/about",
-        "element": "AboutPage"
+        "href": "https://www.peterhochman.com/about"
     }
 }

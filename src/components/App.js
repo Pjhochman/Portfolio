@@ -6,6 +6,7 @@ import {
   Route,
 } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import data from "./data.json"
 import Header from './Header/Header';
 import HomePage from './HomePage/HomePage';
 import AboutPage from './AboutPage/AboutPage';
@@ -30,11 +31,11 @@ const App = () => {
         <Header />
         <Routes>
           <HelmetProvider>
-            <Canonical props={{ home: 'https://www.peterhochman.com' }} />
+            <Canonical props={{ home: data.home.href }} />
             <Route path="/" element={<HomePage />} />
           </HelmetProvider>
           <HelmetProvider>
-            <Canonical props={{ about: 'https://www.peterhochman.com/about' }} />
+            <Canonical props={{ about: data.about.href }} />
             <Route path="/about" element={<AboutPage />} />
           </HelmetProvider>
             <Route path="*" element={<NoPageFound />} />

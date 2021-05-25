@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Dropdown from './Dropdown';
 import { fadeInAnimation } from '../../animations/animations';
@@ -7,6 +7,10 @@ import './styles/header.css';
 
 const FadeIn = styled.div`
   animation: 0.3s ${fadeInAnimation};
+`;
+
+const StyledLink = styled(NavLink)`
+cursor: default;
 `;
 
 const StyledHeader = styled.header`
@@ -35,7 +39,6 @@ const StyledTitleWrapper = styled.h1`
   white-space: nowrap;
   font-weight: 300;
   user-select: none;
-  cursor: default;
   color: #221e41;
   font-size: 1.2em;
   outline: 0;
@@ -63,12 +66,12 @@ const Header = () => {
   return (
     <FadeIn>
       <StyledHeader open={open} isVisible={isVisible}>
-        <Link to="/">
+        <StyledLink to="/">
           <StyledTitleWrapper>
             Peter Hochman&nbsp;
             <span id="profession">Front End Developer</span>
           </StyledTitleWrapper>
-        </Link>
+        </StyledLink>
         <Dropdown
           open={open}
           setOpen={setOpen}
