@@ -17,7 +17,6 @@ export const StyledTopContainer = styled.div`
   text-align: ${(props) => props.textAlign};
   @media (max-width: 637px) {
     font-size: 13px;
-    opacity: 0.9;
   }
 `;
 
