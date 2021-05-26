@@ -31,7 +31,7 @@ img {
   font-weight: bold;
   margin: 0;
   font-size: 80px;
-  color: #221e41;
+  color: #202020;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -51,7 +51,7 @@ img {
 }
 
 #intro {
-  color: #61677c;
+  color: #707070;
   font-weight: 300;
   margin: 0;
   font-size: 26px;
@@ -85,7 +85,7 @@ img {
       -ms-user-select: none;
           user-select: none;
   cursor: default;
-  color: #221e41;
+  color: #202020;
 }
 
 @media (max-width: 1100px) {

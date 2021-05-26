@@ -45,8 +45,8 @@ const StyledTitleWrapper = styled.h1`
   transition: transform 0.3s ease-in-out;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @media (max-width: 450px) {
-  height: 23px;
-  line-height: 23px;
+  height: 26px;
+  line-height: 26px;
   font-size: 4.1vw;
   }
 `;

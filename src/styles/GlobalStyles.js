@@ -1,6 +1,6 @@
 const textColor = {
-  primaryBlack: '#221e41',
-  secondaryBlack: '#040c0e',
+  primaryBlack: '#202020',
+  secondaryBlack: '#202020',
   primaryWhite: '#e9f0fb',
 };
 

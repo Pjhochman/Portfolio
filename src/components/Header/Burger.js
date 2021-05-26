@@ -8,11 +8,12 @@ const BurgerWrapper = styled.button`
   align-items: center;
   justify-content: center;
   position: ${({ open }) => (open ? 'fixed' : 'absolute')};
-  top: 24px;
+  top: 23px;
   right: 6.5vw;
   width: 60px;
   height: 60px;
   @media (max-width: 637px) {
+  top: 22px;
   right: 10px;
   }
 `;

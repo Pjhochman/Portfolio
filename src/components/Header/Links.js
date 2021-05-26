@@ -12,19 +12,19 @@ const StyledContainer = styled.nav`
   background: transparent;
   transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-100%)')};
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.4rem;
   position: absolute;
   box-sizing: border-box;
   top: 0;
   right: 10vw;
   transition: transform 0.3s ease-in-out;
     @media (max-width: 1100px) {
-    background: #040c0e;
+    background: #202020;
     width: 100%;
     right: 0;
   }
   @media (max-width: 637px) {
-    background: #040c0e;
+    background: #202020;
     flex-direction: column;
     padding: 1.6rem;
     width: 100%;
@@ -44,11 +44,12 @@ const StyledSocialMedia = styled.a`
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: #e9f0fb;
   @media (max-width: 637px) {
+    padding: 1.3rem 0;
     font-size: 0.8rem;
     text-align: center;
   }
   &:hover {
-    color: #be9063;
+    color: #ffdf6c;
   }
 `;
 
@@ -65,14 +66,15 @@ const StyledLink = styled(NavLink)`
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: #e9f0fb;
   @media (max-width: 637px) {
+    padding: 1.3rem 0;
     font-size: 0.8rem;
     text-align: center;
   }
   &:hover {
-    color: #be9063;
+    color: #ffdf6c;
   }
   &.selected {
-  color: #be9063;  
+  color: #ffdf6c;  
   }
 `;
 

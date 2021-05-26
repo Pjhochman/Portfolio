@@ -10,7 +10,7 @@ button {
   text-align: center;
   position: relative;
   text-decoration: none;
-  color: #221e41;
+  color: #202020;
   cursor: pointer;
   outline: none;
   font-size: 11px;
@@ -36,8 +36,8 @@ button {
 }
 
 #resumeButton:before {
-  border-bottom: 2px solid #221e41;
-  border-left: 2px solid #221e41;
+  border-bottom: 2px solid #202020;
+  border-left: 2px solid #202020;
   width: 10%;
   height: 33%;
   left: -10px;
@@ -45,8 +45,8 @@ button {
 }
 
 #resumeButton:after {
-  border-top: 2px solid #221e41;
-  border-right: 2px solid #221e41;
+  border-top: 2px solid #202020;
+  border-right: 2px solid #202020;
   width: 10%;
   height: 33%;
   top: -10px;
@@ -78,8 +78,8 @@ button {
       -ms-user-select: none;
           user-select: none;
   letter-spacing: 0.8px;
-  border: 1px solid #221e41;
-  color: #221e41;
+  border: 1px solid #202020;
+  color: #202020;
   padding: 3px;
   right: 10px;
   bottom: 10px;

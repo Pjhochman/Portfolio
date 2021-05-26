@@ -81,7 +81,7 @@ aside {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  color: #221e41;
+  color: #202020;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -135,7 +135,7 @@ aside {
       -ms-user-select: none;
           user-select: none;
   cursor: default;
-  color: #221e41;
+  color: #202020;
 }
 
 @media (max-width: 1100px) {
@@ -296,7 +296,7 @@ aside {
   overflow: visible;
   font-size: 18px;
   line-height: 40px;
-  color: #221e41;
+  color: #202020;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
