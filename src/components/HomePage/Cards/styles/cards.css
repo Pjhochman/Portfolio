@@ -59,6 +59,7 @@ li {
 }
 
 .items__layer .items__item {
+  opacity: 0.94;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,6 +236,7 @@ li {
     top: -50px !important;
   }
   .items__inner {
+    opacity: 1;
     max-width: 100vw;
     left: 0px;
     width: 100%;
