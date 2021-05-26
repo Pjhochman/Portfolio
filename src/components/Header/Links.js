@@ -12,7 +12,7 @@ const StyledContainer = styled.nav`
   background: transparent;
   transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-100%)')};
   text-align: center;
-  padding: 1.4rem;
+  padding: 1.5rem;
   position: absolute;
   box-sizing: border-box;
   top: 0;
@@ -26,7 +26,7 @@ const StyledContainer = styled.nav`
   @media (max-width: 637px) {
     background: #202020;
     flex-direction: column;
-    padding: 1.6rem;
+    padding: 1.5rem;
     width: 100%;
   }
 `;

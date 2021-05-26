@@ -38,9 +38,15 @@ const Accedo = () => {
           <FadeInAnimation duration="0.3s">
             <TopTitle>Previously</TopTitle>
             <StyledHr />
+
             <TopDescription lineHeight="15px">
-              S. Engineer Intern
-              <br />
+              {isExpanded
+                       && (
+                       <>
+                         S. Engineer Intern
+                         <br />
+                       </>
+                       )}
               Accedo.tv
             </TopDescription>
           </FadeInAnimation>

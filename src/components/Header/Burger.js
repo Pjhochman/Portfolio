@@ -8,7 +8,7 @@ const BurgerWrapper = styled.button`
   align-items: center;
   justify-content: center;
   position: ${({ open }) => (open ? 'fixed' : 'absolute')};
-  top: 23px;
+  top: 25px;
   right: 6.5vw;
   width: 60px;
   height: 60px;

@@ -41,7 +41,7 @@ li {
     background: transparent;
   }
   .active {
-    opacity: 0.98;
+    opacity: 0.99;
     z-index: 10;
     top: 0 !important;
     left: 0 !important;
@@ -61,11 +61,11 @@ li {
       content: attr(data-title);
       position: absolute;
       line-height: 20px;
-      font-size: 10px;
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 2px;
       transition: all 0.2s ease;
-      visibility: hidden;
+      opacity: 0;
     }
     &:hover {
       &:after {
@@ -198,6 +198,7 @@ li {
       height: 100%;
     }  
     .active {
+      opacity: 1;
       box-sizing: border-box;
       z-index: 10;
       left: 0 !important;
