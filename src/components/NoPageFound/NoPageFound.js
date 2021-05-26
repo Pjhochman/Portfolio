@@ -39,10 +39,10 @@ const StyledLink = styled.a`
   text-transform: uppercase;
   color: ${textColor.secondaryBlack};
   border-radius: 20px;
-  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  box-shadow: -5px -5px 20px #757c78, 5px 5px 20px #babecc;
   transition: all 0.2s ease-in-out;
   &:hover {
-    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+    box-shadow: -2px -2px 5px #757c78, 2px 2px 5px #babecc;
   }
 `;
 
