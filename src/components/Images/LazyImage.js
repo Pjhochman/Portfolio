@@ -16,7 +16,7 @@ const StyledImageWrapper = styled.div`
 
 const StyledImage = styled.img`
   width: 100%;
-  box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.80);
   transition: filter 0.5s;
 `;
 
