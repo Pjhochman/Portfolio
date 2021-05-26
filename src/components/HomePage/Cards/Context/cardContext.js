@@ -12,7 +12,7 @@ export const StyledTopContainer = styled.div`
   font-size: 9px;
   white-space: nowrap;
   margin: ${(props) => (props.margin ? props.margin : '20px')};
-  color: ${(props) => (props.color ? '#221e41' : '#e9f0fb')};
+  color: ${(props) => (props.color ? '#202020' : '#ffffff')};
   align-self: ${(props) => props.alignSelf};
   text-align: ${(props) => props.textAlign};
   @media (max-width: 637px) {
@@ -39,7 +39,7 @@ export const StyledTopDescription = styled.div`
   line-height: ${(props) => props.lineHeight};
   @media (max-width: 637px) {
   text-transform: none;
-  font-weight: 400;
+  font-weight: 200;
   }
 `;
 
