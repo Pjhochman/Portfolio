@@ -7,19 +7,26 @@ import { internalLinks, externalLinks } from './data.json';
 const StyledContainer = styled.nav`
   z-index: 3;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  background: #040c0e;
+  background: transparent;
   transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-100%)')};
-  width: 100vw;
   text-align: center;
-  padding: 4rem;
-  position: fixed;
+  padding: 1.5rem;
+  position: absolute;
   box-sizing: border-box;
   top: 0;
-  left: 0;
+  right: 10vw;
   transition: transform 0.3s ease-in-out;
+    @media (max-width: 1100px) {
+    background: #040c0e;
+    width: 100%;
+    right: 0;
+  }
   @media (max-width: 637px) {
+    background: #040c0e;
+    flex-direction: column;
+    padding: 1.6rem;
     width: 100%;
   }
 `;
@@ -36,7 +43,7 @@ const StyledSocialMedia = styled.a`
   transition: color 0.3s linear;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: #e9f0fb;
-  @media (max-width: 576px) {
+  @media (max-width: 637px) {
     font-size: 0.8rem;
     text-align: center;
   }
@@ -57,7 +64,7 @@ const StyledLink = styled(NavLink)`
   transition: color 0.3s linear;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: #e9f0fb;
-  @media (max-width: 576px) {
+  @media (max-width: 637px) {
     font-size: 0.8rem;
     text-align: center;
   }

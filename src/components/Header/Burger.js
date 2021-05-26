@@ -8,7 +8,7 @@ const BurgerWrapper = styled.button`
   align-items: center;
   justify-content: center;
   position: ${({ open }) => (open ? 'fixed' : 'absolute')};
-  top: 20px;
+  top: 24px;
   right: 6.5vw;
   width: 60px;
   height: 60px;
@@ -39,12 +39,12 @@ const StyledBurger = styled.div`
   }
   div {
     width: 1.8rem;
-    height: 0.25rem;
+    height: 3px;
     background: ${({ open }) => (open ? '#EFFFFA' : '#221e41')};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
-    transform-origin: 0px;
+    transform-origin: 0.8px;
 
     :first-child {
       transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};

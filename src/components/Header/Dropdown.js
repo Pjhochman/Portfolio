@@ -5,8 +5,8 @@ import Links from './Links';
 
 const Dropdown = ({ open, setOpen, clickHandler }) => (
   <>
-    <Burger open={open} setOpen={setOpen} clickHandler={clickHandler} />
     <Links open={open} />
+    <Burger open={open} setOpen={setOpen} clickHandler={clickHandler} />
   </>
 );
 

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import LazyImage from '../../Images/LazyImage';
 import factsImage from '../../../assets/images/factsImage.webp';
-import altImage from '../../../assets/images/factsImage_small.png';
+import altImage from '../../../assets/images/factsImage_alt.png';
 import { factsList } from './data.json';
 import './styles/facts.css';
 

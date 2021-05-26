@@ -82,6 +82,7 @@ aside {
       -ms-user-select: none;
           user-select: none;
   color: #221e41;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @media (max-width: 1250px) {
