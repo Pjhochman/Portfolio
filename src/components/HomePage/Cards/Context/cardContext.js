@@ -39,7 +39,7 @@ export const StyledTopDescription = styled.div`
   line-height: ${(props) => props.lineHeight};
   @media (max-width: 637px) {
   text-transform: none;
-  font-weight: 300;
+  font-weight: 400;
   }
 `;
 
