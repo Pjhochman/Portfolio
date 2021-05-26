@@ -37,7 +37,7 @@ const StyledSocialMedia = styled.a`
   font-size: 0.7rem;
   text-transform: uppercase;
   padding: 1.5rem 0;
-  font-weight: bold;
+  font-weight: 500;
   letter-spacing: 0.5rem;
   text-decoration: none;
   transition: color 0.3s linear;
@@ -59,7 +59,7 @@ const StyledLink = styled(NavLink)`
   font-size: 0.7rem;
   text-transform: uppercase;
   padding: 1.5rem 0;
-  font-weight: bold;
+  font-weight: 500;
   letter-spacing: 0.5rem;
   text-decoration: none;
   transition: color 0.3s linear;
