@@ -11,9 +11,9 @@ import useWindowSize from '../../../hooks/useWindowSize';
 import {
   fadeInUpAnimation,
   fadeInDownAnimation,
-  fadeInAnimation,
   fadeInLeftAnimation,
   fadeInRightAnimation,
+  fadeInAnimation,
 } from '../../../animations/animations';
 import './styles/cards.css';
 
@@ -36,7 +36,7 @@ const Cards = () => {
           dataDepth={data[0].dataDepth}
           dataTitle={data[0].dataTitle}
           startAnimation={fadeInLeftAnimation}
-          wait={700}
+          wait={600}
         >
           <ColorPalette />
         </CardItem>
@@ -44,7 +44,7 @@ const Cards = () => {
           dataDepth={data[1].dataDepth}
           dataTitle={data[1].dataTitle}
           startAnimation={fadeInRightAnimation}
-          wait={700}
+          wait={600}
         >
           <HyperIsland />
         </CardItem>
@@ -52,7 +52,7 @@ const Cards = () => {
           dataDepth={data[2].dataDepth}
           dataTitle={data[2].dataTitle}
           startAnimation={fadeInUpAnimation}
-          wait={800}
+          wait={700}
         >
           <Project11 />
         </CardItem>
@@ -60,17 +60,16 @@ const Cards = () => {
           dataDepth={data[3].dataDepth}
           dataTitle={data[3].dataTitle}
           startAnimation={fadeInDownAnimation}
-          wait={800}
+          wait={700}
         >
           <BandPlanner />
         </CardItem>
-        <CardItem
+        <CardItem 
           dataDepth={data[4].dataDepth}
           dataTitle={data[4].dataTitle}
           startAnimation={fadeInAnimation}
-          wait={0}
-        >
-          <Accedo />
+          wait={0}>  
+            <Accedo />
         </CardItem>
       </div>
     </div>

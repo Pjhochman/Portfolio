@@ -14,7 +14,7 @@ const Aside = () => {
   useEffect(() => {
     setTimeout(() => {
       setVisible((value) => !value);
-    }, 1700);
+    }, 1500);
   }, []);
 
   return (
