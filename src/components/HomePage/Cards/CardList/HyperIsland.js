@@ -78,11 +78,11 @@ const HyperIsland = () => {
       >
         {width > mediaWidthMobile ? (
           <>
-            <FadeInLeftAnimation duration="0.3s">
+            <FadeInLeftAnimation duration="0.2s">
               <TopTitle>Education</TopTitle>
               <StyledHr />
             </FadeInLeftAnimation>
-            <FadeInLeftAnimation duration="0.5s">
+            <FadeInLeftAnimation duration="0.4s">
               <TopDescription>Hyper Island</TopDescription>
             </FadeInLeftAnimation>
           </>

@@ -31,7 +31,7 @@ const CardItem = ({
   const expandHandler = () => setExpand((value) => !value);
 
   useEffect(() => {
-    if (width < mediaWidthTablet) {
+    if (width > mediaWidthTablet) {
       setVisible((value) => !value);
     } else {
       setTimeout(() => {

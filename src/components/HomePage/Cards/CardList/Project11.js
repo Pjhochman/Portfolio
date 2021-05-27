@@ -72,11 +72,11 @@ const Project11 = () => {
       >
         {width > mediaWidthMobile ? (
           <>
-            <FadeInLeftAnimation duration="0.3s">
+            <FadeInLeftAnimation duration="0.2s">
               <TopTitle>My Own Work</TopTitle>
               <hr />
             </FadeInLeftAnimation>
-            <FadeInLeftAnimation duration="0.5s">
+            <FadeInLeftAnimation duration="0.4s">
               <TopDescription>Project 11</TopDescription>
             </FadeInLeftAnimation>
           </>

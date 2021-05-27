@@ -32,12 +32,12 @@ const BandPlanner = () => {
       <TopContent alignSelf="start">
         {width > mediaWidthMobile ? (
           <>
-            <FadeInRightAnimation duration="0.3s">
+            <FadeInRightAnimation duration="0.2s">
               <TopTitle>My Own Work</TopTitle>
               <hr />
             </FadeInRightAnimation>
 
-            <FadeInRightAnimation duration="0.5s">
+            <FadeInRightAnimation duration="0.4s">
               <TopDescription>Band Planner</TopDescription>
             </FadeInRightAnimation>
           </>

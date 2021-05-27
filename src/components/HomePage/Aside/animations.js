@@ -10,7 +10,7 @@ export const FadeIn = styled.div`
 `;
 
 export const FadeInRight = styled.div`
-  animation: 1s ${fadeInRightAnimation};
+  animation: 0.8s ${fadeInRightAnimation};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +30,7 @@ export const FadeInRight = styled.div`
 `;
 
 export const FadeInLeft = styled.div`
-  animation: 1s ${fadeInLeftAnimation};
+  animation: 0.8s ${fadeInLeftAnimation};
   display: flex;
   flex-direction: column;
   align-items: center;
