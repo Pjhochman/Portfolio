@@ -54,6 +54,7 @@ export const StyledMiddleContainer = styled.div`
   font-weight: 300;
   box-sizing: border-box;
   user-select: none;
+  margin-top: ${(props) => props.margin && props.margin};
   white-space: ${(props) => props.whiteSpace && 'nowrap'};
   color: ${(props) => (props.color ? '#202020' : '#e9f0fb')};
 `;

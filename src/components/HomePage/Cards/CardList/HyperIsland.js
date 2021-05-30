@@ -51,7 +51,7 @@ const HyperIsland = () => {
           {Object.values(hyperIsland[0].middleCardContent).map(
             (item, index, arr) => (
               <FadeInAnimation key={item.title} duration="1.1s">
-                <MiddleContent color="true">
+                <MiddleContent color="true" margin={width < mediaWidthMobile && '80px'}>
                   <MiddleTitle>{item.title}</MiddleTitle>
                   {arr.length - 1 === index && (
                     <Button
@@ -68,7 +68,7 @@ const HyperIsland = () => {
             ),
           )}
           <FadeInAnimation duration="1s">
-            <Cubes imageTitle copyright altImage1={hyperAlt} image1={hyper1} image2={hyper2} image3={hyper4} image4={hyper2} image5={hyper5} image6={hyper1} absolute marginTop={width > mediaWidthMobile ? '60px' : '0'} marginBottom={width > mediaWidthMobile ? '0vh' : '0vh'} />
+            <Cubes imageTitle copyright altImage1={hyperAlt} image1={hyper1} image2={hyper2} image3={hyper4} image4={hyper2} image5={hyper5} image6={hyper1} absolute marginTop={width > mediaWidthMobile ? '60px' : '6vh'} marginBottom={width > mediaWidthMobile ? '0' : '0'} />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#202020" />
             </StyledButton>
