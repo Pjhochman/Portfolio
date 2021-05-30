@@ -26,7 +26,7 @@ const StyledContainer = styled.nav`
   @media (max-width: 637px) {
     background: #202020;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 1.2rem;
     width: 100%;
   }
 `;
