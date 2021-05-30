@@ -44,8 +44,8 @@ const StyledSocialMedia = styled.a`
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: #e9f0fb;
   @media (max-width: 637px) {
-    padding: 1.3rem 0;
-    font-size: 0.8rem;
+    padding: 1.6rem 0;
+    font-size: 0.7rem;
     text-align: center;
   }
   &:hover {
@@ -66,8 +66,8 @@ const StyledLink = styled(NavLink)`
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: #e9f0fb;
   @media (max-width: 637px) {
-    padding: 1.3rem 0;
-    font-size: 0.8rem;
+    padding: 1.6rem 0;
+    font-size: 0.7rem;
     text-align: center;
   }
   &:hover {
