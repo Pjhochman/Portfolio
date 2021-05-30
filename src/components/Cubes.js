@@ -30,8 +30,7 @@ const StyledScene = styled.div`
   @media (max-width: 637px) {
   margin-bottom: ${({ open }) => (open && '55vh')};
   margin-top: ${({ open, marginTop }) => (open && marginTop)};
-  transform: ${({ open }) => open && 'scale(2.6) translate3d(0, 0, 0)'};
-  -webkit-transform: ${({ open }) => open && 'scale(2.6) translate3d(0, 0, 0)'};
+  transform: ${({ open }) => open && 'scale(2.6)'};
   }
     .side {
     opacity: 1;
@@ -41,6 +40,7 @@ const StyledScene = styled.div`
     position: absolute;
     content: ${({ open, imageTitle }) => (open ? !imageTitle ? "'Application Images'" : "'Company Logo'" : null)};
     font-size: 3.7px;
+    -webkit-font-smoothing: antialiased;
     top: -27px;
     text-transform: uppercase;
     font-weight: 500;
