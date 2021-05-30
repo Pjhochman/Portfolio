@@ -11,6 +11,7 @@ import hyper1 from '../../../../assets/images/hyperisland/hyperIsland_black.webp
 import hyper2 from '../../../../assets/images/hyperisland/hyperIsland_green.webp';
 import hyper4 from '../../../../assets/images/hyperisland/hyperIsland_pink.webp';
 import hyper5 from '../../../../assets/images/hyperisland/hyperIsland_purple.webp';
+import hyperAlt from '../../../../assets/images/hyperisland/hyperIsland_black.jpeg';
 
 const StyledHr = styled.hr`
   border: 0.5px solid ${textColor.primaryBlack};
@@ -67,7 +68,7 @@ const HyperIsland = () => {
             ),
           )}
           <FadeInAnimation duration="1s">
-            <Cubes imageTitle copyright image1={hyper1} image2={hyper2} image3={hyper4} image4={hyper2} image5={hyper5} image6={hyper1} absolute marginTop={width > mediaWidthMobile ? '60px' : '13vh'} marginBottom={width > mediaWidthMobile ? '0vh' : '0vh'} />
+            <Cubes imageTitle copyright altImage1={hyperAlt} image1={hyper1} image2={hyper2} image3={hyper4} image4={hyper2} image5={hyper5} image6={hyper1} absolute marginTop={width > mediaWidthMobile ? '60px' : '0'} marginBottom={width > mediaWidthMobile ? '0vh' : '0vh'} />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#202020" />
             </StyledButton>

@@ -12,6 +12,7 @@ import orange from '../../../../assets/images/colorpalette/colorPalette_orange.w
 import purple from '../../../../assets/images/colorpalette/colorPalette_purple.webp';
 import red from '../../../../assets/images/colorpalette/colorPalette_red.webp';
 import violet from '../../../../assets/images/colorpalette/colorPalette_violet.webp';
+import paletteAlt from '../../../../assets/images/colorpalette/colorPalette_purple.png';
 
 const StyledFiller = styled.div`
 height: 10px;
@@ -72,7 +73,7 @@ const ColorPalette = () => {
       {isExpanded && (
         <>
           <FadeInAnimation duration="1s">
-            <Cubes image1={blue} image2={green} image3={orange} image4={purple} image5={red} image6={violet} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
+            <Cubes altImage1={paletteAlt} image1={blue} image2={green} image3={orange} image4={purple} image5={red} image6={violet} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#e9f0fb" />

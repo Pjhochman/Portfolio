@@ -11,6 +11,7 @@ import project2 from '../../../../assets/images/project11/project2.webp';
 import project3 from '../../../../assets/images/project11/project3.webp';
 import project4 from '../../../../assets/images/project11/project4.webp';
 import project5 from '../../../../assets/images/project11/project5.webp';
+import projectAlt from '../../../../assets/images/project11/projectAlt.png';
 
 const StyledWrapper = styled.div`
 position: ${({ isExpanded }) => (isExpanded ? 'relative' : 'absolute')};
@@ -79,7 +80,7 @@ const Project11 = () => {
       {isExpanded && (
       <>
         <FadeInAnimation duration="1s">
-          <Cubes image1={project1} image2={project2} image3={project3} image4={project3} image5={project5} image6={project4} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
+          <Cubes altImage1={projectAlt} image1={project1} image2={project2} image3={project3} image4={project3} image5={project5} image6={project4} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
           <StyledFiller />
           <StyledButton type="button" onClick={() => expandHandler(false)}>
             <CloseIcon color="#e9f0fb" />

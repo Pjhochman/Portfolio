@@ -8,6 +8,7 @@ import { FadeInAnimation } from '../animations';
 import textColor from '../../../../styles/GlobalStyles';
 import Cubes from '../../../Cubes';
 import accedoLogo from '../../../../assets/images/accedo/accedo.webp';
+import altAccedo from '../../../../assets/images/accedo/accedo.png';
 
 const StyledFiller = styled.div`
 height: 10px;
@@ -82,7 +83,7 @@ const Accedo = () => {
       {isExpanded && (
         <>
           <FadeInAnimation duration="1s">
-            <Cubes imageTitle copyright image1={accedoLogo} image2={accedoLogo} image3={accedoLogo} image4={accedoLogo} image5={accedoLogo} image6={accedoLogo} marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom={width > mediaWidthMobile ? '230px' : '55vh'} />
+            <Cubes imageTitle copyright altImage1={altAccedo} image1={accedoLogo} image2={accedoLogo} image3={accedoLogo} image4={accedoLogo} image5={accedoLogo} image6={accedoLogo} marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom={width > mediaWidthMobile ? '230px' : '55vh'} />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#202020" />

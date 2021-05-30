@@ -23,28 +23,25 @@ const StyledScene = styled.div`
   height: 85px;
   width: 85px;
   transition: all 0.2s ease-in-out;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   transform: ${({ open }) => open && 'scale(2.8)'};
   margin-bottom: ${({ open, marginBottom }) => (open && marginBottom)};
   margin-top: ${({ open, marginTop }) => (open && marginTop)};
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  @media (max-width: 637px) {
-  -webkit-font-smoothing: antialiased;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -webkit-perspective: 1000;
-  -moz-osx-font-smoothing: grayscale;
-  will-change: auto;
-  margin-bottom: ${({ open }) => (open && '55vh')};
-  margin-top: ${({ open, marginTop }) => (open && marginTop)};
-  transform: ${({ open }) => open && 'scale(2.6) perspective(1px)'};
-  }
+
+    @media (max-width: 637px) {
+    margin-bottom: ${({ open }) => (open && '55vh')};
+    margin-top: ${({ open, marginTop }) => (open && marginTop)};
+    transform: ${({ open }) => open && 'scale(2.6)'};
+    }
     .side {
     opacity: 1;
     }
+
     &:before {
     transition: all 0.2s ease-in-out;
     position: absolute;
     content: ${({ open, imageTitle }) => (open ? !imageTitle ? "'Application Images'" : "'Company Logo'" : null)};
-    font-size: 3.7px;
+    font-size: 4px;
     top: -27px;
     text-transform: uppercase;
     font-weight: 500;
@@ -71,40 +68,28 @@ const StyledCube = styled.div`
   transform-origin: center center;
 `;
 
-const StyledBack = styled.div`
+const StyledBack = styled.img`
   transform: translateZ(-${cubeValues.transform}px) rotateX(180deg);
-  background-image: url(${({ image1 }) => image1});
-  object-fit: contain;
 `;
 
-const StyledLeft = styled.div`
+const StyledLeft = styled.img`
   transform: translateX(-${cubeValues.transform}px) rotateY(90deg);
-  background-image: url(${({ image2 }) => image2});
-  object-fit: contain;
 `;
 
-const StyledRight = styled.div`
+const StyledRight = styled.img`
   transform: translateX(${cubeValues.transform}px) rotateY(90deg);
-  background-image: url(${({ image3 }) => image3});
-  object-fit: contain;
 `;
 
-const StyledTop = styled.div`
+const StyledTop = styled.img`
   transform: translateY(-${cubeValues.transform}px) rotateX(90deg);
-  background-image: url(${({ image4 }) => image4});
-  object-fit: contain;
 `;
 
-const StyledBottom = styled.div`
+const StyledBottom = styled.img`
   transform: translateY(${cubeValues.transform}px) rotateX(270deg);
-  background-image: url(${({ image5 }) => image5});
-  object-fit: fill;
 `;
 
-const StyledFront = styled.div`
+const StyledFront = styled.img`
   transform: translateZ(${cubeValues.transform}px);
-  background-image: url(${({ image6 }) => image6});
-  object-fit: contain;
 `;
 
 const Cubes = ({
@@ -120,6 +105,7 @@ const Cubes = ({
   image4,
   image5,
   image6,
+  altImage1
 }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -134,12 +120,12 @@ const Cubes = ({
       onClick={() => setOpen((value) => !value)}
     >
       <StyledCube open={open}>
-        <StyledBack image1={image1} className="side" />
-        <StyledLeft image2={image2} className="side" />
-        <StyledRight image3={image3} className="side" />
-        <StyledTop image4={image4} className="side" />
-        <StyledBottom image5={image5} className="side" />
-        <StyledFront image6={image6} className="side" />
+        <StyledBack type="image/webp" src={image1} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledLeft type="image/webp" src={image2} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledRight type="image/webp" src={image3} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledTop type="image/webp" src={image4} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side"/>
+        <StyledBottom type="image/webp" src={image5} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledFront type="image/webp" src={image6} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
       </StyledCube>
     </StyledScene>
   );

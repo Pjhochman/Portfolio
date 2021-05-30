@@ -12,6 +12,7 @@ import homeInfoLight from '../../../../assets/images/bandplanner/homeInfo_light.
 import homeInfoDark from '../../../../assets/images/bandplanner/homeInfo_dark.webp';
 import addPlaylistDark from '../../../../assets/images/bandplanner/addPlaylist_dark.webp';
 import addPlaylistLight from '../../../../assets/images/bandplanner/addPlaylist_light.webp';
+import bandAlt from '../../../../assets/images/bandplanner/bandplanner_login_desktop.png';
 
 const StyledFiller = styled.div`
 height: 10px;
@@ -76,7 +77,7 @@ const BandPlanner = () => {
       {isExpanded && (
         <>
           <FadeInAnimation duration="1s">
-            <Cubes image1={homeDesktop} image2={loginDesktop} image3={homeInfoLight} image4={homeInfoDark} image5={addPlaylistDark} image6={addPlaylistLight} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
+            <Cubes altImage1={bandAlt} image1={homeDesktop} image2={loginDesktop} image3={homeInfoLight} image4={homeInfoDark} image5={addPlaylistDark} image6={addPlaylistLight} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#e9f0fb" />
