@@ -29,6 +29,10 @@ const StyledScene = styled.div`
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @media (max-width: 637px) {
   -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-perspective: 1000;
+  -moz-osx-font-smoothing: grayscale;
+  will-change: auto;
   margin-bottom: ${({ open }) => (open && '55vh')};
   margin-top: ${({ open, marginTop }) => (open && marginTop)};
   transform: ${({ open }) => open && 'scale(2.6) perspective(1px)'};
