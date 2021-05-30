@@ -99,6 +99,7 @@ li {
 }
 
 .items__layer:nth-child(1) .items__item {
+  overflow: hidden;
   top: 120px;
   left: 0px;
   width: 300px;
@@ -113,6 +114,7 @@ li {
 }
 
 .items__layer:nth-child(2) .items__item {
+  overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
@@ -131,10 +133,7 @@ li {
 }
 
 .items__layer:nth-child(3) .items__item {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  overflow: hidden;
   top: 280px;
   left: 30px;
   width: 260px;
@@ -175,6 +174,7 @@ li {
 }
 
 .items__layer:nth-child(4) .items__item {
+  overflow: hidden;
   top: 20px;
   left: 240px;
   width: 240px;
@@ -189,9 +189,7 @@ li {
 }
 
 .items__layer:nth-child(5) .items__item {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  overflow: hidden;
   top: 200px;
   left: 160px;
   width: 160px;
@@ -257,7 +255,7 @@ li {
     transition: none !important;
     -webkit-transform: none !important;
             transform: none !important;
-    padding-bottom: 120px;
+    padding-bottom: 80px;
   }
   .items__layer:nth-child(1) .items__item {
     -webkit-box-sizing: border-box;
@@ -314,91 +312,14 @@ li {
   }
 }
 
-.scene {
-  -webkit-perspective: 800px;
-          perspective: 800px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100%;
-  width: 100%;
-  background: url("https://i.imgur.com/2WQui47.jpg");
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.scene:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-}
-
-.scene:hover .side {
-  opacity: 1;
-}
-
-.cube {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  position: relative;
-  width: 150px;
-  height: 150px;
-  -webkit-animation: rotate 10s ease-in-out infinite;
-          animation: rotate 10s ease-in-out infinite;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-}
-
 .side {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 85px;
+  height: 85px;
   background-color: #333;
-  opacity: 0.95;
+  opacity: .94;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.back {
-  -webkit-transform: translateZ(-75px) rotateX(180deg);
-          transform: translateZ(-75px) rotateX(180deg);
-  background-image: url(https://source.unsplash.com/featured/?nature);
-}
-
-.left {
-  -webkit-transform: translateX(-75px) rotateY(90deg);
-          transform: translateX(-75px) rotateY(90deg);
-  background-image: url(https://source.unsplash.com/featured/?tree);
-}
-
-.right {
-  -webkit-transform: translateX(75px) rotateY(90deg);
-          transform: translateX(75px) rotateY(90deg);
-  background-image: url(https://source.unsplash.com/featured/?home);
-}
-
-.top {
-  -webkit-transform: translateY(-75px) rotateX(90deg);
-          transform: translateY(-75px) rotateX(90deg);
-  background-image: url(https://source.unsplash.com/featured/?car);
-}
-
-.bottom {
-  -webkit-transform: translateY(75px) rotateX(270deg);
-          transform: translateY(75px) rotateX(270deg);
-  background-image: url(https://source.unsplash.com/featured/?work);
-}
-
-.front {
-  -webkit-transform: translateZ(75px);
-          transform: translateZ(75px);
-  background-image: url(https://source.unsplash.com/featured/?);
 }
 
 @-webkit-keyframes rotate {

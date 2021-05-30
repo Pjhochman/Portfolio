@@ -28,7 +28,7 @@ const CardItem = ({
   const [isVisible, setVisible] = useState(false);
   const [isExpanded, setExpand] = useState(false);
 
-  const expandHandler = () => setExpand((value) => !value);
+  const expandHandler = (prop) => (!prop && setExpand(false));
 
   useEffect(() => {
     if (width > mediaWidthTablet) {
@@ -63,7 +63,7 @@ const CardItem = ({
           startAnimation={width > mediaWidthTablet && startAnimation}
           className={isExpanded ? 'items__item active' : 'items__item'}
           data-title={dataTitle}
-          onClick={expandHandler}
+          onClick={!isExpanded ? () => setExpand(true) : expandHandler}
         >
           <CardItemContext.Provider
             value={{
@@ -78,6 +78,7 @@ const CardItem = ({
               BottomDescription: StyledBottomDescription,
               Button: StyledButton,
               isExpanded,
+              expandHandler,
             }}
           >
             {delayCardText()}

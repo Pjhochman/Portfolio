@@ -2,14 +2,26 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { CardItemContext } from '../Context/cardContext';
 import useWindowSize from '../../../../hooks/useWindowSize';
-import CloseButton from '../../../Buttons/CloseButton';
+import CloseIcon from '../../../Buttons/CloseIcon';
 import { accedo } from '../data/data.json';
 import { FadeInAnimation } from '../animations';
 import textColor from '../../../../styles/GlobalStyles';
+import Cubes from '../../../Cubes';
+import accedoLogo from '../../../../assets/images/accedo/accedo.webp';
+
+const StyledFiller = styled.div`
+height: 10px;
+`;
 
 const StyledHr = styled.hr`
-  width: 65px;
+  width: 80px;
   border: 0.5px solid ${textColor.primaryBlack};
+`;
+
+const StyledButton = styled.button`
+position: absolute;
+top: 20px;
+right: 18px;
 `;
 
 const StyledLi = styled.li`
@@ -27,39 +39,32 @@ const Accedo = () => {
     MiddleContent,
     MiddleTitle,
     MiddleDescription,
+    BottomContent,
+    BottomTitle,
+    BottomDescription,
     isExpanded,
+    expandHandler,
     Button,
   } = useContext(CardItemContext);
-
   return (
     <>
-      <TopContent alignSelf="center" textAlign="center" color="true">
+      <TopContent margin={!isExpanded && '55px'} alignSelf={!isExpanded ? 'center' : 'start'} textAlign={!isExpanded ? 'center' : 'start'} color="true">
         {width > mediaWidthMobile ? (
-          <FadeInAnimation duration="0.3s">
+          <FadeInAnimation alignSelf={!isExpanded ? 'center' : 'start'} duration="0.2s">
             <TopTitle>Previously</TopTitle>
-            <StyledHr />
-
             <TopDescription lineHeight="15px">
-              {isExpanded
-                       && (
-                       <>
-                         S. Engineer Intern
-                         <br />
-                       </>
-                       )}
-              Accedo.tv
+              <StyledHr />
+              Accedo
             </TopDescription>
           </FadeInAnimation>
         ) : (
           <>
             {isExpanded ? (
-              <FadeInAnimation duration="0.1s">
-                <TopTitle>Previously</TopTitle>
+              <FadeInAnimation duration="3s">
+                <TopTitle>Accedo</TopTitle>
                 <StyledHr />
                 <TopDescription lineHeight="15px">
                   S. Engineer Intern
-                  <br />
-                  Accedo.tv
                 </TopDescription>
               </FadeInAnimation>
             ) : (
@@ -70,9 +75,16 @@ const Accedo = () => {
           </>
         )}
       </TopContent>
+
       {isExpanded && (
         <>
-          <CloseButton color="#221e41" />
+          <FadeInAnimation duration="1s">
+            <Cubes imageTitle copyright image1={accedoLogo} image2={accedoLogo} image3={accedoLogo} image4={accedoLogo} image5={accedoLogo} image6={accedoLogo} marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom={width > mediaWidthMobile ? '230px' : '55vh'} />
+            <StyledFiller />
+            <StyledButton type="button" onClick={() => expandHandler(false)}>
+              <CloseIcon color="#202020" />
+            </StyledButton>
+          </FadeInAnimation>
           {Object.values(accedo[0].middleCardContent).map(
             (item, index, arr) => (
               <FadeInAnimation key={item.title} duration="1.1s">
@@ -104,9 +116,14 @@ const Accedo = () => {
                     )}
                   </MiddleDescription>
                 </MiddleContent>
+
               </FadeInAnimation>
             ),
           )}
+          <BottomContent margin color="true">
+            <BottomTitle>SaaS Application&nbsp;|</BottomTitle>
+            <BottomDescription>&nbsp;Video Experience</BottomDescription>
+          </BottomContent>
         </>
       )}
     </>

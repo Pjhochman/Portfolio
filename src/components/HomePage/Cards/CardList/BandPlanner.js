@@ -2,12 +2,29 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { CardItemContext } from '../Context/cardContext';
 import useWindowSize from '../../../../hooks/useWindowSize';
-import CloseButton from '../../../Buttons/CloseButton';
+import CloseIcon from '../../../Buttons/CloseIcon';
 import { bandPlanner } from '../data/data.json';
+import Cubes from '../../../Cubes';
 import { FadeInRightAnimation, FadeInAnimation } from '../animations';
+import homeDesktop from '../../../../assets/images/bandplanner/home_desktop.webp';
+import loginDesktop from '../../../../assets/images/bandplanner/login_desktop.webp';
+import homeInfoLight from '../../../../assets/images/bandplanner/homeInfo_light.webp';
+import homeInfoDark from '../../../../assets/images/bandplanner/homeInfo_dark.webp';
+import addPlaylistDark from '../../../../assets/images/bandplanner/addPlaylist_dark.webp';
+import addPlaylistLight from '../../../../assets/images/bandplanner/addPlaylist_light.webp';
+
+const StyledFiller = styled.div`
+height: 10px;
+`;
 
 const StyledLi = styled.li`
   white-space: ${({ whiteSpace }) => whiteSpace};
+`;
+
+const StyledButton = styled.button`
+position: absolute;
+top: 20px;
+right: 18px;
 `;
 
 const BandPlanner = () => {
@@ -24,6 +41,7 @@ const BandPlanner = () => {
     BottomTitle,
     BottomDescription,
     isExpanded,
+    expandHandler,
     Button,
   } = useContext(CardItemContext);
 
@@ -57,7 +75,13 @@ const BandPlanner = () => {
       </TopContent>
       {isExpanded && (
         <>
-          <CloseButton color="#e9f0fb" />
+          <FadeInAnimation duration="1s">
+            <Cubes image1={homeDesktop} image2={loginDesktop} image3={homeInfoLight} image4={homeInfoDark} image5={addPlaylistDark} image6={addPlaylistLight} color="true" marginTop="180px" marginBottom="230px" />
+            <StyledFiller />
+            <StyledButton type="button" onClick={() => expandHandler(false)}>
+              <CloseIcon color="#e9f0fb" />
+            </StyledButton>
+          </FadeInAnimation>
           {Object.values(bandPlanner[0].middleCardContent).map(
             (item, index, arr) => (
               <FadeInAnimation key={item.title} duration="1.1s">
@@ -92,8 +116,8 @@ const BandPlanner = () => {
             ),
           )}
           <BottomContent margin>
-            <BottomTitle>Progressive Web App&nbsp;|</BottomTitle>
-            <BottomDescription>&nbsp;Login Credentials</BottomDescription>
+            <BottomTitle textTransform>EMAIL: hello@email.com &nbsp;|</BottomTitle>
+            <BottomDescription textTransform>&nbsp;PASSWORD: hello</BottomDescription>
           </BottomContent>
         </>
       )}

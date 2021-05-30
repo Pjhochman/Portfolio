@@ -1,9 +1,32 @@
 import React, { useContext } from 'react';
+import styled from 'styled-components';
 import { CardItemContext } from '../Context/cardContext';
 import useWindowSize from '../../../../hooks/useWindowSize';
 import { FadeInLeftAnimation, FadeInAnimation } from '../animations';
 import { project11 } from '../data/data.json';
-import CloseButton from '../../../Buttons/CloseButton';
+import Cubes from '../../../Cubes';
+import CloseIcon from '../../../Buttons/CloseIcon';
+import project1 from '../../../../assets/images/project11/project1.webp';
+import project2 from '../../../../assets/images/project11/project2.webp';
+import project3 from '../../../../assets/images/project11/project3.webp';
+import project4 from '../../../../assets/images/project11/project4.webp';
+import project5 from '../../../../assets/images/project11/project5.webp';
+
+const StyledWrapper = styled.div`
+position: ${({ isExpanded }) => (isExpanded ? 'relative' : 'absolute')};
+bottom: ${({ isExpanded }) => (isExpanded ? null : '15px')};
+right: ${({ isExpanded }) => (isExpanded ? null : '15px')};
+`;
+
+const StyledFiller = styled.div`
+height: 10px;
+`;
+
+const StyledButton = styled.button`
+position: absolute;
+top: 20px;
+right: 18px;
+`;
 
 const Project11 = () => {
   const mediaWidthMobile = 637;
@@ -19,59 +42,17 @@ const Project11 = () => {
     BottomTitle,
     BottomDescription,
     isExpanded,
+    expandHandler,
     Button,
   } = useContext(CardItemContext);
-
   return (
     <>
-      {isExpanded && (
-        <>
-          <BottomContent>
-            <BottomTitle>Desktop&nbsp;|</BottomTitle>
-            <BottomDescription>&nbsp;VR experience</BottomDescription>
-          </BottomContent>
-          <CloseButton color="#e9f0fb" />
-          {Object.values(project11[0].middleCardContent).map(
-            (item, index, arr) => (
-              <FadeInAnimation key={item.title} duration="1.1s">
-                <MiddleContent whiteSpace="true">
-                  <MiddleTitle>{item.title}</MiddleTitle>
-                  {arr.length - 1 === index && (
-                    <Button
-                      type="button"
-                      color="true"
-                      onClick={() => window.open(
-                        `https://${project11[0].middleCardContent.bottomSection.link}`,
-                      )}
-                    >
-                      {item.link}
-                    </Button>
-                  )}
-                  <MiddleDescription width="320px">
-                    {arr.length - 2 === index ? (
-                      <>
-                        {project11[0].middleCardContent.middleSection.description.map(
-                          (value) => (
-                            <li key={value}>{value}</li>
-                          ),
-                        )}
-                      </>
-                    ) : (
-                      <li>{item.description}</li>
-                    )}
-                  </MiddleDescription>
-                </MiddleContent>
-              </FadeInAnimation>
-            ),
-          )}
-        </>
-      )}
       <TopContent
         textAlign={isExpanded ? 'start' : 'end'}
         alignSelf={isExpanded ? 'flex-start' : 'flex-end'}
       >
         {width > mediaWidthMobile ? (
-          <>
+          <StyledWrapper isExpanded={isExpanded}>
             <FadeInLeftAnimation duration="0.2s">
               <TopTitle>My Own Work</TopTitle>
               <hr />
@@ -79,14 +60,14 @@ const Project11 = () => {
             <FadeInLeftAnimation duration="0.4s">
               <TopDescription>Project 11</TopDescription>
             </FadeInLeftAnimation>
-          </>
+          </StyledWrapper>
         ) : (
           <>
             {isExpanded && (
-              <>
-                <TopTitle>My Own Work</TopTitle>
-                <hr />
-              </>
+            <>
+              <TopTitle>My Own Work</TopTitle>
+              <hr />
+            </>
             )}
             <FadeInLeftAnimation duration="0.1s">
               <TopDescription>Project 11</TopDescription>
@@ -94,6 +75,55 @@ const Project11 = () => {
           </>
         )}
       </TopContent>
+
+      {isExpanded && (
+      <>
+        <FadeInAnimation duration="1s">
+          <Cubes image1={project1} image2={project2} image3={project3} image4={project3} image5={project5} image6={project4} color="true" marginTop="180px" marginBottom="230px" />
+          <StyledFiller />
+          <StyledButton type="button" onClick={() => expandHandler(false)}>
+            <CloseIcon color="#e9f0fb" />
+          </StyledButton>
+        </FadeInAnimation>
+        {Object.values(project11[0].middleCardContent).map(
+          (item, index, arr) => (
+            <FadeInAnimation key={item.title} duration="1.1s">
+              <MiddleContent whiteSpace="true">
+                <MiddleTitle>{item.title}</MiddleTitle>
+                {arr.length - 1 === index && (
+                <Button
+                  type="button"
+                  color="true"
+                  onClick={() => window.open(
+                    `https://${project11[0].middleCardContent.bottomSection.link}`,
+                  )}
+                >
+                  {item.link}
+                </Button>
+                )}
+                <MiddleDescription width="320px">
+                  {arr.length - 2 === index ? (
+                    <>
+                      {project11[0].middleCardContent.middleSection.description.map(
+                        (value) => (
+                          <li key={value}>{value}</li>
+                        ),
+                      )}
+                    </>
+                  ) : (
+                    <li>{item.description}</li>
+                  )}
+                </MiddleDescription>
+              </MiddleContent>
+            </FadeInAnimation>
+          ),
+        )}
+        <BottomContent>
+          <BottomTitle>Desktop&nbsp;|</BottomTitle>
+          <BottomDescription>&nbsp;VR experience</BottomDescription>
+        </BottomContent>
+      </>
+      )}
     </>
   );
 };

@@ -9,7 +9,7 @@ export const FadeInAnimation = styled.div`
   animation: ${(props) => props.duration} ${fadeInAnimation};
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: ${(props) => props.alignSelf};
 `;
 
 export const FadeInLeftAnimation = styled.div`

@@ -9,7 +9,7 @@ export const StyledTopContainer = styled.div`
   box-sizing: border-box;
   pointer-events: none;
   user-select: none;
-  font-size: 9px;
+  font-size: 10px;
   white-space: nowrap;
   margin: ${(props) => (props.margin ? props.margin : '20px')};
   color: ${(props) => (props.color ? '#202020' : '#ffffff')};
@@ -55,7 +55,7 @@ export const StyledMiddleContainer = styled.div`
   box-sizing: border-box;
   user-select: none;
   white-space: ${(props) => props.whiteSpace && 'nowrap'};
-  color: ${(props) => (props.color ? '#221e41' : '#e9f0fb')};
+  color: ${(props) => (props.color ? '#202020' : '#e9f0fb')};
 `;
 
 export const StyledMiddleTitle = styled.h3`
@@ -75,7 +75,7 @@ export const StyledMiddleDescription = styled.ul`
   font-weight: 300;
   width: ${(props) => props.width};
   margin-bottom: ${(props) => props.marginBottom && '50px'};
-  width: 380px;
+  width: 270px;
   @media (max-width: 637px) {
   width: 270px;
   font-size: 12px;
@@ -94,11 +94,11 @@ export const StyledBottomContainer = styled.div`
   white-space: nowrap;
   flex-direction: ${(props) => props.flexDirection};
   margin: ${(props) => (props.margin ? '14px' : '20px')};
-  color: ${(props) => (props.color ? '#221e41' : '#e9f0fb')};
+  color: ${(props) => (props.color ? '#202020' : '#e9f0fb')};
 `;
 
 export const StyledBottomTitle = styled.div`
-  text-transform: uppercase;
+  text-transform: ${(props) => (props.textTransform ? null : 'uppercase')};
   letter-spacing: 2px;
   font-size: 9px;
   font-weight: 300;
@@ -108,7 +108,7 @@ export const StyledBottomTitle = styled.div`
 `;
 
 export const StyledBottomDescription = styled.div`
-  text-transform: uppercase;
+  text-transform: ${(props) => (props.textTransform ? null : 'uppercase')};
   letter-spacing: 2px;
   font-size: 9px;
   font-weight: 300;
@@ -124,15 +124,12 @@ export const StyledButton = styled.button`
   cursor: pointer;
   font-size: 12px;
   font-weight: 300;
-  color: ${(props) => (props.color ? '#e9f0fb' : '#221e41')};
+  color: ${(props) => (props.color ? '#e9f0fb' : '#202020')};
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @media (max-width: 637px) {
-  font-size: 12px;
-  }
 `;
 
 export const CardItemContext = createContext({

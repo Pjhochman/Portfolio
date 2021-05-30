@@ -5,13 +5,11 @@ import styled from 'styled-components';
 const StyledCloseIcon = styled.svg`
   width: 15px;
   height: auto;
-  position: absolute;
-  right: 18px;
-  top: 18px;
+  position: relative;
   cursor: pointer;
 `;
 
-const CloseButton = ({ color }) => (
+const CloseIcon = ({ color }) => (
   <StyledCloseIcon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.39 20.39">
     <line
       x1="19.39"
@@ -38,12 +36,12 @@ const CloseButton = ({ color }) => (
   </StyledCloseIcon>
 );
 
-CloseButton.propTypes = {
+CloseIcon.propTypes = {
   color: PropTypes.string,
 };
 
-CloseButton.defaultProps = {
-  color: PropTypes.func,
+CloseIcon.defaultProps = {
+  color: PropTypes.string,
 };
 
-export default CloseButton;
+export default CloseIcon;

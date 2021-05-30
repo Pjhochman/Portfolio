@@ -1,9 +1,27 @@
 import React, { useContext } from 'react';
+import styled from 'styled-components';
 import { CardItemContext } from '../Context/cardContext';
 import useWindowSize from '../../../../hooks/useWindowSize';
-import CloseButton from '../../../Buttons/CloseButton';
+import CloseIcon from '../../../Buttons/CloseIcon';
 import { colorPalette } from '../data/data.json';
+import Cubes from '../../../Cubes';
 import { FadeInRightAnimation, FadeInAnimation } from '../animations';
+import blue from '../../../../assets/images/colorpalette/colorPalette_blue.webp';
+import green from '../../../../assets/images/colorpalette/colorPalette_green.webp';
+import orange from '../../../../assets/images/colorpalette/colorPalette_orange.webp';
+import purple from '../../../../assets/images/colorpalette/colorPalette_purple.webp';
+import red from '../../../../assets/images/colorpalette/colorPalette_red.webp';
+import violet from '../../../../assets/images/colorpalette/colorPalette_violet.webp';
+
+const StyledFiller = styled.div`
+height: 10px;
+`;
+
+const StyledButton = styled.button`
+position: absolute;
+top: 20px;
+right: 18px;
+`;
 
 const ColorPalette = () => {
   const mediaWidthMobile = 637;
@@ -20,6 +38,7 @@ const ColorPalette = () => {
     BottomTitle,
     BottomDescription,
     isExpanded,
+    expandHandler,
     Button,
   } = useContext(CardItemContext);
 
@@ -52,7 +71,13 @@ const ColorPalette = () => {
       </TopContent>
       {isExpanded && (
         <>
-          <CloseButton color="#e9f0fb" />
+          <FadeInAnimation duration="1s">
+            <Cubes image1={blue} image2={green} image3={orange} image4={purple} image5={red} image6={violet} color="true" marginTop="180px" marginBottom="230px" />
+            <StyledFiller />
+            <StyledButton type="button" onClick={() => expandHandler(false)}>
+              <CloseIcon color="#e9f0fb" />
+            </StyledButton>
+          </FadeInAnimation>
           {Object.values(colorPalette[0].middleCardContent).map(
             (item, index, arr) => (
               <FadeInAnimation key={item.title} duration="1.1s">

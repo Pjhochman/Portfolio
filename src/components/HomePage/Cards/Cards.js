@@ -20,7 +20,6 @@ import './styles/cards.css';
 const Cards = () => {
   const mediaWidth = 1110;
   const { width } = useWindowSize();
-
   const scene = document.getElementById('js-scene');
 
   if (width) {

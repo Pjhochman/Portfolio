@@ -4,25 +4,18 @@
       "middleCardContent": {
         "topSection": {
           "title": "Project Description",
-          "description": "SaaS mobile application created for bands to keep track of songs."
+          "description": "SaaS application created for bands to keep track of songs."
         },
         "middleSection": {
           "title": "Technologies & Tools",
           "description": [
             "Node.js",
-            "Javascript",
-            "RESTful API",
-            "Mongoose - Schema modelling & validation",
-            "Express - Handling http requests",
-            "MongoDB - NoSQL database",
-            "SASS - CSS extension",
-            "AWS"
+            "Javascript"
           ]
         },
         "bottomSection": {
-          "title": "Website",
-          "link": "obscure-shore-89574.herokuapp.com",
-          "description": "Email: hello@email.com | Password: hello"
+          "title": "Visit Website",
+          "link": "obscure-shore-89574.herokuapp.com"
         }
       }
     }
@@ -32,21 +25,17 @@
       "middleCardContent": {
         "topSection": {
           "title": "Job Description",
-          "description": "Giving clients access to managing their video streaming applications. Built using React with GraphQL."
+          "description": "Software Engineer intern. Giving clients access to managing their video streaming applications."
         },
         "middleSection": {
           "title": "Technologies & Tools",
           "description": [
             "React with GraphQL",
-            "Validation - Insomnia",
-            "Design system - Zeplin",
-            "Work - Managed through Jira",
-            "Cypress - E2E Testing Framework",
-            "Build & Deploy - Jenkins Pipeline with Docker"
+            "Cypress - E2E Testing Framework"
           ]
         },
         "bottomSection": {
-          "title": "Website",
+          "title": "Visit Website",
           "link": "accedo.tv"
         }
       }
@@ -57,17 +46,17 @@
       "middleCardContent": {
         "topSection": {
           "title": "Project Description",
-          "description": "Gradient color-generator based on uiGradients.com data."
+          "description": "Gradient color-generator."
         },
         "middleSection": {
           "title": "Technologies & Tools",
           "description": [
             "Javascript",
-            "P5.js - Library for creating graphic and interactive experiences"
+            "P5.js"
           ]
         },
         "bottomSection": {
-          "title": "Website",
+          "title": "Visit Website",
           "link": "peterscolorpalette.netlify.app"
         }
       }
@@ -84,11 +73,11 @@
           "title": "Technologies & Tools",
           "description": [
             "Javascript",
-            "A-frame - Framework for building VR experiences"
+            "A-frame"
           ]
         },
         "bottomSection": {
-          "title": "Website",
+          "title": "Visit Website",
           "link": "project11.netlify.app"
         }
       }
@@ -97,14 +86,10 @@
   "hyperIsland": [
     {
       "middleCardContent": {
-        "topSection": {
-          "title": "Program Overview",
-          "description": "Hyper Island puts Front-End Developers to work in teams with the design students. This way, we learn useful ways to combine graphic design with coding principles and master the communication and teamwork needed to produce amazing interactive user experiences."
-        },
         "bottomSection": {
-          "title": "Website",
+          "title": "Visit Website",
           "link": "hyperisland.com/programs-and-courses/frontend-developer",
-          "linkAlt": "hyperIsland.com/frontend-developer"
+          "linkAlt": "hyperIsland.com/developer"
         }
       }
     }

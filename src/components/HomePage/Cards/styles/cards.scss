@@ -75,6 +75,7 @@ li {
     }
   }
   &__layer:nth-child(1) &__item {
+    overflow: hidden;
     $color:  #3f3f3f;// #040c0e;
     top: 120px;
     left: 0px;
@@ -88,6 +89,7 @@ li {
     }
   }
   &__layer:nth-child(2) &__item {
+    overflow: hidden;
     $color: #ffdf6c; // #a4978e;
     flex-direction: column-reverse;
     top: 330px;
@@ -102,7 +104,7 @@ li {
     }
   }
   &__layer:nth-child(3) &__item {
-    flex-direction: column-reverse;
+    overflow: hidden;
     $color: #707070;  //#132226;
     top: 280px;
     left: 30px;
@@ -132,6 +134,7 @@ li {
     }
   }
   &__layer:nth-child(4) &__item {
+    overflow: hidden;
     $color: #202020; // #525b56;
     top: 20px;
     left: 240px;
@@ -145,8 +148,8 @@ li {
     }
   }
   &__layer:nth-child(5) &__item {
+    overflow: hidden;
     $color: #BBBBBB;  // #be9063;
-    justify-content: space-evenly;
     top: 200px;
     left: 160px;
     width: 160px;
@@ -209,7 +212,7 @@ li {
       height: 100vh !important;
       transition: none !important;
       transform: none !important;
-      padding-bottom: 120px;
+      padding-bottom: 80px;
     }
     &__layer:nth-child(1) &__item {
       box-sizing: border-box;
@@ -255,80 +258,16 @@ li {
   }
 }
 
-$size-px: 150px;
-$size: 300;
-$size-lg: $size * 1.5;
-$transform: $size-px / 2;
-
-
-.scene {
-  perspective: 800px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background: url("https://i.imgur.com/2WQui47.jpg");
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  &:hover {
-    transform: scale(1.5);
-
-    .side {
-      opacity: 1;
-    }
-  }
-}
-
-.cube {
-  transform-style: preserve-3d;
-  position: relative;
-  width: $size-px;
-  height: $size-px;
-  animation: rotate 10s ease-in-out infinite;
-  transform-origin: center center;
-}
+// Cube animations
 
 .side {
   position: absolute;
   width: $size-px;
   height: $size-px;
   background-color: #333;
-  opacity: 0.95;
+  opacity: .94;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.back {
-  transform: translateZ(-#{$transform}) rotateX(180deg);
-  background-image: url(https://source.unsplash.com/featured/?nature);
-}
-
-.left {
-  transform: translateX(-#{$transform}) rotateY(90deg);
-  background-image: url(https://source.unsplash.com/featured/?tree);
-}
-
-.right {
-  transform: translateX($transform) rotateY(90deg);
-  background-image: url(https://source.unsplash.com/featured/?home);
-}
-
-.top {
-  transform: translateY(-#{$transform}) rotateX(90deg);
-  background-image: url(https://source.unsplash.com/featured/?car);
-}
-
-.bottom {
-  transform: translateY($transform) rotateX(270deg);
-  background-image: url(https://source.unsplash.com/featured/?work);
-}
-
-.front {
-  transform: translateZ($transform);
-  background-image: url(https://source.unsplash.com/featured/?);
 }
 
 @keyframes rotate {

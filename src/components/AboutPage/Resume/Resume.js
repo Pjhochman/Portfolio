@@ -45,7 +45,7 @@ const StyledModalContent = styled.div`
   justify-content: center;
   align-items: center;
   h1 {
-    color: #221e41;
+    color: #202020;
   }
 `;
 

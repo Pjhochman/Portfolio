@@ -4,11 +4,22 @@ import { CardItemContext } from '../Context/cardContext';
 import useWindowSize from '../../../../hooks/useWindowSize';
 import { FadeInLeftAnimation, FadeInAnimation } from '../animations';
 import { hyperIsland } from '../data/data.json';
-import CloseButton from '../../../Buttons/CloseButton';
+import Cubes from '../../../Cubes';
+import CloseIcon from '../../../Buttons/CloseIcon';
 import textColor from '../../../../styles/GlobalStyles';
+import hyper1 from '../../../../assets/images/hyperisland/hyperIsland_black.webp';
+import hyper2 from '../../../../assets/images/hyperisland/hyperIsland_green.webp';
+import hyper4 from '../../../../assets/images/hyperisland/hyperIsland_pink.webp';
+import hyper5 from '../../../../assets/images/hyperisland/hyperIsland_purple.webp';
 
 const StyledHr = styled.hr`
   border: 0.5px solid ${textColor.primaryBlack};
+`;
+
+const StyledButton = styled.button`
+position: absolute;
+top: 20px;
+right: 18px;
 `;
 
 const HyperIsland = () => {
@@ -21,10 +32,10 @@ const HyperIsland = () => {
     TopTitle,
     TopDescription,
     MiddleTitle,
-    MiddleDescription,
     BottomTitle,
     BottomDescription,
     isExpanded,
+    expandHandler,
     Button,
   } = useContext(CardItemContext);
 
@@ -36,7 +47,6 @@ const HyperIsland = () => {
             <BottomTitle>Stockholm&nbsp;|</BottomTitle>
             <BottomDescription>&nbsp;2019–2021</BottomDescription>
           </BottomContent>
-          <CloseButton color="#221e41" />
           {Object.values(hyperIsland[0].middleCardContent).map(
             (item, index, arr) => (
               <FadeInAnimation key={item.title} duration="1.1s">
@@ -52,27 +62,21 @@ const HyperIsland = () => {
                       {item.linkAlt}
                     </Button>
                   )}
-                  <MiddleDescription marginBottom="true">
-                    {arr.length - 2 === index ? (
-                      <>
-                        {
-                          hyperIsland[0].middleCardContent.topSection
-                            .description
-                        }
-                      </>
-                    ) : (
-                      <li>{item.description}</li>
-                    )}
-                  </MiddleDescription>
                 </MiddleContent>
               </FadeInAnimation>
             ),
           )}
+          <FadeInAnimation duration="1s">
+            <Cubes imageTitle copyright image1={hyper1} image2={hyper2} image3={hyper4} image4={hyper2} image5={hyper5} image6={hyper1} absolute marginTop={width > mediaWidthMobile ? '60px' : '10vh'} marginBottom="0" />
+            <StyledButton type="button" onClick={() => expandHandler(false)}>
+              <CloseIcon color="#202020" />
+            </StyledButton>
+          </FadeInAnimation>
         </>
       )}
       <TopContent
         color="true"
-        margin={!isExpanded && (width < mediaWidthMobile) ? '15px 6px' : '14px'}
+        margin={!isExpanded && (width < mediaWidthMobile) ? '15px 6px' : '11px'}
         textAlign={isExpanded ? 'start' : 'end'}
         alignSelf={isExpanded ? 'flex-start' : 'flex-end'}
       >
