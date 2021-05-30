@@ -62,7 +62,7 @@ const Project11 = () => {
             </FadeInLeftAnimation>
           </StyledWrapper>
         ) : (
-          <>
+          <StyledWrapper isExpanded={isExpanded}>
             {isExpanded && (
             <>
               <TopTitle>My Own Work</TopTitle>
@@ -72,14 +72,14 @@ const Project11 = () => {
             <FadeInLeftAnimation duration="0.1s">
               <TopDescription>Project 11</TopDescription>
             </FadeInLeftAnimation>
-          </>
+          </StyledWrapper>
         )}
       </TopContent>
 
       {isExpanded && (
       <>
         <FadeInAnimation duration="1s">
-          <Cubes image1={project1} image2={project2} image3={project3} image4={project3} image5={project5} image6={project4} color="true" marginTop="180px" marginBottom="230px" />
+          <Cubes image1={project1} image2={project2} image3={project3} image4={project3} image5={project5} image6={project4} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
           <StyledFiller />
           <StyledButton type="button" onClick={() => expandHandler(false)}>
             <CloseIcon color="#e9f0fb" />

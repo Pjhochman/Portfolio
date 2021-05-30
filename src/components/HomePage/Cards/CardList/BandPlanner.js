@@ -76,7 +76,7 @@ const BandPlanner = () => {
       {isExpanded && (
         <>
           <FadeInAnimation duration="1s">
-            <Cubes image1={homeDesktop} image2={loginDesktop} image3={homeInfoLight} image4={homeInfoDark} image5={addPlaylistDark} image6={addPlaylistLight} color="true" marginTop="180px" marginBottom="230px" />
+            <Cubes image1={homeDesktop} image2={loginDesktop} image3={homeInfoLight} image4={homeInfoDark} image5={addPlaylistDark} image6={addPlaylistLight} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#e9f0fb" />

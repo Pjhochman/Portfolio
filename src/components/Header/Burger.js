@@ -13,7 +13,7 @@ const BurgerWrapper = styled.button`
   width: 60px;
   height: 60px;
   @media (max-width: 637px) {
-  top: 22px;
+  top: 21px;
   right: 10px;
   }
 `;

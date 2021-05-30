@@ -67,7 +67,7 @@ const HyperIsland = () => {
             ),
           )}
           <FadeInAnimation duration="1s">
-            <Cubes imageTitle copyright image1={hyper1} image2={hyper2} image3={hyper4} image4={hyper2} image5={hyper5} image6={hyper1} absolute marginTop={width > mediaWidthMobile ? '60px' : '10vh'} marginBottom="0" />
+            <Cubes imageTitle copyright image1={hyper1} image2={hyper2} image3={hyper4} image4={hyper2} image5={hyper5} image6={hyper1} absolute marginTop={width > mediaWidthMobile ? '60px' : '13vh'} marginBottom={width > mediaWidthMobile ? '0vh' : '0vh'} />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#202020" />
             </StyledButton>

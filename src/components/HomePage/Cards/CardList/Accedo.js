@@ -16,6 +16,9 @@ height: 10px;
 const StyledHr = styled.hr`
   width: 80px;
   border: 0.5px solid ${textColor.primaryBlack};
+  @media (max-width: 637px) {
+  width: 57px;
+  }
 `;
 
 const StyledButton = styled.button`
@@ -48,7 +51,7 @@ const Accedo = () => {
   } = useContext(CardItemContext);
   return (
     <>
-      <TopContent margin={!isExpanded && '55px'} alignSelf={!isExpanded ? 'center' : 'start'} textAlign={!isExpanded ? 'center' : 'start'} color="true">
+      <TopContent margin={!isExpanded && '52px'} alignSelf={!isExpanded ? 'center' : 'start'} textAlign={!isExpanded ? 'center' : 'start'} color="true">
         {width > mediaWidthMobile ? (
           <FadeInAnimation alignSelf={!isExpanded ? 'center' : 'start'} duration="0.2s">
             <TopTitle>Previously</TopTitle>

@@ -72,7 +72,7 @@ const ColorPalette = () => {
       {isExpanded && (
         <>
           <FadeInAnimation duration="1s">
-            <Cubes image1={blue} image2={green} image3={orange} image4={purple} image5={red} image6={violet} color="true" marginTop="180px" marginBottom="230px" />
+            <Cubes image1={blue} image2={green} image3={orange} image4={purple} image5={red} image6={violet} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#e9f0fb" />
