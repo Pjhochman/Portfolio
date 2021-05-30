@@ -23,11 +23,6 @@ const StyledScene = styled.div`
   height: 85px;
   width: 85px;
   transition: all 0.2s ease-in-out;
-  filter: none !important; 
-  -webkit-filter: blur(0px); 
-  -moz-filter: blur(0px); 
-  -ms-filter: blur(0px);
--webkit-transform: translate3d(0, 0, 0);
   transform: ${({ open }) => open && 'scale(2.8)'};
   margin-bottom: ${({ open, marginBottom }) => (open && marginBottom)};
   margin-top: ${({ open, marginTop }) => (open && marginTop)};
@@ -36,6 +31,7 @@ const StyledScene = styled.div`
   margin-bottom: ${({ open }) => (open && '55vh')};
   margin-top: ${({ open, marginTop }) => (open && marginTop)};
   transform: ${({ open }) => open && 'scale(2.6) translate3d(0, 0, 0)'};
+  -webkit-transform: ${({ open }) => open && 'scale(2.6) translate3d(0, 0, 0)'};
   }
     .side {
     opacity: 1;
