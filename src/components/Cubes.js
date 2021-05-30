@@ -29,23 +29,29 @@ const StyledScene = styled.div`
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @media (max-width: 637px) {
   margin-bottom: ${({ open }) => (open && "50vh")};
-  margin-top: ${({ open, marginTop }) => (open && marginTop)};
+  margin-top: ${({ open }) => (open && "28vh")};
   transform: ${({ open }) => open && 'scale(2.6)'};
   }
     .side {
     opacity: 1;
     }
     &:before {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: subpixel-antialiased;
     transition: all 0.2s ease-in-out;
     position: absolute;
     content: ${({ open, imageTitle }) => open ? !imageTitle ? "'Application Screenshots'" : "'Company Logo'" : null};
-    font-size: 3.8px;
+    font-size: 3.7px;
     top: -27px;
     text-transform: uppercase;
     font-weight: 500;
     color: ${({ color }) => (color ? 'white' : '#202020')}
   }
       &:after {
+     backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: subpixel-antialiased;
     transition: all 0.2s ease-in-out;
     position: absolute;
     content: ${({ open, copyright }) => open ? !copyright ? "' \\00A9  Peter Hochman'" : null : null};
