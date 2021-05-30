@@ -23,15 +23,17 @@ const StyledScene = styled.div`
   height: 85px;
   width: 85px;
   transition: all 0.2s ease-in-out;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  -webkit-font-smoothing: subpixel-antialiased;
+  filter: none; 
+  -webkit-filter: blur(0px); 
+  -moz-filter: blur(0px); 
+  -ms-filter: blur(0px);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
   transform: ${({ open }) => open && 'scale(2.8)'};
   margin-bottom: ${({ open, marginBottom }) => (open && marginBottom)};
   margin-top: ${({ open, marginTop }) => (open && marginTop)};
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @media (max-width: 637px) {
-  margin-bottom: ${({ open }) => (open && "55vh")};
+  margin-bottom: ${({ open }) => (open && '55vh')};
   margin-top: ${({ open, marginTop }) => (open && marginTop)};
   transform: ${({ open }) => open && 'scale(2.6)'};
   }
@@ -41,7 +43,7 @@ const StyledScene = styled.div`
     &:before {
     transition: all 0.2s ease-in-out;
     position: absolute;
-    content: ${({ open, imageTitle }) => open ? !imageTitle ? "'Application Images'" : "'Company Logo'" : null};
+    content: ${({ open, imageTitle }) => (open ? !imageTitle ? "'Application Images'" : "'Company Logo'" : null)};
     font-size: 3.7px;
     top: -27px;
     text-transform: uppercase;
@@ -51,7 +53,7 @@ const StyledScene = styled.div`
     &:after {
     transition: all 0.2s ease-in-out;
     position: absolute;
-    content: ${({ open, copyright }) => open ? !copyright ? "' \\00A9  Peter Hochman'" : null : null};
+    content: ${({ open, copyright }) => (open ? !copyright ? "' \\00A9  Peter Hochman'" : null : null)};
     font-size: 4.5px;
     bottom: -27px;
     font-weight: 300;
@@ -71,41 +73,54 @@ const StyledCube = styled.div`
 
 const StyledBack = styled.div`
   transform: translateZ(-${cubeValues.transform}px) rotateX(180deg);
-  background-image: url(${({image1}) => image1});
+  background-image: url(${({ image1 }) => image1});
   object-fit: contain;
 `;
 
 const StyledLeft = styled.div`
   transform: translateX(-${cubeValues.transform}px) rotateY(90deg);
-  background-image: url(${({image2}) => image2});
+  background-image: url(${({ image2 }) => image2});
   object-fit: contain;
 `;
 
 const StyledRight = styled.div`
   transform: translateX(${cubeValues.transform}px) rotateY(90deg);
-  background-image: url(${({image3}) => image3});
+  background-image: url(${({ image3 }) => image3});
   object-fit: contain;
 `;
 
 const StyledTop = styled.div`
   transform: translateY(-${cubeValues.transform}px) rotateX(90deg);
-  background-image: url(${({image4}) => image4});
+  background-image: url(${({ image4 }) => image4});
   object-fit: contain;
 `;
 
 const StyledBottom = styled.div`
   transform: translateY(${cubeValues.transform}px) rotateX(270deg);
-  background-image: url(${({image5}) => image5});
+  background-image: url(${({ image5 }) => image5});
   object-fit: fill;
 `;
 
 const StyledFront = styled.div`
   transform: translateZ(${cubeValues.transform}px);
-  background-image: url(${({image6}) => image6});
+  background-image: url(${({ image6 }) => image6});
   object-fit: contain;
 `;
 
-const Cubes = ({ imageTitle, copyright, color, absolute, marginBottom, marginTop, image1, image2, image3, image4, image5, image6 }) => {
+const Cubes = ({
+  imageTitle,
+  copyright,
+  color,
+  absolute,
+  marginBottom,
+  marginTop,
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+}) => {
   const [open, setOpen] = useState(false);
   return (
     <StyledScene
@@ -136,7 +151,7 @@ Cubes.propTypes = {
   margin: PropTypes.bool,
   imageTitle: PropTypes.bool,
   copyright: PropTypes.bool,
-
+  marginBottom: PropTypes.string,
 };
 
 export default Cubes;
