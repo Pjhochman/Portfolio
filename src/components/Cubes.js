@@ -28,9 +28,10 @@ const StyledScene = styled.div`
   margin-top: ${({ open, marginTop }) => (open && marginTop)};
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @media (max-width: 637px) {
+  -webkit-font-smoothing: antialiased;
   margin-bottom: ${({ open }) => (open && '55vh')};
   margin-top: ${({ open, marginTop }) => (open && marginTop)};
-  transform: ${({ open }) => open && 'scale(2.6)'};
+  transform: ${({ open }) => open && 'scale(2.6) perspective(1px)'};
   }
     .side {
     opacity: 1;
@@ -40,7 +41,6 @@ const StyledScene = styled.div`
     position: absolute;
     content: ${({ open, imageTitle }) => (open ? !imageTitle ? "'Application Images'" : "'Company Logo'" : null)};
     font-size: 3.7px;
-    -webkit-font-smoothing: antialiased;
     top: -27px;
     text-transform: uppercase;
     font-weight: 500;
