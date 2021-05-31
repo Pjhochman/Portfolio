@@ -131,7 +131,7 @@ const BandPlanner = () => {
             ),
           )}
           <FadeInAnimation duration="1s">
-            <BottomContent margin>
+            <BottomContent>
               <BottomTitle textTransform>EMAIL: hello@email.com &nbsp;|</BottomTitle>
               <BottomDescription textTransform>&nbsp;PASSWORD: hello</BottomDescription>
             </BottomContent>
