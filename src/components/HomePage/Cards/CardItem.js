@@ -22,7 +22,7 @@ import './styles/cards.css';
 const CardItem = ({
   children, wait, startAnimation, dataDepth, dataTitle,
 }) => {
-  const mediaWidthTablet = 1100;
+  const mediaWidthTablet = 637;
   const [refCard, cardHovered] = useHover();
   const { width } = useWindowSize();
   const [isVisible, setVisible] = useState(false);
