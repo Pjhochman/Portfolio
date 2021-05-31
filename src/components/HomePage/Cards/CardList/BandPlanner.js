@@ -8,7 +8,6 @@ import CloseIcon from '../../../Buttons/CloseIcon';
 import { bandPlanner } from '../data/data.json';
 import Cubes from '../../../Cubes';
 import { FadeInRightAnimation, FadeInAnimation } from '../animations';
-import homeDesktop from '../../../../assets/images/bandplanner/home_desktop.webp';
 import loginDesktop from '../../../../assets/images/bandplanner/login_desktop.webp';
 import homeInfoLight from '../../../../assets/images/bandplanner/homeInfo_light.webp';
 import homeInfoDark from '../../../../assets/images/bandplanner/homeInfo_dark.webp';
@@ -90,7 +89,7 @@ const BandPlanner = () => {
       {isExpanded && isVisible && (
         <>
           <FadeInAnimation duration="1s">
-            <Cubes isVisible={isVisible} altImage1={bandAlt} image1={homeDesktop} image2={loginDesktop} image3={homeInfoLight} image4={homeInfoDark} image5={addPlaylistDark} image6={addPlaylistLight} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
+            <Cubes isVisible={isVisible} altImage1={bandAlt} image1={loginDesktop} image2={homeInfoLight} image3={loginDesktop} image4={homeInfoDark} image5={addPlaylistDark} image6={addPlaylistLight} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" imageTitle="'Application Images'" />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#e9f0fb" />

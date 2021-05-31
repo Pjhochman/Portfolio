@@ -86,7 +86,7 @@ const ColorPalette = () => {
       {isExpanded && isVisible && (
         <>
           <FadeInAnimation duration="1s">
-            <Cubes isVisible={isVisible} altImage1={paletteAlt} image1={blue} image2={green} image3={orange} image4={purple} image5={red} image6={violet} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
+            <Cubes imageTitle="'Website Images'" isVisible={isVisible} altImage1={paletteAlt} image1={blue} image2={green} image3={orange} image4={purple} image5={red} image6={violet} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#e9f0fb" />

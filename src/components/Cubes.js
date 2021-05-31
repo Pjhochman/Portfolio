@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import './HomePage/Cards/styles/cards.css';
 
-const size = 85;
+const size = 75;
 
 const cubeValues = {
-  transform: 85 / 2,
+  transform: 75 / 2,
 };
 
 const StyledScene = styled.div`
@@ -41,7 +41,7 @@ const StyledScene = styled.div`
     &:before {
     transition: all 0.2s ease-in-out;
     position: absolute;
-    content: ${({ open, imageTitle }) => (open ? !imageTitle ? "'Application Images'" : "'Company Logo'" : null)};
+    content: ${({ open, imageTitle }) => (open && imageTitle)};
     font-size: 4px;
     top: -27px;
     text-transform: uppercase;
@@ -65,7 +65,7 @@ const StyledCube = styled.div`
   position: relative;
   width: ${size}px;
   height: ${size}px;
-  animation: rotate 10s ease-in-out infinite;
+  animation: rotate 12s ease-in-out infinite;
   transform-origin: center center;
 `;
 
@@ -138,7 +138,7 @@ Cubes.propTypes = {
   color: PropTypes.string,
   absolute: PropTypes.bool,
   margin: PropTypes.bool,
-  imageTitle: PropTypes.bool,
+  imageTitle: PropTypes.string,
   copyright: PropTypes.bool,
   marginBottom: PropTypes.string,
 };
