@@ -52,7 +52,7 @@ li {
 
 .items .active {
   z-index: 10;
-  top: 0 !important;
+  top: -10px !important;
   left: 0 !important;
   width: 485px !important;
   height: 590px !important;
