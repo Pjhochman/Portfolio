@@ -94,7 +94,7 @@ export const StyledBottomContainer = styled.div`
   user-select: none;
   white-space: nowrap;
   flex-direction: ${(props) => props.flexDirection};
-  margin: ${(props) => (props.margin ? '14px' : '20px')};
+  margin: 20px;
   color: ${(props) => (props.color ? '#202020' : '#e9f0fb')};
 `;
 

@@ -93,7 +93,7 @@ const HyperIsland = () => {
       )}
       <TopContent
         color="true"
-        margin={!isExpanded && (width < mediaWidthMobile) ? '15px 6px' : '11px'}
+        margin={!isExpanded && (width < mediaWidthMobile) ? '15px 1px' : '11px'}
         textAlign={isExpanded ? 'start' : 'end'}
         alignSelf={isExpanded ? 'flex-start' : 'flex-end'}
       >
