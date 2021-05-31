@@ -1,4 +1,6 @@
-import React, { useContext } from 'react';
+import React, {
+  useContext, useEffect, useState, useRef,
+} from 'react';
 import styled from 'styled-components';
 import { CardItemContext } from '../Context/cardContext';
 import useWindowSize from '../../../../hooks/useWindowSize';
@@ -32,6 +34,8 @@ right: 18px;
 const Project11 = () => {
   const mediaWidthMobile = 637;
   const { width } = useWindowSize();
+  const [isVisible, setVisible] = useState(false);
+  const isMountedRef = useRef(null);
   const {
     TopContent,
     MiddleContent,
@@ -46,6 +50,17 @@ const Project11 = () => {
     expandHandler,
     Button,
   } = useContext(CardItemContext);
+
+  useEffect(() => {
+    isMountedRef.current = true;
+    if (isMountedRef.current && isExpanded) {
+      setTimeout(() => {
+        setVisible(true);
+      }, 200);
+    }
+    return () => { isMountedRef.current = false; };
+  }, [isVisible, isExpanded]);
+
   return (
     <>
       <TopContent
@@ -77,10 +92,10 @@ const Project11 = () => {
         )}
       </TopContent>
 
-      {isExpanded && (
+      {isExpanded && isVisible && (
       <>
         <FadeInAnimation duration="1s">
-          <Cubes altImage1={projectAlt} image1={project1} image2={project2} image3={project3} image4={project3} image5={project5} image6={project4} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
+          <Cubes isVisible={isVisible} altImage1={projectAlt} image1={project1} image2={project2} image3={project3} image4={project3} image5={project5} image6={project4} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
           <StyledFiller />
           <StyledButton type="button" onClick={() => expandHandler(false)}>
             <CloseIcon color="#e9f0fb" />
@@ -88,7 +103,7 @@ const Project11 = () => {
         </FadeInAnimation>
         {Object.values(project11[0].middleCardContent).map(
           (item, index, arr) => (
-            <FadeInAnimation key={item.title} duration="1.1s">
+            <FadeInAnimation key={item.title} duration="1s">
               <MiddleContent whiteSpace="true">
                 <MiddleTitle>{item.title}</MiddleTitle>
                 {arr.length - 1 === index && (
@@ -119,10 +134,12 @@ const Project11 = () => {
             </FadeInAnimation>
           ),
         )}
-        <BottomContent>
-          <BottomTitle>Desktop&nbsp;|</BottomTitle>
-          <BottomDescription>&nbsp;VR experience</BottomDescription>
-        </BottomContent>
+        <FadeInAnimation duration="1s">
+          <BottomContent>
+            <BottomTitle>Desktop&nbsp;|</BottomTitle>
+            <BottomDescription>&nbsp;VR experience</BottomDescription>
+          </BottomContent>
+        </FadeInAnimation>
       </>
       )}
     </>

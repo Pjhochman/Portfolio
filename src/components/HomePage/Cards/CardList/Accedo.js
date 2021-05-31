@@ -1,4 +1,6 @@
-import React, { useContext } from 'react';
+import React, {
+  useContext, useEffect, useState, useRef,
+} from 'react';
 import styled from 'styled-components';
 import { CardItemContext } from '../Context/cardContext';
 import useWindowSize from '../../../../hooks/useWindowSize';
@@ -35,6 +37,8 @@ const StyledLi = styled.li`
 const Accedo = () => {
   const mediaWidthMobile = 637;
   const { width } = useWindowSize();
+  const [isVisible, setVisible] = useState(false);
+  const isMountedRef = useRef(null);
 
   const {
     TopContent,
@@ -50,11 +54,22 @@ const Accedo = () => {
     expandHandler,
     Button,
   } = useContext(CardItemContext);
+
+  useEffect(() => {
+    isMountedRef.current = true;
+    if (isMountedRef.current && isExpanded) {
+      setTimeout(() => {
+        setVisible(true);
+      }, 200);
+    }
+    return () => { isMountedRef.current = false; };
+  }, [isVisible, isExpanded]);
+
   return (
     <>
       <TopContent margin={!isExpanded && '52px'} alignSelf={!isExpanded ? 'center' : 'start'} textAlign={!isExpanded ? 'center' : 'start'} color="true">
         {width > mediaWidthMobile ? (
-          <FadeInAnimation alignSelf={!isExpanded ? 'center' : 'start'} duration="0.2s">
+          <FadeInAnimation alignSelf={!isExpanded ? 'center' : 'start'} duration="0.3s">
             <TopTitle>Previously</TopTitle>
             <TopDescription lineHeight="15px">
               <StyledHr />
@@ -64,7 +79,7 @@ const Accedo = () => {
         ) : (
           <>
             {isExpanded ? (
-              <FadeInAnimation duration="3s">
+              <FadeInAnimation duration="0.3s">
                 <TopTitle>Accedo</TopTitle>
                 <StyledHr />
                 <TopDescription lineHeight="15px">
@@ -80,10 +95,10 @@ const Accedo = () => {
         )}
       </TopContent>
 
-      {isExpanded && (
+      {isExpanded && isVisible && (
         <>
           <FadeInAnimation duration="1s">
-            <Cubes imageTitle copyright altImage1={altAccedo} image1={accedoLogo} image2={accedoLogo} image3={accedoLogo} image4={accedoLogo} image5={accedoLogo} image6={accedoLogo} marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom={width > mediaWidthMobile ? '230px' : '55vh'} />
+            <Cubes isVisible={isVisible} imageTitle copyright altImage1={altAccedo} image1={accedoLogo} image2={accedoLogo} image3={accedoLogo} image4={accedoLogo} image5={accedoLogo} image6={accedoLogo} marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom={width > mediaWidthMobile ? '230px' : '55vh'} />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#202020" />
@@ -124,10 +139,12 @@ const Accedo = () => {
               </FadeInAnimation>
             ),
           )}
-          <BottomContent margin color="true">
-            <BottomTitle>SaaS Application&nbsp;|</BottomTitle>
-            <BottomDescription>&nbsp;Video Experience</BottomDescription>
-          </BottomContent>
+          <FadeInAnimation duration="1s">
+            <BottomContent margin color="true">
+              <BottomTitle>SaaS Application&nbsp;|</BottomTitle>
+              <BottomDescription>&nbsp;Video Experience</BottomDescription>
+            </BottomContent>
+          </FadeInAnimation>
         </>
       )}
     </>

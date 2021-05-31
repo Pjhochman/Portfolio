@@ -43,8 +43,8 @@ li {
   .active {
     z-index: 10;
     top: 0 !important;
-    left: -9px !important;
-    width: 515px !important;
+    left: 0 !important;
+    width: 485px !important;
     height: 590px !important;
   }
   &__layer &__item {
@@ -249,9 +249,9 @@ li {
     }
     &__layer:nth-child(5) &__item {
       box-sizing: border-box;
-      left: 50% !important;
-      top: 50% !important;
-      transform: translate(-50%, -50%) !important;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       width: 120px;
       height: 120px;
     }

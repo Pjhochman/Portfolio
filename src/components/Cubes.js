@@ -13,6 +13,7 @@ const cubeValues = {
 const StyledScene = styled.div`
   perspective: 800px;
   display: flex;
+  opacity:  ${({ isVisible }) => (isVisible ? '1' : '0')};
   position: ${({ absolute }) => (absolute ? 'absolute' : 'relative')};
   left: 0;
   right: 0;
@@ -93,6 +94,7 @@ const StyledFront = styled.img`
 `;
 
 const Cubes = ({
+  isVisible,
   imageTitle,
   copyright,
   color,
@@ -110,6 +112,7 @@ const Cubes = ({
   const [open, setOpen] = useState(false);
   return (
     <StyledScene
+      isVisible={isVisible}
       imageTitle={imageTitle}
       copyright={copyright}
       absolute={absolute}

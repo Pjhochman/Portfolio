@@ -34,7 +34,7 @@ const Cards = () => {
         <CardItem
           dataDepth={data[0].dataDepth}
           dataTitle={data[0].dataTitle}
-          startAnimation={fadeInLeftAnimation}
+          startAnimation={width > mediaWidth ? fadeInLeftAnimation : fadeInAnimation}
           wait={600}
         >
           <ColorPalette />
@@ -42,7 +42,7 @@ const Cards = () => {
         <CardItem
           dataDepth={data[1].dataDepth}
           dataTitle={data[1].dataTitle}
-          startAnimation={fadeInRightAnimation}
+          startAnimation={width > mediaWidth ? fadeInRightAnimation : fadeInAnimation}  
           wait={600}
         >
           <HyperIsland />
@@ -50,7 +50,7 @@ const Cards = () => {
         <CardItem
           dataDepth={data[2].dataDepth}
           dataTitle={data[2].dataTitle}
-          startAnimation={fadeInUpAnimation}
+          startAnimation={width > mediaWidth ? fadeInUpAnimation : fadeInAnimation}  
           wait={700}
         >
           <Project11 />
@@ -58,7 +58,7 @@ const Cards = () => {
         <CardItem
           dataDepth={data[3].dataDepth}
           dataTitle={data[3].dataTitle}
-          startAnimation={fadeInDownAnimation}
+          startAnimation={width > mediaWidth ? fadeInDownAnimation : fadeInAnimation}  
           wait={700}
         >
           <BandPlanner />

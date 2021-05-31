@@ -1,4 +1,6 @@
-import React, { useContext } from 'react';
+import React, {
+  useContext, useEffect, useState, useRef,
+} from 'react';
 import styled from 'styled-components';
 import { CardItemContext } from '../Context/cardContext';
 import useWindowSize from '../../../../hooks/useWindowSize';
@@ -30,6 +32,8 @@ right: 18px;
 
 const BandPlanner = () => {
   const mediaWidthMobile = 637;
+  const [isVisible, setVisible] = useState(false);
+  const isMountedRef = useRef(null);
   const { width } = useWindowSize();
   const {
     TopContent,
@@ -46,6 +50,15 @@ const BandPlanner = () => {
     Button,
   } = useContext(CardItemContext);
 
+  useEffect(() => {
+    isMountedRef.current = true;
+    if (isMountedRef.current && isExpanded) {
+      setTimeout(() => {
+        setVisible(true);
+      }, 200);
+    }
+    return () => { isMountedRef.current = false; };
+  }, [isVisible, isExpanded]);
   return (
     <>
       <TopContent alignSelf="start">
@@ -74,18 +87,19 @@ const BandPlanner = () => {
           </>
         )}
       </TopContent>
-      {isExpanded && (
+      {isExpanded && isVisible && (
         <>
           <FadeInAnimation duration="1s">
-            <Cubes altImage1={bandAlt} image1={homeDesktop} image2={loginDesktop} image3={homeInfoLight} image4={homeInfoDark} image5={addPlaylistDark} image6={addPlaylistLight} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
+            <Cubes isVisible={isVisible} altImage1={bandAlt} image1={homeDesktop} image2={loginDesktop} image3={homeInfoLight} image4={homeInfoDark} image5={addPlaylistDark} image6={addPlaylistLight} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#e9f0fb" />
             </StyledButton>
           </FadeInAnimation>
+
           {Object.values(bandPlanner[0].middleCardContent).map(
             (item, index, arr) => (
-              <FadeInAnimation key={item.title} duration="1.1s">
+              <FadeInAnimation key={item.title} duration="1s">
                 <MiddleContent>
                   <MiddleTitle>{item.title}</MiddleTitle>
                   {arr.length - 1 === index && (
@@ -116,10 +130,12 @@ const BandPlanner = () => {
               </FadeInAnimation>
             ),
           )}
-          <BottomContent margin>
-            <BottomTitle textTransform>EMAIL: hello@email.com &nbsp;|</BottomTitle>
-            <BottomDescription textTransform>&nbsp;PASSWORD: hello</BottomDescription>
-          </BottomContent>
+          <FadeInAnimation duration="1s">
+            <BottomContent margin>
+              <BottomTitle textTransform>EMAIL: hello@email.com &nbsp;|</BottomTitle>
+              <BottomDescription textTransform>&nbsp;PASSWORD: hello</BottomDescription>
+            </BottomContent>
+          </FadeInAnimation>
         </>
       )}
     </>

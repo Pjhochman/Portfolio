@@ -1,4 +1,6 @@
-import React, { useContext } from 'react';
+import React, {
+  useContext, useEffect, useState, useRef,
+} from 'react';
 import styled from 'styled-components';
 import { CardItemContext } from '../Context/cardContext';
 import useWindowSize from '../../../../hooks/useWindowSize';
@@ -27,7 +29,8 @@ right: 18px;
 const ColorPalette = () => {
   const mediaWidthMobile = 637;
   const { width } = useWindowSize();
-
+  const [isVisible, setVisible] = useState(false);
+  const isMountedRef = useRef(null);
   const {
     TopContent,
     MiddleContent,
@@ -42,6 +45,16 @@ const ColorPalette = () => {
     expandHandler,
     Button,
   } = useContext(CardItemContext);
+
+  useEffect(() => {
+    isMountedRef.current = true;
+    if (isMountedRef.current && isExpanded) {
+      setTimeout(() => {
+        setVisible(true);
+      }, 200);
+    }
+    return () => { isMountedRef.current = false; };
+  }, [isVisible, isExpanded]);
 
   return (
     <>
@@ -70,10 +83,10 @@ const ColorPalette = () => {
           </>
         )}
       </TopContent>
-      {isExpanded && (
+      {isExpanded && isVisible && (
         <>
           <FadeInAnimation duration="1s">
-            <Cubes altImage1={paletteAlt} image1={blue} image2={green} image3={orange} image4={purple} image5={red} image6={violet} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
+            <Cubes isVisible={isVisible} altImage1={paletteAlt} image1={blue} image2={green} image3={orange} image4={purple} image5={red} image6={violet} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#e9f0fb" />
@@ -81,7 +94,7 @@ const ColorPalette = () => {
           </FadeInAnimation>
           {Object.values(colorPalette[0].middleCardContent).map(
             (item, index, arr) => (
-              <FadeInAnimation key={item.title} duration="1.1s">
+              <FadeInAnimation key={item.title} duration="1s">
                 <MiddleContent>
                   <MiddleTitle>{item.title}</MiddleTitle>
                   {arr.length - 1 === index && (
@@ -112,10 +125,12 @@ const ColorPalette = () => {
               </FadeInAnimation>
             ),
           )}
-          <BottomContent>
-            <BottomTitle>Mobile & Desktop&nbsp;|</BottomTitle>
-            <BottomDescription>&nbsp;Interactive Design</BottomDescription>
-          </BottomContent>
+          <FadeInAnimation duration="1s">
+            <BottomContent>
+              <BottomTitle>Mobile & Desktop&nbsp;|</BottomTitle>
+              <BottomDescription>&nbsp;Interactive Design</BottomDescription>
+            </BottomContent>
+          </FadeInAnimation>
         </>
       )}
     </>

@@ -60,7 +60,7 @@ const CardItem = ({
     >
       {isVisible && (
         <StartAnimation
-          startAnimation={width > mediaWidthTablet && startAnimation}
+          startAnimation={startAnimation}
           className={isExpanded ? 'items__item active' : 'items__item'}
           data-title={dataTitle}
           onClick={!isExpanded ? () => setExpand(true) : expandHandler}
