@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import useHover from '../../../hooks/useHover';
+import useWindowSize from '../../../hooks/useWindowSize';
 import {
   CardItemContext,
   StyledTopContainer,
@@ -14,7 +15,6 @@ import {
   StyledBottomDescription,
   StyledButton,
 } from './Context/cardContext';
-import useWindowSize from '../../../hooks/useWindowSize';
 
 import { StartAnimation } from '../../../animations/animations';
 import './styles/cards.css';
@@ -22,7 +22,7 @@ import './styles/cards.css';
 const CardItem = ({
   children, wait, startAnimation, dataDepth, dataTitle,
 }) => {
-  const mediaWidthTablet = 768;
+  const mediaWidthTablet = 1100;
   const [refCard, cardHovered] = useHover();
   const { width } = useWindowSize();
   const [isVisible, setVisible] = useState(false);
@@ -31,13 +31,9 @@ const CardItem = ({
   const expandHandler = (prop) => (!prop && setExpand(false));
 
   useEffect(() => {
-    if (width > mediaWidthTablet) {
+    setTimeout(() => {
       setVisible((value) => !value);
-    } else {
-      setTimeout(() => {
-        setVisible((value) => !value);
-      }, wait);
-    }
+    }, wait);
   }, [wait]);
 
   const delayCardText = () => {
