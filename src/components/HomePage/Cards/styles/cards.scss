@@ -204,6 +204,7 @@ li {
       height: 100%;
     }  
     .active {
+      top: 0px !important;
       opacity: 1;
       box-sizing: border-box;
       z-index: 10;

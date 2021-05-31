@@ -244,6 +244,7 @@ li {
     height: 100%;
   }
   .items .active {
+    top: 0px !important;
     opacity: 1;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
