@@ -35,7 +35,7 @@ const Cards = () => {
           dataDepth={data[0].dataDepth}
           dataTitle={data[0].dataTitle}
           startAnimation={width > mediaWidth ? fadeInLeftAnimation : fadeInAnimation}
-          wait={600}
+          wait={width > mediaWidth ? 600 : 900}
         >
           <ColorPalette />
         </CardItem>
@@ -43,7 +43,7 @@ const Cards = () => {
           dataDepth={data[1].dataDepth}
           dataTitle={data[1].dataTitle}
           startAnimation={width > mediaWidth ? fadeInRightAnimation : fadeInAnimation}  
-          wait={600}
+          wait={width > mediaWidth ? 600 : 700}
         >
           <HyperIsland />
         </CardItem>
@@ -51,7 +51,7 @@ const Cards = () => {
           dataDepth={data[2].dataDepth}
           dataTitle={data[2].dataTitle}
           startAnimation={width > mediaWidth ? fadeInUpAnimation : fadeInAnimation}  
-          wait={700}
+          wait={width > mediaWidth ? 700 : 500}
         >
           <Project11 />
         </CardItem>
@@ -59,7 +59,7 @@ const Cards = () => {
           dataDepth={data[3].dataDepth}
           dataTitle={data[3].dataTitle}
           startAnimation={width > mediaWidth ? fadeInDownAnimation : fadeInAnimation}  
-          wait={700}
+          wait={width > mediaWidth ? 700 : 300}
         >
           <BandPlanner />
         </CardItem>
@@ -67,7 +67,7 @@ const Cards = () => {
           dataDepth={data[4].dataDepth}
           dataTitle={data[4].dataTitle}
           startAnimation={fadeInAnimation}
-          wait={0}>  
+          wait={width > mediaWidth ? 0 : 100}>
             <Accedo />
         </CardItem>
       </div>

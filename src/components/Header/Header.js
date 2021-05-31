@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Dropdown from './Dropdown';
+import useWindowSize from '../../hooks/useWindowSize';
 import { fadeInAnimation } from '../../animations/animations';
 import './styles/header.css';
 
@@ -54,6 +55,9 @@ const StyledTitleWrapper = styled.h1`
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [isVisible, setVisible] = useState(false);
+  const mediaWidth = 1110;
+  const { width } = useWindowSize();
+
   const clickHandler = () => {
     setOpen((value) => !value);
   };
@@ -61,7 +65,7 @@ const Header = () => {
   useEffect(() => {
     setTimeout(() => {
       setVisible((value) => !value);
-    }, 1600);
+    }, width > mediaWidth ? 1600 : 200);
   }, []);
   return (
     <FadeIn>
