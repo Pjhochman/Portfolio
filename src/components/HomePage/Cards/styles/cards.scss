@@ -75,6 +75,7 @@ li {
     }
   }
   &__layer:nth-child(1) &__item {
+    transition: all 0.2s ease-in-out;
     overflow: hidden;
     $color:  #3f3f3f;// #040c0e;
     top: 120px;
@@ -82,6 +83,7 @@ li {
     width: 300px;
     height: 300px;
     background: $color;
+   
     &:after {
       top: -23px;
       left: 0;
@@ -89,6 +91,7 @@ li {
     }
   }
   &__layer:nth-child(2) &__item {
+    transition: all 0.2s ease-in-out;
     overflow: hidden;
     $color: #ffdf6c; // #a4978e;
     flex-direction: column-reverse;
@@ -104,6 +107,7 @@ li {
     }
   }
   &__layer:nth-child(3) &__item {
+    transition: all 0.2s ease-in-out;
     overflow: hidden;
     $color: #707070;  //#132226;
     top: 280px;
@@ -134,6 +138,7 @@ li {
     }
   }
   &__layer:nth-child(4) &__item {
+    transition: all 0.2s ease-in-out;
     overflow: hidden;
     $color: #202020; // #525b56;
     top: 20px;
@@ -148,6 +153,7 @@ li {
     }
   }
   &__layer:nth-child(5) &__item {
+    transition: all 0.2s ease-in-out;
     overflow: hidden;
     $color: #BBBBBB;  // #be9063;
     top: 200px;

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import useWindowSize from '../../../hooks/useWindowSize';
+
 import { FadeInLeft, FadeInRight, FadeIn } from './animations';
 import { technologies } from './data.json';
 import './styles/aside.css';
 
-const Aside = () => {
+const Aside = ({ clickHandler }) => {
   const mediaWidthDesktop = 1100;
   const [display, setDisplay] = useState(false);
   const [isVisible, setVisible] = useState(false);
@@ -16,13 +18,16 @@ const Aside = () => {
       setVisible((value) => !value);
     }, 1500);
   }, []);
-
   return (
     <aside>
-      <div id="designerContainer">
+      <div type="button" id="designerContainer">
         {isVisible && (
           <FadeInLeft>
-            <h2 className="designer-title title">designer</h2>
+            <button aria-label="Transform Cards" type="button" onClick={() => clickHandler()}>
+              <h2 className="designer-title title">
+                designer
+              </h2>
+            </button>
             <p className="description">
               I have a passion for designing beautiful and functional
               experiences.
@@ -77,6 +82,10 @@ const Aside = () => {
       </div>
     </aside>
   );
+};
+
+Aside.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
 };
 
 export default Aside;

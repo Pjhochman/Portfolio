@@ -99,6 +99,8 @@ li {
 }
 
 .items__layer:nth-child(1) .items__item {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   overflow: hidden;
   top: 120px;
   left: 0px;
@@ -114,6 +116,8 @@ li {
 }
 
 .items__layer:nth-child(2) .items__item {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
@@ -133,6 +137,8 @@ li {
 }
 
 .items__layer:nth-child(3) .items__item {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   overflow: hidden;
   top: 280px;
   left: 30px;
@@ -174,6 +180,8 @@ li {
 }
 
 .items__layer:nth-child(4) .items__item {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   overflow: hidden;
   top: 20px;
   left: 240px;
@@ -189,6 +197,8 @@ li {
 }
 
 .items__layer:nth-child(5) .items__item {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   overflow: hidden;
   top: 200px;
   left: 160px;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Parallax from 'parallax-js';
 import { data } from './data/data.json';
 import CardItem from './CardItem';
@@ -17,7 +18,7 @@ import {
 } from '../../../animations/animations';
 import './styles/cards.css';
 
-const Cards = () => {
+const Cards = ({ click }) => {
   const mediaWidth = 1110;
   const { width } = useWindowSize();
   const scene = document.getElementById('js-scene');
@@ -29,11 +30,14 @@ const Cards = () => {
       : new Parallax(scene, { scalarX: '0', scalarY: '0' });
   }
   return (
+    <>
     <div className="items">
       <div className='items__inner' id="js-scene">
         <CardItem
           dataDepth={data[0].dataDepth}
           dataTitle={data[0].dataTitle}
+          click={click}
+          transform='items__item transform1'
           startAnimation={width > mediaWidth ? fadeInLeftAnimation : fadeInAnimation}
           wait={600}
         >
@@ -42,6 +46,9 @@ const Cards = () => {
         <CardItem
           dataDepth={data[1].dataDepth}
           dataTitle={data[1].dataTitle}
+          transform='items__item transform2'
+          click={click}
+
           startAnimation={width > mediaWidth ? fadeInRightAnimation : fadeInAnimation}  
           wait={600}
         >
@@ -50,6 +57,9 @@ const Cards = () => {
         <CardItem
           dataDepth={data[2].dataDepth}
           dataTitle={data[2].dataTitle}
+          transform='items__item transform3'
+          click={click}
+
           startAnimation={width > mediaWidth ? fadeInUpAnimation : fadeInAnimation}  
           wait={700}
         >
@@ -58,6 +68,9 @@ const Cards = () => {
         <CardItem
           dataDepth={data[3].dataDepth}
           dataTitle={data[3].dataTitle}
+          transform='items__item transform4'
+          click={click}
+
           startAnimation={width > mediaWidth ? fadeInDownAnimation : fadeInAnimation}  
           wait={700}
         >
@@ -66,6 +79,9 @@ const Cards = () => {
         <CardItem 
           dataDepth={data[4].dataDepth}
           dataTitle={data[4].dataTitle}
+          transform='items__item transform5'
+          click={click}
+
           startAnimation={fadeInAnimation}
           wait={0}
           >
@@ -73,7 +89,12 @@ const Cards = () => {
         </CardItem>
       </div>
     </div>
+    </>
   );
 };
+
+Cards.propTypes = {
+  click : PropTypes.bool.isRequired
+}
 
 export default Cards;
