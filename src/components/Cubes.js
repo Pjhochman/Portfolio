@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import './HomePage/Cards/styles/cards.css';
 
-const size = 97;
+const size = 93;
 
 const cubeValues = {
-  transform: 97 / 2,
+  transform: 93 / 2,
 };
 
 const StyledScene = styled.div`
@@ -71,42 +71,42 @@ const StyledCube = styled.div`
 `;
 
 const StyledBack = styled.img`
-  border: 5px solid ${({borderColor}) => borderColor};
+  border: 3px solid ${({borderColor}) => borderColor};
   padding: 8px;  
   transform: translateZ(-${cubeValues.transform}px) rotateX(180deg);
   background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledLeft = styled.img`
-  border: 5px solid ${({borderColor}) => borderColor};
+  border: 3px solid ${({borderColor}) => borderColor};
   padding: 8px; 
   transform: translateX(-${cubeValues.transform}px) rotateY(90deg);
   background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledRight = styled.img`
-  border: 5px solid ${({borderColor}) => borderColor};
+  border: 3px solid ${({borderColor}) => borderColor};
   padding: 8px; 
   transform: translateX(${cubeValues.transform}px) rotateY(90deg);
   background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledTop = styled.img`
-  border: 5px solid ${({borderColor}) => borderColor};
+  border: 3px solid ${({borderColor}) => borderColor};
   padding: 8px;
   transform: translateY(-${cubeValues.transform}px) rotateX(90deg);
   background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledBottom = styled.img`
-  border: 5px solid ${({borderColor}) => borderColor};
+  border: 3px solid ${({borderColor}) => borderColor};
   padding: 8px; 
   transform: translateY(${cubeValues.transform}px) rotateX(270deg);
   background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledFront = styled.img`
-  border: 5px solid ${({borderColor}) => borderColor};
+  border: 3px solid ${({borderColor}) => borderColor};
   padding: 8px; 
   transform: translateZ(${cubeValues.transform}px);
   background-color: ${({backgroundColor}) => backgroundColor}
