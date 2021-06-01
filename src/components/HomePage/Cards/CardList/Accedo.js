@@ -97,8 +97,8 @@ const Accedo = () => {
 
       {isExpanded && isVisible && (
         <>
-          <FadeInAnimation duration="1s">
-            <Cubes isVisible={isVisible} imageTitle="'Accedo Logo'" copyright altImage1={altAccedo} image1={accedoLogo} image2={accedoLogo} image3={accedoLogo} image4={accedoLogo} image5={accedoLogo} image6={accedoLogo} marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom={width > mediaWidthMobile ? '230px' : '55vh'} />
+          <FadeInAnimation duration="0.5s">
+            <Cubes backgroundColor="#BBBBBB" isVisible={isVisible} imageTitle="'Accedo Logo'" copyright altImage1={altAccedo} image1={accedoLogo} image2={accedoLogo} image3={accedoLogo} image4={accedoLogo} image5={accedoLogo} image6={accedoLogo} marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom={width > mediaWidthMobile ? '230px' : '55vh'} />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#202020" />
@@ -106,7 +106,7 @@ const Accedo = () => {
           </FadeInAnimation>
           {Object.values(accedo[0].middleCardContent).map(
             (item, index, arr) => (
-              <FadeInAnimation key={item.title} duration="1.1s">
+              <FadeInAnimation key={item.title} duration="0.5s">
                 <MiddleContent color="true">
                   <MiddleTitle>{item.title}</MiddleTitle>
                   {arr.length - 1 === index && (
@@ -139,7 +139,7 @@ const Accedo = () => {
               </FadeInAnimation>
             ),
           )}
-          <FadeInAnimation duration="1s">
+          <FadeInAnimation duration="0.5s">
             <BottomContent margin color="true">
               <BottomTitle>SaaS Application&nbsp;|</BottomTitle>
               <BottomDescription>&nbsp;Video Experience</BottomDescription>

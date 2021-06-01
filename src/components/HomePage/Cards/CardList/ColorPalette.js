@@ -85,8 +85,8 @@ const ColorPalette = () => {
       </TopContent>
       {isExpanded && isVisible && (
         <>
-          <FadeInAnimation duration="1s">
-            <Cubes imageTitle="'Website Images'" isVisible={isVisible} altImage1={paletteAlt} image1={blue} image2={green} image3={orange} image4={purple} image5={red} image6={violet} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
+          <FadeInAnimation duration="0.5s">
+            <Cubes backgroundColor="#3f3f3f" imageTitle="'Application Images'" isVisible={isVisible} altImage1={paletteAlt} image1={blue} image2={green} image3={orange} image4={purple} image5={red} image6={violet} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#e9f0fb" />
@@ -94,7 +94,7 @@ const ColorPalette = () => {
           </FadeInAnimation>
           {Object.values(colorPalette[0].middleCardContent).map(
             (item, index, arr) => (
-              <FadeInAnimation key={item.title} duration="1s">
+              <FadeInAnimation key={item.title} duration="0.5s">
                 <MiddleContent>
                   <MiddleTitle>{item.title}</MiddleTitle>
                   {arr.length - 1 === index && (
@@ -125,7 +125,7 @@ const ColorPalette = () => {
               </FadeInAnimation>
             ),
           )}
-          <FadeInAnimation duration="1s">
+          <FadeInAnimation duration="0.5s">
             <BottomContent>
               <BottomTitle>Mobile & Desktop&nbsp;|</BottomTitle>
               <BottomDescription>&nbsp;Interactive Design</BottomDescription>

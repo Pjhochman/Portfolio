@@ -94,8 +94,8 @@ const Project11 = () => {
 
       {isExpanded && isVisible && (
       <>
-        <FadeInAnimation duration="1s">
-          <Cubes imageTitle="'Game Images'" isVisible={isVisible} altImage1={projectAlt} image1={project1} image2={project2} image3={project3} image4={project3} image5={project5} image6={project4} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
+        <FadeInAnimation duration="0.5s">
+          <Cubes backgroundColor="#707070" imageTitle="'VR Images'" isVisible={isVisible} altImage1={projectAlt} image1={project1} image2={project2} image3={project3} image4={project3} image5={project5} image6={project4} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
           <StyledFiller />
           <StyledButton type="button" onClick={() => expandHandler(false)}>
             <CloseIcon color="#e9f0fb" />
@@ -103,7 +103,7 @@ const Project11 = () => {
         </FadeInAnimation>
         {Object.values(project11[0].middleCardContent).map(
           (item, index, arr) => (
-            <FadeInAnimation key={item.title} duration="1s">
+            <FadeInAnimation key={item.title} duration="0.5s">
               <MiddleContent whiteSpace="true">
                 <MiddleTitle>{item.title}</MiddleTitle>
                 {arr.length - 1 === index && (
@@ -134,7 +134,7 @@ const Project11 = () => {
             </FadeInAnimation>
           ),
         )}
-        <FadeInAnimation duration="1s">
+        <FadeInAnimation duration="0.5s">
           <BottomContent>
             <BottomTitle>Desktop&nbsp;|</BottomTitle>
             <BottomDescription>&nbsp;VR experience</BottomDescription>

@@ -315,9 +315,8 @@ li {
 
 .side {
   position: absolute;
-  width: 75px;
-  height: 75px;
-  background-color: #333;
+  width: 70px;
+  height: 70px;
   opacity: .94;
   background-size: cover;
   background-repeat: no-repeat;

@@ -58,7 +58,7 @@ const HyperIsland = () => {
     <>
       {isExpanded && isVisible && (
         <>
-          <FadeInAnimation duration="1s">
+          <FadeInAnimation duration="0.5s">
             <BottomContent color="true">
               <BottomTitle>Stockholm&nbsp;|</BottomTitle>
               <BottomDescription>&nbsp;2019–2021</BottomDescription>
@@ -83,8 +83,8 @@ const HyperIsland = () => {
               </FadeInAnimation>
             ),
           )}
-          <FadeInAnimation duration="1s">
-            <Cubes isVisible={isVisible} imageTitle="'Hyper Island Logo'" copyright altImage1={hyperAlt} image1={hyper1} image2={hyper2} image3={hyper4} image4={hyper2} image5={hyper5} image6={hyper1} absolute marginTop={width > mediaWidthMobile ? '60px' : '17vh'} marginBottom={width > mediaWidthMobile ? '0' : '0'} />
+          <FadeInAnimation duration="0.5s">
+            <Cubes backgroundColor="#ffdf6c" isVisible={isVisible} imageTitle="'Hyper Island Logo'" copyright altImage1={hyperAlt} image1={hyper1} image2={hyper2} image3={hyper4} image4={hyper2} image5={hyper5} image6={hyper1} absolute marginTop={width > mediaWidthMobile ? '60px' : '17vh'} marginBottom={width > mediaWidthMobile ? '0' : '0'} />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#202020" />
             </StyledButton>

@@ -88,8 +88,8 @@ const BandPlanner = () => {
       </TopContent>
       {isExpanded && isVisible && (
         <>
-          <FadeInAnimation duration="1s">
-            <Cubes isVisible={isVisible} altImage1={bandAlt} image1={loginDesktop} image2={homeInfoLight} image3={loginDesktop} image4={homeInfoDark} image5={addPlaylistDark} image6={addPlaylistLight} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" imageTitle="'Application Images'" />
+          <FadeInAnimation duration="0.5s">
+            <Cubes backgroundColor="#202020" isVisible={isVisible} altImage1={bandAlt} image1={loginDesktop} image2={homeInfoLight} image3={loginDesktop} image4={homeInfoDark} image5={addPlaylistDark} image6={addPlaylistLight} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" imageTitle="'Application Images'" />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#e9f0fb" />
@@ -98,7 +98,7 @@ const BandPlanner = () => {
 
           {Object.values(bandPlanner[0].middleCardContent).map(
             (item, index, arr) => (
-              <FadeInAnimation key={item.title} duration="1s">
+              <FadeInAnimation key={item.title} duration="0.5s">
                 <MiddleContent>
                   <MiddleTitle>{item.title}</MiddleTitle>
                   {arr.length - 1 === index && (
@@ -129,7 +129,7 @@ const BandPlanner = () => {
               </FadeInAnimation>
             ),
           )}
-          <FadeInAnimation duration="1s">
+          <FadeInAnimation duration="0.5s">
             <BottomContent>
               <BottomTitle textTransform>EMAIL: hello@email.com &nbsp;|</BottomTitle>
               <BottomDescription textTransform>&nbsp;PASSWORD: hello</BottomDescription>

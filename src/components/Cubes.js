@@ -4,14 +4,14 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import './HomePage/Cards/styles/cards.css';
 
-const size = 75;
+const size = 101.5;
 
 const cubeValues = {
-  transform: 75 / 2,
+  transform: 101.5 / 2,
 };
 
 const StyledScene = styled.div`
-  perspective: 800px;
+  perspective: 600px;
   display: flex;
   opacity:  ${({ isVisible }) => (isVisible ? '1' : '0')};
   position: ${({ absolute }) => (absolute ? 'absolute' : 'relative')};
@@ -21,24 +21,25 @@ const StyledScene = styled.div`
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  height: 85px;
-  width: 85px;
+  height: ${size}px;
+  width: ${size}px;
   transition: all 0.2s ease-in-out;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  transform: ${({ open }) => open && 'scale(2.8)'};
+  transform: ${({ open }) => open && 'scale(2.7)'};
   margin-bottom: ${({ open, marginBottom }) => (open && marginBottom)};
   margin-top: ${({ open, marginTop }) => (open && marginTop)};
 
     @media (max-width: 637px) {
     margin-bottom: ${({ open }) => (open && '55vh')};
     margin-top: ${({ open, marginTop }) => (open && marginTop)};
-    transform: ${({ open }) => open && 'scale(2.6)'};
+    transform: ${({ open }) => open && 'scale(2.5)'};
     }
     .side {
     opacity: 1;
     }
 
     &:before {
+    margin-left: -1px;
     transition: all 0.2s ease-in-out;
     position: absolute;
     content: ${({ open, imageTitle }) => (open && imageTitle)};
@@ -70,27 +71,45 @@ const StyledCube = styled.div`
 `;
 
 const StyledBack = styled.img`
+  border: 6px solid black;
+  padding: 10px;  
   transform: translateZ(-${cubeValues.transform}px) rotateX(180deg);
+  background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledLeft = styled.img`
+  border: 6px solid black;
+  padding: 10px; 
   transform: translateX(-${cubeValues.transform}px) rotateY(90deg);
+  background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledRight = styled.img`
+  border: 6px solid black;
+  padding: 10px; 
   transform: translateX(${cubeValues.transform}px) rotateY(90deg);
+  background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledTop = styled.img`
+  border: 6px solid black;
+  padding: 10px;
   transform: translateY(-${cubeValues.transform}px) rotateX(90deg);
+  background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledBottom = styled.img`
+  border: 6px solid black;
+  padding: 10px; 
   transform: translateY(${cubeValues.transform}px) rotateX(270deg);
+  background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledFront = styled.img`
+  border: 6px solid black;
+  padding: 10px; 
   transform: translateZ(${cubeValues.transform}px);
+  background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const Cubes = ({
@@ -107,7 +126,8 @@ const Cubes = ({
   image4,
   image5,
   image6,
-  altImage1
+  altImage1,
+  backgroundColor
 }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -123,12 +143,12 @@ const Cubes = ({
       onClick={() => setOpen((value) => !value)}
     >
       <StyledCube open={open}>
-        <StyledBack type="image/webp" src={image1} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
-        <StyledLeft type="image/webp" src={image2} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
-        <StyledRight type="image/webp" src={image3} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
-        <StyledTop type="image/webp" src={image4} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side"/>
-        <StyledBottom type="image/webp" src={image5} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
-        <StyledFront type="image/webp" src={image6} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledBack backgroundColor={backgroundColor} type="image/webp" src={image1} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledLeft backgroundColor={backgroundColor} type="image/webp" src={image2} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledRight backgroundColor={backgroundColor} type="image/webp" src={image3} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledTop backgroundColor={backgroundColor} type="image/webp" src={image4} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side"/>
+        <StyledBottom backgroundColor={backgroundColor} type="image/webp" src={image5} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledFront backgroundColor={backgroundColor} type="image/webp" src={image6} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
       </StyledCube>
     </StyledScene>
   );
