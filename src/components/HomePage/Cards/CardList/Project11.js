@@ -95,7 +95,7 @@ const Project11 = () => {
       {isExpanded && isVisible && (
       <>
         <FadeInAnimation duration="0.5s">
-          <Cubes borderColor="#e9f0fb" backgroundColor="#707070" imageTitle="'VR Images'" isVisible={isVisible} altImage1={projectAlt} image1={project1} image2={project2} image3={project3} image4={project3} image5={project5} image6={project4} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
+          <Cubes borderColor="black" backgroundColor="#707070" imageTitle="'VR Images'" isVisible={isVisible} altImage1={projectAlt} image1={project1} image2={project2} image3={project3} image4={project3} image5={project5} image6={project4} color="true" marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom="230px" />
           <StyledFiller />
           <StyledButton type="button" onClick={() => expandHandler(false)}>
             <CloseIcon color="#e9f0fb" />
