@@ -23,11 +23,14 @@ const Aside = ({ clickHandler }) => {
       <div type="button" id="designerContainer">
         {isVisible && (
           <FadeInLeft>
-            <button aria-label="Transform Cards" type="button" onClick={() => clickHandler()}>
-              <h2 className="designer-title title">
-                designer
-              </h2>
-            </button>
+            <h2
+              aria-hidden="true"
+              type="button"
+              className="designer-title title"
+              onClick={() => clickHandler()}
+            >
+              designer
+            </h2>
             <p className="description">
               I have a passion for designing beautiful and functional
               experiences.
@@ -38,7 +41,6 @@ const Aside = ({ clickHandler }) => {
       <div id="filler" />
       <div id="coderContainer">
         {isVisible && (
-
           <FadeInRight>
             <h2
               aria-hidden="true"

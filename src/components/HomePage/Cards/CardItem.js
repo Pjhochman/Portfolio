@@ -32,12 +32,8 @@ const CardItem = ({
   const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
   const randomWidth = randomInt(50, 400);
   const randomHeight = randomInt(50, 300);
-  const randomTop = randomInt(-10, -10);
-  const randomLeft = randomInt(-10, -10);
-  const randomBorderTop = randomInt(100, 100);
-  const randomBorderRight = randomInt(100, 100);
-  const randomBorderBottom = randomInt(100, 100);
-  const randomBorderLeft = randomInt(100, 100);
+  const randomTransform = randomInt(-10, -10);
+  const randomRadius = randomInt(100, 100);
 
   useEffect(() => {
     setTimeout(() => {
@@ -59,12 +55,8 @@ const CardItem = ({
     <StyledCards
       randomWidth={randomWidth}
       randomHeight={randomHeight}
-      randomLeft={randomLeft}
-      randomTop={randomTop}
-      randomBorderTop={randomBorderTop}
-      randomBorderRight={randomBorderRight}
-      randomBorderBottom={randomBorderBottom}
-      randomBorderLeft={randomBorderLeft}
+      randomTransform={randomTransform}
+      randomRadius={randomRadius}
       className={
         isExpanded ? 'items__layer layer active' : 'items__layer layer'
       }
