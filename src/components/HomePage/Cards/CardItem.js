@@ -33,7 +33,7 @@ const CardItem = ({
   const randomWidth = randomInt(50, 400);
   const randomHeight = randomInt(50, 300);
   const randomTransform = randomInt(-10, -10);
-  const randomRadius = randomInt(100, 100);
+  const randomRadius = randomInt(0, 100);
 
   useEffect(() => {
     setTimeout(() => {
@@ -43,7 +43,7 @@ const CardItem = ({
 
   const delayCardText = () => {
     if (width > mediaWidthTablet) {
-      if (cardHovered || isExpanded) {
+      if ((cardHovered && !click) || isExpanded) {
         return children;
       }
     } else {
