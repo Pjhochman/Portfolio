@@ -98,7 +98,7 @@ const Accedo = () => {
       {isExpanded && isVisible && (
         <>
           <FadeInAnimation duration="0.5s">
-            <Cubes backgroundColor="#BBBBBB" isVisible={isVisible} imageTitle="'Accedo Logo'" copyright altImage1={altAccedo} image1={accedoLogo} image2={accedoLogo} image3={accedoLogo} image4={accedoLogo} image5={accedoLogo} image6={accedoLogo} marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom={width > mediaWidthMobile ? '230px' : '55vh'} />
+            <Cubes borderColor="black" backgroundColor="#BBBBBB" isVisible={isVisible} imageTitle="'Accedo Logo'" copyright altImage1={altAccedo} image1={accedoLogo} image2={accedoLogo} image3={accedoLogo} image4={accedoLogo} image5={accedoLogo} image6={accedoLogo} marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom={width > mediaWidthMobile ? '230px' : '55vh'} />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
               <CloseIcon color="#202020" />

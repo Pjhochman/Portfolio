@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import './HomePage/Cards/styles/cards.css';
 
-const size = 101.5;
+const size = 97;
 
 const cubeValues = {
-  transform: 101.5 / 2,
+  transform: 97 / 2,
 };
 
 const StyledScene = styled.div`
@@ -71,43 +71,43 @@ const StyledCube = styled.div`
 `;
 
 const StyledBack = styled.img`
-  border: 6px solid black;
-  padding: 10px;  
+  border: 5px solid ${({borderColor}) => borderColor};
+  padding: 8px;  
   transform: translateZ(-${cubeValues.transform}px) rotateX(180deg);
   background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledLeft = styled.img`
-  border: 6px solid black;
-  padding: 10px; 
+  border: 5px solid ${({borderColor}) => borderColor};
+  padding: 8px; 
   transform: translateX(-${cubeValues.transform}px) rotateY(90deg);
   background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledRight = styled.img`
-  border: 6px solid black;
-  padding: 10px; 
+  border: 5px solid ${({borderColor}) => borderColor};
+  padding: 8px; 
   transform: translateX(${cubeValues.transform}px) rotateY(90deg);
   background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledTop = styled.img`
-  border: 6px solid black;
-  padding: 10px;
+  border: 5px solid ${({borderColor}) => borderColor};
+  padding: 8px;
   transform: translateY(-${cubeValues.transform}px) rotateX(90deg);
   background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledBottom = styled.img`
-  border: 6px solid black;
-  padding: 10px; 
+  border: 5px solid ${({borderColor}) => borderColor};
+  padding: 8px; 
   transform: translateY(${cubeValues.transform}px) rotateX(270deg);
   background-color: ${({backgroundColor}) => backgroundColor}
 `;
 
 const StyledFront = styled.img`
-  border: 6px solid black;
-  padding: 10px; 
+  border: 5px solid ${({borderColor}) => borderColor};
+  padding: 8px; 
   transform: translateZ(${cubeValues.transform}px);
   background-color: ${({backgroundColor}) => backgroundColor}
 `;
@@ -127,7 +127,8 @@ const Cubes = ({
   image5,
   image6,
   altImage1,
-  backgroundColor
+  backgroundColor,
+  borderColor
 }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -143,12 +144,12 @@ const Cubes = ({
       onClick={() => setOpen((value) => !value)}
     >
       <StyledCube open={open}>
-        <StyledBack backgroundColor={backgroundColor} type="image/webp" src={image1} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
-        <StyledLeft backgroundColor={backgroundColor} type="image/webp" src={image2} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
-        <StyledRight backgroundColor={backgroundColor} type="image/webp" src={image3} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
-        <StyledTop backgroundColor={backgroundColor} type="image/webp" src={image4} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side"/>
-        <StyledBottom backgroundColor={backgroundColor} type="image/webp" src={image5} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
-        <StyledFront backgroundColor={backgroundColor} type="image/webp" src={image6} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledBack borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image1} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledLeft borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image2} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledRight borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image3} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledTop borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image4} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side"/>
+        <StyledBottom borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image5} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
+        <StyledFront borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image6} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
       </StyledCube>
     </StyledScene>
   );
