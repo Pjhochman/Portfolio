@@ -1,39 +1,49 @@
 import styled from 'styled-components';
 
 const StyledCards = styled.div`
-   .transform1 {
-    transform: ${({ randomTransform }) => `translate(${`${randomTransform}%`},${`  ${randomTransform}%`}) !important`};
-    border-radius: ${({ randomRadius }) => `${randomRadius}%`};
-    width: ${({ randomWidth }) => randomWidth}px !important;
-    height: ${({ randomHeight }) => randomHeight}px !important;
+    .colorPalette {
+    border-radius: ${({ colorPaletteRadius }) => `${colorPaletteRadius}`};
+    width: ${({ colorPaletteWidth }) => colorPaletteWidth} !important;
+    height: ${({ colorPaletteHeight }) => colorPaletteHeight} !important;
+    transform: ${({ colorPaletteTransform }) => colorPaletteTransform} !important;
+    top: ${({ colorPaletteTop }) => colorPaletteTop} !important;
+    left: ${({ colorPaletteLeft }) => colorPaletteLeft} !important;
     transition: all 0.3s ease-in-out;
   }
-   .transform2 {
-    transform: ${({ randomTransform }) => `translate(${`${randomTransform}%`},${`  ${randomTransform}%`}) !important`};
-    border-radius: ${({ randomRadius }) => `${randomRadius}%`};
-    width: ${({ randomWidth }) => randomWidth}px !important;
-    height: ${({ randomHeight }) => randomHeight}px !important;
+    .accedo {
+    border-radius: ${({ accedoRadius }) => `${accedoRadius}`};
+    width: ${({ accedoWidth }) => accedoWidth} !important;
+    height: ${({ accedoHeight }) => accedoHeight} !important;
+    transform: ${({ accedoTransform }) => accedoTransform} !important;
+    top: ${({ accedoTop }) => accedoTop} !important;
+    left: ${({ accedoLeft }) => accedoLeft} !important;
     transition: all 0.3s ease-in-out;
   }
-   .transform3 {
-    transform: ${({ randomTransform }) => `translate(${`${randomTransform}%`},${`  ${randomTransform}%`}) !important`};
-    border-radius: ${({ randomRadius }) => `${randomRadius}%`};
-    width: ${({ randomWidth }) => randomWidth}px !important;
-    height: ${({ randomHeight }) => randomHeight}px !important;
+    .project {
+    border-radius: ${({ projectRadius }) => `${projectRadius}`};
+    width: ${({ projectWidth }) => projectWidth} !important;
+    height: ${({ projectHeight }) => projectHeight} !important;
+    transform: ${({ projectTransform }) => projectTransform} !important;
+    top: ${({ projectTop }) => projectTop} !important;
+    left: ${({ projectLeft }) => projectLeft} !important;
     transition: all 0.3s ease-in-out;
   }
-   .transform4 {
-    transform: ${({ randomTransform }) => `translate(${`${randomTransform}%`},${`  ${randomTransform}%`}) !important`};
-    border-radius: ${({ randomRadius }) => `${randomRadius}%`};
-    width: ${({ randomWidth }) => randomWidth}px !important;
-    height: ${({ randomHeight }) => randomHeight}px !important;
+   .bandPlanner {
+    border-radius: ${({ bandPlannerRadius }) => `${bandPlannerRadius}`};
+    width: ${({ bandPlannerWidth }) => bandPlannerWidth} !important;
+    height: ${({ bandPlannerHeight }) => bandPlannerHeight} !important;
+    transform: ${({ bandPlannerTransform }) => bandPlannerTransform} !important;
+    top: ${({ bandPlannerTop }) => bandPlannerTop} !important;
+    left: ${({ bandPlannerLeft }) => bandPlannerLeft} !important;
     transition: all 0.3 ease-in-out;
   }
-    .transform5 {
-     transform: ${({ randomTransform }) => `translate(${`${randomTransform}%`},${`  ${randomTransform}%`}) !important`};
-     border-radius: ${({ randomRadius }) => `${randomRadius}%`};
-     width: ${({ randomWidth }) => randomWidth}px !important;
-     height: ${({ randomHeight }) => randomHeight}px !important;
+   .hyperIsland {
+    border-radius: ${({ hyperRadius }) => `${hyperRadius}`};
+    width: ${({ hyperWidth }) => hyperWidth} !important;
+    height: ${({ hyperHeight }) => hyperHeight} !important;
+    transform: ${({ hyperTransform }) => hyperTransform} !important;
+    top: ${({ hyperTop }) => hyperTop} !important;
+    left: ${({ hyperLeft }) => hyperLeft} !important;
     transition: all 0.3s ease-in-out;
   }
 `;

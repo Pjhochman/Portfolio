@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import StyledCards from './TransformCards';
 import useHover from '../../../hooks/useHover';
 import useWindowSize from '../../../hooks/useWindowSize';
+import { transformData } from './data/data.json';
 import {
   CardItemContext,
   StyledTopContainer,
@@ -20,7 +21,7 @@ import { StartAnimation } from '../../../animations/animations';
 import './styles/cards.css';
 
 const CardItem = ({
-  children, wait, startAnimation, dataDepth, dataTitle, transform, click,
+  children, wait, startAnimation, dataDepth, dataTitle, transform, counter,
 }) => {
   const mediaWidthTablet = 637;
   const [refCard, cardHovered] = useHover();
@@ -29,21 +30,14 @@ const CardItem = ({
   const [isExpanded, setExpand] = useState(false);
   const expandHandler = (prop) => (!prop && setExpand(false));
 
-  const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-  const randomWidth = randomInt(50, 400);
-  const randomHeight = randomInt(50, 300);
-  const randomTransform = randomInt(-10, -10);
-  const randomRadius = randomInt(0, 100);
-
   useEffect(() => {
     setTimeout(() => {
       setVisible((value) => !value);
     }, wait);
   }, [wait]);
-
   const delayCardText = () => {
     if (width > mediaWidthTablet) {
-      if ((cardHovered && !click) || isExpanded) {
+      if ((cardHovered) || isExpanded) {
         return children;
       }
     } else {
@@ -53,10 +47,36 @@ const CardItem = ({
   };
   return (
     <StyledCards
-      randomWidth={randomWidth}
-      randomHeight={randomHeight}
-      randomTransform={randomTransform}
-      randomRadius={randomRadius}
+      accedoWidth={transformData[0].accedo.width[counter]}
+      accedoHeight={transformData[0].accedo.height[counter]}
+      accedoRadius={transformData[0].accedo.borderRadius[counter]}
+      accedoTransform={transformData[0].accedo.transform[counter]}
+      accedoTop={transformData[0].accedo.top[counter]}
+      accedoLeft={transformData[0].accedo.left[counter]}
+      bandPlannerWidth={transformData[0].bandPlanner.width[counter]}
+      bandPlannerHeight={transformData[0].bandPlanner.height[counter]}
+      bandPlannerRadius={transformData[0].bandPlanner.borderRadius[counter]}
+      bandPlannerTransform={transformData[0].bandPlanner.transform[counter]}
+      bandPlannerTop={transformData[0].bandPlanner.top[counter]}
+      bandPlannerLeft={transformData[0].bandPlanner.left[counter]}
+      colorPaletteWidth={transformData[0].colorPalette.width[counter]}
+      colorPaletteHeight={transformData[0].colorPalette.height[counter]}
+      colorPaletteRadius={transformData[0].colorPalette.borderRadius[counter]}
+      colorPaletteTransform={transformData[0].colorPalette.transform[counter]}
+      colorPaletteTop={transformData[0].colorPalette.top[counter]}
+      colorPaletteLeft={transformData[0].colorPalette.left[counter]}
+      projectWidth={transformData[0].project.width[counter]}
+      projectHeight={transformData[0].project.height[counter]}
+      projectRadius={transformData[0].project.borderRadius[counter]}
+      projectTransform={transformData[0].project.transform[counter]}
+      projectTop={transformData[0].project.top[counter]}
+      projectLeft={transformData[0].project.left[counter]}
+      hyperWidth={transformData[0].hyperIsland.width[counter]}
+      hyperHeight={transformData[0].hyperIsland.height[counter]}
+      hyperRadius={transformData[0].hyperIsland.borderRadius[counter]}
+      hyperTransform={transformData[0].hyperIsland.transform[counter]}
+      hyperTop={transformData[0].hyperIsland.top[counter]}
+      hyperLeft={transformData[0].hyperIsland.left[counter]}
       className={
         isExpanded ? 'items__layer layer active' : 'items__layer layer'
       }
@@ -67,7 +87,7 @@ const CardItem = ({
         <StartAnimation
           startAnimation={startAnimation}
           /* eslint-disable */
-          className={isExpanded ? 'items__item active' : click && !isExpanded ? `items__item ${transform}` : 'items__item'}
+          className={isExpanded ? 'items__item active' :  counter !== 3 ? `items__item ${transform}` : 'items__item'}
           data-title={dataTitle}
           onClick={!isExpanded ? () => setExpand(true) : expandHandler}
         >
@@ -102,7 +122,7 @@ CardItem.propTypes = {
   wait: PropTypes.number.isRequired,
   children: PropTypes.node.isRequired,
   transform: PropTypes.string.isRequired,
-  click: PropTypes.bool.isRequired,
+  counter: PropTypes.number.isRequired,
 };
 
 export default CardItem;

@@ -115,5 +115,154 @@
       "dataDepth": "0",
       "dataTitle": "no.5"
     }
+  ],
+  "transformData": [
+    {
+      "accedo": {
+        "width": [
+          "202px",
+          "360px",
+          "300px"
+        ],
+        "height": [
+          "33px",
+          "130px",
+          "150px"
+        ],
+        "borderRadius": [
+          "0",
+          "150px 0 150px 0",
+          "20%"
+        ],
+        "transform": [
+          "skew(70deg,-20deg)",
+          "skew(-30deg,10deg)"
+        ],
+        "top": [
+          "8px",
+          "45px"
+        ],
+        "left": [
+          "112px",
+          "92px"
+        ]
+      },
+      "bandPlanner": {
+        "width": [
+          "80px",
+          "170px",
+          "100px"
+        ],
+        "height": [
+          "279px",
+          "170px",
+          "200px"
+        ],
+        "borderRadius": [
+          "",
+          "100%",
+          "50%"
+        ],
+        "transform": [
+          "skew(10deg,20deg)",
+          ""
+        ],
+        "top": [
+          "80px",
+          "400px"
+        ],
+        "left": [
+          "90px",
+          "10px"
+        ]
+      },
+      "colorPalette": {
+        "width": [
+          "190px",
+          "250px",
+          "100px"
+        ],
+        "height": [
+          "280px",
+          "120px",
+          "200px"
+        ],
+        "borderRadius": [
+          "0%",
+          "0 90px 0 90px",
+          "10%"
+        ],
+        "transform": [
+          "skew(10deg,-20deg)",
+          "skew(10deg,10deg)"
+        ],
+        "top": [
+          "60px",
+          "180px"
+        ],
+        "left": [
+          "200px",
+          "78px"
+        ]
+      },
+      "project": {
+        "width": [
+          "80px",
+          "200px",
+          "100px"
+        ],
+        "height": [
+          "170px",
+          "110px",
+          "200px"
+        ],
+        "borderRadius": [
+          "0%",
+          "0 90px 0 90px",
+          "10%"
+        ],
+        "transform": [
+          "skew(10deg,20deg)",
+          "skew(10deg,10deg)"
+        ],
+        "top": [
+          "388px",
+          "320px"
+        ],
+        "left": [
+          "136px",
+          "180px"
+        ]
+      },
+      "hyperIsland": {
+        "width": [
+          "190px",
+          "160px",
+          "100px"
+        ],
+        "height": [
+          "170px",
+          "100px",
+          "200px"
+        ],
+        "borderRadius": [
+          "0",
+          "0 90px 0 90px",
+          "40%"
+        ],
+        "transform": [
+          "skew(10deg,-20deg)",
+          "skew(10deg,10deg)"
+        ],
+        "top": [
+          "367px",
+          "452px"
+        ],
+        "left": [
+          "244px",
+          "270px"
+        ]
+      }
+    }
   ]
 }

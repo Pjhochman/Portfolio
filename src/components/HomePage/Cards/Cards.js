@@ -18,7 +18,7 @@ import {
 } from '../../../animations/animations';
 import './styles/cards.css';
 
-const Cards = ({ click }) => {
+const Cards = ({ counter }) => {
   const mediaWidth = 1110;
   const { width } = useWindowSize();
   const scene = document.getElementById('js-scene');
@@ -26,7 +26,7 @@ const Cards = ({ click }) => {
   if (width) {
     /* eslint-disable */ 
     width > mediaWidth
-      ? new Parallax(scene, { hoverOnly: false })
+      ? new Parallax(scene, { hoverOnly: true })
       : new Parallax(scene, { scalarX: '0', scalarY: '0' });
   }
   return (
@@ -36,8 +36,8 @@ const Cards = ({ click }) => {
         <CardItem
           dataDepth={data[0].dataDepth}
           dataTitle={data[0].dataTitle}
-          click={click}
-          transform='items__item transform1'
+          transform='items__item colorPalette'
+          counter={counter}
           startAnimation={width > mediaWidth ? fadeInLeftAnimation : fadeInAnimation}
           wait={600}
         >
@@ -46,9 +46,8 @@ const Cards = ({ click }) => {
         <CardItem
           dataDepth={data[1].dataDepth}
           dataTitle={data[1].dataTitle}
-          transform='items__item transform2'
-          click={click}
-
+          transform='items__item hyperIsland'
+          counter={counter}
           startAnimation={width > mediaWidth ? fadeInRightAnimation : fadeInAnimation}  
           wait={600}
         >
@@ -57,9 +56,8 @@ const Cards = ({ click }) => {
         <CardItem
           dataDepth={data[2].dataDepth}
           dataTitle={data[2].dataTitle}
-          transform='items__item transform3'
-          click={click}
-
+          transform='items__item project'
+          counter={counter}
           startAnimation={width > mediaWidth ? fadeInUpAnimation : fadeInAnimation}  
           wait={700}
         >
@@ -68,9 +66,8 @@ const Cards = ({ click }) => {
         <CardItem
           dataDepth={data[3].dataDepth}
           dataTitle={data[3].dataTitle}
-          transform='items__item transform4'
-          click={click}
-
+          transform='items__item bandPlanner'
+          counter={counter}
           startAnimation={width > mediaWidth ? fadeInDownAnimation : fadeInAnimation}  
           wait={700}
         >
@@ -79,9 +76,8 @@ const Cards = ({ click }) => {
         <CardItem 
           dataDepth={data[4].dataDepth}
           dataTitle={data[4].dataTitle}
-          transform='items__item transform5'
-          click={click}
-
+          transform='items__item accedo'
+          counter={counter}
           startAnimation={fadeInAnimation}
           wait={0}
           >
@@ -94,7 +90,7 @@ const Cards = ({ click }) => {
 };
 
 Cards.propTypes = {
-  click : PropTypes.bool.isRequired
+  counter : PropTypes.number.isRequired
 }
 
 export default Cards;
