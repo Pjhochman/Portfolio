@@ -57,10 +57,12 @@ const Accedo = () => {
 
   useEffect(() => {
     isMountedRef.current = true;
-    if (isMountedRef.current && isExpanded) {
+    if (isMountedRef.current && isExpanded && width > mediaWidthMobile) {
       setTimeout(() => {
         setVisible(true);
       }, 200);
+    } else {
+      return setVisible(true);
     }
     return () => { isMountedRef.current = false; };
   }, [isVisible, isExpanded]);

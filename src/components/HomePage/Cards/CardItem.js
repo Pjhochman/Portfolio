@@ -37,7 +37,7 @@ const CardItem = ({
   }, [wait]);
   const delayCardText = () => {
     if (width > mediaWidthTablet) {
-      if ((cardHovered) || isExpanded) {
+      if ((cardHovered && counter === 3) || isExpanded) {
         return children;
       }
     } else {

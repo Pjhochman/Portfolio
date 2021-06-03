@@ -121,146 +121,161 @@
       "accedo": {
         "width": [
           "202px",
-          "360px",
-          "300px"
+          "330px",
+          "60px"
         ],
         "height": [
           "33px",
           "130px",
-          "150px"
+          "850px"
         ],
         "borderRadius": [
           "0",
-          "150px 0 150px 0",
-          "20%"
+          "100%",
+          "0"
         ],
         "transform": [
           "skew(70deg,-20deg)",
-          "skew(-30deg,10deg)"
+          "skew(-30deg,0deg)",
+          "skew(0deg,0deg)"
         ],
         "top": [
           "8px",
-          "45px"
+          "75px",
+          "-350px"
         ],
         "left": [
           "112px",
-          "92px"
+          "40px",
+          "30px"
         ]
       },
       "bandPlanner": {
         "width": [
           "80px",
-          "170px",
-          "100px"
+          "60px",
+          "60px"
         ],
         "height": [
           "279px",
-          "170px",
-          "200px"
+          "60px",
+          "440px"
         ],
         "borderRadius": [
-          "",
+          "0",
           "100%",
-          "50%"
+          "0"
         ],
         "transform": [
           "skew(10deg,20deg)",
-          ""
+          "skew(0deg,-10deg)",
+          "skew(0deg,0deg)"
         ],
         "top": [
           "80px",
-          "400px"
+          "370px",
+          "-350px"
         ],
         "left": [
           "90px",
-          "10px"
+          "300px",
+          "300px"
         ]
       },
       "colorPalette": {
         "width": [
           "190px",
           "250px",
-          "100px"
+          "60px"
         ],
         "height": [
           "280px",
           "120px",
-          "200px"
+          "1000px"
         ],
         "borderRadius": [
           "0%",
-          "0 90px 0 90px",
-          "10%"
+          "100%",
+          "0"
         ],
         "transform": [
           "skew(10deg,-20deg)",
-          "skew(10deg,10deg)"
+          "skew(10deg,10deg)",
+          "skew(0deg,0deg)"
         ],
         "top": [
           "60px",
-          "180px"
+          "180px",
+          "-350px"
         ],
         "left": [
           "200px",
-          "78px"
+          "210px",
+          "210px"
         ]
       },
       "project": {
         "width": [
           "80px",
           "200px",
-          "100px"
+          "60px"
         ],
         "height": [
           "170px",
           "110px",
-          "200px"
+          "690px"
         ],
         "borderRadius": [
-          "0%",
-          "0 90px 0 90px",
-          "10%"
+          "0",
+          "100%",
+          "0"
         ],
         "transform": [
           "skew(10deg,20deg)",
-          "skew(10deg,10deg)"
+          "skew(10deg,0deg)",
+          "skew(0deg,0deg)"
         ],
         "top": [
           "388px",
-          "320px"
+          "240px",
+          "-350px"
         ],
         "left": [
           "136px",
-          "180px"
+          "140px",
+          "120px"
         ]
       },
       "hyperIsland": {
         "width": [
           "190px",
           "160px",
-          "100px"
+          "60px"
         ],
         "height": [
           "170px",
           "100px",
-          "200px"
+          "1300px"
         ],
         "borderRadius": [
           "0",
-          "0 90px 0 90px",
-          "40%"
+          "100%",
+          "0"
         ],
         "transform": [
           "skew(10deg,-20deg)",
-          "skew(10deg,10deg)"
+          "skew(10deg,-10deg)",
+          "skew(0deg,0deg)"
         ],
         "top": [
           "367px",
-          "452px"
+          "312px",
+          "-390px"
         ],
         "left": [
           "244px",
-          "270px"
+          "30px",
+          "390px"
         ]
       }
     }

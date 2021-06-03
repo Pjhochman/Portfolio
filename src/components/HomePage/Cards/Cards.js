@@ -26,7 +26,7 @@ const Cards = ({ counter }) => {
   if (width) {
     /* eslint-disable */ 
     width > mediaWidth
-      ? new Parallax(scene, { hoverOnly: false })
+      ? new Parallax(scene, { hoverOnly: counter === 3 ? false : true })
       : new Parallax(scene, { scalarX: '0', scalarY: '0' });
   }
   return (
