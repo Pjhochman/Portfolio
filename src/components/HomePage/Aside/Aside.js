@@ -27,7 +27,7 @@ const Aside = ({ clickHandler }) => {
               aria-hidden="true"
               type="button"
               className="designer-title title"
-              onClick={() => clickHandler()}
+              onClick={() => width > mediaWidthDesktop && clickHandler()}
             >
               designer
             </h2>
