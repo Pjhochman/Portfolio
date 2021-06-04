@@ -60,6 +60,18 @@ aside {
   font-weight: bold;
 }
 
+.designer-title:active {
+  font-size: 55px;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+.coder-title:active {
+  font-size: 55px;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
 .coder-title {
   cursor: pointer;
   color: #202020;

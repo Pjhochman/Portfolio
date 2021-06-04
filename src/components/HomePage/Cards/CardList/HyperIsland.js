@@ -46,12 +46,10 @@ const HyperIsland = () => {
 
   useEffect(() => {
     isMountedRef.current = true;
-    if (isMountedRef.current && isExpanded && width > mediaWidthMobile) {
+    if (isMountedRef.current && isExpanded) {
       setTimeout(() => {
         setVisible(true);
       }, 200);
-    } else {
-      setVisible(true);
     }
     return () => { isMountedRef.current = false; };
   }, [isVisible, isExpanded]);

@@ -53,12 +53,10 @@ const Project11 = () => {
 
   useEffect(() => {
     isMountedRef.current = true;
-    if (isMountedRef.current && isExpanded && width > mediaWidthMobile) {
+    if (isMountedRef.current && isExpanded) {
       setTimeout(() => {
         setVisible(true);
       }, 200);
-    } else {
-      return setVisible(true);
     }
     return () => { isMountedRef.current = false; };
   }, [isVisible, isExpanded]);
