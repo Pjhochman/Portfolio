@@ -60,16 +60,20 @@ aside {
   font-weight: bold;
 }
 
-.designer-title:active {
-  font-size: 55px;
-  -webkit-transition: 0.1s linear;
-  transition: 0.1s linear;
+@media (min-width: 1100px) {
+  .designer-title:active {
+    font-size: 55px;
+    -webkit-transition: 0.1s linear;
+    transition: 0.1s linear;
+  }
 }
 
-.coder-title:active {
-  font-size: 55px;
-  -webkit-transition: 0.1s linear;
-  transition: 0.1s linear;
+@media (min-width: 1100px) {
+  .coder-title:active {
+    font-size: 55px;
+    -webkit-transition: 0.1s linear;
+    transition: 0.1s linear;
+  }
 }
 
 .coder-title {

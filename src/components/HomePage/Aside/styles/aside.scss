@@ -50,14 +50,19 @@ aside {
   font-weight: bold;
 }
 
-.designer-title:active {
+
+@media (min-width: 1100px) {
+ .designer-title:active  {
   font-size: 55px;
   transition: 0.1s linear;
+  }
 }
 
+@media (min-width: 1100px) {
 .coder-title:active {
   font-size: 55px;
   transition: 0.1s linear;
+}
 }
 
 .coder-title {
