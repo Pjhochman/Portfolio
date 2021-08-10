@@ -2,7 +2,7 @@
 
 # Hi There! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
-I'm a Front-End Developer looking to solve real world problems. I have a passion for learning and sharing my knowledge with others. If you find value in something I have created, please feel free to give some :yellow_heart: on <a href="https://www.linkedin.com/in/peter-hochman/" target="_blank">linkedin</a> or by <a href="mailto:peter.hochman.dev@gmail.com?">email</a>. I am currently open to work and you can visit my porfolio website right [here].
+I'm a Front-End Developer looking to solve real world problems. I have a passion for learning and sharing my knowledge with others. If you find value in something I have created, please feel free to give some :yellow_heart: on <a href="https://www.linkedin.com/in/peter-hochman/" target="_blank">linkedin</a> or by <a href="mailto:peter.hochman.dev@gmail.com?">email</a>. You can visit my porfolio website right [here].
 
 [2]: https://www.linkedin.com/in/peter-hochman/
 [here]: https://petersportfolio.netlify.app/
