@@ -8,7 +8,6 @@ const StyledGradient = styled.div`
     background: linear-gradient(
       -45deg,
       #b6aca5,
-      #677174,
       #e9f0fb,
       #757c78,
       #f5efe8

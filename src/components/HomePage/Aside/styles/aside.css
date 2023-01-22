@@ -309,9 +309,8 @@ aside {
       -ms-flex-align: center;
           align-items: center;
   height: 20px;
-  width: 212px;
+  width: 100%;
   margin-top: 20px;
-  overflow: visible;
   font-size: 18px;
   line-height: 40px;
   color: #202020;
@@ -326,38 +325,12 @@ aside {
   overflow: hidden;
   height: 20px;
 }
-
-.content__container:before {
-  content: "[";
-  left: 0;
-}
-
-.content__container:after {
-  content: "]";
-  position: absolute;
-  right: 0;
-}
-
-.content__container:after, .content__container:before {
-  position: absolute;
-  bottom: -9px;
-  font-weight: bold;
-  color: #525b56;
-  font-size: 20px;
-  line-height: 40px;
-  -webkit-animation-name: opacity;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  animation-name: opacity;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-
 .content__container__text {
   position: relative;
   display: inline;
   margin: 0 5px 0 15px;
   font-size: 18px;
+  font-weight: 600;
 }
 
 .content__container__list {
@@ -375,16 +348,19 @@ aside {
 
 .content__container__list__item {
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #73303C;
   line-height: 50px;
   padding-bottom: 9px;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+
 }
+
 
 @-webkit-keyframes opacity {
   0%,

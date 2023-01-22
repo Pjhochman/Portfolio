@@ -1,4 +1,4 @@
-/* eslint-disable */ 
+/* eslint-disable */
 import React, { useEffect } from 'react';
 import {
   BrowserRouter,
@@ -30,15 +30,9 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
-          <HelmetProvider>
-            <Canonical props={{ home: data.home.href }} />
-            <Route path="/" element={<HomePage />} />
-          </HelmetProvider>
-          <HelmetProvider>
-            <Canonical props={{ about: data.about.href }} />
-            <Route path="/about" element={<AboutPage />} />
-          </HelmetProvider>
-            <Route path="*" element={<NoPageFound />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<NoPageFound />} />
         </Routes>
       </BrowserRouter>
     </StyledGradient>

@@ -106,13 +106,8 @@ li {
   left: 0px;
   width: 300px;
   height: 300px;
-  background: #3f3f3f;
-}
 
-.items__layer:nth-child(1) .items__item:after {
-  top: -23px;
-  left: 0;
-  color: #3f3f3f;
+  background: #73303C;
 }
 
 .items__layer:nth-child(2) .items__item {
@@ -121,19 +116,14 @@ li {
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
   top: 330px;
   left: 250px;
   width: 170px;
   height: 160px;
-  background: #ffdf6c;
-}
 
-.items__layer:nth-child(2) .items__item:after {
-  bottom: -23px;
-  right: 0;
-  color: #ffdf6c;
+  background: #D9BBA9;
 }
 
 .items__layer:nth-child(3) .items__item {
@@ -144,8 +134,48 @@ li {
   left: 30px;
   width: 260px;
   height: 260px;
-  background: #707070;
+
+  background: #8C644D;
 }
+
+.items__layer:nth-child(4) .items__item {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  top: 20px;
+  left: 240px;
+  width: 240px;
+  height: 420px;
+  
+  background: #101726;
+}
+
+.items__layer:nth-child(5) .items__item {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  top: 200px;
+  left: 160px;
+  width: 160px;
+  height: 160px;
+
+  background: #4C6353;
+}
+
+.items__layer:nth-child(1) .items__item:after {
+  top: -23px;
+  left: 0;
+  color: #3f3f3f;
+}
+
+
+
+.items__layer:nth-child(2) .items__item:after {
+  bottom: -23px;
+  right: 0;
+  color: #ffdf6c;
+}
+
 
 .items__layer:nth-child(3) .items__item__active {
   z-index: 1;
@@ -179,16 +209,7 @@ li {
   color: #132226;
 }
 
-.items__layer:nth-child(4) .items__item {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  overflow: hidden;
-  top: 20px;
-  left: 240px;
-  width: 240px;
-  height: 420px;
-  background: #202020;
-}
+
 
 .items__layer:nth-child(4) .items__item:after {
   top: -23px;
@@ -196,16 +217,7 @@ li {
   color: #090909;
 }
 
-.items__layer:nth-child(5) .items__item {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  overflow: hidden;
-  top: 200px;
-  left: 160px;
-  width: 160px;
-  height: 160px;
-  background: #BBBBBB;
-}
+
 
 .items__layer:nth-child(5) .items__item:after {
   top: -20px;

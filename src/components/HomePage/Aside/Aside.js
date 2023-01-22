@@ -58,11 +58,11 @@ const Aside = ({ clickHandler }) => {
 
             {display && (
               <FadeIn>
-                <div>
+                <>
                   <div className="content">
-                    <p className="content__container__text">
+                    <div className="content__container__text">
                       I&#39;m skilled in
-                    </p>
+                    </div>
                     <div className="content__container">
                       <ul className="content__container__list">
                         {technologies.map((item) => (
@@ -76,7 +76,7 @@ const Aside = ({ clickHandler }) => {
                       </ul>
                     </div>
                   </div>
-                </div>
+                </>
               </FadeIn>
             )}
           </FadeInRight>

@@ -82,7 +82,7 @@ const Links = ({ open }) => (
   <StyledContainer open={open}>
     {Object.values(internalLinks).map((value) => (
       <StyledLink
-        activeClassName="selected"
+        activeclassname="selected"
         key={value.title}
         end
         to={value.path}
