@@ -75,7 +75,7 @@ const Burger = ({ open, setOpen, clickHandler }) => {
   return (
     <BurgerWrapper onClick={clickHandler} ref={clickRef}>
       <StyledBurger
-        aria-label="dropdown"
+        aria-label="button"
         open={open}
       >
         <div />
