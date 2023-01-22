@@ -40,7 +40,8 @@ const StyledTitleWrapper = styled.h1`
   white-space: nowrap;
   font-weight: 300;
   user-select: none;
-  color: #202020;
+  color: #121212;
+  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3);
   font-size: 1.2em;
   outline: 0;
   transition: transform 0.3s ease-in-out;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import useClickOutside from '../../hooks/useClickOutside';
 
-const BurgerWrapper = styled.button`
+const BurgerWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

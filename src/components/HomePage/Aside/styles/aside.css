@@ -101,6 +101,11 @@ aside {
       -ms-user-select: none;
           user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  color: #121212;
+  
+    text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+      0px -4px 10px rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 1250px) {
@@ -331,6 +336,10 @@ aside {
   margin: 0 5px 0 15px;
   font-size: 18px;
   font-weight: 600;
+  color: #121212;
+  
+    text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+      0px -4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .content__container__list {
