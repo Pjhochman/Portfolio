@@ -18,7 +18,7 @@ const BurgerWrapper = styled.button`
   }
 `;
 
-const StyledBurger = styled.div`
+const StyledBurger = styled.button`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -75,7 +75,7 @@ const Burger = ({ open, setOpen, clickHandler }) => {
   return (
     <BurgerWrapper onClick={clickHandler} ref={clickRef}>
       <StyledBurger
-        aria-label="button"
+        aria-pressed="true"
         open={open}
       >
         <div />
