@@ -76,9 +76,9 @@ aside {
 
 @media (min-width: 1100px) {
   .coder-title:active {
-    font-size: 55px;
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
+    font-size: 55px !important;
   }
 }
 
@@ -374,7 +374,7 @@ aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #73303C;
+  color: #E84A5F;
   line-height: 50px;
   padding-bottom: 9px;
   -webkit-box-pack: start;

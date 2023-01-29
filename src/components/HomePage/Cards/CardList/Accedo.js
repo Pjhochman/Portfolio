@@ -67,7 +67,7 @@ const Accedo = () => {
 
   return (
     <>
-      <TopContent margin={!isExpanded && '52px'} alignSelf={!isExpanded ? 'center' : 'start'} textAlign={!isExpanded ? 'center' : 'start'} color="true">
+      <TopContent margin={!isExpanded && '52px'} alignSelf={!isExpanded ? 'center' : 'start'} textAlign={!isExpanded ? 'center' : 'start'}>
         {width > mediaWidthMobile ? (
           <FadeInAnimation alignSelf={!isExpanded ? 'center' : 'start'} duration="0.3s">
             <TopTitle>Previously</TopTitle>
@@ -107,7 +107,7 @@ const Accedo = () => {
           {Object.values(accedo[0].middleCardContent).map(
             (item, index, arr) => (
               <FadeInAnimation key={item.title} duration="0.5s">
-                <MiddleContent color="true">
+                <MiddleContent>
                   <MiddleTitle>{item.title}</MiddleTitle>
                   {arr.length - 1 === index && (
                     <Button
@@ -140,7 +140,7 @@ const Accedo = () => {
             ),
           )}
           <FadeInAnimation duration="0.5s">
-            <BottomContent margin color="true">
+            <BottomContent margin>
               <BottomTitle>SaaS Application&nbsp;|</BottomTitle>
               <BottomDescription>&nbsp;Video Experience</BottomDescription>
             </BottomContent>
