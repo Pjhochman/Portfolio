@@ -18,7 +18,7 @@ height: 10px;
 
 const StyledHr = styled.hr`
   width: 80px;
-  border: 0.5px solid ${textColor.primaryBlack};
+  border: 0.5px solid ${textColor.primaryWhite};
   @media (max-width: 637px) {
   width: 57px;
   }
@@ -98,10 +98,10 @@ const Accedo = () => {
       {isExpanded && isVisible && (
         <>
           <FadeInAnimation duration="0.5s">
-            <Cubes borderColor="black" backgroundColor="#BBBBBB" isVisible={isVisible} imageTitle="'Accedo Logo'" copyright altImage1={altAccedo} image1={accedoLogo} image2={accedoLogo} image3={accedoLogo} image4={accedoLogo} image5={accedoLogo} image6={accedoLogo} marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom={width > mediaWidthMobile ? '230px' : '55vh'} />
+            <Cubes borderColor="black" backgroundColor="black" isVisible={isVisible} imageTitle="'Accedo Logo'" copyright altImage1={altAccedo} image1={accedoLogo} image2={accedoLogo} image3={accedoLogo} image4={accedoLogo} image5={accedoLogo} image6={accedoLogo} marginTop={width > mediaWidthMobile ? '180px' : '28vh'} marginBottom={width > mediaWidthMobile ? '230px' : '55vh'} />
             <StyledFiller />
             <StyledButton type="button" onClick={() => expandHandler(false)}>
-              <CloseIcon color="#202020" />
+              <CloseIcon color="white" />
             </StyledButton>
           </FadeInAnimation>
           {Object.values(accedo[0].middleCardContent).map(

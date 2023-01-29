@@ -58,28 +58,40 @@ aside {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
   font-size: 60px;
   font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+.designer-title:hover {
+  font-size: 1.55em;
+      transition: 0.2s ease-in-out;
 }
 
 @media (min-width: 1100px) {
   .designer-title:active {
     font-size: 55px;
-    -webkit-transition: 0.1s linear;
-    transition: 0.1s linear;
+    -webkit-transition: 0.2s ea;
+    transition: 0.2s ease-in-out;
   }
 }
 
 @media (min-width: 1100px) {
   .coder-title:active {
     font-size: 55px;
-    -webkit-transition: 0.1s linear;
-    transition: 0.1s linear;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
 }
 
 .coder-title {
   cursor: pointer;
   color: #202020;
+  transition: 0.2s ease-in-out;
 }
+
+.coder-title:hover {
+  font-size: 1.55em;
+}
+
 
 .coder-title:before {
   content: "<";
@@ -205,6 +217,7 @@ aside {
           align-items: center;
   width: 100%;
 }
+
 
 @media (max-width: 1100px) {
   #designerContainer {

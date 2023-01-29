@@ -42,7 +42,7 @@ const StyledSocialMedia = styled.a`
   text-decoration: none;
   transition: color 0.3s linear;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  color: #e9f0fb;
+  color: #121212;
   @media (max-width: 637px) {
     padding: 1.6rem 0;
     font-size: 0.7rem;
@@ -62,9 +62,9 @@ const StyledLink = styled(NavLink)`
   font-weight: 500;
   letter-spacing: 0.5rem;
   text-decoration: none;
-  transition: color 0.3s linear;
+  transition: color 0.2s linear;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  color: #e9f0fb;
+  color: #121212;
   @media (max-width: 637px) {
     padding: 1.6rem 0;
     font-size: 0.7rem;

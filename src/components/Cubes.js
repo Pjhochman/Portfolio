@@ -71,45 +71,45 @@ const StyledCube = styled.div`
 `;
 
 const StyledBack = styled.img`
-  border: 2px solid ${({borderColor}) => borderColor};
+  border: 2px solid ${({ borderColor }) => borderColor};
   padding: 7px;  
   transform: translateZ(-${cubeValues.transform}px) rotateX(180deg);
-  background-color: ${({backgroundColor}) => backgroundColor}
+  background-color: ${({ backgroundColor }) => backgroundColor}
 `;
 
 const StyledLeft = styled.img`
-  border: 2px solid ${({borderColor}) => borderColor};
+  border: 2px solid ${({ borderColor }) => borderColor};
   padding: 7px; 
   transform: translateX(-${cubeValues.transform}px) rotateY(90deg);
-  background-color: ${({backgroundColor}) => backgroundColor}
+  background-color: ${({ backgroundColor }) => backgroundColor}
 `;
 
 const StyledRight = styled.img`
-  border: 2px solid ${({borderColor}) => borderColor};
+  border: 2px solid ${({ borderColor }) => borderColor};
   padding: 7px; 
   transform: translateX(${cubeValues.transform}px) rotateY(90deg);
-  background-color: ${({backgroundColor}) => backgroundColor}
+  background-color: ${({ backgroundColor }) => backgroundColor}
 `;
 
 const StyledTop = styled.img`
-  border: 2px solid ${({borderColor}) => borderColor};
+  border: 2px solid ${({ borderColor }) => borderColor};
   padding: 7px;
   transform: translateY(-${cubeValues.transform}px) rotateX(90deg);
-  background-color: ${({backgroundColor}) => backgroundColor}
+  background-color: ${({ backgroundColor }) => backgroundColor}
 `;
 
 const StyledBottom = styled.img`
-  border: 2px solid ${({borderColor}) => borderColor};
+  border: 2px solid ${({ borderColor }) => borderColor};
   padding: 7px; 
   transform: translateY(${cubeValues.transform}px) rotateX(270deg);
-  background-color: ${({backgroundColor}) => backgroundColor}
+  background-color: ${({ backgroundColor }) => backgroundColor}
 `;
 
 const StyledFront = styled.img`
-  border: 2px solid ${({borderColor}) => borderColor};
+  border: 2px solid ${({ borderColor }) => borderColor};
   padding: 7px; 
   transform: translateZ(${cubeValues.transform}px);
-  background-color: ${({backgroundColor}) => backgroundColor}
+  background-color: ${({ backgroundColor }) => backgroundColor}
 `;
 
 const Cubes = ({
@@ -147,7 +147,7 @@ const Cubes = ({
         <StyledBack borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image1} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
         <StyledLeft borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image2} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
         <StyledRight borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image3} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
-        <StyledTop borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image4} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side"/>
+        <StyledTop borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image4} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
         <StyledBottom borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image5} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
         <StyledFront borderColor={borderColor} backgroundColor={backgroundColor} type="image/webp" src={image6} onError={(e) => (e.target.onerror = null, e.target.src = altImage1)} className="side" />
       </StyledCube>
