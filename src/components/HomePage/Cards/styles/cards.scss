@@ -18,7 +18,7 @@ hr {
 
 li {
   margin-bottom: 5px;
-  font-weight: 300;
+  font-weight: bold;
 }
 
 .items {
@@ -32,6 +32,7 @@ li {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+
   &__inner {
     position: relative;
     z-index: 2;
@@ -40,6 +41,7 @@ li {
     height: 550px;
     background: transparent;
   }
+
   .active {
     z-index: 10;
     top: -10px !important;
@@ -47,6 +49,7 @@ li {
     width: 485px !important;
     height: 590px !important;
   }
+
   &__layer &__item {
     opacity: 0.94;
     position: absolute;
@@ -57,6 +60,7 @@ li {
     pointer-events: all;
     box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.50);
     transition: all 0.2s ease-in-out;
+
     &:after {
       content: attr(data-title);
       position: absolute;
@@ -67,6 +71,7 @@ li {
       transition: all 0.2s ease;
       opacity: 0;
     }
+
     &:hover {
       &:after {
         visibility: visible;
@@ -74,22 +79,24 @@ li {
       }
     }
   }
+
   &__layer:nth-child(1) &__item {
     transition: all 0.2s ease-in-out;
     overflow: hidden;
-    $color:  #3f3f3f;// #040c0e;
+    $color: #3f3f3f; // #040c0e;
     top: 120px;
     left: 0px;
     width: 300px;
     height: 300px;
     background: $color;
-   
+
     &:after {
       top: -23px;
       left: 0;
       color: $color;
     }
   }
+
   &__layer:nth-child(2) &__item {
     transition: all 0.2s ease-in-out;
     overflow: hidden;
@@ -100,21 +107,24 @@ li {
     width: 170px;
     height: 160px;
     background: $color;
+
     &:after {
       bottom: -23px;
       right: 0;
       color: $color;
     }
   }
+
   &__layer:nth-child(3) &__item {
     transition: all 0.2s ease-in-out;
     overflow: hidden;
-    $color: #707070;  //#132226;
+    $color: #707070; //#132226;
     top: 280px;
     left: 30px;
     width: 260px;
     height: 260px;
     background: $color;
+
     &__active {
       $color: #132226;
       z-index: 1;
@@ -131,12 +141,14 @@ li {
       transition: all 0.1s ease-in-out;
       pointer-events: auto;
     }
+
     &:after {
       bottom: -23px;
       left: 0;
       color: $color;
     }
   }
+
   &__layer:nth-child(4) &__item {
     transition: all 0.2s ease-in-out;
     overflow: hidden;
@@ -146,31 +158,34 @@ li {
     width: 240px;
     height: 420px;
     background: $color;
+
     &:after {
       top: -23px;
       right: 0;
       color: darken($color, 9%);
     }
   }
+
   &__layer:nth-child(5) &__item {
     transition: all 0.2s ease-in-out;
     overflow: hidden;
-    $color: #BBBBBB;  // #be9063;
+    $color: #BBBBBB; // #be9063;
     top: 200px;
     left: 160px;
     width: 160px;
     height: 160px;
     background: $color;
+
     &:after {
-    top: -20px;
-    font-weight: bold;
-    left: 0;
-    right: 0;
-    width: 40px;
-    height: 20px;
-    line-height: 20px;
-    margin: auto;
-    text-align: center;
+      top: -20px;
+      font-weight: bold;
+      left: 0;
+      right: 0;
+      width: 40px;
+      height: 20px;
+      line-height: 20px;
+      margin: auto;
+      text-align: center;
       color: darken($color, 12%);
     }
   }
@@ -181,34 +196,41 @@ li {
     &__layer &__item {
       transition: none;
     }
+
     &__layer:nth-child(1) &__item {
       &:after {
         display: none;
       }
     }
+
     &__layer:nth-child(2) &__item {
       display: none;
     }
   }
 }
+
 @media (max-width: 637px) {
   .items {
     touch-action: none;
     height: 100vh;
+
     &__layer {
-    width: 100% !important;
-    height: 100% !important;
-    top: -50px !important;
+      width: 100% !important;
+      height: 100% !important;
+      top: -50px !important;
     }
+
     &__layer &__item {
-    opacity: 1;
+      opacity: 1;
     }
+
     &__inner {
       max-width: 100vw;
       left: 0px;
       width: 100%;
       height: 100%;
-    }  
+    }
+
     .active {
       top: 0px !important;
       opacity: 1;
@@ -221,6 +243,7 @@ li {
       transform: none !important;
       padding-bottom: 50px;
     }
+
     &__layer:nth-child(1) &__item {
       box-sizing: border-box;
       left: 50%;
@@ -230,16 +253,18 @@ li {
       height: 180px;
       transition: none !important;
     }
+
     &__layer:nth-child(2) &__item {
       box-sizing: border-box;
       display: flex;
       left: 50%;
       top: 50%;
-      transform: translate(4%, 70%);   
+      transform: translate(4%, 70%);
       width: 130px;
       height: 90px;
       transition: none !important;
     }
+
     &__layer:nth-child(3) &__item {
       box-sizing: border-box;
       left: 50%;
@@ -249,6 +274,7 @@ li {
       height: 180px;
       transition: none !important;
     }
+
     &__layer:nth-child(4) &__item {
       box-sizing: border-box;
       left: 50%;
@@ -258,6 +284,7 @@ li {
       height: 280px;
       transition: none !important;
     }
+
     &__layer:nth-child(5) &__item {
       box-sizing: border-box;
       left: 50%;
@@ -285,27 +312,35 @@ li {
   0% {
     transform: rotateX(0);
   }
+
   12.5% {
     transform: rotateY(90deg);
   }
+
   25% {
     transform: rotateY(270deg);
   }
+
   37.5% {
     transform: rotateY(270deg);
   }
+
   50% {
     transform: rotateY(360deg);
   }
+
   62.5% {
     transform: rotateX(90deg);
   }
+
   75% {
     transform: rotateX(180deg);
   }
+
   87.5% {
     transform: rotateX(270deg);
   }
+
   100% {
     transform: rotateX(360deg);
   }

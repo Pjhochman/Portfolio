@@ -15,7 +15,7 @@ cursor: default;
 `;
 
 const StyledHeader = styled.header`
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,12 +23,12 @@ const StyledHeader = styled.header`
   top: 0;
   right: 0;
   height: 100px;
-  opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
+  // opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
   z-index: ${({ open }) => (open ? '3' : '2')};
   margin: auto;
   width: 100%;
   font-weight: 400;
-  background: transparent;
+  background: #e9f0fb;
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
 `;

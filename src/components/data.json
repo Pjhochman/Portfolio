@@ -1,8 +1,8 @@
 {
-    "home": {
-        "href": "https://www.peterhochman.com"
-    },
-    "about": {
-        "href": "https://www.peterhochman.com/about"
-    }
+  "home": {
+    "href": "https://www.peterhochman.com/home"
+  },
+  "about": {
+    "href": "https://www.peterhochman.com/about"
+  }
 }

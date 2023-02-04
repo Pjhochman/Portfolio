@@ -8,7 +8,7 @@ const BurgerWrapper = styled.div`
   align-items: center;
   justify-content: center;
   position: ${({ open }) => (open ? 'fixed' : 'absolute')};
-  top: 25px;
+  top: 21px;
   right: 6.5vw;
   width: 60px;
   height: 60px;
@@ -59,6 +59,11 @@ const StyledBurger = styled.button`
     :nth-child(3) {
       transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
+
+    @media (max-width: 1280px) {
+      background: ${({ open }) => (open ? 'white' : '#202020')};
+    }
+
     @media (max-width: 637px) {
     width: 1.5rem;
     height: 0.1rem;
@@ -71,6 +76,8 @@ const Burger = ({ open, setOpen, clickHandler }) => {
   const triggerHandler = () => {
     setOpen(open && open);
   };
+
+  console.log(open);
   const clickRef = useClickOutside(triggerHandler);
   return (
     <BurgerWrapper onClick={clickHandler} ref={clickRef}>

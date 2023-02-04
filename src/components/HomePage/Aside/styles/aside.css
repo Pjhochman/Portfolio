@@ -61,17 +61,18 @@ aside {
   transition: 0.2s ease-in-out;
 }
 
-.designer-title:hover {
-  font-size: 1.55em;
-      transition: 0.2s ease-in-out;
-}
 
 @media (min-width: 1100px) {
   .designer-title:active {
-    font-size: 55px;
-    -webkit-transition: 0.2s ea;
-    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
+      font-size: 55px !important;
   }
+
+    .designer-title:hover {
+      font-size: 1.55em;
+      transition: 0.2s ease-in-out;
+    }
 }
 
 @media (min-width: 1100px) {
@@ -80,16 +81,16 @@ aside {
     transition: 0.2s ease-in-out;
     font-size: 55px !important;
   }
+
+    .coder-title:hover {
+      font-size: 1.55em;
+    }
 }
 
 .coder-title {
   cursor: pointer;
   color: #202020;
   transition: 0.2s ease-in-out;
-}
-
-.coder-title:hover {
-  font-size: 1.55em;
 }
 
 

@@ -24,73 +24,73 @@ const Cards = ({ counter }) => {
   const scene = document.getElementById('js-scene');
 
   if (width) {
-    /* eslint-disable */ 
+    /* eslint-disable */
     width > mediaWidth
       ? new Parallax(scene, { hoverOnly: counter === 3 ? false : true })
       : new Parallax(scene, { scalarX: '0', scalarY: '0' });
   }
   return (
     <>
-    <div className="items">
-      <div className='items__inner' id="js-scene">
-        <CardItem
-          dataDepth={data[0].dataDepth}
-          dataTitle={data[0].dataTitle}
-          transform='items__item colorPalette'
-          counter={counter}
-          startAnimation={width > mediaWidth ? fadeInLeftAnimation : fadeInAnimation}
-          wait={600}
-        >
-          <ColorPalette />
-        </CardItem>
-        <CardItem
-          dataDepth={data[1].dataDepth}
-          dataTitle={data[1].dataTitle}
-          transform='items__item hyperIsland'
-          counter={counter}
-          startAnimation={width > mediaWidth ? fadeInRightAnimation : fadeInAnimation}  
-          wait={600}
-        >
-          <HyperIsland />
-        </CardItem>
-        <CardItem
-          dataDepth={data[2].dataDepth}
-          dataTitle={data[2].dataTitle}
-          transform='items__item project'
-          counter={counter}
-          startAnimation={width > mediaWidth ? fadeInUpAnimation : fadeInAnimation}  
-          wait={700}
-        >
-          <Project11 />
-        </CardItem>
-        <CardItem
-          dataDepth={data[3].dataDepth}
-          dataTitle={data[3].dataTitle}
-          transform='items__item bandPlanner'
-          counter={counter}
-          startAnimation={width > mediaWidth ? fadeInDownAnimation : fadeInAnimation}  
-          wait={700}
-        >
-          <BandPlanner />
-        </CardItem>
-        <CardItem 
-          dataDepth={data[4].dataDepth}
-          dataTitle={data[4].dataTitle}
-          transform='items__item accedo'
-          counter={counter}
-          startAnimation={fadeInAnimation}
-          wait={0}
+      <div className="items">
+        <div className='items__inner' id="js-scene">
+          <CardItem
+            dataDepth={data[0].dataDepth}
+            dataTitle={data[0].dataTitle}
+            transform='items__item colorPalette'
+            counter={counter}
+            startAnimation={width > mediaWidth ? fadeInLeftAnimation : fadeInAnimation}
+            wait={600}
+          >
+            <ColorPalette />
+          </CardItem>
+          <CardItem
+            dataDepth={data[1].dataDepth}
+            dataTitle={data[1].dataTitle}
+            transform='items__item hyperIsland'
+            counter={counter}
+            startAnimation={width > mediaWidth ? fadeInRightAnimation : fadeInAnimation}
+            wait={600}
+          >
+            <HyperIsland />
+          </CardItem>
+          <CardItem
+            dataDepth={data[2].dataDepth}
+            dataTitle={data[2].dataTitle}
+            transform='items__item project'
+            counter={counter}
+            startAnimation={width > mediaWidth ? fadeInUpAnimation : fadeInAnimation}
+            wait={700}
+          >
+            <Project11 />
+          </CardItem>
+          <CardItem
+            dataDepth={data[3].dataDepth}
+            dataTitle={data[3].dataTitle}
+            transform='items__item bandPlanner'
+            counter={counter}
+            startAnimation={width > mediaWidth ? fadeInDownAnimation : fadeInAnimation}
+            wait={700}
+          >
+            <BandPlanner />
+          </CardItem>
+          <CardItem
+            dataDepth={data[4].dataDepth}
+            dataTitle={data[4].dataTitle}
+            transform='items__item accedo'
+            counter={counter}
+            startAnimation={fadeInAnimation}
+            wait={0}
           >
             <Accedo />
-        </CardItem>
+          </CardItem>
+        </div>
       </div>
-    </div>
     </>
   );
 };
 
 Cards.propTypes = {
-  counter : PropTypes.number.isRequired
+  counter: PropTypes.string.isRequired
 }
 
 export default Cards;
