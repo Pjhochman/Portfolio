@@ -18,8 +18,10 @@ const HomePage = () => {
     if (width > mediaWidthTablet) {
       setCounter(3);
     }
-  },
-  [width]);
+    return () => {
+      setCounter({}); // This worked for me
+    };
+  }, [width]);
 
   return (
     <>

@@ -274,9 +274,12 @@ aside {
   background-color: transparent;
 
   &__container {
-    font-weight: 600;
+    position: relative;
     overflow: hidden;
-    height: 20px;
+    height: 25px;
+    font-weight: 600;
+
+    top: 2pt;
 
     &:before {
       content: "[";

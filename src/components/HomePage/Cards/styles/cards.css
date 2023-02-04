@@ -5,6 +5,7 @@ p {
 h3 {
   text-transform: uppercase;
   font-size: 11px;
+  text-decoration: underline;
 }
 
 hr {
@@ -16,7 +17,7 @@ hr {
 
 li {
   margin-bottom: 5px;
-  font-weight: 300;
+  font-weight: bold;
 }
 
 .items {

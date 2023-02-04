@@ -51,7 +51,7 @@ export const StyledMiddleContainer = styled.div`
   text-align: center;
   flex-direction: column;
   align-items: center;
-  font-weight: 300;
+  font-weight: bold;
   box-sizing: border-box;
   user-select: none;
   margin-top: ${(props) => props.margin && props.margin};
@@ -73,7 +73,7 @@ export const StyledMiddleDescription = styled.ul`
   white-space: break-spaces;
   line-height: 15px;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: bold;
   width: ${(props) => props.width};
   margin-bottom: ${(props) => props.marginBottom && '50px'};
   width: 270px;
@@ -102,7 +102,7 @@ export const StyledBottomTitle = styled.div`
   text-transform: ${(props) => (props.textTransform ? null : 'uppercase')};
   letter-spacing: 2px;
   font-size: 9px;
-  font-weight: 300;
+  font-weight: bold;
     @media (max-width: 637px) {
   font-size: 10px;
   }
@@ -112,7 +112,7 @@ export const StyledBottomDescription = styled.div`
   text-transform: ${(props) => (props.textTransform ? null : 'uppercase')};
   letter-spacing: 2px;
   font-size: 9px;
-  font-weight: 300;
+  font-weight: bold;
     @media (max-width: 637px) {
   font-size: 10px;
   }
@@ -124,7 +124,7 @@ export const StyledButton = styled.button`
   margin-bottom: 5px;
   cursor: pointer;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: bold;
   color: ${(props) => (props.color ? '#e9f0fb' : '#202020')};
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",

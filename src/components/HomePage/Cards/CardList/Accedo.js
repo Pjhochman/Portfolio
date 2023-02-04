@@ -111,6 +111,7 @@ const Accedo = () => {
                   <MiddleTitle>{item.title}</MiddleTitle>
                   {arr.length - 1 === index && (
                     <Button
+                      color="white"
                       type="button"
                       onClick={() => window.open(
                         `https://${accedo[0].middleCardContent.bottomSection.link}`,
