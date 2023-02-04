@@ -77,7 +77,6 @@ const Burger = ({ open, setOpen, clickHandler }) => {
     setOpen(open && open);
   };
 
-  console.log(open);
   const clickRef = useClickOutside(triggerHandler);
   return (
     <BurgerWrapper onClick={clickHandler} ref={clickRef}>
