@@ -17,16 +17,27 @@ const StyledContainer = styled.nav`
   box-sizing: border-box;
   top: 0;
   right: 10vw;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+
     @media (max-width: 1280px) {
     background: #202020;
     width: 100%;
     right: 0;
+    padding: ${({ open }) => (open ? '0.9rem' : '0')};
+    margin: 0;
+
+    a {
+      padding-bottom: 0;
+      line-height: 27px;
+      margin: 1.3rem;
+      transform: translateY(2pt);
+    }
   }
   @media (max-width: 885px) {
     background: #202020;
     flex-direction: column;
-    margin: 1.2rem;
+    align-items: center;
+    margin: auto;
     width: 100%;
   }
 `;
@@ -34,17 +45,17 @@ const StyledContainer = styled.nav`
 const StyledSocialMedia = styled.a`
   cursor: pointer;
   user-select: none;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   text-transform: uppercase;
   margin: 1.2rem 1.5rem 1.5rem 1.5rem;
   font-weight: 500;
   letter-spacing: 0.5rem;
   text-decoration: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: #121212;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
   border-bottom: 0px solid #202020;
 
   @media (max-width: 1280px) {
@@ -60,37 +71,35 @@ const StyledSocialMedia = styled.a`
 
   &:hover {
     border-width: 3px;
-    text-shadow: 1px 3px 2px rgb(0 0 0 / 30%), 0px -4px 10px rgb(255 255 255 / 30%);
   }
 
   &.active {
     border-width: 3px;
-    text-shadow: 1px 3px 2px rgb(0 0 0 / 30%), 0px -4px 10px rgb(255 255 255 / 30%);
   }
 
   &:nth-child(3) {
-    width: 7.5rem;
+    width: 7.3rem;
   }
 
   &:nth-child(4) {
-    width: 5.8rem;
+    width: 5.65rem;
   }
 `;
 
 const StyledLink = styled(NavLink)`
   cursor: pointer;
   user-select: none;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   text-transform: uppercase;
   margin: 1.2rem 1.5rem 1.5rem 1.5rem;
   font-weight: 500;
   letter-spacing: 0.5rem;
   text-decoration: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: #121212;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
   border-bottom: 0px solid #202020;
 
 
@@ -107,20 +116,18 @@ const StyledLink = styled(NavLink)`
 
   &:hover {
     border-width: 3px;
-    text-shadow: 1px 3px 2px rgb(0 0 0 / 30%), 0px -4px 10px rgb(255 255 255 / 30%);
   }
 
   &.active {
     border-width: 3px;
-    text-shadow: 1px 3px 2px rgb(0 0 0 / 30%), 0px -4px 10px rgb(255 255 255 / 30%);
   }
 
   &:nth-child(1) {
-    width: 4.05rem;
+    width: 3.98rem;
   }
 
   &:nth-child(2) {
-    width: 4.95rem;
+    width: 4.87rem;
   }
 `;
 

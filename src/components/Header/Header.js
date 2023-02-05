@@ -23,7 +23,7 @@ const StyledHeader = styled.header`
   top: 0;
   right: 0;
   height: 100px;
-  // opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
+  opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
   z-index: ${({ open }) => (open ? '3' : '2')};
   margin: auto;
   width: 100%;
@@ -49,6 +49,7 @@ const StyledTitleWrapper = styled.h1`
   height: 26px;
   line-height: 27px;
   font-size: 4.1vw;
+  cursor: pointer;
   }
 `;
 

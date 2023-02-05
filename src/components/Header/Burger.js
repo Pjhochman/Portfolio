@@ -74,7 +74,7 @@ const StyledBurger = styled.button`
 
 const Burger = ({ open, setOpen, clickHandler }) => {
   const triggerHandler = () => {
-    setOpen(open && open);
+    setOpen(open && !open);
   };
 
   const clickRef = useClickOutside(triggerHandler);

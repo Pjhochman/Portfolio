@@ -7,11 +7,7 @@ const StyledGradient = styled.div`
    touch-action: manipulation;
     background: linear-gradient(
       -45deg,
-      #ebf6f7,
-      #eaf4fc,
-      #e5e4e2,
-      #F8F8FF,
-      #f5f5f5
+      #e9f0fb;
     );
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
